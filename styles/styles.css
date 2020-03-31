@@ -7,7 +7,7 @@
     --layout-agenda-cell-height: 20px;
 	--layout-agenda-cell-width: 2fr;
 	
-	--font-size-h1: 73px;
+	--font-size-h1: 2.8rem;
 	--font-size-h2: 2rem;
 	--font-size-h3: 1.4rem;
 	--font-size-p: 1rem;
@@ -149,6 +149,8 @@ button:hover {
 .navbar {
 	height: 5vh;
 	background-color: white;
+	display: flex;
+	align-items: center;
 }
 /*** END navbar ***/
 
@@ -156,11 +158,23 @@ button:hover {
 /*** BEGIN header ***/
 .header {	
 	background-color: var(--color-primary-blue);
+	background-image: url('./../assets/img/bg-header.png');
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	padding: 2rem 0;
+	width: 100%;
+}
+
+.header .container {
 	display: flex;
+	justify-content: space-between;
+
 }
 
 .header-left {
-	width: 50%;
+	width: 60%;
 }
 
 .header-left h2{
@@ -172,8 +186,8 @@ button:hover {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 40%;
-	background-color: var(--color-secondary-yellow);
+	width: 30%;
+	/* background-color: var(--color-secondary-yellow); */
 }
 
 .header-right h1{
