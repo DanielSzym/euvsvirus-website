@@ -1,0 +1,156 @@
+:root {
+	--color-primary-blue: #003399;
+	--color-secondary-yellow: #FFCC00;
+	--color-light-grey: #F8F9F9;
+	--font-color-grey: #222121;
+    --font-color-yellow: #fc0;
+    
+    --layout-agenda-cell-height: 20px;
+    --layout-agenda-cell-width: 2fr;
+}
+
+body {
+	margin:0;
+	padding:0;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	font-family: "PT Sans", sans-serif;
+}
+
+.agenda {
+    display: grid;
+    grid-template-columns: 
+        [times] 6em
+        [day-1] var(--layout-agenda-cell-width)
+        [day-2] var(--layout-agenda-cell-width)
+        [day-3] var(--layout-agenda-cell-width);
+    grid-template-rows:
+        [dates] 4em
+        [time-0900] var(--layout-agenda-cell-height)
+        [time-1000] var(--layout-agenda-cell-height)
+        [time-1100] var(--layout-agenda-cell-height)
+        [time-1200] var(--layout-agenda-cell-height)
+        [time-1300] var(--layout-agenda-cell-height)
+        [time-1400] var(--layout-agenda-cell-height)
+        [time-1500] var(--layout-agenda-cell-height)
+        [time-1600] var(--layout-agenda-cell-height)
+        [time-1700] var(--layout-agenda-cell-height)
+        [time-1800] var(--layout-agenda-cell-height)
+        [time-1900] var(--layout-agenda-cell-height)
+        [time-2000] var(--layout-agenda-cell-height)
+        [time-2100] var(--layout-agenda-cell-height)
+        [time-2200] var(--layout-agenda-cell-height)
+        [time-2300] var(--layout-agenda-cell-height)
+        [time-2400] var(--layout-agenda-cell-height)
+        [time-0100] var(--layout-agenda-cell-height);
+}
+
+.item {
+    margin: 0 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-blue {
+    color: var(--color-secondary-yellow);
+    background-color: var(--color-primary-blue);
+}
+.item-grey {
+    color: var(--font-color-grey);
+    background-color: var(--color-light-grey);
+
+}
+/* Layout - columns */
+.item-date {
+    grid-row: dates;
+    font-weight: bold;
+    color: var(--font-color-grey);
+}
+.date-d1 {
+    grid-column: day-1;
+}
+.date-d2 {
+    grid-column: day-2;
+}
+.date-d3 {
+    grid-column: day-3;
+}
+/* Layout - rows */
+.item-time {
+    grid-column: times;
+    color: var(--font-color-grey);
+    background-color: var(--color-light-grey);
+    font-size: 85%;
+    margin: 4px;
+}
+.time-t09 {
+    grid-row: time-0900 / time-1100;
+}
+.time-t11 {
+    grid-row: time-1100 / time-1300;
+}
+.time-t13 {
+    grid-row: time-1300 / time-1500;
+}
+.time-t15 {
+    grid-row: time-1500 / time-1700;
+}
+.time-t17 {
+    grid-row: time-1700 / time-1900;
+}
+.time-t19 {
+    grid-row: time-1900 / time-2100;
+}
+.time-t21 {
+    grid-row: time-2100 / time-2300;
+}
+.time-t23 {
+    grid-row: time-2300 / time-0100;
+}
+
+/* Items */
+.item-d1-1 {
+    grid-column: day-1;
+    grid-row: time-1600 / time-2000;
+}
+.item-d1-2 {
+    grid-column: day-1;
+    grid-row: time-2000 / time-2400;
+}
+.item-d2-1 {
+    grid-column: day-2;
+    grid-row: time-0900 / time-1100;
+}
+.item-d2-2 {
+    grid-column: day-2;
+    grid-row: time-1100 / time-1500;
+}
+.item-d2-3 {
+    grid-column: day-2;
+    grid-row: time-1500 / time-1700;
+}
+.item-d2-4 {
+    grid-column: day-2;
+    grid-row: time-1700 / time-2100;
+}
+.item-d2-5 {
+    grid-column: day-2;
+    grid-row: time-2100 / time-2300;
+}
+.item-d3-1 {
+    grid-column: day-3;
+    grid-row: time-0900 / time-1100;
+}
+.item-d3-2 {
+    grid-column: day-3;
+    grid-row: time-1100 / time-1700;
+}
+.item-d3-3 {
+    grid-column: day-3;
+    grid-row: time-1700 / time-1800;
+}
+.item-d3-4 {
+    grid-column: day-3;
+    grid-row: time-1800 / time-2300;
+}
