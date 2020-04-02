@@ -32,4 +32,3 @@ jobs:
         container_name: $web
         # The connection string for the storage account
         connection_string: ${{ secrets.blobConnection }}
-        # extra arguments that can be passed to `az storage blob upload-batch`. Useful for passing flags like `--pattern` or `--destination-path`
