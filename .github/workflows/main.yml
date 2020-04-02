@@ -6,9 +6,9 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ azure-prod ]
   pull_request:
-    branches: [ master ]
+    branches: [ azure-prod ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,4 +32,3 @@ jobs:
         container_name: $web
         # The connection string for the storage account
         connection_string: ${{ secrets.blobConnection }}
-        # extra arguments that can be passed to `az storage blob upload-batch`. Useful for passing flags like `--pattern` or `--destination-path`
