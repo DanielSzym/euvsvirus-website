@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <link href="style.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>#EUvsVirus</title>
-  
+  <meta name="description" content="The pan-European Hackathon against the Corona Virus. Participate soon!">
+  <title>Pan-European Hackathon</title>
+
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 </head>
 <body>
@@ -14,26 +13,42 @@
   <!-- BEGIN navbar -->
   <section id="navbar">
     <div class="navbar container">
-      <a href="#"><img src="./assets/img/navbar/EUnitedvsVirus.png" alt=""></a>
+      <img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg">
+      <div>
+        <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+          <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
+        </a>
+        <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+          <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
+        </a>
+        <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+          <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+        </a>
+      </div>
     </div>
   </section>
   <!-- END navbar -->
+
+  <!-- BEGIN Banner -->
+  <section id="banner">
+    <img alt="Banner Pan European Hackathon" src="./assets/img/banner/Pan-EUHackthron.jpg">
+  </section>
+  <!-- END Banner -->
 
   <!-- BEGIN header -->
   <section id="header" class="header">
     <div class="container">
       <div class="header-left mt-5">
         <h3 class="fw-normal">
-          Innovators, startups, makers in Europe are working to develop 
-          innovative solutions to be deployed in the short-term to alleviate 
-          the negtive consequences of the corona crisis.
-          So can you.
+          The European Commission,
+          in close collaboration with EU member states, will host a pan-European
+          hackathon to connect civil society, innovators, partners and buyers across
+          Europe to develop innovative solutions to overcome coronavirus-related challenges.
         </h3>
         <h3 class="bold mt-4">
-          Join the EU-community and contribute your skills to help overcoming the
-          EU's biggest challenges in the COVID-19 crisis. Start making an impact now.
-        </h3>       
-        <h1 class="mt-4-5 header-date">24 – 26 April 2020</h1>        
+          Now is your chance to help tackle coronavirus!
+        </h3>
+        <h1 class="mt-4-5 header-date">When? 24, 25 and 26 April</h1>
         <p id="counter-header" class="counter-header d-flex-center-h">
           <span class="counter-group">
             <span id="counter-days">00</span> Days
@@ -49,13 +64,33 @@
           </span>
           until registration ends.
         </p>
-        <div class="primary-button mt-3">         
+        <p class="bold mt-4">
+          Challenges to be hacked, and the opening of registration to hack the challenges, will be announced soon. Watch this space!
+        </p>
+        <div class="primary-button mt-3">
           More information coming soon
         </div>
+        <p id="hashtags-header" class="counter-header d-flex-center-h">
+          <span class="counter-group">
+            #EUvsVirus
+          </span>
+          <span class="counter-group">
+            #HacktheCrisis
+          </span>
+          <span class="counter-group">
+            #EUSolidarity
+          </span>
+          <span class="counter-group">
+            #StrongerTogether
+          </span>
+          <span class="counter-group">
+            #TogetherWeCan
+          </span>
+        </p>
       </div>
       <div class="header-right">
         <div class="header-image-wrapper">
-          <img src="./assets/img/header picture.svg">
+          <img alt="Picture of a village with a european flag hanging from a balcony" src="./assets/img/header picture.svg">
         </div>
       </div>
     </div>
@@ -63,24 +98,25 @@
   <!-- END header -->
 
 
-
   <!-- BEGIN intro -->
-  <section id="intro" class="container">
-    <img class="logo-EC" alt="Logo of the European Commission" src="./assets/img/European Commission Logo.png">
-    <div class="intro-patron mt-4">
+  <section id="intro" class="container mt-8">
+    <div class="intro-patron">
       <div class="text-patron-wrapper">
         <p>
-          The EUnitedvsVirus – Hackathon is a hackathon patronaged and organized by the European Commission Prominent under the patronage of Mariya Gabriel.
+          EUvsVirus is a pan-European Hackathon organized by the European Commission under the patronage of Mariya Gabriel.
         </p>
+        <div>
+          <a class="intro-infos-link" rel="noreferrer" href="https://ec.europa.eu/commission/commissioners/2019-2024/gabriel_en" target="_blank" title="Commissioner Mariya Gabriel on the webpage of the European Commission">
+            Show Infos
+          </a>
+        </div>
       </div>
       <div class="img-patron-wrapper">
         <img class="img-patron" alt="Patron Mariya Gabriel" src="assets/img/MariyaGabriel.png">
       </div>
     </div>
+    <img class="logo-EC mt-6" alt="Logo of the European Commission" src="./assets/img/European Commission Logo.png">
     <div>
-      <a class="intro-infos-link" href="https://ec.europa.eu/commission/commissioners/2019-2024/gabriel_en" target="_blank" title="Commissioner Mariya Gabriel on the webpage of the European Commission">
-        Show Infos
-      </a>
     </div>
 
     <!-- Countries involved -->
@@ -91,21 +127,62 @@
         <img alt="Country flags of all participating countries" src="./assets/img/flags/countryflags.png">
       </div>
     </div>
+    
+    <section id="initiators" class="mt-5">
+      <strong class="bold">Initiated by</strong>
+      <div class="initiators-logo-row">
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/allied_for_startups.png" alt="Logo of the company 'Allied for Startup'">
+        </div>
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/atoelye.png" alt="Logo of the company 'Atölye'">
+        </div>
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/civitta.png" alt="Logo of the company 'Civitta'">
+        </div>
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/dh.png" alt="Logo of the company 'DH'">
+        </div>
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/startup_division.png" alt="Logo of the company 'Startup Division'">
+        </div>
+        <div class="initiators-logo ml-2">
+          <img src="./assets/img/initiators/life_changing_software_services.png" alt="Logo of the company 'DO OK'">
+        </div>
+      </div>
+      <div class="initiators-logo-row">
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/virus_virus.png" alt="Logo of the company 'Versus Virus'">
+        </div>
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/hack_the_crisis_norway.png" alt="Logo of the company 'Hack the Crisis Norway'">
+        </div>
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/startup_portugal.png" alt="Logo of the company 'Startup Portugal'">
+        </div>
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/hack_for_sweden.png" alt="Logo of the company 'Hack for Sweden'">
+        </div>
+        <div class="initiators-logo">
+          <img src="./assets/img/initiators/the_hackathon_company.png" alt="Logo of the company 'The Hackathon Company'">
+        </div>
+      </div>
+    </section>
   </section> 
   <!-- END intro -->
 
   
   <!-- BEGIN footer -->
-  <footer class="mt-8 pt-1">
+  <footer class="mt-5 pt-1">
     <div class="container">
       <ul>
         <li>
-          <a href="#" hreflang="en">
+          <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en" hreflang="en">
             Legal Notice
           </a>
         </li>
         <li>
-          <a href="#" hreflang="en">
+          <a href="https://europa.eu/european-union/abouteuropa/privacy-policy_en" hreflang="en">
             Privacy Policy
           </a>
         </li>
@@ -121,7 +198,7 @@
 
   <script> 
     // tbd: add other counters
-    var deadline = new Date("Apr 24, 2020 24:00:00").getTime();
+    var deadline = new Date("Apr 20, 2020 23:59:59").getTime();
 
     var x = setInterval(function() { 
       var now = new Date().getTime(); 
@@ -131,10 +208,10 @@
       var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
       var seconds = Math.floor((t % (1000 * 60)) / 1000);
       
-      days = days.toString().length == 1 ? '0'+days : days
-      hours = hours.toString().length == 1 ? '0'+hours : hours
-      minutes = minutes.toString().length == 1 ? '0'+minutes : minutes
-      seconds = seconds.toString().length == 1 ? '0'+seconds : seconds
+      days = days.toString().length == 1 ? '0'+days.toString() : days.toString()
+      hours = hours.toString().length == 1 ? '0'+hours : hours.toString()
+      minutes = minutes.toString().length == 1 ? '0'+minutes.toString() : minutes.toString()
+      seconds = seconds.toString().length == 1 ? '0'+seconds.toString() : seconds.toString()
 
       document.getElementById('counter-days').innerHTML = days;
       document.getElementById('counter-hours').innerHTML = hours;
