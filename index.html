@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>#EUvsVirus</title>
+  <title>Pan-European Hackathon</title>
   
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 </head>
@@ -12,7 +12,7 @@
   <!-- BEGIN navbar -->
   <section id="navbar">
     <div class="navbar container">
-      <a href="#"><img src="./assets/img/navbar/EUnitedvsVirus.png" alt=""></a>
+      <a href="#"><img src="./assets/img/navbar/EUnitedvsVirus.svg" alt=""></a>
     </div>
   </section>
   <!-- END navbar -->
@@ -24,7 +24,7 @@
         <h3 class="fw-normal">
           Innovators, startups, makers in Europe are working to develop 
           innovative solutions to be deployed in the short-term to alleviate 
-          the negtive consequences of the corona crisis.
+          the negative consequences of the corona crisis.
           So can you.
         </h3>
         <h3 class="bold mt-4">
@@ -68,7 +68,7 @@
     <div class="intro-patron mt-4">
       <div class="text-patron-wrapper">
         <p>
-          The EUnitedvsVirus – Hackathon is a hackathon patronaged and organized by the European Commission Prominent under the patronage of Mariya Gabriel.
+          EUnitedvsVirus is a pan-European hackathon organized by the European Commission under the patronage of Mariya Gabriel.
         </p>
       </div>
       <div class="img-patron-wrapper">
@@ -98,12 +98,12 @@
     <div class="container">
       <ul>
         <li>
-          <a href="#" hreflang="en">
+          <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en" hreflang="en">
             Legal Notice
           </a>
         </li>
         <li>
-          <a href="#" hreflang="en">
+          <a href="https://europa.eu/european-union/abouteuropa/privacy-policy_en" hreflang="en">
             Privacy Policy
           </a>
         </li>
@@ -119,7 +119,7 @@
 
   <script> 
     // tbd: add other counters
-    var deadline = new Date("Apr 24, 2020 24:00:00").getTime();
+    var deadline = new Date("Apr 20, 2020 23:59:59").getTime();
 
     var x = setInterval(function() { 
       var now = new Date().getTime(); 
@@ -129,10 +129,10 @@
       var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
       var seconds = Math.floor((t % (1000 * 60)) / 1000);
       
-      days = days.toString().length == 1 ? '0'+days : days
-      hours = hours.toString().length == 1 ? '0'+hours : hours
-      minutes = minutes.toString().length == 1 ? '0'+minutes : minutes
-      seconds = seconds.toString().length == 1 ? '0'+seconds : seconds
+      days = days.toString().length == 1 ? '0'+days.toString() : days.toString()
+      hours = hours.toString().length == 1 ? '0'+hours : hours.toString()
+      minutes = minutes.toString().length == 1 ? '0'+minutes.toString() : minutes.toString()
+      seconds = seconds.toString().length == 1 ? '0'+seconds.toString() : seconds.toString()
 
       document.getElementById('counter-days').innerHTML = days;
       document.getElementById('counter-hours').innerHTML = hours;
