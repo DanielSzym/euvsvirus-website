@@ -27,24 +27,87 @@
 </head>
 <body>
 
-  <!-- BEGIN navbar -->
-  <section id="navbar">
-    <div class="navbar container">
-      <img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg">
+
+
+  <!-- BEGIN mobile menu -->
+  <div id="mobileNav" class="overlay">
+    <section id="navbar-mobile">
+      <div class="navbar container">
+        <img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg">
+        <div>
+          <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
+        </div>
+        <div class="d-none">
+          <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
+          </a>
+          <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="overlay-content container">
       <div>
+        <a href="/" class="mobile-link-item current-menu">Hackathon</a>
+        <a href="/challenges/" class="mobile-link-item">Challenges</a>
+        <a href="/agenda/" class="mobile-link-item">Agenda</a>
+        <a href="/resources/" class="mobile-link-item">Resources</a>
+        <a href="/press/" class="mobile-link-item">Press</a>
+        <a href="/team/" class="mobile-link-item">Team</a>
+        <a href="/faq/" class="mobile-link-item">FAQ</a>
+      </div>
+      <div class="d-flex mb-4">
         <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
-          <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
+          <img class="navbar-logo-mobile" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
         </a>
         <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
-          <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
+          <img class="navbar-logo-mobile" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
         </a>
         <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
-          <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+          <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
         </a>
       </div>
     </div>
+  </div>
+  <!-- END mobile menu -->
+
+
+  <!-- BEGIN navbar desktop -->
+  <section id="navbar-desktop">
+    <div class="navbar container">
+      <img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg">
+      <div id="menu-mobile-burger">
+        <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
+      </div>
+      <div id="menu-desktop-content">
+        <div class="d-flex">
+          <a href="/challenges/" class="desktop-link-item current-menu">Hackathon</a>
+          <a href="/challenges/" class="desktop-link-item">Challenges</a>
+          <a href="/agenda/" class="desktop-link-item">Agenda</a>
+          <a href="/resources/" class="desktop-link-item">Resources</a>
+          <a href="/press/" class="desktop-link-item">Press</a>
+          <a href="/team/" class="desktop-link-item">Team</a>
+          <a href="/faq/" class="desktop-link-item">FAQ</a>
+        </div>
+        <div class="d-flex align-items-center">
+          <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
+          </a>
+          <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+          </a>
+      </div>
+      </div>
+    </div>
   </section>
-  <!-- END navbar -->
+  <!-- END navbar desktop -->
 
   <!-- BEGIN Banner -->
   <section id="banner">
@@ -253,7 +316,18 @@
               clearInterval(x); 
               document.getElementById('counter-header').innerHTML = 'Application deadline expired'; 
           } 
-    }, 1000); 
+    }, 1000);
+
+    // mobile menu
+    function openNav() {
+      document.getElementById('mobileNav').style.display = 'flex';
+      document.body.style.overflowY = 'hidden';
+    }
+
+    function closeNav() {
+      document.getElementById('mobileNav').style.display = 'none';
+      document.body.style.overflowY = 'scroll';
+    }
   </script> 
 </body>
 </html>
