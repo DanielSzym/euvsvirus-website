@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Now is your chance to help tackle coronavirus! #EUvsVirus">
+
+  <!-- Meta tags for social media -->
+  <meta property="og:title" content="Pan-European Hackathon">
+  <meta property="og:description" content="Now is your chance to help tackle coronavirus! #EUvsVirus">
+  <meta property="og:image" content="https://euvsvirus.org/assets/img/banner/Pan-EUHackathon-Thumbnail.jpg">
+  <meta property="og:url" content="https://euvsvirus.org">
+  <meta property="og:type" content="website">
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pan-European Hackathon">
+  <meta name="twitter:description" content="Now is your chance to help tackle coronavirus! #EUvsVirus">
+  <meta name="twitter:image" content="https://euvsvirus.org/assets/img/banner/Pan-EUHackathon-Thumbnail.jpg">
+
+
+  <title>Pan-European Hackathon</title>
+
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../styles/styles-011.css">
+</head>
+
+<body>
+
+
+
+  <!-- BEGIN mobile menu -->
+  <div id="mobileNav" class="overlay">
+    <section id="navbar-mobile">
+      <div class="navbar container">
+        <a href="/#" onclick="closeNav()"><img alt="EU versus virus hashtag" src="../assets/img/navbar/EUvsVirus.svg"></a>
+        <div>
+          <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
+        </div>
+        <div class="d-none">
+          <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+          </a>
+          <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="overlay-content container">
+      <div>
+        <a href="/#" class="mobile-link-item" onclick="closeNav()">Hackathon</a>
+        <a href="/#challenges" class="mobile-link-item" onclick="closeNav()">Challenges</a>
+        <a href="/#agenda" class="mobile-link-item" onclick="closeNav()">Agenda</a>
+        <a  class="mobile-link-item disable-menu tooltip" style="width:110px;">Resources<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
+        <a  class="mobile-link-item disable-menu tooltip" style="width:110px;">Press<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
+        <a  class="mobile-link-item disable-menu tooltip" style="width:110px;">Team<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
+        <a href="#" class="mobile-link-item current-menu" onclick="closeNav()">FAQ</a>
+      </div>
+      <div class="d-flex mb-4">
+        <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+          <img class="navbar-logo-mobile" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+        </a>
+        <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+          <img class="navbar-logo-mobile" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+        </a>
+        <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+          <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- END mobile menu -->
+
+
+  <!-- BEGIN navbar desktop -->
+  <section id="navbar-desktop">
+    <div class="navbar container">
+      <a href="/#"><img alt="EU versus virus hashtag" src="../assets/img/navbar/EUvsVirus.svg"></a>
+      <div id="menu-mobile-burger">
+        <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
+      </div>
+      <div id="menu-desktop-content">
+        <div class="d-flex">
+          <a href="/#" class="desktop-link-item">Hackathon</a>
+          <a href="/#challenges" class="desktop-link-item">Challenges</a>
+          <a href="/#agenda" class="desktop-link-item">Agenda</a>
+          <a class="desktop-link-item disable-menu tooltip">Resources<span class="tooltiptext tooltip-bottom">Coming
+              soon</span></a>
+          <a class="desktop-link-item disable-menu tooltip">Press<span class="tooltiptext tooltip-bottom">Coming
+              soon</span></a>
+          <a class="desktop-link-item disable-menu tooltip">Team<span class="tooltiptext tooltip-bottom">Coming
+              soon</span></a>
+          <a href="#" class="desktop-link-item current-menu">FAQ</a>
+        </div>
+        <div class="d-flex align-items-center">
+          <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+          </a>
+          <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END navbar desktop -->
+
+
+  <!-- BEGIN FAQs -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <h1>FAQs</h1>
+      <hr>
+      <h2>FAQs for Participants</h2>
+      <h3>What is #EUvsVirus about?</h3>
+      <p>
+        The #EUvsVirus hackathon offers a common organizational and technical
+        framework in which the participants can get involved online and develop
+        prototypes and solutions for technically, politically and socially relevant issues in the context of the Coronavirus crisis. It aims at collectively developing innovative solutions, e.g. high tech, low
+        tech, hardware and software, using biotech, digital tech, societal science and other innovation
+        domains. There are five areas that have been identified as targets for these innovative solutions: Health & Medicine, Business Continuity, Social Cohesion, Protection of Risk Groups, and Education.
+      </p>
+      <h3>Who runs the #EUvsVirus hackathon?
+      </h3>
+      <p>
+        The Pan-European hackathon #EUvsVirus is a joint event between the European Commission and  the 
+        most plugged in and nationally connected digital ecosystem actors from all over Europe. It builds upon 
+        already conducted national hackathons and their solutions. The organisers of the national hackathons 
+        related to coronavirus are the partners of the EU Commission on the pan-European hackathon.
+      </p>
+      <h3>When will the hackathon take place?</h3>
+      <p>
+        The hackathon will take place online from 24 - 26 April 2020. Participants will have 48 hours to 
+        collaborate via different online platforms and build a solution within the challenge areas.
+      </p>
+      <h3>How is the online hackathon organised?</h3>
+      <p>
+        The hackathon will take place online. The appropriate tools needed to facilitate the work of 
+        everybody involved will be provided. Slack will be the main communication platform for the teams. 
+        There will be video conferencing for live webinars, Q&A sessions and daily check-ins.
+      </p>
+      <h3>What are the challenges?</h3>
+      <p>
+        There are five challenge categories: Health & Medicine, Business Continuity, Social Cohesion, 
+        Protection of Risk Groups, and Education.
+      </p>
+      <h3>Who can participate?</h3>
+      <p>
+        Developers, designers, creative people, problem solvers, digital entrepreneurs, makers, and 
+        innovative start-ups from Europe. Use your teams’ interdisciplinary skills and be creative 
+        together to develop solutions that help all EU citizens to overcome the crisis.
+      </p>
+      <h3>What is the deadline for the application?</h3>
+      <p>
+        The application deadline is 20 April 2020.
+      </p>
+      <h3>Are there any specific requirements for participation?</h3>
+      <p>
+        There is no limit to the number of participants. Anyone who is interested in digitization, 
+        building digital tech or design solutions can apply. Whether computer scientist, tech and 
+        data enthusiast, UX/UI Designer, business or complete career changer, we welcome all of you!
+      </p>
+      <h3>Are software development skills required?</h3>
+      <p>
+        No, we welcome all innovators across Europe with their individual skills.
+      </p>
+      <h3>Should I apply as a team or as an individual?</h3>
+      <p>
+        If you already have a team, you can apply together and work on the challenges. 
+        Individuals can also apply. On Slack there will be many opportunities to get in 
+        touch with the community and find a team, based on your interests and knowledge.
+      </p>
+      <h3>How can I participate in the hackathon with my existing project/idea?</h3>
+      <p>
+        During the past few weeks we’ve seen an impressive number of initiatives to develop 
+        digital solutions and infrastructure to face the Coronavirus crisis. We have immense 
+        respect for your work. Feel free to apply with your existing projects or ideas. 
+        #EUvsVirus is building on those experiences.
+      </p>
+      <h3>Where and how can I submit my ready solution at the end of the hackathon?</h3>
+      <p>
+        The solutions have to be submitted by 26 April 2020 (end of the hackathon) as a 
+        presentation video, ppt, demo, prototype (depending on the solution). Further 
+        information of the topic will be provided in the beginning of the hackathon.
+      </p>
+      <h3>Do I have to speak English to participate?</h3>
+      <p>
+        The official language of the hackathon is English. To facilitate the processes 
+        you should understand and be able to communicate in English.
+      </p>
+      <h3>Do I need preinstalled software?</h3>
+      <p>
+        No, you don’t need software beforehand. The technical infrastructure and instructions 
+        will be provided prior to the hackathon. However, it would be useful if you install 
+        Slack after your registration, since this will be the main collaboration platform.
+      </p>
+      <h3>Will we get any support during the hackathon?</h3>
+      <p>
+        There will be mentors and experts with different knowledge backgrounds who 
+        will support you throughout the hackathon. They will provide valuable tips and feedback.
+      </p>
+      <h3>What are the evaluation criteria for the final solutions?</h3>
+      <p>
+        The main evaluation criteria are: social value, technical innovation, creativity, 
+        user-/customer-centricity, business case, technical execution, and presentation of 
+        the solution. Detailed information of the judging criteria will be provided in the 
+        beginning of the hackathon.
+      </p>
+      <h3> What will happen with the solutions after the hackathon?</h3>
+      <p>
+        The pan-European hackathon will provide avenues for uptake by end-users or follow 
+        up development of the solutions. The teams with the best solutions will be invited 
+        to join the European Innovation Council (EIC) Community Platform that will facilitate 
+        connections with end users (e.g. hospital) and will also provide access to investors, 
+        foundations and other funding opportunities from the EIC and other EU financial supporters. 
+        It will also be a starting point of a much longer collaboration between the European Commission 
+        and the ecosystems of innovators, makers and start-ups across Europe related to 
+        the Coronavirus crisis.
+      </p>
+      <h3>Should I apply as a team or as an individual?</h3>
+      <p>
+        If you already have a team, you can apply together and work on the challenges. 
+        Individuals can also apply. On Slack there will be many opportunities to get in 
+        touch with the community and find a team, based on your interests and knowledge.
+      </p>
+
+      <h2>FAQs for Mentors</h2>
+      <h3>In which areas can I provide support?</h3>
+      <p>
+        We are looking for mentors and experts from all areas, including health, 
+        IT (software and hardware), legal, business, security, design, soft skills, 
+        data and social sciences. There are five challenge categories within the 
+        hackathon: Health & Medicine, Business Continuity, Social Cohesion, Protection 
+        of Risk Groups, and Education.
+      </p>
+      <h3>How much time do I have to invest?</h3>
+      <p>
+        The hackathon will take place online from the afternoon of 24 April to the evening 
+        of 26 April 2020. It is best if you are available during the whole event. There 
+        will also be a short briefing prior to the event. You can find detailed 
+        information in the agenda on the homepage.
+      </p>
+      <h3>How many teams can I support?</h3>
+      <p>
+        You can support one or more teams depending on your expertise and availability. 
+        Open expert sessions will be organized during the event. We will clarify your 
+        tasks prior to the event.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+  
+  <!-- BEGIN footer -->
+  <footer class="mt-2 pt-1">
+    <div class="container d-flex space-between">
+      <div class="footer-left d-flex">
+        <img class="footer-hashtag" alt="EU versus virus hashtag" src="../assets/img/footer/EUvsVirus-footer.svg">
+        <ul>
+          <li>
+            <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en" hreflang="en">
+              Legal Notice
+            </a>
+          </li>
+          <li>
+            <a href="https://europa.eu/european-union/abouteuropa/privacy-policy_en" hreflang="en">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="mailto:RTD-PAN-EUROPEAN-COVID-HACKATHON@ec.europa.eu" hreflang="en">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center d-none-mobile">
+        <div class="d-flex align-items-center">
+          <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+          </a>
+          <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+          </a>
+      </div>
+    </div>
+  </footer>
+  <!-- END footer -->
+
+  <script>
+    // mobile menu
+    function openNav() {
+      document.getElementById('mobileNav').style.display = 'flex';
+      document.getElementById('navbar-desktop').style.display = 'none';
+      document.body.style.overflowY = 'hidden';
+    }
+
+    function closeNav() {
+      document.getElementById('mobileNav').style.display = 'none';
+      document.getElementById('navbar-desktop').style.display = 'block';
+      document.body.style.overflowY = 'scroll';
+    }
+  </script>
+</body>
+
+</html>
