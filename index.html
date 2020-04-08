@@ -60,7 +60,7 @@
         <a  class="mobile-link-item disable-menu tooltip" style="width:110px;">Resources<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
         <a  class="mobile-link-item disable-menu tooltip" style="width:110px;">Press<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
         <a  class="mobile-link-item disable-menu tooltip" style="width:110px;">Team<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
-        <a href="/faq/" class="mobile-link-item" onclick="closeNav()">FAQ</a>
+        <a href="./faq/" class="mobile-link-item" onclick="closeNav()">FAQ</a>
       </div>
       <div class="d-flex mb-4">
         <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -87,16 +87,16 @@
       </div>
       <div id="menu-desktop-content">
         <div class="d-flex">
-          <a href="#" class="desktop-link-item current-menu">Hackathon</a>
-          <a href="#challenges" class="desktop-link-item">Challenges</a>
-          <a href="#agenda" class="desktop-link-item">Agenda</a>
+          <a href="#" class="desktop-link-item" onclick="selectMenuItem()">Hackathon</a>
+          <a href="#challenges" class="desktop-link-item" onclick="selectMenuItem()">Challenges</a>
+          <a href="#agenda" class="desktop-link-item" onclick="selectMenuItem()">Agenda</a>
           <a class="desktop-link-item disable-menu tooltip">Resources<span class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
           <a class="desktop-link-item disable-menu tooltip">Press<span class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
           <a class="desktop-link-item disable-menu tooltip">Team<span class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
-          <a href="/faq/" class="desktop-link-item">FAQ</a>
+          <a href="./faq/" class="desktop-link-item">FAQ</a>
         </div>
         <div class="d-flex align-items-center">
           <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -230,7 +230,6 @@
           src="./assets/img/flags/countryflags_mobile.png">
       </div>
     </div>
-
     
     <!-- Description -->
     <section id="description" class="intro-description">
@@ -242,7 +241,7 @@
         <div class="description-content">
           <div>
             <h2 class="h2-description">
-              <img class="h2-description-icon" alt="blue hashtag as image" src="/assets/img/intro/hashtag.png">
+              <img class="h2-description-icon" alt="blue hashtag as image" src="./assets/img/intro/hashtag.png">
               <span style="margin-left: 6px;" class="text">EUnitedvsVirus Hackathon</span>
             </h2>
             <div class="description-p">
@@ -266,7 +265,7 @@
           </div>
           <div>
             <h2 class="h2-description mt-4">
-              <img class="h2-description-icon" alt="golden star as image" src="/assets/img/intro/star.png">
+              <img class="h2-description-icon" alt="golden star as image" src="./assets/img/intro/star.png">
               <span class="text">&nbsp;Benefits</span>
             </h2>
             <div class="description-p">
@@ -296,7 +295,7 @@
       <div class="category">
         <a href="#">
           <div class="category-image">
-            <img src="./assets/img/challenges/challenge health and medicine.png" alt="Picture of medical equipment">
+            <img src="./assets/img/challenges/health_and_medicine.png" alt="Picture of medical equipment">
           </div>
           <div class="category-button noselect">Health & Medicine</div>
         </a>
@@ -304,7 +303,7 @@
       <div class="category">
         <a href="#">
           <div class="category-image">
-            <img src="./assets/img/challenges/challenge business continuity.png"
+            <img src="./assets/img/challenges/business_continuity.png"
               alt="Picture of someone working on a laptop and making some notes next to a sheet with diagrams">
           </div>
           <div class="category-button noselect">Business Continuity</div>
@@ -313,7 +312,7 @@
       <div class="category">
         <a href="#">
           <div class="category-image">
-            <img src="./assets/img/challenges/challenge social cohesion.png"
+            <img src="./assets/img/challenges/social_cohesion.png"
               alt="Picture showing the arms of two people holding something">
           </div>
           <div class="category-button noselect">Social Cohesion</div>
@@ -322,7 +321,7 @@
       <div class="category">
         <a href="#">
           <div class="category-image">
-            <img src="./assets/img/challenges/challenge protection of risk groups.png"
+            <img src="./assets/img/challenges/protection_risk_groups.png"
               alt="Picture of an elderly women with shades and a red hat">
           </div>
           <div class="category-button noselect">Protection of Risk Groups</div>
@@ -331,7 +330,7 @@
       <div class="category">
         <a href="#">
           <div class="category-image">
-            <img src="./assets/img/challenges/challenge education.png" alt="Picture of a girl focussing on something">
+            <img src="./assets/img/challenges/education.png" alt="Picture of a girl focussing on something">
           </div>
           <div class="category-button noselect">Education</div>
         </a>
@@ -568,6 +567,12 @@
       document.getElementById('mobileNav').style.display = 'none';
       document.getElementById('navbar-desktop').style.display = 'block';
       document.body.style.overflowY = 'scroll';
+    }
+
+    function selectMenuItem() {
+      var desktopMenu = document.querySelector('.mobile-link-item')  
+
+      desktopMenu.classList.toggle('current-menu');
     }
   </script>
 </body>
