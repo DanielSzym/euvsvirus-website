@@ -786,7 +786,6 @@ button:focus {
 	padding-bottom: 100px;	
 }
 
-
 .faq h1 {
 	padding-top: 5rem;
 	color: var(--color-grey-h3-normal) !important;
@@ -806,9 +805,15 @@ button:focus {
 }
 
 .faq p {
-	width: 50%;
+	width: 80%;
 	margin-top: 1rem;
 	color: var(--color-grey-h3-normal);
+}
+
+@media (max-width: 992px){
+	.faq .p {
+		width: 100%;
+	}
 }
 
 
