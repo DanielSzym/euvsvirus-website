@@ -148,6 +148,7 @@ p {
 
 .secondary-button {
 	cursor: pointer;
+	width: 100%;
 	padding: 10px 25px;
 	border: 2px solid #222121;
 	border-radius: 5px;
@@ -203,15 +204,24 @@ p {
 
 
 /*** BEGIN mobile menu ***/
-#navbar-mobile {
-	background-color: #fff;;
+#navbar-desktop, #navbar-mobile {
+	background-color: #fff;
+	position: sticky;
+	top: 0; /* required */
+	z-index: 100;
+	-webkit-box-shadow: 0px 2px 4px 0px rgba(171,171,171,1);
+	-moz-box-shadow: 0px 2px 4px 0px rgba(171,171,171,1);
+	box-shadow: 0px 2px 4px 0px rgba(171,171,171,1);
 }
+.toggle-mobile-menu-icon.close {
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
 	display: none;
 	position: fixed;
-	z-index: 1;
+	z-index: 100;
 	top: 0;
 	left: 0;
 	background-color: var(--color-light-grey);
@@ -240,7 +250,7 @@ p {
 }
 
 .overlay a:hover, .overlay a:focus {
-	color: #f1f1f1;
+	color: var(--color-grey-h3-bold);
 }
 
 .overlay .closebtn {
@@ -478,6 +488,92 @@ p {
 /*** END intro ***/
 
 
+
+/*** BEGIN categories ***/
+.categories {
+	padding: 30px 0px;
+	min-height: 350px;
+	background-color: var(--color-primary-blue);	
+	display:flex;
+	align-items: center;
+}
+
+.categories h3 {	
+	color: white;
+}
+
+.categories h4 {
+	display: inline-block;
+	color: white;
+}
+
+.categories h4:hover{
+	text-decoration: underline;
+}
+
+.category {
+	display:inline-block;
+	margin-top:auto;
+	padding: 40px 40px 40px 0px;
+}
+
+.category-image {
+	position:relative;
+	width: 120px;
+	height: 120px;
+	border-radius: 20px;
+	z-index: 0;
+}
+
+.category-button {	
+	position:relative;
+	z-index: 1;
+	width: 150px;
+	height: 40px;
+	background-color: var(--color-primary-blue);
+	border-radius: 20px;
+	margin-top: -25px;
+	margin-left: 10px;
+	font-size: 1.2rem;
+	color: white;
+	overflow-y: hidden;
+	padding: 10px;
+	z-index:1;
+}
+
+/*** END categories ***/
+
+
+/*** BEGIN how-can-you-help ***/
+.how-can-you-help {
+
+}
+
+.how-can-you-help h2 {
+	margin-bottom: 40px;
+}
+
+.how-can-you-help h3 {
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+.how-can-you-help p {
+	font-size: var(--font-size-p);
+	line-height: 1rem;
+	margin-bottom: 20px;
+}
+
+.how-can-you-help-row {
+	display: flex;
+	flex-direction: row;	
+}
+
+.how-can-you-help-column {
+	padding: 0px 100px 0px 0px;
+}
+
+/*** END how-can-you-help ***/
 
 
 /*** BEGIN footer ***/

@@ -110,7 +110,7 @@
   <!-- END navbar desktop -->
 
   <!-- BEGIN Banner -->
-  <section id="banner">
+  <section id="banner" >
     <img alt="Banner Pan European Hackathon" src="./assets/img/banner/Pan-EUHackathon.jpg">
   </section>
   <!-- END Banner -->
@@ -266,6 +266,85 @@
   </section> 
   <!-- END intro -->
 
+
+
+  <!-- BEGIN categories -->
+  <br><br>
+  <section id="categories" class="categories">
+    <div class="container"> 
+      <h3>Challenge Categories</h3>
+      <div class="category">
+        <a href="#">
+          <div class="category-image">
+            <img src="./assets/img/challenges/challenge health and medicine.png" alt="Picture of medical equipment">
+          </div>
+          <div class="category-button noselect">Health & Medicine</div>
+        </a>
+      </div>
+      <div class="category">
+        <a href="#">
+        <div class="category-image">
+          <img src="./assets/img/challenges/challenge business continuity.png" alt="Picture of someone working on a laptop and making some notes next to a sheet with diagrams">
+        </div>
+        <div class="category-button noselect">Business Continuity</div>
+      </a>
+      </div>
+      <div class="category">
+        <a href="#">
+        <div class="category-image">
+          <img src="./assets/img/challenges/challenge social cohesion.png" alt="Picture showing the arms of two people holding something">
+        </div>
+        <div class="category-button noselect">Social Cohesion</div>
+      </a>
+      </div>
+      <div class="category">
+        <a href="#">
+        <div class="category-image">
+          <img src="./assets/img/challenges/challenge protection of risk groups.png" alt="Picture of an elderly women with shades and a red hat">
+        </div>
+        <div class="category-button noselect">Protection of Risk Groups</div>
+      </a>
+      </div>
+      <div class="category">
+        <a href="#">
+        <div class="category-image">
+          <img src="./assets/img/challenges/challenge education.png" alt="Picture of a girl focussing on something">
+        </div>
+        <div class="category-button noselect">Education</div>
+      </a>
+      </div>
+      <div>
+        <a href="#"><h4>Open all challenges</h4></a>
+      </div>
+    </div>
+  </section>
+  <!-- END categories -->
+
+
+  <!-- BEGIN how can you help -->
+  <section id="how-can-you-help" class="how-can-you-help container mt-5">
+    <h2>How can you help?</h3>
+    <div class="how-can-you-help-row">
+      <div class="how-can-you-help-column">
+        <h3>...as a problem solver</h4>
+        <p>Developers, designers, creatives and problem solvers with expertise in healthcare, business, sociology, education etc. and ideally experience in hackathons</p>
+        <button class="secondary-button">Register as an individual</button>
+        <button class="secondary-button mt-2">Register as a team</button>
+      </div>
+      <div class="how-can-you-help-column">
+        <h3>...as a mentor</h4>
+        <p>We are looking for experts in the areas of health, digitalization, business, education who support the teams with their expertise.</p>
+        <button class="secondary-button">Become mentor</button>
+      </div>
+      <div class="how-can-you-help-column">
+        <h3>...as a sponsor</h4>
+        <p>We are welcoming support for solving some of the challenges we face as a community today. Let us know if your company is interested in receiving more information.</p>
+        <button class="secondary-button">Become a sponsor</button>
+      </div>
+    </div>
+  </section> 
+  <!-- END how can you help
+
   
   <!-- BEGIN footer -->
   <footer class="mt-5 pt-1">
@@ -321,11 +400,13 @@
     // mobile menu
     function openNav() {
       document.getElementById('mobileNav').style.display = 'flex';
+      document.getElementById('navbar-desktop').style.display = 'none';
       document.body.style.overflowY = 'hidden';
     }
 
     function closeNav() {
       document.getElementById('mobileNav').style.display = 'none';
+      document.getElementById('navbar-desktop').style.display = 'block';
       document.body.style.overflowY = 'scroll';
     }
   </script> 
