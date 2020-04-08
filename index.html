@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,16 +9,16 @@
   <!-- Meta tags for social media -->
   <meta property="og:title" content="Pan-European Hackathon">
   <meta property="og:description" content="Now is your chance to help tackle coronavirus! #EUvsVirus">
-  <meta property="og:image" content="https://daniel-szymkowiak.com/euvsvirus-website/assets/img/banner/Pan-EUHackathon-Thumbnail.jpg">
-  <meta property="og:url" content="https://daniel-szymkowiak.com/euvsvirus-website">
+  <meta property="og:image" content="https://euvsvirus.org/assets/img/banner/Pan-EUHackathon-Thumbnail.jpg">
+  <meta property="og:url" content="https://euvsvirus.org">
   <meta property="og:type" content="website">
 
-  
- 
+
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pan-European Hackathon">
   <meta name="twitter:description" content="Now is your chance to help tackle coronavirus! #EUvsVirus">
-  <meta name="twitter:image" content="https://daniel-szymkowiak.com/euvsvirus-website/assets/img/banner/Pan-EUHackathon-Thumbnail.jpg">
+  <meta name="twitter:image" content="https://euvsvirus.org/assets/img/banner/Pan-EUHackathon-Thumbnail.jpg">
 
 
   <title>Pan-European Hackathon</title>
@@ -25,26 +26,93 @@
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 </head>
+
 <body>
 
-  <!-- BEGIN navbar -->
-  <section id="navbar">
-    <div class="navbar container">
-      <img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg">
+
+
+  <!-- BEGIN mobile menu -->
+  <div id="mobileNav" class="overlay">
+    <section id="navbar-mobile">
+      <div class="navbar container">
+        <a href="#" onclick="closeNav()"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
+        <div>
+          <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
+        </div>
+        <div class="d-none">
+          <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
+          </a>
+          <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="overlay-content container">
       <div>
+        <a href="#" class="mobile-link-item current-menu" onclick="closeNav()">Hackathon</a>
+        <a href="#challenges" class="mobile-link-item" onclick="closeNav()">Challenges</a>
+        <a href="#agenda" class="mobile-link-item" onclick="closeNav()">Agenda</a>
+        <a  class="mobile-link-item disable-menu tooltip" style="width:110px;">Resources<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
+        <a  class="mobile-link-item disable-menu tooltip" style="width:110px;">Press<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
+        <a  class="mobile-link-item disable-menu tooltip" style="width:110px;">Team<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
+        <a href="/faq/" class="mobile-link-item" onclick="closeNav()">FAQ</a>
+      </div>
+      <div class="d-flex mb-4">
         <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
-          <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
+          <img class="navbar-logo-mobile" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
         </a>
         <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
-          <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
+          <img class="navbar-logo-mobile" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
         </a>
         <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
-          <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+          <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
         </a>
       </div>
     </div>
+  </div>
+  <!-- END mobile menu -->
+
+
+  <!-- BEGIN navbar desktop -->
+  <section id="navbar-desktop">
+    <div class="navbar container">
+      <a href="#"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
+      <div id="menu-mobile-burger">
+        <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
+      </div>
+      <div id="menu-desktop-content">
+        <div class="d-flex">
+          <a href="#" class="desktop-link-item current-menu">Hackathon</a>
+          <a href="#challenges" class="desktop-link-item">Challenges</a>
+          <a href="#agenda" class="desktop-link-item">Agenda</a>
+          <a class="desktop-link-item disable-menu tooltip">Resources<span class="tooltiptext tooltip-bottom">Coming
+              soon</span></a>
+          <a class="desktop-link-item disable-menu tooltip">Press<span class="tooltiptext tooltip-bottom">Coming
+              soon</span></a>
+          <a class="desktop-link-item disable-menu tooltip">Team<span class="tooltiptext tooltip-bottom">Coming
+              soon</span></a>
+          <a href="/faq/" class="desktop-link-item">FAQ</a>
+        </div>
+        <div class="d-flex align-items-center">
+          <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
+          </a>
+          <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
-  <!-- END navbar -->
+  <!-- END navbar desktop -->
 
   <!-- BEGIN Banner -->
   <section id="banner">
@@ -79,10 +147,11 @@
           <span class="counter-group">
             <span id="counter-seconds">00</span> Seconds
           </span>
-          until registration ends.
+          until registration opens.
         </p>
         <p class="bold mt-4">
-          Challenges to be hacked, and the opening of registration to hack the challenges, will be announced soon. Watch this space!
+          Challenges to be hacked, and the opening of registration to hack the challenges, will be announced soon. Watch
+          this space!
         </p>
         <div class="primary-button mt-3">
           More information coming soon
@@ -107,7 +176,8 @@
       </div>
       <div class="header-right">
         <div class="header-image-wrapper">
-          <img alt="Picture of a village with a european flag hanging from a balcony" src="./assets/img/header picture.svg">
+          <img alt="Picture of a village with a european flag hanging from a balcony"
+            src="./assets/img/header picture.svg">
         </div>
       </div>
     </div>
@@ -116,144 +186,394 @@
 
 
   <!-- BEGIN intro -->
-  <section id="intro" class="container mt-8">
+  <section id="intro" class="container">
     <div class="intro-patron">
       <div class="text-patron-wrapper">
         <p>
-          EUvsVirus is a pan-European Hackathon organized by the European Commission under the patronage of Mariya Gabriel.
+          EUvsVirus is a pan-European Hackathon organized by the European Commission under the patronage of Mariya
+          Gabriel.
         </p>
-        <div>
-          <a class="intro-infos-link" rel="noreferrer" href="https://ec.europa.eu/commission/commissioners/2019-2024/gabriel_en" target="_blank" title="Commissioner Mariya Gabriel on the webpage of the European Commission">
+        <div class="mt-3">
+          <a class="intro-infos-link" rel="noreferrer"
+            href="https://ec.europa.eu/commission/commissioners/2019-2024/gabriel_en" target="_blank"
+            title="Commissioner Mariya Gabriel on the webpage of the European Commission">
             Show Infos
           </a>
         </div>
       </div>
       <div class="img-patron-wrapper">
-        <img class="img-patron" alt="Patron Mariya Gabriel" src="assets/img/MariyaGabriel.png">
+        <div>
+          <img class="img-patron" alt="Patron Mariya Gabriel" src="assets/img/MariyaGabriel.png">
+        </div>
+        <div>
+          <img class="logo-EC" alt="Logo of the European Commission" src="./assets/img/European Commission Logo.png">
+        </div>
       </div>
     </div>
-    <img class="logo-EC mt-6" alt="Logo of the European Commission" src="./assets/img/European Commission Logo.png">
-    <div>
+
+    <!-- EU Parliament involvment -->
+    <div class="parliament-wrapper mt-5">
+      <strong class="bold d-block mb-3">EUvsVirus is supported by the European Parliament</strong>
+      <img class="logo-parliament" alt="Logo of the European parliament"
+        src="./assets/img/intro/european_parliament.png">
     </div>
 
     <!-- Countries involved -->
     <div class="countries-wrapper mt-5">
       <strong class="bold">Countries involved</strong>
-  
+
       <div class="country-flags mt-4">
-        <img alt="Country flags of all participating countries" src="./assets/img/flags/countryflags.png">
+        <img class="country-desktop" alt="Country flags of all participating countries in a 2x12 grid"
+          src="./assets/img/flags/countryflags.png">
+        <img class="country-mobile" alt="Country flags of all participating countries in a 4x6 grid"
+          src="./assets/img/flags/countryflags_mob.png">
       </div>
     </div>
+
     
-    <section id="initiators" class="mt-5">
-      <strong class="bold">Initiated by</strong>
-      <div class="initiators-logo-row">
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/afs.png" alt="Logo of the company 'Allied for Startup'">
+    <!-- Description -->
+    <section id="description" class="intro-description">
+      <!-- Picture -->
+      <div class="description-container">
+        <div class="description-picture">
+          <img src="./assets/img/about-people.png" style="margin-left: -8vw; max-width: 108%;">
         </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/atoelye.png" alt="Logo of the company 'Atölye'">
-        </div>
-        <div class="initiators-logo ml-2">
-          <img src="./assets/img/initiators/austrianstartups.png" alt="Logo of the company 'Austrian Startups'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/civitta.png" alt="Logo of the company 'Civitta'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/docler.png" alt="Logo of the company 'Docler'">
-        </div>
-        <div class="initiators-logo ml-2">
-          <img src="./assets/img/initiators/dook.png" alt="Logo of the company 'DO OK'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/hackathon.png" alt="Logo of the company 'The Hackathon Company'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/hackforitaly.png" alt="Logo of the company 'Hack For Italy'">
-        </div>
-      </div>
-      <div class="initiators-logo-row">
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/hackjunction.png" alt="Logo of the company 'Hack For Hackjunction'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/norway.png" alt="Logo of the company 'Hack the Crisis Norway'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/portugal.png" alt="Logo of the company 'Startup Portugal'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/sapianinnovation.png" alt="Logo of the company 'Sapian Innovation'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/startin.png" alt="Logo of the company 'startin.lv'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/startupdivision.png" alt="Logo of the company 'Startup Division'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/sweden.png" alt="Logo of the company 'Hack for Sweden'">
-        </div>
-        <div class="initiators-logo">
-          <img src="./assets/img/initiators/versusvirus.png" alt="Logo of the company 'Versus Virus'">
+        <div class="description-content">
+          <div>
+            <h2 class="h2-description">
+              <img class="h2-description-icon" alt="blue hashtag as image" src="/assets/img/intro/hashtag.png">
+              <span style="margin-left: 6px;" class="text">EUnitedvsVirus Hackathon</span>
+            </h2>
+            <div class="description-p">
+              <p class="mt-3">
+                Many online hackathons have been organised across Europe since the beginning of March.
+                There have been hackathons in Estonia, Finland, Poland, Italy, Belgium and many more
+                hackathons are also planned in the coming weeks.
+              </p>
+              <p class="mt-2">
+                <strong>eunitedvsvirushackathon.org</strong> is an online European-wide hackathon organized by the most
+                plugged in and nationally connected digital ecosystem actors from all over Europe.
+                It builds upon already conducted national hackathons and the solutions worked on.
+
+              </p>
+              <p class="mt-2">
+                It is a call to action to each and everyone to participate in the fight against COVID-19:
+                demonstrate unity for the common good across borders and generations.
+                Let’s digitally open EU-borders in the times of pandemic crisis!
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 class="h2-description mt-4">
+              <img class="h2-description-icon" alt="golden star as image" src="/assets/img/intro/star.png">
+              <span class="text">&nbsp;Benefits</span>
+            </h2>
+            <div class="description-p">
+              <p class="mt-3">
+                <strong>Social Impact</strong>
+                <br>The real reward is driving meaningful social impact for the COVID-19 response.
+              </p>
+              <p class="mt-2">
+                <strong>Recognition</strong>
+                <br>Judge-selected projects will be shared widely across tech ecosystem and partner networks.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  </section> 
+  </section>
   <!-- END intro -->
 
-  
-  <!-- BEGIN footer -->
-  <footer class="mt-5 pt-1">
+
+
+  <!-- BEGIN categories -->
+  <section class="categories mt-8">   
     <div class="container">
-      <ul>
-        <li>
-          <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en" hreflang="en">
-            Legal Notice
+      <div id="challenges" class="anchor"></div>
+      <h2>Challenge Categories</h2>
+      <div class="category">
+        <a href="#">
+          <div class="category-image">
+            <img src="./assets/img/challenges/challenge health and medicine.png" alt="Picture of medical equipment">
+          </div>
+          <div class="category-button noselect">Health & Medicine</div>
+        </a>
+      </div>
+      <div class="category">
+        <a href="#">
+          <div class="category-image">
+            <img src="./assets/img/challenges/challenge business continuity.png"
+              alt="Picture of someone working on a laptop and making some notes next to a sheet with diagrams">
+          </div>
+          <div class="category-button noselect">Business Continuity</div>
+        </a>
+      </div>
+      <div class="category">
+        <a href="#">
+          <div class="category-image">
+            <img src="./assets/img/challenges/challenge social cohesion.png"
+              alt="Picture showing the arms of two people holding something">
+          </div>
+          <div class="category-button noselect">Social Cohesion</div>
+        </a>
+      </div>
+      <div class="category">
+        <a href="#">
+          <div class="category-image">
+            <img src="./assets/img/challenges/challenge protection of risk groups.png"
+              alt="Picture of an elderly women with shades and a red hat">
+          </div>
+          <div class="category-button noselect">Protection of Risk Groups</div>
+        </a>
+      </div>
+      <div class="category">
+        <a href="#">
+          <div class="category-image">
+            <img src="./assets/img/challenges/challenge education.png" alt="Picture of a girl focussing on something">
+          </div>
+          <div class="category-button noselect">Education</div>
+        </a>
+      </div>
+      <div class="category">
+        <p style="color: #fff">All challenges will be announced soon.</p>
+        <!-- <div class="category-open-all">
+          <a href="#">
+            <h4>Open all challenges</h4>
           </a>
-        </li>
-        <li>
-          <a href="https://europa.eu/european-union/abouteuropa/privacy-policy_en" hreflang="en">
-            Privacy Policy
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- END categories -->
+
+
+  <!-- BEGIN how can you help -->
+  <section id="how-can-you-help" class="how-can-you-help container mt-5">
+    <h2>How can you help?</h2>
+    <div class="how-can-you-help-row">
+      <div class="how-can-you-help-column">
+        <h3>As a problem solver</h3>
+        <p>We are welcoming developers, designers, creatives and problem solvers with expertise in healthcare, business,
+          sociology, education etc. and ideally experience in hackathons.</p>
+        <button class="secondary-button tooltip disable-button">Register as an individual<a href="#"
+            class="tooltiptext">Coming
+            soon</a></button>
+        <button class="secondary-button mt-2 tooltip disable-button">Register as a team<a href="#"
+            class="tooltiptext tooltip-bottom">Coming soon</a></button>
+      </div>
+      <div class="how-can-you-help-column">
+        <h3>As a mentor</h3>
+        <p>We are looking for experts in the areas of health, digitalization, business, education who support the teams
+          with their expertise.</p>
+        <button class="secondary-button tooltip disable-button">Become a mentor<a href="#" class="tooltiptext">Coming
+            soon</a></button>
+      </div>
+      <div class="how-can-you-help-column">
+        <h3>As a partner</h3>
+        <p>We are welcoming support for solving some of the challenges we face as a community today. Let us know if your
+          company is interested in receiving more information.</p>
+        <button class="secondary-button tooltip disable-button">Become a partner<a href="#" class="tooltiptext">Coming
+            soon</a></button>
+      </div>
+    </div>
+  </section>
+  <!-- END how can you help -->
+
+
+  <!-- BEGIN Agenda -->
+  <section class="agenda container">
+    <div id="agenda" class="anchor"></div>
+    <h2>Agenda</h2>
+    <br><br>
+    <div class="agenda-image desktop">
+      <img src="./assets/img/agenda/agenda_desktop.png" alt="Image of the EUvsVirus hackathon agenda">
+    </div>
+    <div class="agenda-image mobile">
+      <img src="./assets/img/agenda/agenda_mobile.png" alt="Image of the EUvsVirus hackathon agenda">
+    </div>
+    <div>
+      <p>
+        Further details will be announced soon.
+      </p>
+    </div>
+  </section>
+  <!-- END Agenda -->
+
+
+  <!-- Initiators -->
+  <section id="initiators" class="mt-8 container">
+    <strong>Initiated by</strong>
+    <br><br>
+    <div class="initiators-logo-row">
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/afs.png" alt="Logo of the company 'Allied for Startup'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/atoelye.png" alt="Logo of the company 'Atölye'">
+      </div>
+      <div class="initiators-logo ml-2">
+        <img src="./assets/img/initiators/austrianstartups.png" alt="Logo of the company 'Austrian Startups'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/avch.png" alt="Logo of the 'Antivirus Crowd Hack Greece'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/bulgarianbusinessforums.png" alt="Logo of the 'Bulgarian Business Forums'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/bundesverband_deutschestartups.png"
+          alt="Logo of the 'Bundesverband Deutsche Startups'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/casers.png" alt="Logo of the company 'Casers'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/chelopech.png" alt="Logo of the company 'Chelopech'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/civitta.png" alt="Logo of the company 'Civitta'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/coronathon.png" alt="Logo of the 'Coronathon Türkiye'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/docler.png" alt="Logo of the company 'Docler'">
+      </div>
+      <div class="initiators-logo ml-2">
+        <img src="./assets/img/initiators/dook.png" alt="Logo of the company 'DO OK'">
+      </div>
+      <div class="initiators-logo ml-2">
+        <img src="./assets/img/initiators/esn.png" alt="Logo of the 'European Startup Network'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/hackathon.png" alt="Logo of the company 'The Hackathon Company'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/hackforitaly.png" alt="Logo of 'Hack For Italy'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/hackjunction.png" alt="Logo of 'Hackjunction'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/maltaenterprise.png" alt="Logo of the company 'Malta Enterprise'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/norway.png" alt="Logo of 'Hack the Crisis Norway'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/portugal.png" alt="Logo of 'Startup Portugal'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/sapianinnovation.png" alt="Logo of 'Sapian Innovation'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/startin.png" alt="Logo of the company 'startin.lv'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/startupdivision.png" alt="Logo of the company 'Startup Division'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/stopcorona.png" alt="Logo of 'Stop Corona'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/sweden.png" alt="Logo of 'Hack for Sweden'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/versusvirus.png" alt="Logo of 'Versus Virus'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/sweden.png" alt="Logo of the company 'Startup Wise Guys'">
+      </div>
+      <div class="initiators-logo">
+        <img src="./assets/img/initiators/wallsio.png" alt="Logo of the company 'wall.io'">
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- BEGIN footer -->
+  <footer class="mt-6 pt-1">
+    <div class="container d-flex space-between">
+      <div class="footer-left d-flex">
+        <img class="footer-hashtag" alt="EU versus virus hashtag" src="./assets/img/footer/EUvsVirus-footer.svg">
+        <ul>
+          <li>
+            <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en" hreflang="en">
+              Legal Notice
+            </a>
+          </li>
+          <li>
+            <a href="https://europa.eu/european-union/abouteuropa/privacy-policy_en" hreflang="en">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="mailto:RTD-PAN-EUROPEAN-COVID-HACKATHON@ec.europa.eu" hreflang="en">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center d-none-mobile">
+        <div class="d-flex align-items-center">
+          <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
           </a>
-        </li>
-        <li>
-          <a href="mailto:RTD-PAN-EUROPEAN-COVID-HACKATHON@ec.europa.eu" hreflang="en">
-            Contact
+          <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
           </a>
-        </li>
-      </ul>  
+          <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+          </a>
+      </div>
     </div>
   </footer>
   <!-- END footer -->
 
-  <script> 
+  <script>
     // tbd: add other counters
-    var deadline = new Date("Apr 20, 2020 23:59:59").getTime();
+    // var deadline = new Date("Apr 20, 2020 23:59:59").getTime();
+    var deadline = new Date("Apr 14, 2020 00:00:01").getTime();
 
-    var x = setInterval(function() { 
-      var now = new Date().getTime(); 
-      var t = deadline - now; 
-      var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
-      var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
-      var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var t = deadline - now;
+      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((t % (1000 * 60)) / 1000);
-      
-      days = days.toString().length == 1 ? '0'+days.toString() : days.toString()
-      hours = hours.toString().length == 1 ? '0'+hours : hours.toString()
-      minutes = minutes.toString().length == 1 ? '0'+minutes.toString() : minutes.toString()
-      seconds = seconds.toString().length == 1 ? '0'+seconds.toString() : seconds.toString()
+
+      days = days.toString().length == 1 ? '0' + days.toString() : days.toString()
+      hours = hours.toString().length == 1 ? '0' + hours : hours.toString()
+      minutes = minutes.toString().length == 1 ? '0' + minutes.toString() : minutes.toString()
+      seconds = seconds.toString().length == 1 ? '0' + seconds.toString() : seconds.toString()
 
       document.getElementById('counter-days').innerHTML = days;
       document.getElementById('counter-hours').innerHTML = hours;
       document.getElementById('counter-minutes').innerHTML = minutes;
       document.getElementById('counter-seconds').innerHTML = seconds;
-          if (t < 0) { 
-              clearInterval(x); 
-              document.getElementById('counter-header').innerHTML = 'Application deadline expired'; 
-          } 
-    }, 1000); 
-  </script> 
+      if (t < 0) {
+        clearInterval(x);
+        document.getElementById('counter-header').innerHTML = 'Application deadline expired';
+      }
+    }, 1000);
+
+    // mobile menu
+    function openNav() {
+      document.getElementById('mobileNav').style.display = 'flex';
+      document.getElementById('navbar-desktop').style.display = 'none';
+      document.body.style.overflowY = 'hidden';
+    }
+
+    function closeNav() {
+      document.getElementById('mobileNav').style.display = 'none';
+      document.getElementById('navbar-desktop').style.display = 'block';
+      document.body.style.overflowY = 'scroll';
+    }
+  </script>
 </body>
+
 </html>
