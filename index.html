@@ -35,7 +35,7 @@
   <div id="mobileNav" class="overlay">
     <section id="navbar-mobile">
       <div class="navbar container">
-        <a href="#" onclick="closeNav()"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
+        <a href="./" onclick="closeNav()"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
         <div>
           <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
         </div>
@@ -54,16 +54,16 @@
     </section>
     <div class="overlay-content container">
       <div>
-        <a href="#" class="mobile-link-item current-menu" onclick="closeNav()">Hackathon</a>
-        <a href="#challenges" class="mobile-link-item" onclick="closeNav()">Challenges</a>
-        <a href="#agenda" class="mobile-link-item" onclick="closeNav()">Agenda</a>
-        <a class="mobile-link-item disable-menu tooltip" style="width:110px;">Resources<span
+        <a href="./" class="mobile-link-item menu-hackathon" onclick="closeNav()">Hackathon</a>
+        <a href="./challenges" class="mobile-link-item menu-item menu-challenges" onclick="closeNav()">Challenges</a>
+        <a href="./agenda" class="mobile-link-item menu-item menu-agenda" onclick="closeNav()">Agenda</a>
+        <a class="mobile-link-item menu-item menu-resources disable-menu tooltip" style="width:110px;">Resources<span
             class="tooltiptext tooltip-bottom">Coming soon</span></a>
-        <a class="mobile-link-item disable-menu tooltip" style="width:110px;">Press<span
+        <a class="mobile-link-item menu-item menu-press disable-menu tooltip" style="width:110px;">Press<span
             class="tooltiptext tooltip-bottom">Coming soon</span></a>
-        <a class="mobile-link-item disable-menu tooltip" style="width:110px;">Team<span
+        <a class="mobile-link-item menu-item menu-team disable-menu tooltip" style="width:110px;">Team<span
             class="tooltiptext tooltip-bottom">Coming soon</span></a>
-        <a href="./faq/" class="mobile-link-item" onclick="closeNav()">FAQ</a>
+        <a href="./faq" class="mobile-link-item menu-item menu-faq" onclick="closeNav()">FAQ</a>
       </div>
       <div class="d-flex mb-4">
         <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -84,27 +84,27 @@
   <!-- BEGIN navbar desktop -->
   <section id="navbar-desktop">
     <div class="navbar container">
-      <a href="#"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
+      <a href="./"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
       <div id="menu-mobile-burger">
         <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
       </div>
       <div id="menu-desktop-content">
         <div class="d-flex">
-          <a id="menu-hackathon" href="#" class="desktop-link-item current-menu"
+          <a href="./" class="desktop-link-item menu-item menu-hackathon current-menu"
             onclick="selectMenuItem(this)">Hackathon</a>
-          <a id="menu-challenges" href="#challenges" class="desktop-link-item"
+          <a href="./challenges" class="desktop-link-item menu-challenges menu-item"
             onclick="selectMenuItem(this)">Challenges</a>
-          <a id="menu-agenda" href="#agenda" class="desktop-link-item" onclick="selectMenuItem(this)">Agenda</a>
-          <a id="menu-resources" class="desktop-link-item disable-menu tooltip">Resources<span
+          <a href="./agenda" class="desktop-link-item menu-agenda menu-item" onclick="selectMenuItem(this)">Agenda</a>
+          <a class="desktop-link-item menu-item menu-resources disable-menu tooltip">Resources<span
               class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
-          <a id="menu-press" class="desktop-link-item disable-menu tooltip">Press<span
+          <a class="desktop-link-item menu-item menu-press disable-menu tooltip">Press<span
               class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
-          <a id="menu-team" class="desktop-link-item disable-menu tooltip">Team<span
+          <a id="menu-team" class="desktop-link-item menu-item menu-team disable-menu tooltip">Team<span
               class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
-          <a id="menu-faq" href="./faq/" class="desktop-link-item" onclick="selectMenuItem(this)">FAQ</a>
+          <a href="./faq" class="desktop-link-item menu-item menu-faq" onclick="selectMenuItem(this)">FAQ</a>
         </div>
         <div class="d-flex align-items-center">
           <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -644,6 +644,7 @@
   </footer>
   <!-- END footer -->
 
+  <script src="./assets/js/global.js"></script>
   <script>
     // tbd: add other counters
     // var deadline = new Date("Apr 20, 2020 23:59:59").getTime();
@@ -676,42 +677,6 @@
         document.getElementById('counter-register').innerHTML = 'Application deadline expired';
       }
     }, 1000);
-
-    // mobile menu
-    function openNav() {
-      document.getElementById('mobileNav').style.display = 'flex';
-      document.getElementById('navbar-desktop').style.display = 'none';
-      document.body.style.overflowY = 'hidden';
-    }
-
-    function closeNav() {
-      document.getElementById('mobileNav').style.display = 'none';
-      document.getElementById('navbar-desktop').style.display = 'block';
-      document.body.style.overflowY = 'scroll';
-    }
-
-    url = window.location.href
-    console.log(url)
-    if (url.includes('challenges')) { resetMenuBar(); document.getElementById('menu-challenges').classList.add('current-menu'); }
-    if (url.includes('agenda')) { resetMenuBar(); document.getElementById('menu-agenda').classList.add('current-menu'); }
-    if (url.includes('resources')) { resetMenuBar(); document.getElementById('menu-resources').classList.add('current-menu'); }
-    if (url.includes('press')) { resetMenuBar(); document.getElementById('menu-press').classList.add('current-menu'); }
-    if (url.includes('team')) { resetMenuBar(); document.getElementById('menu-resources').classList.add('current-menu'); }
-
-    function selectMenuItem(selectedItem) {
-      resetMenuBar()
-      selectedItem.classList.add('current-menu')
-    }
-
-    function resetMenuBar() {
-      document.getElementById('menu-hackathon').classList.remove('current-menu')
-      document.getElementById('menu-challenges').classList.remove('current-menu')
-      document.getElementById('menu-agenda').classList.remove('current-menu')
-      document.getElementById('menu-resources').classList.remove('current-menu')
-      document.getElementById('menu-press').classList.remove('current-menu')
-      document.getElementById('menu-team').classList.remove('current-menu')
-      document.getElementById('menu-faq').classList.remove('current-menu')
-    }
   </script>
 </body>
 

@@ -1,23 +1,59 @@
 :root {
-	--color-primary-blue: #003399;
-	--color-secondary-yellow: #FFCC00;
-	--color-light-grey: #F8F9F9;
-	--font-color-grey: #222121;
-    --font-color-yellow: #fc0;
-    
     --layout-agenda-cell-height: 20px;
+    --layout-agenda-cell-width: 2fr;
     --layout-agenda-cell-width: 2fr;
 }
 
-body {
-	margin:0;
-	padding:0;
-	text-rendering:optimizeLegibility;
-	-webkit-font-smoothing:antialiased;
-	font-family: "PT Sans", sans-serif;
+
+
+/*** BEGIN agenda ***/
+.agenda-wrapper {
+	background-color: var(--color-light-grey);
+    padding-bottom: 100px;
 }
 
-.agenda {
+.agenda-wrapper h1 {
+	padding-top: 5rem;
+	color: var(--color-grey-h3-normal) !important;
+}
+
+.agenda-wrapper h2 {
+	margin-top: 2rem;
+}
+
+.h2-gold {
+    background-color: var(--color-secondary-yellow);
+    display: inline-block;
+    padding: 4px 6px;
+}
+
+.agenda-wrapper h3 {
+	margin-top: 1rem;
+}
+.agenda-wrapper p {
+    margin-top: 8px !important;
+    padding: 0;
+}
+
+.agenda-wrapper hr {
+	margin-top: 10px;
+	background-color: var(--color-grey-h3-normal);
+}
+
+.agenda-wrapper p {
+	width: 80%;
+	margin-top: 1rem;
+	color: var(--color-grey-h3-normal);
+}
+
+@media (max-width: 992px){
+	.agenda-wrapper .p {
+		width: 100%;
+	}
+}
+
+.agenda.desktop {
+    margin-top: 0;
     display: grid;
     grid-template-columns: 
         [times] 6em
@@ -43,6 +79,96 @@ body {
         [time-2300] var(--layout-agenda-cell-height)
         [time-2400] var(--layout-agenda-cell-height)
         [time-0100] var(--layout-agenda-cell-height);
+}
+
+.agenda.mobile { 
+    display: none;
+    margin-top: 0 !important;
+}
+.agenda-day { display: none; }
+
+@media (max-width: 768px) {
+    .agenda.desktop { display: none; }
+    .agenda-day {
+        display: flex;
+        justify-content: center;
+    }
+    .agenda.mobile.d1 {
+        display: grid;
+        grid-template-columns: 
+            [times] 6em
+            [day-1] var(--layout-agenda-cell-width);
+        grid-template-rows:
+            [time-0900] var(--layout-agenda-cell-height)
+            [time-1000] var(--layout-agenda-cell-height)
+            [time-1100] var(--layout-agenda-cell-height)
+            [time-1200] var(--layout-agenda-cell-height)
+            [time-1300] var(--layout-agenda-cell-height)
+            [time-1400] var(--layout-agenda-cell-height)
+            [time-1500] var(--layout-agenda-cell-height)
+            [time-1600] var(--layout-agenda-cell-height)
+            [time-1700] var(--layout-agenda-cell-height)
+            [time-1800] var(--layout-agenda-cell-height)
+            [time-1900] var(--layout-agenda-cell-height)
+            [time-2000] var(--layout-agenda-cell-height)
+            [time-2100] var(--layout-agenda-cell-height)
+            [time-2200] var(--layout-agenda-cell-height)
+            [time-2300] var(--layout-agenda-cell-height)
+            [time-2400] var(--layout-agenda-cell-height)
+            [time-0100] var(--layout-agenda-cell-height);
+    }
+
+
+    .agenda.mobile.d2 {
+        display: grid;
+        grid-template-columns: 
+            [times] 6em
+            [day-2] var(--layout-agenda-cell-width);
+        grid-template-rows:
+            [time-0900] var(--layout-agenda-cell-height)
+            [time-1000] var(--layout-agenda-cell-height)
+            [time-1100] var(--layout-agenda-cell-height)
+            [time-1200] var(--layout-agenda-cell-height)
+            [time-1300] var(--layout-agenda-cell-height)
+            [time-1400] var(--layout-agenda-cell-height)
+            [time-1500] var(--layout-agenda-cell-height)
+            [time-1600] var(--layout-agenda-cell-height)
+            [time-1700] var(--layout-agenda-cell-height)
+            [time-1800] var(--layout-agenda-cell-height)
+            [time-1900] var(--layout-agenda-cell-height)
+            [time-2000] var(--layout-agenda-cell-height)
+            [time-2100] var(--layout-agenda-cell-height)
+            [time-2200] var(--layout-agenda-cell-height)
+            [time-2300] var(--layout-agenda-cell-height)
+            [time-2400] var(--layout-agenda-cell-height)
+            [time-0100] var(--layout-agenda-cell-height);
+    }
+
+
+    .agenda.mobile.d3 {
+        display: grid;
+        grid-template-columns: 
+            [times] 6em
+            [day-3] var(--layout-agenda-cell-width);
+        grid-template-rows:
+            [time-0900] var(--layout-agenda-cell-height)
+            [time-1000] var(--layout-agenda-cell-height)
+            [time-1100] var(--layout-agenda-cell-height)
+            [time-1200] var(--layout-agenda-cell-height)
+            [time-1300] var(--layout-agenda-cell-height)
+            [time-1400] var(--layout-agenda-cell-height)
+            [time-1500] var(--layout-agenda-cell-height)
+            [time-1600] var(--layout-agenda-cell-height)
+            [time-1700] var(--layout-agenda-cell-height)
+            [time-1800] var(--layout-agenda-cell-height)
+            [time-1900] var(--layout-agenda-cell-height)
+            [time-2000] var(--layout-agenda-cell-height)
+            [time-2100] var(--layout-agenda-cell-height)
+            [time-2200] var(--layout-agenda-cell-height)
+            [time-2300] var(--layout-agenda-cell-height)
+            [time-2400] var(--layout-agenda-cell-height)
+            [time-0100] var(--layout-agenda-cell-height);
+    }
 }
 
 .item {
@@ -75,6 +201,10 @@ body {
 }
 .date-d3 {
     grid-column: day-3;
+}
+.date-d3-mobile {
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 /* Layout - rows */
 .item-time {
@@ -154,3 +284,4 @@ body {
     grid-column: day-3;
     grid-row: time-1800 / time-2300;
 }
+/*** END agenda ***/
