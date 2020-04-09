@@ -791,50 +791,6 @@ button:focus {
 
 
 /*** BEGIN challenges ***/
-.challenges-container {
-	background-color: var(--color-light-grey);
-	padding-top: 100px;
-}
-
-.challenges h1 {
-	color: var(--color-grey-h3-normal) !important;
-}
-
-.challenges p {
-	margin-top: 1rem;
-}
-
-.challenges hr {
-	margin-top: 10px;
-	background-color: var(--color-grey-h3-normal);
-	margin-bottom: 60px;
-}
-
-.challenges .category {
-	margin-top: -60px;
-}
-
-.challenges .category-image {
-	height: 155px;
-	width: 300px;
-	margin-right: 60px;
-}
-
-.challenges .category-image img {
-	width: 300px;
-	height: 155px;
-	object-fit: cover;
-	border-radius: 23px;
-}
-
-.challenges .category-button {
-	color: var(--color-grey);
-	background-color: var(--color-light-grey);
-	height: 200px;
-	width: 300px;
-	margin-left: 15px;
-}
-
 /* challenges MENU */
 .challenges-menu .categories-menu {
 	display: flex;
