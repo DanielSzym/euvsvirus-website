@@ -122,6 +122,13 @@ p {
 	margin: 0;
 }
 
+.h1-seperator {
+    height: 2px;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--color-grey);
+}
+
 .disable-menu {
 	cursor: default !important;
 	color: rgb(180, 180, 180) !important;
@@ -1000,6 +1007,9 @@ footer ul li a {
 }
 .mb-5 {
 	margin-bottom: 3rem !important;
+}
+.mb-6 {
+	margin-bottom: 6rem !important;
 }
 
 .ml-1 {

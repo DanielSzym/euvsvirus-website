@@ -1,9 +1,9 @@
 :root {
+    --color-agenda-grey: #e6e9e9;
     --layout-agenda-cell-height: 20px;
     --layout-agenda-cell-width: 2fr;
     --layout-agenda-cell-width: 2fr;
 }
-
 
 
 /*** BEGIN agenda ***/
@@ -15,6 +15,11 @@
 .agenda-wrapper h1 {
 	padding-top: 5rem;
 	color: var(--color-grey-h3-normal) !important;
+}
+
+.agenda-timeline {
+    max-width: 840px;
+    margin-top: 2rem;
 }
 
 .agenda-wrapper h2 {
@@ -33,11 +38,6 @@
 .agenda-wrapper p {
     margin-top: 8px !important;
     padding: 0;
-}
-
-.agenda-wrapper hr {
-	margin-top: 10px;
-	background-color: var(--color-grey-h3-normal);
 }
 
 .agenda-wrapper p {
@@ -184,7 +184,7 @@
 }
 .item-grey {
     color: var(--font-color-grey);
-    background-color: var(--color-light-grey);
+    background-color: var(--color-agenda-grey);
 
 }
 /* Layout - columns */
@@ -210,7 +210,7 @@
 .item-time {
     grid-column: times;
     color: var(--font-color-grey);
-    background-color: var(--color-light-grey);
+    background-color: var(--color-agenda-grey);
     font-size: 85%;
     margin: 4px;
 }
@@ -242,7 +242,7 @@
 /* Items */
 .item-d1-1 {
     grid-column: day-1;
-    grid-row: time-1600 / time-2000;
+    grid-row: time-1700 / time-2000;
 }
 .item-d1-2 {
     grid-column: day-1;
@@ -258,15 +258,15 @@
 }
 .item-d2-3 {
     grid-column: day-2;
-    grid-row: time-1500 / time-1700;
+    grid-row: time-1500 / time-1800;
 }
 .item-d2-4 {
     grid-column: day-2;
-    grid-row: time-1700 / time-2100;
+    grid-row: time-1800 / time-2200;
 }
 .item-d2-5 {
     grid-column: day-2;
-    grid-row: time-2100 / time-2300;
+    grid-row: time-2200 / time-2300;
 }
 .item-d3-1 {
     grid-column: day-3;
