@@ -33,7 +33,8 @@
   <div id="mobileNav" class="overlay">
     <section id="navbar-mobile">
       <div class="navbar container">
-        <a href="./../" onclick="closeNav()"><img alt="EU versus virus hashtag" src="../assets/img/navbar/EUvsVirus.svg"></a>
+        <a href="./../" onclick="closeNav()"><img alt="EU versus virus hashtag"
+            src="../assets/img/navbar/EUvsVirus.svg"></a>
         <div>
           <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
         </div>
@@ -77,8 +78,8 @@
     </div>
   </div>
   <!-- END mobile menu -->
-  
-  
+
+
   <!-- BEGIN navbar desktop -->
   <section id="navbar-desktop">
     <div class="navbar container">
@@ -119,12 +120,13 @@
   <!-- END navbar desktop -->
 
 
+
   <section id="challenges-main" class="challenges d-none">
     <div class="container">
-      <h1>Challenges</h1>
+      <h1 class="mt-6">Challenges</h1>
       <hr>
 
-      <div class="d-flex" style="flex-wrap: wrap;">
+      <div class="d-fle d-none" style="flex-wrap: wrap;">
         <div class="category">
           <!-- <a href="#"> -->
           <div class="category-image">
@@ -133,9 +135,10 @@
           <div class="category-button">
             <h2>Health & Life</h2>
             <p>
-              The hackathon #EUnitedvsVirus  offers a common organizational and technical
-              framework in which the participants can get involved online and develop prototypes and solutions for technically.
-            </p> 
+              The hackathon #EUnitedvsVirus offers a common organizational and technical
+              framework in which the participants can get involved online and develop prototypes and solutions for
+              technically.
+            </p>
           </div>
           <!-- </a> -->
         </div>
@@ -148,8 +151,9 @@
           <div class="category-button">
             <h2>Business Continuity</h2>
             <p>
-              The hackathon #EUnitedvsVirus  offers a common organizational and technical
-              framework in which the participants can get involved online and develop prototypes and solutions for technically.
+              The hackathon #EUnitedvsVirus offers a common organizational and technical
+              framework in which the participants can get involved online and develop prototypes and solutions for
+              technically.
             </p>
           </div>
           <!-- </a> -->
@@ -163,8 +167,9 @@
           <div class="category-button">
             <h2>Social & Political Cohesion</h2>
             <p>
-              The hackathon #EUnitedvsVirus  offers a common organizational and technical
-              framework in which the participants can get involved online and develop prototypes and solutions for technically.
+              The hackathon #EUnitedvsVirus offers a common organizational and technical
+              framework in which the participants can get involved online and develop prototypes and solutions for
+              technically.
             </p>
           </div>
           <!-- </a> -->
@@ -176,10 +181,11 @@
               alt="Picture of an elderly women with shades and a red hat">
           </div>
           <div class="category-button">
-            <h2>Protection of Isolated & Risk Groups</h2>
+            <h2>Digital Finance</h2>
             <p>
-              The hackathon #EUnitedvsVirus  offers a common organizational and technical
-              framework in which the participants can get involved online and develop prototypes and solutions for technically.
+              The hackathon #EUnitedvsVirus offers a common organizational and technical
+              framework in which the participants can get involved online and develop prototypes and solutions for
+              technically.
             </p>
           </div>
           <!-- </a> -->
@@ -192,8 +198,9 @@
           <div class="category-button">
             <h2>Remote Working & Education</h2>
             <p>
-              The hackathon #EUnitedvsVirus  offers a common organizational and technical
-              framework in which the participants can get involved online and develop prototypes and solutions for technically.
+              The hackathon #EUnitedvsVirus offers a common organizational and technical
+              framework in which the participants can get involved online and develop prototypes and solutions for
+              technically.
             </p>
           </div>
           <!-- </a> -->
@@ -211,93 +218,262 @@
           </div>
           <!-- </a> -->
         </div>
-    </div>
+      </div>
   </section>
 
 
-  <section id="challenges-menu" class="challenges-menu">
-    <div class="categories-menu container">
-      <div class="category">
-        <!-- <a href="#"> -->
-        <div id="challenges-menu-health" class="category-image">
-          <img src="../assets/img/challenges/health_and_medicine.png" alt="Picture of medical equipment">
+  <section id="challenges-menu" class="challenges-menu mt-5">
+    <div class="categories-menu container" style="overflow-x: auto;">
+      <div id="challenges-menu-health" class="category" onclick="changeChallenge(this)"
+        data-target-id="callenges-health">
+        <div class="category-image">
+          <img class="img-selected" src="../assets/img/challenges/health_and_medicine.png"
+            alt="Picture of medical equipment">
         </div>
         <div class="category-button noselect">Health & Life</div>
-        <!-- </a> -->
       </div>
-      <div id="challenges-menu-business" class="category">
-        <!-- <a href="#"> -->
+
+      <div id="challenges-menu-business" class="category not-selected" onclick="changeChallenge(this)"
+        data-target-id="callenges-business">
         <div class="category-image">
-          <img src="../assets/img/challenges/business_continuity.png"
+          <img class="img-greyed" src="../assets/img/challenges/business_continuity.png"
             alt="Picture of someone working on a laptop and making some notes next to a sheet with diagrams">
         </div>
         <div class="category-button noselect">Business Continuity</div>
-        <!-- </a> -->
       </div>
-      <div id="challenges-menu-social" class="category">
-        <!-- <a href="#"> -->
+
+      <div id="challenges-menu-education" class="category not-selected" onclick="changeChallenge(this)"
+        data-target-id="callenges-education">
         <div class="category-image">
-          <img src="../assets/img/challenges/social_cohesion.png"
+          <img class="img-greyed" src="../assets/img/challenges/education.png"
+            alt="Picture of a girl focussing on something">
+        </div>
+        <div class="category-button noselect">Remote Working & Education</div>
+      </div>
+
+      <div id="challenges-menu-social" class="category not-selected" onclick="changeChallenge(this)"
+        data-target-id="callenges-social">
+        <div class="category-image">
+          <img class="img-greyed" src="../assets/img/challenges/social_cohesion.png"
             alt="Picture showing the arms of two people holding something">
         </div>
         <div class="category-button noselect">Social & Political Cohesion</div>
-        <!-- </a> -->
       </div>
-      <div id="challenges-menu-risk-groups" class="category">
-        <!-- <a href="#"> -->
+
+      <div id="challenges-menu-finance" class="category not-selected" onclick="changeChallenge(this)"
+        data-target-id="callenges-finance">
         <div class="category-image">
-          <img src="../assets/img/challenges/protection_risk_groups.png"
+          <img class="img-greyed" src="../assets/img/challenges/digital_finance.png"
             alt="Picture of an elderly women with shades and a red hat">
         </div>
-        <div class="category-button noselect">Protection of Isolated & Risk Groups</div>
-        <!-- </a> -->
+        <div class="category-button noselect">Digital Finance</div>
       </div>
-      <div id="challenges-menu-education" class="category">
-        <!-- <a href="#"> -->
+
+      <div id="challenges-menu-other" class="category not-selected" onclick="changeChallenge(this)"
+        data-target-id="callenges-other">
         <div class="category-image">
-          <img src="../assets/img/challenges/education.png" alt="Picture of a girl focussing on something">
-        </div>
-        <div class="category-button noselect">Remote Working & Education</div>
-        <!-- </a> -->
-      </div>
-      <div id="challenges-menu-other" class="category">
-        <!-- <a href="#"> -->
-        <div class="category-image">
-          <img src="../assets/img/challenges/other.png" alt="Picture of a girl focussing on something">
+          <img class="img-greyed" src="../assets/img/challenges/other.png"
+            alt="Picture of a girl focussing on something">
         </div>
         <div class="category-button noselect">Other</div>
-        <!-- </a> -->
       </div>
     </div>
-    <div class="container">
-      <hr>
-    </div>
-  </div>
   </section>
+  <div class="container">
+    <div class="justify-end challenges-arrow-right-container">
+      <img src="./../assets/img/challenges/back_arrow.svg"
+        alt="arrow pointing to the right indicating a horizontal scroll" class="rotate-90">
+    </div>
+    <hr>
+  </div>
 
 
   <section id="callenges-health" class="container challenge-content">
-    <h2>Health & Life</h2>
-    <p>The hackathon #EUnitedvsVirus  offers a common organizational and technical
-      framework in which the participants can get involved online and develop prototypes and solutions for technically.</p>
-    <h3>Topic 1</h3>
-    <h3>Topic 2</h3>
-    <h3>Topic 3</h3>
+    <div class="pb-3">
+      <h2 class="challenge-content-h2">Health & Life</h2>
+      <p>
+        The hackathon #EUnitedvsVirus offers a common organizational and technical
+        framework in which the participants can get involved online and develop prototypes and solutions for
+        technically.
+      </p>
+    </div>
+
+    <div class="challenge-topic-box">
+      <h3>Topic 1 for Health</h3>
+      <p>
+        I'm baby palo santo four loko lyft meditation. Helvetica poutine forage cray fixie raclette. Meggings
+        thundercats celiac vinyl cliche. Hot chicken poutine microdosing, church-key brooklyn lyft put a bird on it
+        pitchfork butcher disrupt selvage fam waistcoat tbh cornhole. Artisan blog trust fund, af fam hot chicken 90's
+        la croix biodiesel ennui vegan. Ennui distillery enamel pin subway tile synth tousle. Heirloom roof party jean
+        shorts, lyft vexillologist migas poutine trust fund normcore umami salvia wolf tumblr messenger bag. Freegan
+        kale chips vegan, austin cardigan vexillologist venmo pork belly raclette wayfarers. Jean shorts schlitz
+        flexitarian iceland godard iPhone.
+      </p>
+    </div>
+
+    <div class="challenge-topic-box">
+      <h3>Topic 2 for Health</h3>
+      <p>
+        I'm baby palo santo four loko lyft meditation. Helvetica poutine forage cray fixie raclette. Meggings
+        thundercats celiac vinyl cliche. Hot chicken poutine microdosing, church-key brooklyn lyft put a bird on it
+        pitchfork butcher disrupt selvage fam waistcoat tbh cornhole. Artisan blog trust fund, af fam hot chicken 90's
+        la croix biodiesel ennui vegan. Ennui distillery enamel pin subway tile synth tousle. Heirloom roof party jean
+        shorts, lyft vexillologist migas poutine trust fund normcore umami salvia wolf tumblr messenger bag. Freegan
+        kale chips vegan, austin cardigan vexillologist venmo pork belly raclette wayfarers. Jean shorts schlitz
+        flexitarian iceland godard iPhone.
+      </p>
+    </div>
+
+    <!-- <div class="challenge-topic-box">
+      <h3>Topic 3 for Health</h3>
+      <p>
+        I'm baby palo santo four loko lyft meditation. Helvetica poutine forage cray fixie raclette. Meggings
+        thundercats celiac vinyl cliche. Hot chicken poutine microdosing, church-key brooklyn lyft put a bird on it
+        pitchfork butcher disrupt selvage fam waistcoat tbh cornhole. Artisan blog trust fund, af fam hot chicken 90's
+        la croix biodiesel ennui vegan. Ennui distillery enamel pin subway tile synth tousle. Heirloom roof party jean
+        shorts, lyft vexillologist migas poutine trust fund normcore umami salvia wolf tumblr messenger bag. Freegan
+        kale chips vegan, austin cardigan vexillologist venmo pork belly raclette wayfarers. Jean shorts schlitz
+        flexitarian iceland godard iPhone.
+      </p>
+    </div> -->
+
   </section>
   <section id="callenges-business" class="container challenge-content d-none">
-    Content of Business Category...
+    <div class="pb-3">
+      <h2 class="challenge-content-h2">Business Continuity</h2>
+      <p>
+        The hackathon #EUnitedvsVirus offers a common organizational and technical
+        framework in which the participants can get involved online and develop prototypes and solutions for
+        technically.
+      </p>
+    </div>
+
+    <div class="challenge-topic-box">
+      <h3>Topic 1 for BC</h3>
+      <p>
+        I'm baby palo santo four loko lyft meditation. Helvetica poutine forage cray fixie raclette. Meggings
+        thundercats celiac vinyl cliche. Hot chicken poutine microdosing, church-key brooklyn lyft put a bird on it
+        pitchfork butcher disrupt selvage fam waistcoat tbh cornhole. Artisan blog trust fund, af fam hot chicken 90's
+        la croix biodiesel ennui vegan. Ennui distillery enamel pin subway tile synth tousle. Heirloom roof party jean
+        shorts, lyft vexillologist migas poutine trust fund normcore umami salvia wolf tumblr messenger bag. Freegan
+        kale chips vegan, austin cardigan vexillologist venmo pork belly raclette wayfarers. Jean shorts schlitz
+        flexitarian iceland godard iPhone.
+      </p>
+    </div>
+
+    <div class="challenge-topic-box">
+      <h3>Topic 2 for BC</h3>
+      <p>
+        <p>
+          I'm baby palo santo four loko lyft meditation. Helvetica poutine forage cray fixie raclette. Meggings
+          thundercats celiac vinyl cliche. Hot chicken poutine microdosing, church-key brooklyn lyft put a bird on it
+          pitchfork butcher disrupt selvage fam waistcoat tbh cornhole. Artisan blog trust fund, af fam hot chicken 90's
+          la croix biodiesel ennui vegan. Ennui distillery enamel pin subway tile synth tousle. Heirloom roof party jean
+          shorts, lyft vexillologist migas poutine trust fund normcore umami salvia wolf tumblr messenger bag. Freegan
+          kale chips vegan, austin cardigan vexillologist venmo pork belly raclette wayfarers. Jean shorts schlitz
+          flexitarian iceland godard iPhone.
+        </p>
+    </div>
   </section>
+  <section id="callenges-education" class="container challenge-content d-none">
+    <div class="pb-3">
+      <h2 class="challenge-content-h2">Remote Working & Education Continuity</h2>
+      <p>
+        The hackathon #EUnitedvsVirus offers a common organizational and technical
+        framework in which the participants can get involved online and develop prototypes and solutions for
+        technically.
+      </p>
+    </div>
+
+    <div class="challenge-topic-box">
+      <h3>Topic 1 for Remote Working & EC</h3>
+      <p>
+        I'm baby palo santo four loko lyft meditation. Helvetica poutine forage cray fixie raclette. Meggings
+        thundercats celiac vinyl cliche. Hot chicken poutine microdosing, church-key brooklyn lyft put a bird on it
+        pitchfork butcher disrupt selvage fam waistcoat tbh cornhole. Artisan blog trust fund, af fam hot chicken 90's
+        la croix biodiesel ennui vegan. Ennui distillery enamel pin subway tile synth tousle. Heirloom roof party jean
+        shorts, lyft vexillologist migas poutine trust fund normcore umami salvia wolf tumblr messenger bag. Freegan
+        kale chips vegan, austin cardigan vexillologist venmo pork belly raclette wayfarers. Jean shorts schlitz
+        flexitarian iceland godard iPhone.
+      </p>
+    </div>
+  </section>
+
   <section id="callenges-social" class="container challenge-content d-none">
-    Content of Business Social...
+    <div class="pb-3">
+      <h2 class="challenge-content-h2">Social & Political Cohesion</h2>
+      <p>
+        The hackathon #EUnitedvsVirus offers a common organizational and technical
+        framework in which the participants can get involved online and develop prototypes and solutions for
+        technically.
+      </p>
+    </div>
+    
+    <div class="challenge-topic-box">
+      <h3>Topic 1 for social & political cohesion</h3>
+      <p>
+        I'm baby palo santo four loko lyft meditation. Helvetica poutine forage cray fixie raclette. Meggings
+        thundercats celiac vinyl cliche. Hot chicken poutine microdosing, church-key brooklyn lyft put a bird on it
+        pitchfork butcher disrupt selvage fam waistcoat tbh cornhole. Artisan blog trust fund, af fam hot chicken 90's
+        la croix biodiesel ennui vegan. Ennui distillery enamel pin subway tile synth tousle. Heirloom roof party jean
+        shorts, lyft vexillologist migas poutine trust fund normcore umami salvia wolf tumblr messenger bag. Freegan
+        kale chips vegan, austin cardigan vexillologist venmo pork belly raclette wayfarers. Jean shorts schlitz
+        flexitarian iceland godard iPhone.
+      </p>
+    </div>
   </section>
-  <section id="callenges-risk-groups" class="container challenge-content d-none"></section>
-  <section id="callenges-education" class="container challenge-content d-none"></section>
-  <section id="callenges-other" class="container challenge-content d-none"></section>
+
+  <section id="callenges-finance" class="container challenge-content d-none">
+    <div class="pb-3">
+      <h2 class="challenge-content-h2">Digital Finance</h2>
+      <p>
+        The hackathon #EUnitedvsVirus offers a common organizational and technical
+        framework in which the participants can get involved online and develop prototypes and solutions for
+        technically.
+      </p>
+    </div>
+    
+    <div class="challenge-topic-box">
+      <h3>Topic 1 for digital finance</h3>
+      <p>
+        I'm baby palo santo four loko lyft meditation. Helvetica poutine forage cray fixie raclette. Meggings
+        thundercats celiac vinyl cliche. Hot chicken poutine microdosing, church-key brooklyn lyft put a bird on it
+        pitchfork butcher disrupt selvage fam waistcoat tbh cornhole. Artisan blog trust fund, af fam hot chicken 90's
+        la croix biodiesel ennui vegan. Ennui distillery enamel pin subway tile synth tousle. Heirloom roof party jean
+        shorts, lyft vexillologist migas poutine trust fund normcore umami salvia wolf tumblr messenger bag. Freegan
+        kale chips vegan, austin cardigan vexillologist venmo pork belly raclette wayfarers. Jean shorts schlitz
+        flexitarian iceland godard iPhone.
+      </p>
+    </div>
+  </section>
+
+  <section id="callenges-other" class="container challenge-content d-none">
+    <div class="pb-3">
+      <h2 class="challenge-content-h2">Other Topics</h2>
+      <p>
+        The hackathon #EUnitedvsVirus offers a common organizational and technical
+        framework in which the participants can get involved online and develop prototypes and solutions for
+        technically.
+      </p>
+    </div>
+    
+    <div class="challenge-topic-box">
+      <h3>Be creative!</h3>
+      <p>
+        I'm baby palo santo four loko lyft meditation. Helvetica poutine forage cray fixie raclette. Meggings
+        thundercats celiac vinyl cliche. Hot chicken poutine microdosing, church-key brooklyn lyft put a bird on it
+        pitchfork butcher disrupt selvage fam waistcoat tbh cornhole. Artisan blog trust fund, af fam hot chicken 90's
+        la croix biodiesel ennui vegan. Ennui distillery enamel pin subway tile synth tousle. Heirloom roof party jean
+        shorts, lyft vexillologist migas poutine trust fund normcore umami salvia wolf tumblr messenger bag. Freegan
+        kale chips vegan, austin cardigan vexillologist venmo pork belly raclette wayfarers. Jean shorts schlitz
+        flexitarian iceland godard iPhone.
+      </p>
+    </div>
+  </section>
 
   <section class="vertical-spacing"></section>
 
 
-  
 
 
 
@@ -309,9 +485,10 @@
 
 
 
-    
+
+
   <!-- BEGIN footer -->
-  <footer class="mt-6 pt-1">
+  <footer class="pt-1">
     <div class="container d-flex space-between">
       <div class="footer-left d-flex">
         <img class="footer-hashtag" alt="EU versus virus hashtag" src="../assets/img/footer/EUvsVirus-footer.svg">
