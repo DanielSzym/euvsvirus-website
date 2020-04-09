@@ -815,7 +815,7 @@ button:focus {
 		margin-right: 0;
 	}
 	.challenges-menu .category-image img {
-		width: 80px;
+		width: 80px; 
 		height: 80px;
 	}
 }
