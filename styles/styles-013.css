@@ -599,9 +599,20 @@ button:focus {
 .initiators-logo img {
 	width: 120px;
 }
+.eic-logo {
+	max-width: 60%;
+}
+@media (max-width: 992px) {
+	.eic-logo {
+		max-width: 80%;
+	}
+}
 @media (max-width: 768px) {
 	.initiators-logo img {
 		width: 80px;
+	}
+	.eic-logo {
+		max-width: 100%;
 	}
 }
 /* description */
@@ -969,6 +980,7 @@ button:focus {
 	height: 34vw;
 	min-height: 440px;
 	max-height: 800px;
+	border:0;
 }
 @media (max-width: 992px){
 	.press .p {
@@ -1054,6 +1066,9 @@ footer ul li a {
 	}
 	footer ul {
 		margin-left: 0rem;
+	}
+	footer ul li {
+		margin-right: 20px;
 	}
 }
 /*** END footer ***/
@@ -1169,8 +1184,8 @@ footer ul li a {
 .d-none {
 	display: none !important;
 }
-.d-inline {
-	display: inline !important;
+.d-inline-block {
+	display: inline-block !important;
 }
 .d-flex {
 	display: flex !important;
