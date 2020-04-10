@@ -24,18 +24,16 @@
   <title>Pan-European Hackathon</title>
 
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="./styles/styles-012.css">
+  <link rel="stylesheet" type="text/css" href="./styles/styles-013.css">
 </head>
 
 <body>
-
-
-
   <!-- BEGIN mobile menu -->
   <div id="mobileNav" class="overlay">
     <section id="navbar-mobile">
       <div class="navbar container">
-        <a href="#" onclick="closeNav()"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
+        <a href="./" onclick="closeNav()"><img alt="EU versus virus hashtag"
+            src="./assets/img/navbar/EUvsVirus.svg"></a>
         <div>
           <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
         </div>
@@ -54,16 +52,15 @@
     </section>
     <div class="overlay-content container">
       <div>
-        <a href="#" class="mobile-link-item current-menu" onclick="closeNav()">Hackathon</a>
-        <a href="#challenges" class="mobile-link-item" onclick="closeNav()">Challenges</a>
-        <a href="#agenda" class="mobile-link-item" onclick="closeNav()">Agenda</a>
-        <a class="mobile-link-item disable-menu tooltip" style="width:110px;">Resources<span
+        <a href="#" class="mobile-link-item menu-hackathon" onclick="closeNav()">Hackathon</a>
+        <a href="./challenges" class="mobile-link-item menu-item menu-challenges" onclick="closeNav()">Challenges</a>
+        <a href="./agenda" class="mobile-link-item menu-item menu-agenda" onclick="closeNav()">Agenda</a>
+        <a class="mobile-link-item menu-item menu-resources disable-menu tooltip" style="width:110px;">Resources<span
             class="tooltiptext tooltip-bottom">Coming soon</span></a>
-        <a class="mobile-link-item disable-menu tooltip" style="width:110px;">Press<span
+        <a href="./press/" class="mobile-link-item menu-item menu-press" style="width:110px;">Press</a>
+        <a class="mobile-link-item menu-item menu-team disable-menu tooltip" style="width:110px;">Team<span
             class="tooltiptext tooltip-bottom">Coming soon</span></a>
-        <a class="mobile-link-item disable-menu tooltip" style="width:110px;">Team<span
-            class="tooltiptext tooltip-bottom">Coming soon</span></a>
-        <a href="./faq/" class="mobile-link-item" onclick="closeNav()">FAQ</a>
+        <a href="./faq" class="mobile-link-item menu-item menu-faq" onclick="closeNav()">FAQ</a>
       </div>
       <div class="d-flex mb-4">
         <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -84,27 +81,25 @@
   <!-- BEGIN navbar desktop -->
   <section id="navbar-desktop">
     <div class="navbar container">
-      <a href="#"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
+      <a href="./"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
       <div id="menu-mobile-burger">
         <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
       </div>
       <div id="menu-desktop-content">
         <div class="d-flex">
-          <a id="menu-hackathon" href="#" class="desktop-link-item current-menu"
+          <a href="#" class="desktop-link-item menu-item menu-hackathon current-menu"
             onclick="selectMenuItem(this)">Hackathon</a>
-          <a id="menu-challenges" href="#challenges" class="desktop-link-item"
+          <a href="./challenges/" class="desktop-link-item menu-challenges menu-item"
             onclick="selectMenuItem(this)">Challenges</a>
-          <a id="menu-agenda" href="#agenda" class="desktop-link-item" onclick="selectMenuItem(this)">Agenda</a>
-          <a id="menu-resources" class="desktop-link-item disable-menu tooltip">Resources<span
+          <a href="./agenda/" class="desktop-link-item menu-agenda menu-item" onclick="selectMenuItem(this)">Agenda</a>
+          <a class="desktop-link-item menu-item menu-resources disable-menu tooltip">Resources<span
               class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
-          <a id="menu-press" class="desktop-link-item disable-menu tooltip">Press<span
+          <a href="./press/" class="desktop-link-item menu-item menu-press">Press</a>
+          <a id="menu-team" class="desktop-link-item menu-item menu-team disable-menu tooltip">Team<span
               class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
-          <a id="menu-team" class="desktop-link-item disable-menu tooltip">Team<span
-              class="tooltiptext tooltip-bottom">Coming
-              soon</span></a>
-          <a id="menu-faq" href="./faq/" class="desktop-link-item" onclick="selectMenuItem(this)">FAQ</a>
+          <a href="./faq/" class="desktop-link-item menu-item menu-faq" onclick="selectMenuItem(this)">FAQ</a>
         </div>
         <div class="d-flex align-items-center">
           <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -162,7 +157,7 @@
           this space!
         </p>
         <div class="primary-button mt-3">
-          More information coming soon
+          Register soon
         </div>
         <div class="d-flex mt-2">
           <p class="hashtags-header">
@@ -233,9 +228,9 @@
 
       <div class="country-flags mt-4">
         <img class="country-desktop" alt="Country flags of all participating countries in a 2x12 grid"
-          src="./assets/img/flags/countryflags_desktop.png">
+          src="./assets/img/flags/countryflags1004_desktop.png">
         <img class="country-mobile" alt="Country flags of all participating countries in a 4x6 grid"
-          src="./assets/img/flags/countryflags_mobile.png">
+          src="./assets/img/flags/countryflags1004_mobile.png">
       </div>
     </div>
 
@@ -299,68 +294,68 @@
   <section class="categories mt-6">
     <div class="container">
       <div id="challenges" class="anchor"></div>
-      <h2>Challenge Categories</h2>
+      <h2>Challenge Domains</h2>
       <div class="d-flex" style="flex-wrap: wrap;">
         <div class="category">
-          <!-- <a href="#"> -->
-          <div class="category-image">
-            <img src="./assets/img/challenges/health_and_medicine.png" alt="Picture of medical equipment">
-          </div>
-          <div class="category-button noselect">Health & Life</div>
-          <!-- </a> -->
+          <a href="./challenges/#health">
+            <div class="category-image">
+              <img src="./assets/img/challenges/health_and_medicine.png" alt="Picture of medical equipment">
+            </div>
+            <div class="category-button noselect">Health & Life</div>
+          </a>
         </div>
         <div class="category">
-          <!-- <a href="#"> -->
-          <div class="category-image">
-            <img src="./assets/img/challenges/business_continuity.png"
-              alt="Picture of someone working on a laptop and making some notes next to a sheet with diagrams">
-          </div>
-          <div class="category-button noselect">Business Continuity</div>
-          <!-- </a> -->
+          <a href="./challenges/#business">
+            <div class="category-image">
+              <img src="./assets/img/challenges/business_continuity.png"
+                alt="Picture of someone working on a laptop and making some notes next to a sheet with diagrams">
+            </div>
+            <div class="category-button noselect">Business Continuity</div>
+          </a>
         </div>
         <div class="category">
-          <!-- <a href="#"> -->
-          <div class="category-image">
-            <img src="./assets/img/challenges/social_cohesion.png"
-              alt="Picture showing the arms of two people holding something">
-          </div>
-          <div class="category-button noselect">Social & Political Cohesion</div>
-          <!-- </a> -->
+          <a href="./challenges/#social">
+            <div class="category-image">
+              <img src="./assets/img/challenges/social_cohesion.png"
+                alt="Picture showing the arms of two people holding something">
+            </div>
+            <div class="category-button noselect">Social & Political Cohesion</div>
+          </a>
         </div>
         <div class="category">
-          <!-- <a href="#"> -->
-          <div class="category-image">
-            <img src="./assets/img/challenges/protection_risk_groups.png"
-              alt="Picture of an elderly women with shades and a red hat">
-          </div>
-          <div class="category-button noselect">Protection of Isolated & Risk Groups</div>
-          <!-- </a> -->
+          <a href="./challenges/#remote">
+            <div class="category-image">
+              <img src="./assets/img/challenges/education.png" alt="Picture of a girl focussing on something">
+            </div>
+            <div class="category-button noselect">Remote Working & Education</div>
+          </a>
         </div>
         <div class="category">
-          <!-- <a href="#"> -->
-          <div class="category-image">
-            <img src="./assets/img/challenges/education.png" alt="Picture of a girl focussing on something">
-          </div>
-          <div class="category-button noselect">Remote Working & Education</div>
-          <!-- </a> -->
+          <a href="./challenges/#finance">
+            <div class="category-image">
+              <img src="./assets/img/challenges/digital_finance.png"
+                alt="Picture of a handing holding out different euro banknotes">
+            </div>
+            <div class="category-button noselect">Digital Finance</div>
+          </a>
         </div>
         <div class="category">
-          <!-- <a href="#"> -->
-          <div class="category-image">
-            <img src="./assets/img/challenges/other.png" alt="Picture of a girl focussing on something">
-          </div>
-          <div class="category-button noselect">Other</div>
-          <!-- </a> -->
+          <a href="./challenges/#other">
+            <div class="category-image">
+              <img src="./assets/img/challenges/other.png" alt="Picture of a girl focussing on something">
+            </div>
+            <div class="category-button noselect">Other</div>
+          </a>
         </div>
       </div>
       <div class="category">
-          <h2 style="color: #fff; font-weight: normal;">All challenges will be announced soon.</h2>
-          <!-- <div class="category-open-all">
+        <h2 style="color: #fff; font-weight: normal;">All challenges will be announced soon.</h2>
+        <!-- <div class="category-open-all">
             <a href="#">
               <h4>Open all challenges</h4>
             </a>
           </div> -->
-        </div>
+      </div>
     </div>
   </section>
   <!-- END categories -->
@@ -389,21 +384,24 @@
 
     <div class="how-can-you-help-row mt-4">
       <div class="how-can-you-help-column">
-        <h3>As a problem solver</h3>
-        <p>We are welcoming developers, designers, creatives and problem solvers with expertise in healthcare, business,
-          sociology, education etc. and ideally experience in hackathons.
-        </p>
-        <strong>
-          Register as
-        </strong>
-        <button class="secondary-button tooltip disable-button mt-3">
-          Team
-          <a href="#" class="tooltiptext">Coming soon</a>
-        </button>
-        <button class="secondary-button tooltip disable-button mt-2">
-          Individual
-          <a href="#" class="tooltiptext tooltip-bottom">Coming soon</a>
-        </button>
+        <div>
+          <h3>As a problem solver</h3>
+          <p>We are welcoming developers, designers, creatives and problem solvers with expertise in healthcare,
+            business,
+            sociology, education etc. and ideally experience in hackathons.
+          </p>
+          <strong>
+            Register as
+          </strong>
+          <button class="secondary-button tooltip disable-button mt-3">
+            Team
+            <a href="#" class="tooltiptext">Coming soon</a>
+          </button>
+          <button class="secondary-button tooltip disable-button mt-2">
+            Individual
+            <a href="#" class="tooltiptext tooltip-bottom">Coming soon</a>
+          </button>
+        </div>
       </div>
       <div class="how-can-you-help-column">
         <h3>As a mentor</h3>
@@ -415,13 +413,16 @@
         <strong>
           Become a
         </strong>
-        <button class="secondary-button tooltip disable-button mt-3">
-          Mentor
-          <a href="#" class="tooltiptext">Coming soon</a></button>
-        <button class="secondary-button tooltip disable-button mt-2">
-          Ninja
-          <a href="#" class="tooltiptext tooltip-bottom">Coming soon</a>
+        <a href="https://euvsvirus.typeform.com/to/V5xqpy">
+          <button class="secondary-button mt-3">
+            Mentor
           </button>
+        </a>
+        <a href="https://euvsvirus.typeform.com/to/Fm602V">
+          <button class="secondary-button mt-2">
+            Ninja
+          </button>
+        </a>
       </div>
       <div class="how-can-you-help-column">
         <h3>As a partner</h3>
@@ -447,7 +448,7 @@
         </a>
         <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_LocalAuthorities">
           <button class="secondary-button mt-2">
-            Region or city
+            Public authority
           </button>
         </a>
         <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_Private_org">
@@ -472,6 +473,9 @@
     <div class="agenda-image mobile">
       <img src="./assets/img/agenda/agenda_mobile.png" alt="Image of the EUvsVirus hackathon agenda">
     </div>
+    <div class="mt-3">
+      <a href="./agenda/"><b><u>Open Full agenda</u></b></a>
+    </div>
   </section>
   <!-- END Agenda -->
 
@@ -487,9 +491,9 @@
         </a>
       </div>
       <div class="initiators-logo">
-          <a target="_blank" rel="noreferrer" href="https://atolye.io/en/home/">
-            <img src="./assets/img/initiators/atoelye.png" alt="Logo of the company 'Atölye'">
-          </a>
+        <a target="_blank" rel="noreferrer" href="https://atolye.io/en/home/">
+          <img src="./assets/img/initiators/atoelye.png" alt="Logo of the company 'Atölye'">
+        </a>
       </div>
       <div class="initiators-logo ml-2">
         <a target="_blank" rel="noreferrer" href="https://austrianstartups.com/">
@@ -497,41 +501,40 @@
         </a>
       </div>
       <div class="initiators-logo">
-          <a target="_blank" rel="noreferrer" href="https://crowdhackathon.com/antivirus/en/">
-            <img src="./assets/img/initiators/avch.png" alt="Logo of the 'Antivirus Crowd Hack Greece'">
-          </a>
+        <a target="_blank" rel="noreferrer" href="https://crowdhackathon.com/antivirus/en/">
+          <img src="./assets/img/initiators/avch.png" alt="Logo of the 'Antivirus Crowd Hack Greece'">
+        </a>
       </div>
       <div class="initiators-logo">
-          <a target="_blank" rel="noreferrer" href="http://bbforums.bg/home-en/">
-            <img src="./assets/img/initiators/bulgarianbusinessforums.png"
-              alt="Logo of the 'Bulgarian Business Forums'">
-          </a>
+        <a target="_blank" rel="noreferrer" href="http://bbforums.bg/home-en/">
+          <img src="./assets/img/initiators/bulgarianbusinessforums.png" alt="Logo of the 'Bulgarian Business Forums'">
+        </a>
       </div>
       <div class="initiators-logo">
-          <a target="_blank" rel="noreferrer" href="https://deutschestartups.org/">
-            <img src="./assets/img/initiators/bundesverband_deutschestartups.png"
-              alt="Logo of the 'Bundesverband Deutsche Startups'">
-          </a>
+        <a target="_blank" rel="noreferrer" href="https://deutschestartups.org/">
+          <img src="./assets/img/initiators/bundesverband_deutschestartups.png"
+            alt="Logo of the 'Bundesverband Deutsche Startups'">
+        </a>
       </div>
       <div class="initiators-logo">
-          <a target="_blank" rel="noreferrer" href="https://casers.org/">
-            <img src="./assets/img/initiators/casers.png" alt="Logo of the company 'Casers'">
-          </a>
+        <a target="_blank" rel="noreferrer" href="https://casers.org/">
+          <img src="./assets/img/initiators/casers.png" alt="Logo of the company 'Casers'">
+        </a>
       </div>
       <div class="initiators-logo">
-          <a target="_blank" rel="noreferrer" href="https://startupvillagechelopech.com/">
-            <img src="./assets/img/initiators/chelopech.png" alt="Logo of the company 'Chelopech'">
-          </a>
+        <a target="_blank" rel="noreferrer" href="https://startupvillagechelopech.com/">
+          <img src="./assets/img/initiators/chelopech.png" alt="Logo of the company 'Chelopech'">
+        </a>
       </div>
       <div class="initiators-logo">
-          <a target="_blank" rel="noreferrer" href="https://civitta.com/">
-            <img src="./assets/img/initiators/civitta.png" alt="Logo of the company 'Civitta'">
-          </a>
+        <a target="_blank" rel="noreferrer" href="https://civitta.com/">
+          <img src="./assets/img/initiators/civitta.png" alt="Logo of the company 'Civitta'">
+        </a>
       </div>
       <div class="initiators-logo">
-          <a target="_blank" rel="noreferrer" href="https://coronathonturkiye.com/">
-            <img src="./assets/img/initiators/coronathon.png" alt="Logo of the 'Coronathon Türkiye'">
-          </a>
+        <a target="_blank" rel="noreferrer" href="https://coronathonturkiye.com/">
+          <img src="./assets/img/initiators/coronathon.png" alt="Logo of the 'Coronathon Türkiye'">
+        </a>
       </div>
       <div class="initiators-logo">
         <a target="_blank" rel="noreferrer" href="https://www.doclerholding.com/">
@@ -544,9 +547,29 @@
         </a>
       </div>
       <div class="initiators-logo ml-2">
+        <a target="_blank" rel="noreferrer" href="https://fr-fr.facebook.com/pg/LesEtuTech/posts/?ref=page_internal">
+          <img src="./assets/img/initiators/etudiants.png" alt="Logo of the 'Les Étudiants de la Tech'">
+        </a>
+      </div>
+      <div class="initiators-logo ml-2">
         <a target="_blank" rel="noreferrer" href="https://europeanstartupnetwork.eu/">
           <img src="./assets/img/initiators/esn.png" alt="Logo of the 'European Startup Network'">
         </a>
+      </div>
+      <div class="initiators-logo ml-2">
+        <a target="_blank" rel="noreferrer" href="https://www.francedigitale.org/">
+          <img src="./assets/img/initiators/franceDigitale.png" alt="Logo of the 'France Digital'">
+        </a>
+      </div>
+      <div class="initiators-logo ml-2">
+        <a target="_blank" rel="noreferrer" href="https://www.futurenext.de/">
+          <img src="./assets/img/initiators/FutureNext.png" alt="Logo of the company 'FutureNext'">
+        </a>
+      </div>
+      <div class="initiators-logo ml-2">
+        <!-- <a target="_blank" rel="noreferrer" href="#"> -->
+          <img src="./assets/img/initiators/genius.png" alt="Logo of the 'Hack The Crisis France'">
+        <!-- </a> -->
       </div>
       <div class="initiators-logo">
         <a target="_blank" rel="noreferrer" href="http://thehackathoncompany.com/">
@@ -604,6 +627,11 @@
         </a>
       </div>
       <div class="initiators-logo">
+        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/transilvania-it-cluster/">
+          <img src="./assets/img/initiators/transilvania.png" alt="Logo of the company 'Transilvania IT Cluster'">
+        </a>
+      </div>
+      <div class="initiators-logo">
         <a target="_blank" rel="noreferrer" href="https://www.versusvirus.ch/">
           <img src="./assets/img/initiators/versusvirus.png" alt="Logo of 'Versus Virus'">
         </a>
@@ -621,8 +649,10 @@
     </div>
   </section>
 
+  <section id="logo-eic" class="container mt-6">
+    <img class="eic-logo" alt="A banner image of the european innovation council" src="./assets/img/EIC-innovation.png">
+  </section>
 
-  
   <!-- BEGIN footer -->
   <footer class="mt-6 pt-1">
     <div class="container d-flex space-between">
@@ -630,13 +660,18 @@
         <img class="footer-hashtag" alt="EU versus virus hashtag" src="./assets/img/footer/EUvsVirus-footer.svg">
         <ul>
           <li>
-            <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en" hreflang="en">
-              Legal Notice
+            <a href="./terms/" hreflang="en">
+              Terms & Conditions
             </a>
           </li>
           <li>
-            <a href="https://europa.eu/european-union/abouteuropa/privacy-policy_en" hreflang="en">
+            <a href="./privacy/" hreflang="en">
               Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="./imprint/" hreflang="en">
+              Imprint
             </a>
           </li>
           <li>
@@ -662,6 +697,7 @@
   </footer>
   <!-- END footer -->
 
+  <script src="./assets/js/global.js"></script>
   <script>
     // tbd: add other counters
     // var deadline = new Date("Apr 20, 2020 23:59:59").getTime();
@@ -694,43 +730,9 @@
         document.getElementById('counter-register').innerHTML = 'Application deadline expired';
       }
     }, 1000);
-
-    // mobile menu
-    function openNav() {
-      document.getElementById('mobileNav').style.display = 'flex';
-      document.getElementById('navbar-desktop').style.display = 'none';
-      document.body.style.overflowY = 'hidden';
-    }
-
-    function closeNav() {
-      document.getElementById('mobileNav').style.display = 'none';
-      document.getElementById('navbar-desktop').style.display = 'block';
-      document.body.style.overflowY = 'scroll';
-    }
-
-    url = window.location.href
-    console.log(url)
-    if (url.includes('challenges')) { resetMenuBar(); document.getElementById('menu-challenges').classList.add('current-menu'); }
-    if (url.includes('agenda')) { resetMenuBar(); document.getElementById('menu-agenda').classList.add('current-menu'); }
-    if (url.includes('resources')) { resetMenuBar(); document.getElementById('menu-resources').classList.add('current-menu'); }
-    if (url.includes('press')) { resetMenuBar(); document.getElementById('menu-press').classList.add('current-menu'); }
-    if (url.includes('team')) { resetMenuBar(); document.getElementById('menu-resources').classList.add('current-menu'); }
-
-    function selectMenuItem(selectedItem) {
-      resetMenuBar()
-      selectedItem.classList.add('current-menu')
-    }
-
-    function resetMenuBar() {
-      document.getElementById('menu-hackathon').classList.remove('current-menu')
-      document.getElementById('menu-challenges').classList.remove('current-menu')
-      document.getElementById('menu-agenda').classList.remove('current-menu')
-      document.getElementById('menu-resources').classList.remove('current-menu')
-      document.getElementById('menu-press').classList.remove('current-menu')
-      document.getElementById('menu-team').classList.remove('current-menu')
-      document.getElementById('menu-faq').classList.remove('current-menu')
-    }
   </script>
+  <script src="./assets/js/cookieconsent.min.js"></script>
+
 </body>
 
 </html>

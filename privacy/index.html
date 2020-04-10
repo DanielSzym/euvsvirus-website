@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Now is your chance to help tackle coronavirus! #EUvsVirus">
+
+    <!-- Meta tags for social media -->
+    <meta property="og:title" content="Pan-European Hackathon">
+    <meta property="og:description" content="Now is your chance to help tackle coronavirus! #EUvsVirus">
+    <meta property="og:image" content="https://euvsvirus.org/assets/img/banner/Pan-EUHackathon-Thumbnail.jpg">
+    <meta property="og:url" content="https://euvsvirus.org">
+    <meta property="og:type" content="website">
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pan-European Hackathon">
+    <meta name="twitter:description" content="Now is your chance to help tackle coronavirus! #EUvsVirus">
+    <meta name="twitter:image" content="https://euvsvirus.org/assets/img/banner/Pan-EUHackathon-Thumbnail.jpg">
+
+
+    <title>Pan-European Hackathon</title>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./../styles/styles-013.css">
+</head>
+
+<body>
+
+    <!-- BEGIN mobile menu -->
+    <div id="mobileNav" class="overlay">
+        <section id="navbar-mobile">
+            <div class="navbar container">
+                <a href="./../" onclick="closeNav()"><img alt="EU versus virus hashtag"
+                        src="../assets/img/navbar/EUvsVirus.svg"></a>
+                <div>
+                    <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
+                </div>
+                <div class="d-none">
+                    <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+                    </a>
+                    <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+                    </a>
+                    <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="overlay-content container">
+            <div>
+                <a href="./../" class="mobile-link-item menu-hackathon" onclick="closeNav()">Hackathon</a>
+                <a href="./../challenges/" class="mobile-link-item menu-item menu-challenges"
+                    onclick="closeNav()">Challenges</a>
+                <a href="./../agenda/" class="mobile-link-item menu-item menu-agenda" onclick="closeNav()">Agenda</a>
+                <a class="mobile-link-item menu-item menu-resources disable-menu tooltip"
+                    style="width:110px;">Resources<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
+                <a href="./../press/" class="mobile-link-item menu-item menu-press" style="width:110px;">Press</a>
+                <a class="mobile-link-item menu-item menu-team disable-menu tooltip" style="width:110px;">
+                    Team
+                    <span class="tooltiptext tooltip-bottom">Coming soon</span>
+                </a>
+                <a href="./../faq/" class="mobile-link-item menu-item menu-faq" onclick="closeNav()">FAQ</a>
+            </div>
+            <div class="d-flex mb-4">
+                <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+                    <img class="navbar-logo-mobile" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+                </a>
+                <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+                    <img class="navbar-logo-mobile" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+                </a>
+                <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+                    <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- END mobile menu -->
+
+
+    <!-- BEGIN navbar desktop -->
+    <section id="navbar-desktop">
+        <div class="navbar container">
+            <a href="./../"><img alt="EU versus virus hashtag" src="../assets/img/navbar/EUvsVirus.svg"></a>
+            <div id="menu-mobile-burger">
+                <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
+            </div>
+            <div id="menu-desktop-content">
+                <div class="d-flex">
+                    <a href="./../" class="desktop-link-item menu-item menu-hackathon">Hackathon</a>
+                    <a href="./../challenges/" class="desktop-link-item menu-challenges menu-item">Challenges</a>
+                    <a href="./../agenda/" class="desktop-link-item menu-agenda menu-item">Agenda</a>
+                    <a class="desktop-link-item menu-item menu-resources disable-menu tooltip">Resources<span
+                            class="tooltiptext tooltip-bottom">Coming
+                            soon</span></a>
+                    <a href="./../press/" class="desktop-link-item menu-item menu-press">Press</a>
+                    <a id="menu-team" class="desktop-link-item menu-item menu-team disable-menu tooltip">Team<span
+                            class="tooltiptext tooltip-bottom">Coming
+                            soon</span></a>
+                    <a href="./../faq/" class="desktop-link-item menu-item menu-faq">FAQ</a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+                    </a>
+                    <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+                    </a>
+                    <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END navbar desktop -->
+
+
+    <!-- BEGIN Terms -->
+    <section id="terms" class="legal main-wrapper">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <div class="h1-seperator"></div>
+            <em class="text-muted mt-2 mb-4 d-block">Last modified: April 2020</em>
+            <p>
+                The EUvsVirus Website and Sub-Sites located at <a
+                    href="https://euvsvirus.org/">https://euvsvirus.org/</a> and its subdomains (collectively
+                “Website”) are operated by the Hackathon Company GmbH, organized under the laws of Germany, with office
+                at Julius-Hatry-Str. 1, 68161 Mannheim, (hereinafter referred to as “EUvsVirus Organization”, “we” or
+                “us”) under the patronage of the European Commission.
+            </p>
+            <p>
+                Additional information about EUvsVirus, such as contact details, as well as the names of the authorized
+                representatives can be found under the “Contact” button displayed in the navigation bar of the Site.
+            </p>
+            <p>
+                Please note: You can access, print out, download and/or save this Privacy Policy at any time, even after
+                registration, under the “Privacy Policy” link that appears in the bottom line of the Website.
+            </p>
+
+            <h2>
+                1.) Subject Matter of this Privacy Policy
+            </h2>
+            <p>
+                This Privacy Policy explains how we collect, use, share, protect and process information about you and
+                the choices that you have about the collection and use of certain information about you. We value you as
+                a participant and take your personal privacy seriously. While providing you with services, we collect
+                certain personal information about you that we understand you may consider private or confidential. This
+                information may be contained in applications and other forms you submit to us or obtained from other
+                third parties. We are therefore providing you with this Privacy Policy to explain our policies for
+                collecting, using and sharing this information with others.
+            </p>
+
+            <h2>
+                2.) Personal Data
+            </h2>
+            <p>
+                Personal Data is any information that can be used to directly or indirectly identify you. Personal Data
+                also includes anonymous information that is linked to information that can be used to directly or
+                indirectly identify you. Personal Data does not include information that has been irreversibly
+                anonymized or aggregated so that it can no longer enable us, whether in combination with other
+                information or otherwise, to identify you.
+            </p>
+            <p>
+                We will only collect and use information which is necessary to comply with our legal obligations and
+                assist us to administer our business and provide you with the services you request.
+            </p>
+            <p>
+                Your Personal Data is protected. All the data and information that we receive is protected and only
+                available to authorized personnel.
+            </p>
+
+            <h2>
+                3.) Collection of Personal Data
+            </h2>
+            <p>
+                Here is a description of the types of personal information we may collect and how we may use it:
+            </p>
+            <ul>
+                <li>
+                    Information you provide: We collect information you provide to us over the Website and our
+                    registration forms. When you register or log in to your account, when we send a communication to
+                    you, or when you access, respond to, or decline to open a communication from us, complete a form to
+                    communicate with us, or contacts us, we collect and store certain information about you such as:
+                </li>
+                <li>
+                    first and last name, title, street address, telephone number, company name, email address or other
+                    information uploaded by you (e.g. photos, texts and other relevant background information). Your
+                    Personal Data will be kept confidential and will only be used to complete your registration for the
+                    EUvsVirus hackathon, send you our newsletter and/or provide you with other Website services.
+                </li>
+                <li>
+                    Persons that are under 16 years old cannot provide their personal data through this Website. If you
+                    are below the age of 16 years, please provide consent for personal data submission and processing by
+                    the holder of parental responsibility over you.
+                </li>
+                <li>
+                    Information from other sources: We may receive information about you from publicly available and
+                    third-party databases or services that provide information about business people and companies. We
+                    may request information from third parties (e.g. credit card information services) with regard to
+                    your payment behaviour in order to be able to offer you certain payment options.
+                </li>
+                <li>
+                    Information about use of our services and products: When you visit our Website, we receive and save
+                    certain pieces of information, e.g. the IP address of your device, your operating system, the type
+                    of Internet browser that you use, usage information, diagnostic information, and location
+                    information from or about the computers, phones, or other devices on which you access our Websites,
+                    preferences and settings: time zone, language, and character size, time spent on a page, click
+                    through, clickstream data, queries made, search results selected, search history, date and time of
+                    your visit, the websites you visit within our service and the website you came from if you visit our
+                    Website via a link from a third party website. We do this to learn more about your interests and to
+                    improve our Website and services.
+                </li>
+            </ul>
+
+            <h2>
+                4.) Use of Personal Data
+            </h2>
+            <p>
+                We use Personal Data to provide, improve, and develop our products and services, to communicate with
+                you, to offer you targeted advertisements and services.
+                <br>We collect, process and determine how to process your Personal Data as data controller for the
+                following purposes:
+                <br>Providing, improving, and developing our products and services: We use Personal Data to help us
+                provide, improve, and develop our products, services, and advertising. This includes using Personal Data
+                for purposes such as data analysis, research, and audits. Such processing is based on our legitimate
+                interest in offering you products and services and for business continuity.
+                <br>Communicating with you: Subject to your prior express consent, we may use Personal Data to send you
+                marketing communications in relation to our products and services, communicate with you about your
+                account or participation requests, and inform you about our policies and terms. If you no longer wish to
+                receive email communications for marketing purposes, please contact us to opt-out. We also may use your
+                information to process and respond to your requests when you contact us. Subject to your prior express
+                consent, we may share your Personal Data with third party partners who may send you marketing
+                communications in relation to their products and services.
+                <br>The following are some other ways in which we may use your information to administer our business
+                and provide you with the products and services you request or may be of interest to you:
+            </p>
+            <ul>
+                <li>
+                    To operate our Events;
+                </li>
+                <li>
+                    To Keep records of contact information and correspondence;
+                </li>
+                <li>
+                    To provide you with information, products or services that you request from us or which we feel may
+                    interest you, where you have consented to be contacted for such purposes;
+                </li>
+                <li>
+                    To facilitate social sharing functionality, such as sharing content, through social media networks;
+                </li>
+                <li>
+                    To carry out our obligations arising from agreement or contract (including our obligations to you as
+                    a customer of our events) entered into between you and us;
+                </li>
+                <li>
+                    To notify you about changes to our policies and/or terms;
+                </li>
+                <li>
+                    To create a more accurate and complete customer profile to better understand the products and
+                    services you want to use;
+                </li>
+                <li>
+                    To improve the products and services we provide you and develop new products and services;
+                </li>
+                <li>
+                    To process debit and credit card and other financial transactions;
+                </li>
+                <li>
+                    Otherwise with your consent or as permitted or required by law.
+                </li>
+            </ul>
+            <p>
+                Offering and measuring targeted advertisements and services: Subject to your prior express consent, we
+                may use Personal Data to personalize your experience with our products and services and on third-party
+                websites and applications and to determine the effectiveness of our promotional campaigns.
+            </p>
+            <p>
+                For any of the uses of your data described above that require your prior express consent, note that you
+                may withdraw your consent by contacting us.
+                <br>Promoting safety and security: We use Personal Data to help verify accounts and user activity, as
+                well as to promote safety and security, such as by monitoring fraud and investigating suspicious or
+                potentially illegal activity or violations of our terms or policies. Such processing is based on our
+                legitimate interest in helping ensure the safety of our products and services.
+            </p>
+            <p>
+                <u>Disclosure of Personal Data</u>
+                <br>We make certain Personal Data available to strategic partners that work with us to provide our
+                products and services or help us market to customers. Personal Data will only be shared by us with these
+                companies in order to provide or improve our products, services, and advertising; it will not be shared
+                with third parties for their own marketing purposes without your prior express consent.
+            </p>
+            <p>
+                <u>Service Providers</u>
+                <br>We share Personal Data with companies that provide services on our behalf, such as website hosting,
+                email services, marketing, sponsoring of the event, auditing, fulfilling customer requests, data
+                analytics, providing customer service, and conducting customer research and satisfaction surveys. These
+                companies are obligated to protect your information and may be located wherever we operate.
+            </p>
+            <p>
+                <u>Legal Compliance and Security</u>
+                It may be necessary – by law, legal process, litigation, and/or requests from public and governmental
+                authorities within or outside your country of residence – for us to disclose personal data. We may also
+                disclose Personal Data if we determine that for purposes of national security, law enforcement, or other
+                issues of public importance, disclosure is necessary or appropriate.
+                <br>We may also disclose Personal Data if we determine in good faith that disclosure is reasonably
+                necessary to protect our rights and pursue available remedies, enforce our terms and conditions,
+                investigate fraud, or protect our operations or Customers.
+            </p>
+            <p>
+                <u>Retention of Personal Data</u>
+                <br>We will retain your Personal Data for as long as it is necessary to fulfill the purposes outlined in
+                this Privacy Policy unless a longer retention period is required or permitted by law.
+            </p>
+            <p>
+                <u>Extending Period of Storage</u>
+                <br>We may ask for your permission to extend the storage period of your personal data for information
+                purposes such as email newsletters to future events held by the European Commission and/or the service
+                providers involved.
+            </p>
+            <p>
+                <u>Legal Basis For The Processing of Personal Data</u>
+                <br>If you are located in the European Economic Area (“EEA”), our processing of your Personal Data will
+                be based on the following: To the extent that we obtain your consent for the processing of your Personal
+                Data such processing will be justified pursuant to Article 6(1) lit. (a) of the General Data Protection
+                Regulation (EU) 2016/679 (“GDPR”). If the processing of your Personal Data is necessary for the
+                performance of a contract between you and us or for taking pre-contractual steps upon your request, such
+                processing will be based on GDPR Article 6(1) lit. (b). Where the processing is necessary for us to
+                comply with a legal obligation, we will process your Personal Data on basis of GDPR Article 6(1) lit.
+                (c), and where the processing is necessary for the purposes of our legitimate interests, such processing
+                will be made in accordance with GDPR Article 6(1) lit. (f).
+                <br>Please note that where you have given your consent to the processing of your Personal Data you may
+                withdraw your consent at any time which withdrawal will not affect the lawfulness of any processing
+                previously made on basis of your consent.
+            </p>
+            <p>
+                <u>Transfer of Personal Data</u>
+                <br>When we share your Personal Data with our partners and service providers, your Personal Data may be
+                transferred to and/or made accessible from countries out of the European Economic Area. In such
+                circumstances, we will enter into model contractual clauses as adopted by the European Commission, or
+                rely on alternative legal bases such as the Privacy Shield, where applicable, or binding corporate rules
+                where our partners or service providers have adopted such internal policies approved by European data
+                protection authorities.
+            </p>
+            <p>
+                <u>Your Rights</u>
+                <br>We take reasonable steps to ensure that your Personal Data is accurate, complete, and up to date.
+                You have the right to access, correct, or delete the Personal Data that we collect. You are also
+                entitled to restrict or object, at any time, to the further processing of your Personal Data. You have
+                the right to receive your Personal Data in a structured and standard format. You may lodge a complaint
+                with the competent data protection authority regarding the processing of your Personal Data.
+                <br>To protect the privacy and the security of your Personal Data, we may request information from you
+                to enable us to confirm your identity and right to access such information, as well as to search for and
+                provide you with the Personal Data we maintain. There are instances where applicable laws or regulatory
+                requirements allow us to refuse to provide or delete some or all of the Personal Data that we maintain.
+                In this case, we reserve the right to refuse to act on a request that is manifestly unfounded or
+                excessive (for example because it is repetitive) and/or to charge a fee that takes into account the
+                administrative costs for providing the information or taking the action requested.
+            </p>
+            <p>
+                In your request, please make clear what information you would like to have access to or have changed,
+                whether you would like to have your Personal Data suppressed from our database, or other limitations you
+                would like to put on our use of your Personal Data.
+            </p>
+            <p>
+                You may contact us to exercise your rights. We will respond to your request in a reasonable timeframe,
+                and in any event in less than 30 days.
+            </p>
+
+            <h2>
+                5.) Social Media Plug-ins
+            </h2>
+            <p>
+                a) Facebook
+                <br>Our Website uses plug-ins of the social network Facebook, a service of Facebook Inc., 1601 S.
+                California Ave, Palo Alto, CA 94304, USA. You recognize the Facebook plug-ins on our Website by their
+                Facebook-Logo or the “like button”. An overview over all Facebook plug-ins can be found here: <a
+                    href="http://developers.facebook.com/docs/plugins/">http://developers.facebook.com/docs/plugins/</a>.
+            </p>
+            <p>
+                When you visit our Website, the plug-ins establish a connection between your browser and the Facebook
+                server. Thereby, Facebook receives the information that you visited our Website with your IP address.
+                This occurs regardless of whether you click on a plug-in or not. When you click on the Facebook “like
+                button” while you are logged on to your Facebook account you may link the information on our Website to
+                your Facebook account. Thereby, Facebook can associate your visit on our Website to your Facebook
+                account. We as the operator of the Website do not gain any knowledge about the content of the data
+                transferred or their usage by Facebook. The data protection policies of Facebook provide additional
+                information, in particular about the collection and use of data by Facebook, your rights in this regard
+                as well as the options available to you for protecting your privacy:
+                <a href="https://de-de.facebook.com/about/privacy/">https://de-de.facebook.com/about/privacy/</a>.
+            </p>
+            <p>
+                If you wish to prevent the transfer to and storage of data by Facebook about you and your interaction
+                with our Website, you must first log out of Facebook before visiting our Website. In addition, tools are
+                freely available on the market that can be used to block Facebook social plug-ins with add-ons from
+                being added to all commonly used browsers: <a
+                    href="http://webgraph.com/resources/facebookblocker/">http://webgraph.com/resources/facebookblocker/</a>.
+            </p>
+            <p>
+                b) Twitter
+                <br>Our Website also uses social plug-ins provided by Twitter, Inc., 1355 Market St, Suite 900, San
+                Francisco, CA 94103, USA. When accessing our Website, which contains this plug-in, a connection from
+                your browser to Twitter’s servers will be established. At this point, data will already be transferred
+                to Twitter. Through this process, Twitter is informed precisely which page of our Website is being
+                visited. We have no control over the data that Twitter collects in the process, or over the extent of
+                the data that Twitter collects. If you have a Twitter account, these data may be linked to your Twitter
+                account. To the best of our knowledge, Twitter collects the URL of each website accessed as well as the
+                IP address of the user but does so solely for the purpose of displaying Twitter components. Additional
+                information may be obtained from the Twitter data privacy policy, at: <a
+                    href="http://twitter.com/privacy">http://twitter.com/privacy</a>.
+                <br>If you wish to avoid data being linked to your Twitter account, please log out from Twitter before
+                visiting our Website. Interactions, in particular such as clicking the “Re-Tweet”-button will equally be
+                transferred to Twitter. You may change your data privacy settings in your account settings on <a
+                    href="http://twitter.com/account/settings">http://twitter.com/account/settings</a>.
+            </p>
+            <p>
+                c) YouTube
+                <br>This Website also uses a plug-in of YouTube which belongs to Google Inc., San Bruno/California, USA.
+                When you visit one of our websites containing a YouTube plug-in, a connection to the YouTube servers is
+                established. By this, YouTube is informed which website you visited. Furthermore, in case you are logged
+                on to your YouTube account, YouTube may also associate your surfing behaviour to your personal account.
+                If you wish to avoid data being linked to your YouTube account, please log out from YouTube before
+                visiting our Website. Additional information may be obtained from the YouTube data privacy policy on <a
+                    href="https://www.youtube.com/static?template=privacy_guidelines">https://www.youtube.com/static?template=privacy_guidelines</a>.
+            </p>
+            <p>
+                d) Slide Share
+                <br>On our Website we also use the java script code SlideShare operated by LinkedIn Ireland, Wilton
+                Plaza, Wilton Place, Dublin 2, Ireland (if you reside outside of the United States) or LinkedIn
+                Corporation, 2029 Stierlin Court, Mountain View, California 94043, USA (if you reside in the United
+                States). If your browser has java script enabled and in case you have not installed a java script
+                blocker, your browser may transfer Personal Data of you to SlideShare. We have no control over nor any
+                knowledge about the data that SlideShare collects in the process, or over the extent and purpose of the
+                data that SlideShare collects. Additional information may be obtained from the SlideShare data privacy
+                policy at <a
+                    href="https://www.linkedin.com/legal/privacy-policy">https://www.linkedin.com/legal/privacy-policy</a>.
+                If you wish to avoid the SlideShare java script to be activated, you can install a java script blocker
+                (e.g. www.noscript.net or www.ghostery.com).
+            </p>
+            <p>
+                Your interactions with the features mentioned above under lit. a)-d) are governed by the privacy policy
+                of the company providing the respective feature(s).
+            </p>
+            <p>
+                <u>Your Rights</u>
+                <br>Our Website may contain links to other Internet websites, including co-branded or other affiliated
+                sites. These links are provided for your convenience only and should be used at your discretion. These
+                linked websites have separate and independent privacy policies. This Privacy Policy does not apply to
+                information provided to or gathered by the third parties that operate them. We are not responsible for
+                any information these third-parties’ services may obtain or how they may use it. You should review their
+                privacy policies to understand how they may use your information.
+            </p>
+            <p>
+                We have no responsibility or liability for the content and activities of these linked sites.
+                Nonetheless, we seek to protect the integrity of our Website and welcome any feedback about these linked
+                sites (including if a specific link does not work).
+            </p>
+            <p>
+                <u>Changes in Our Privacy Policy</u>
+                <br>We may periodically change this Privacy Policy to keep pace with new technologies, industry
+                practices, and regulatory requirements, among other reasons. We expect most such changes to be minor.
+                Any non-material changes will take effect immediately upon posting of an updated Privacy Policy.
+                However, there may be cases where changes to the Privacy Policy may be more significant. In such cases,
+                we will first provide a more prominent notice.
+            </p>
+            <p>
+                Your continued use of our products and services after the effective date of the Privacy Policy means
+                that you accept the revised Privacy Policy. If you do not agree to the revised Privacy Policy, please
+                refrain from using our products or services and contact us to close any account you may have created.
+            </p>
+
+            <h2>
+                6.) Contact
+            </h2>
+            <p>
+                If you have any further questions regarding this Privacy Policy, our handling of your Personal Data or
+                if you would like to be informed of exactly what Personal Data we possess, then we would be pleased to
+                provide you with more detailed information. Please contact our Data Protection Officer by sending a mail
+                to: hello@thehackathoncompany.com
+            </p>
+
+            <div id="cookies" class="anchor"></div>
+            <h2>
+                7.) Cookie Statement
+            </h2>
+            <em class="text-muted mt-2 mb-4 d-block">Last modified: April 2020</em>
+            <p>
+                This Cookie Statement applies to all EUvsVirus brands, websites, products, and services (collectively,
+                “we,” “us,” or “our”) and explains how we use cookies on our websites and online services and the
+                choices you have.
+            </p>
+            <p>
+                <u>a) What are “Cookies”</u>
+                <br>Cookies are small pieces of text used to store information on web browsers. Cookies are widely used
+                to store and receive identifiers and other information on computers, phones, and other devices. We also
+                use other technologies, including data we store on your web browser or device, identifiers associated
+                with your device, and other software, for similar purposes. In this Cookie Statement, we refer to all of
+                these technologies as “cookies.”
+            </p>
+            <p>
+                <u>b) Types of Cookies</u>
+                <br>We use cookies to provide, protect, and improve our products and services, such as by personalizing
+                content, offering and measuring advertisements, understanding user behavior, and providing a safer
+                experience. We describe below the various types of cookies we use and the purposes they perform.
+                <ul>
+                    <li>
+                        Essential cookies: These cookies are strictly necessary to provide you with our websites and
+                        services and to enable essential features, such as providing shopping cart for the event
+                        ticket(s). If you disable these cookies, we will not be able to fulfil your request. On the
+                        Website, we use session cookies for authentication and authorization purposes and to track a
+                        visitor’s identity during a particular session.
+                    </li>
+                    <li>
+                        Performance and functionality cookies: These cookies are used to store choices you make and your
+                        preferences regarding our services (such as your user name, language or the region you are in,
+                        enable user interface customization). The information these cookies collect allows us to
+                        optimize our websites and make them easier for you to use, and it does not personally identify
+                        you. If you disable or opt-out of these cookies, you may not be able to use certain features of
+                        our websites and services, and it may reduce the support or information that we can provide you.
+                    </li>
+                    <li>
+                        Analytics and customization cookies: These cookies allow us to recognize and count the number of
+                        visitors and to see how visitors move around the Website when they are using it. This helps us
+                        to improve the way our Website work, for example by making sure visitors are finding what they
+                        need easily. The information collected through these cookies include anonymous traffic
+                        statistics, like number of page views, number of visitors, and time spent on each page.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                We use cookies from Google Analytics, a web analytics service provided by Google Inc. (“Google”). The
+                information collected by Google (including your internet protocol (IP) address) will be transmitted to
+                and stored by Google on servers in the United States. Google will use this information on our behalf for
+                the purpose of evaluating your use of the Websites, compiling reports on the Websites activity and
+                providing further services to us relating to the Websites usage. Learn more about Google Analytics’
+                privacy practices, and see a copy of Google’s privacy policy, at the following link:
+                <a
+                    href="https://support.google.com/analytics/answer/6004245?hl=en&ref_topic=2919631">https://support.google.com/analytics/answer/ 6004245?hl=en&ref_topic=2919631</a>.
+            </p>
+            <p>
+                You can also prevent your data from being collected by Google Analytics on the Websites by downloading
+                and installing the Google Analytics Opt-out Browser Add-on for your current web browser at the following
+                link: <a
+                    href="https://tools.google.com/dlpage/gaoptout?hl=en">https://tools.google.com/dlpage/gaoptout?hl=en</a>.
+                <ul>
+                    <li>
+                        Advertising cookies: These cookies collect information about your browsing or shopping history
+                        and are used to make advertising messages more relevant to you. They perform functions like
+                        preventing the same advertisement from continuously reappearing, ensuring that advertisements
+                        are properly displayed, and in some cases selecting advertisements that are based on your
+                        interests. We may share this information with third parties to help create and deliver
+                        advertising personalized to you and your interests. If you disable or opt-out of these cookies,
+                        you may not be able to use certain features of our websites and services, and it may reduce the
+                        support or information that we can provide you.
+
+                    </li>
+                    <li>
+                        Social networking cookies: These cookies are used to enable you to share pages and content on
+                        our websites and services through third-party social networking and other websites. These
+                        cookies may also be used for advertising purposes.
+                    </li>
+                    <li>
+                        Cookies Placed by Third Parties: You may also encounter cookies on our websites that are placed
+                        by third parties. For example, when you buy our products online, our e-commerce vendor may use
+                        cookies and other technologies. We may also allow third parties to place cookies on our websites
+                        to track information about your online activities and/or across third-party sites or online
+                        services, including to send you targeted advertisements based on that information, which may
+                        include the remarketing of our products and services that you have viewed on our websites and on
+                        third-party websites.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                This Cookie Statement does not apply to the cookies, applications, technologies or websites that are
+                owned by and/or operated by third parties, or such third parties’ practices, even if they use or access
+                our technology to store or collect information. To understand how third parties, use cookies, please
+                review their privacy policies.
+            </p>
+            <p>
+                <u>c) Controlling and Opting-Out of Cookies</u>
+                <br>Your browser or device may offer settings that allow you to choose whether browser cookies are set
+                and to delete them. On most web browsers, you will find a “help” section on the toolbar. Please refer to
+                this section for information on how to receive a notification when you are receiving a new cookie and
+                how to turn cookies off. Please see the links below for guidance on how to modify your web browser’s
+                settings on the most popular browsers:
+                <ul>
+                    <li>
+                        Internet Explorer
+                    </li>
+                    <li>
+                        Mozilla Firefox
+                    </li>
+                    <li>
+                        Google Chrome
+                    </li>
+                    <li>
+                        Apple Safari
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Please note that if you reject cookies or disable cookies, your use of certain features or functions on
+                our Website or Platforms or service may be limited.
+                <br>To find out more about cookies and similar technologies, including how to see what cookies and
+                similar technologies have been set and how to manage and delete them, visit <a
+                    href="www.allaboutcookies.org">www.allaboutcookies.org</a>
+                and/or or the Network Advertising Initiative’s online resources, at <a
+                    href="http://www.networkadvertising.org">http://www.networkadvertising.org</a>,
+                and follow the opt-out instructions there. If you access the Websites on your mobile device, you may not
+                be able to control tracking technologies through the settings. If you wish to not have your information
+                used for the purpose of serving you targeted ads, you may opt-out by visiting the Network Advertising
+                Initiative’s online resources available <a href="https://optout.networkadvertising.org/?c=1">here</a>
+                and following the opt-out instructions there, or if located
+                in the European Union, visit the European Interactive Digital Advertising Alliance’s Your Online Choices
+                opt-out tool <a href="https://www.youronlinechoices.com/">here</a>. By opting out of targeted
+                advertisements you will no longer see advertisements on our
+                Websites from third-party partners that participate in the Digital Advertising Alliance; however, you
+                may still continue to see other non-targeted advertisements on our Websites.
+            </p>
+            <p>
+                <u>d) Do Not Track</u>
+                <br>Some browsers include the ability to transmit “Do Not Track” signals. We do not process or respond
+                to “Do Not Track” signals. Instead, we adhere to the standards described in our Privacy Policy and this
+                Cookie Statement.
+            </p>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- BEGIN footer -->
+    <footer class="mt-3 pt-1">
+        <div class="container d-flex space-between">
+            <div class="footer-left d-flex">
+                <img class="footer-hashtag" alt="EU versus virus hashtag"
+                    src="../assets/img/footer/EUvsVirus-footer.svg">
+                <ul>
+                    <li>
+                        <a href="./../terms/" hreflang="en">
+                            Terms & Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a hreflang="en">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./../imprint/" hreflang="en">
+                            Imprint
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:RTD-PAN-EUROPEAN-COVID-HACKATHON@ec.europa.eu" hreflang="en">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center d-none-mobile">
+                <div class="d-flex align-items-center">
+                    <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+                    </a>
+                    <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+                    </a>
+                    <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+                    </a>
+                </div>
+            </div>
+    </footer>
+    <!-- END footer -->
+
+    <script src="../assets/js/global.js"></script>
+    <script src="./../assets/js/cookieconsent.min.js"></script>
+</body>
+
+</html>
