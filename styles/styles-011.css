@@ -980,6 +980,41 @@ button:focus {
 
 
 
+/*** BEGIN all legal: imprint, terms, privacy ***/
+.legal {
+	background-color: var(--color-light-grey);
+	padding-bottom: 100px;	
+}
+.legal h2 {
+	margin-top: 3rem;
+}
+.legal h3 {
+	margin-top: 2rem;
+}
+.legal hr {
+	margin-top: 10px;
+	background-color: var(--color-grey-h3-normal);
+}
+.legal p, .legal li {
+	width: 80%;
+	margin-top: 1rem;
+	color: var(--color-grey-h3-normal);
+}
+.legal a {
+	color: var(--color-primary-blue);
+}
+@media (max-width: 992px){
+	.legal .p {
+		width: 100%;
+	}
+}
+.legal .text-muted {
+	color: var(--color-grey-h3-bold);
+}
+/*** END all legal ***/
+
+
+
 /*** BEGIN footer ***/
 footer {
 	background-color: var(--color-light-grey);
