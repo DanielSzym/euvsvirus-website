@@ -54,15 +54,14 @@
   <div class="overlay-content container">
     <div>
       <a href="./../" class="mobile-link-item menu-hackathon" onclick="closeNav()">Hackathon</a>
-      <a href="./../challenges" class="mobile-link-item menu-item menu-challenges" onclick="closeNav()">Challenges</a>
-      <a href="./../agenda" class="mobile-link-item menu-item menu-agenda" onclick="closeNav()">Agenda</a>
+      <a href="./../challenges/" class="mobile-link-item menu-item menu-challenges" onclick="closeNav()">Challenges</a>
+      <a href="#" class="mobile-link-item menu-item menu-agenda" onclick="closeNav()">Agenda</a>
       <a class="mobile-link-item menu-item menu-resources disable-menu tooltip" style="width:110px;">Resources<span
           class="tooltiptext tooltip-bottom">Coming soon</span></a>
-      <a class="mobile-link-item menu-item menu-press disable-menu tooltip" style="width:110px;">Press<span
-          class="tooltiptext tooltip-bottom">Coming soon</span></a>
+      <a href="./../press/" class="mobile-link-item menu-item menu-press" style="width:110px;">Press</a>
       <a class="mobile-link-item menu-item menu-team disable-menu tooltip" style="width:110px;">Team<span
           class="tooltiptext tooltip-bottom">Coming soon</span></a>
-      <a href="./../faq" class="mobile-link-item menu-item menu-faq" onclick="closeNav()">FAQ</a>
+      <a href="./../faq/" class="mobile-link-item menu-item menu-faq" onclick="closeNav()">FAQ</a>
     </div>
     <div class="d-flex mb-4">
       <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -90,18 +89,16 @@
     <div id="menu-desktop-content">
       <div class="d-flex">
         <a href="./../" class="desktop-link-item menu-item menu-hackathon">Hackathon</a>
-        <a href="./../challenges" class="desktop-link-item menu-challenges menu-item">Challenges</a>
-        <a href="./../agenda" class="desktop-link-item menu-agenda menu-item">Agenda</a>
+        <a href="./../challenges/" class="desktop-link-item menu-challenges menu-item">Challenges</a>
+        <a href="#" class="desktop-link-item menu-agenda menu-item">Agenda</a>
         <a class="desktop-link-item menu-item menu-resources disable-menu tooltip">Resources<span
             class="tooltiptext tooltip-bottom">Coming
             soon</span></a>
-        <a class="desktop-link-item menu-item menu-press disable-menu tooltip">Press<span
-            class="tooltiptext tooltip-bottom">Coming
-            soon</span></a>
+        <a href="./../press/" class="desktop-link-item menu-item menu-press">Press</a>
         <a id="menu-team" class="desktop-link-item menu-item menu-team disable-menu tooltip">Team<span
             class="tooltiptext tooltip-bottom">Coming
             soon</span></a>
-        <a href="./../faq" class="desktop-link-item menu-item menu-faq">FAQ</a>
+        <a href="./../faq/" class="desktop-link-item menu-item menu-faq">FAQ</a>
       </div>
       <div class="d-flex align-items-center">
         <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -121,17 +118,33 @@
 
   <!-- BEGIN agenda -->
   <main class="agenda-wrapper">
-    <section id="agenda" class="container">
+    <section id="agenda" class="container main-wrapper">
       <div>
 
         <h1>Agenda</h1>
         <div class="h1-seperator"></div>
         
-        <div class="agenda-timeline mb-6">
+        <div class="timeline-mobile mb-5">
+          <h2>PRE-Hackathon</h2>
+          <h3>14 April</h3>
+          <p>
+            Application for participants open
+          </p>
+          <h3>19 April</h3>
+          <p>
+            Applications deadline
+          </p>
+          <h3>20 – 23 April</h3>
+          <p>
+            Onboarding & team building
+          </p>
+        </div>
+
+        <div class="timeline-desktop agenda-timeline mb-6">
           <img src="./../assets/img/agenda/timeline_2.png" alt="Timeline of before the hackathon (14 April application open for participants, 19 April application deadline, 20 - 23 April onboarding and team building) and after the hackathon (27 April ending celebration, 01 May award ceremony livestream)">
         </div>
 
-        <h2 class="h2-gold">Hackathon Agenda</h2>
+        <h2 class="h2-gold mb-4">Hackathon Agenda</h2>
         <div class="agenda desktop">
           <!-- Layout - Columns -->
           <div class="item item-date date-d1">24 April</div>
@@ -231,13 +244,25 @@
           <div class="item item-grey item-d3-4">Closing Ceremony</div>
         </div>
         
-        <h2 class="mt-6">What happens after the hackathon?</h2>
-        <p>
-          One of the main concerned related to the hackathons organised until now is the difficulties to follow up of the best projects from the hackathon. To this aim the panEuropean hackathon will provide avenues for uptake by end-users or follow up development.
-        </p>
-        <p>
-          The best solutions will be invited to join the European Innovation Council (EIC) Community Platform that will facilitate connections with end users (e.g. hospital) and will also provide access to investors, foundations and other funding opportunities from the EIC and other EU financial support mechanisms. It will also be a starting point of a much longer collaboration between the European Commission and the ecosystems of innovators, makers and startups across Europe in relation to the corona crisis. In addition, it will strengthen the overall ability of Europe to act together and respond to critical situations such as the corona crisis.
-        </p>
+        <div class="timeline-mobile">
+          <h2><em>POST-Hackathon</em></h2>
+          <h3>27 April</h3>
+          <p>
+            Ending celebration livestream & communication of next steps
+          </p>
+          <h3>01 May</h3>
+          <p>
+            Award ceremony livestream
+          </p>
+  
+          <h2 class="mt-6">What happens after the hackathon?</h2>
+          <p>
+            One of the main concerned related to the hackathons organised until now is the difficulties to follow up of the best projects from the hackathon. To this aim the panEuropean hackathon will provide avenues for uptake by end-users or follow up development.
+          </p>
+          <p>
+            The best solutions will be invited to join the European Innovation Council (EIC) Community Platform that will facilitate connections with end users (e.g. hospital) and will also provide access to investors, foundations and other funding opportunities from the EIC and other EU financial support mechanisms. It will also be a starting point of a much longer collaboration between the European Commission and the ecosystems of innovators, makers and startups across Europe in relation to the corona crisis. In addition, it will strengthen the overall ability of Europe to act together and respond to critical situations such as the corona crisis.
+          </p>
+        </div>
     </section>
     <!-- END agenda -->
   </main>

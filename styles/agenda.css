@@ -12,11 +12,11 @@
     padding-bottom: 100px;
 }
 
-.agenda-wrapper h1 {
-	padding-top: 5rem;
-	color: var(--color-grey-h3-normal) !important;
+.timeline-mobile { display: none; }
+@media (max-width: 768px){
+    .timeline-mobile { display: block; }
+    .timeline-desktop { display: none; }
 }
-
 .agenda-timeline {
     max-width: 840px;
     margin-top: 2rem;

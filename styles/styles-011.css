@@ -122,6 +122,21 @@ p {
 	margin: 0;
 }
 
+.main-wrapper h1 {
+	padding-top: 5rem;
+	color: var(--color-grey-h3-normal) !important;
+}
+
+@media (max-width: 768px) {
+	.main-wrapper h1 {
+		padding-top: 3rem;
+	}
+}
+@media (max-width: 576px) {
+	.main-wrapper h1 {
+		padding-top: 2rem;
+	}
+}
 .h1-seperator {
     height: 2px;
     width: 100%;
@@ -889,17 +904,12 @@ button:focus {
 	padding-bottom: 100px;	
 }
 
-.faq h1 {
-	padding-top: 5rem;
-	color: var(--color-grey-h3-normal) !important;
-}
-
 .faq h2 {
-	margin-top: 5rem;
+	margin-top: 3rem;
 }
 
 .faq h3 {
-	margin-top: 3rem;
+	margin-top: 2rem;
 }
 
 .faq hr {
@@ -919,6 +929,54 @@ button:focus {
 	}
 }
 
+
+
+/*** BEGIN press ***/
+.press {
+	background-color: var(--color-light-grey);
+	padding-bottom: 100px;	
+}
+
+.press h2 {
+	margin-top: 3rem;
+	font-size: 2rem;
+}
+
+.press h3 {
+	margin-top: 1rem;
+}
+
+.press hr {
+	margin-top: 10px;
+	background-color: var(--color-grey-h3-normal);
+}
+
+.press p {
+	width: 80%;
+	margin-top: 1rem;
+	color: var(--color-grey-h3-normal);
+}
+
+#twitter-wall {
+	width: 100%;
+	height: 34vw;
+	min-height: 440px;
+	max-height: 800px;
+}
+@media (max-width: 992px){
+	.press .p {
+		width: 100%;
+	}
+	#twitter-wall {
+		height: 40vw;
+	}
+}
+@media (max-width: 768px){
+	#twitter-wall {
+		height: 50vw;
+	}
+}
+/*** END press ***/
 
 
 
