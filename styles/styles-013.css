@@ -748,15 +748,22 @@ button:focus {
 
 .how-can-you-help-row {
 	display: flex;
-	flex-direction: row;	
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .how-can-you-help-column {
-	padding: 0px 80px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	width: 30%;
 }
 .how-can-you-help-column p {
 	min-height: 150px;
+}
+.how-can-you-help .secondary-button {
+	font-size: 1rem;
+	padding: 8px 25px;
+	margin-bottom: 2px;
+	width: 100%;
 }
 @media (max-width: 992px){
 	.how-can-you-help-row {

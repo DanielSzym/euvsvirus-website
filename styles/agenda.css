@@ -242,46 +242,50 @@
 /* Items */
 .item-d1-1 {
     grid-column: day-1;
-    grid-row: time-1700 / time-2000;
+    grid-row: time-1700 / time-1900;
 }
 .item-d1-2 {
     grid-column: day-1;
-    grid-row: time-2000 / time-2400;
+    grid-row: time-1900 / time-2400;
 }
 .item-d2-1 {
     grid-column: day-2;
-    grid-row: time-0900 / time-1100;
+    grid-row: time-0900 / time-1000;
 }
 .item-d2-2 {
     grid-column: day-2;
-    grid-row: time-1100 / time-1500;
+    grid-row: time-1000 / time-1400;
 }
 .item-d2-3 {
     grid-column: day-2;
-    grid-row: time-1500 / time-1800;
+    grid-row: time-1400 / time-1700;
 }
 .item-d2-4 {
     grid-column: day-2;
-    grid-row: time-1800 / time-2200;
+    grid-row: time-1700 / time-1900;
 }
 .item-d2-5 {
     grid-column: day-2;
-    grid-row: time-2200 / time-2300;
+    grid-row: time-1900 / time-2000;
+}
+.item-d2-6 {
+    grid-column: day-2;
+    grid-row: time-2000 / time-2400;
 }
 .item-d3-1 {
     grid-column: day-3;
-    grid-row: time-0900 / time-1100;
+    grid-row: time-0900 / time-1000;
 }
 .item-d3-2 {
     grid-column: day-3;
-    grid-row: time-1100 / time-1700;
+    grid-row: time-1000 / time-1700;
 }
 .item-d3-3 {
     grid-column: day-3;
-    grid-row: time-1700 / time-1800;
+    grid-row: time-1700 / time-1900;
 }
 .item-d3-4 {
     grid-column: day-3;
-    grid-row: time-1800 / time-2300;
+    grid-row: time-1900 / time-2000;
 }
 /*** END agenda ***/
