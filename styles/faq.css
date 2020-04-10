@@ -1,0 +1,34 @@
+.faq {
+	background-color: var(--color-light-grey);
+	padding-bottom: 100px;	
+}
+
+.faq h1 {
+	padding-top: 5rem;
+	color: var(--color-grey-h3-normal) !important;
+}
+
+.faq h2 {
+	margin-top: 5rem;
+}
+
+.faq h3 {
+	margin-top: 3rem;
+}
+
+.faq hr {
+	margin-top: 10px;
+	background-color: var(--color-grey-h3-normal);
+}
+
+.faq p {
+	width: 80%;
+	margin-top: 1rem;
+	color: var(--color-grey-h3-normal);
+}
+
+@media (max-width: 992px){
+	.faq .p {
+		width: 100%;
+	}
+}
