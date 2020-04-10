@@ -77,7 +77,7 @@ img {
 	border:0;
 	max-width:100%;
 	vertical-align:bottom;
-    -ms-interpolation-mode:bicubic;
+	-ms-interpolation-mode:bicubic;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -726,6 +726,7 @@ button:focus {
 	}
 	.category-button {
 		width: 90px;
+		height: 80px;
 	}
 	.category-open-all {
 		width: 140px;
