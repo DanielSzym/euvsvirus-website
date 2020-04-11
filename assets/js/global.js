@@ -111,36 +111,46 @@ function changeChallenge(element) {
 }
 
 
+(function() {
 
-// 'activate' menu item based on url
-let url = window.location.href
-if (url.indexOf('challenges') > -1) { 
-    resetMenuBar(); 
-    activateMenuItem('.menu-challenges');
-    if(url.indexOf('#health') > -1) { changeChallenge(document.getElementById('challenges-menu-health'))}
-    else if(url.indexOf('#business') > -1) { changeChallenge(document.getElementById('challenges-menu-business'))}
-    else if(url.indexOf('#social') > -1) { changeChallenge(document.getElementById('challenges-menu-social'))}
-    else if(url.indexOf('#remote') > -1) { changeChallenge(document.getElementById('challenges-menu-education'))}
-    else if(url.indexOf('#finance') > -1) { changeChallenge(document.getElementById('challenges-menu-finance'))}
-    else if(url.indexOf('#other') > -1) { changeChallenge(document.getElementById('challenges-menu-other'))}
+  // 'activate' menu item based on url
+  let url = window.location.href
+  if (url.indexOf('challenges') > -1) { 
+      resetMenuBar(); 
+      activateMenuItem('.menu-challenges');
+      if(url.indexOf('#health') > -1) { changeChallenge(document.getElementById('challenges-menu-health'))}
+      else if(url.indexOf('#business') > -1) { changeChallenge(document.getElementById('challenges-menu-business'))}
+      else if(url.indexOf('#social') > -1) { changeChallenge(document.getElementById('challenges-menu-social'))}
+      else if(url.indexOf('#remote') > -1) { changeChallenge(document.getElementById('challenges-menu-education'))}
+      else if(url.indexOf('#finance') > -1) { changeChallenge(document.getElementById('challenges-menu-finance'))}
+      else if(url.indexOf('#other') > -1) { changeChallenge(document.getElementById('challenges-menu-other'))}
 
-    // dont jump to anchor on challenges page
-    if (location.hash) {
-        setTimeout(function() {
-          window.scrollTo(0, 0);
-        }, 1);
-      }
-}
-else if (url.indexOf('agenda') > -1) { resetMenuBar(); activateMenuItem('.menu-agenda') }
-else if (url.indexOf('resources') > -1) { resetMenuBar(); activateMenuItem('.menu-resources') }
-else if (url.indexOf('press') > -1) { resetMenuBar(); activateMenuItem('.menu-press') }
-else if (url.indexOf('team') > -1) { resetMenuBar(); activateMenuItem('.menu-team') }
-else if (url.indexOf('faq') > -1) { resetMenuBar(); activateMenuItem('.menu-faq') }
-else if (url.indexOf('terms') > -1) { resetMenuBar(); }
-else if (url.indexOf('privacy') > -1) { resetMenuBar(); }
-else if (url.indexOf('terms') > -1) { resetMenuBar(); }
-else if (url.indexOf('imprint') > -1) { resetMenuBar(); }
-else { resetMenuBar(); activateMenuItem('.menu-hackathon'); }
+      // dont jump to anchor on challenges page
+      if (location.hash) {
+          setTimeout(function() {
+            window.scrollTo(0, 0);
+          }, 1);
+        }
+  }
+  else if (url.indexOf('agenda') > -1) { resetMenuBar(); activateMenuItem('.menu-agenda') }
+  else if (url.indexOf('resources') > -1) { resetMenuBar(); activateMenuItem('.menu-resources') }
+  else if (url.indexOf('press') > -1) { resetMenuBar(); activateMenuItem('.menu-press') }
+  else if (url.indexOf('team') > -1) { resetMenuBar(); activateMenuItem('.menu-team') }
+  else if (url.indexOf('faq') > -1) { resetMenuBar(); activateMenuItem('.menu-faq') }
+  else if (url.indexOf('terms') > -1) { resetMenuBar(); }
+  else if (url.indexOf('privacy') > -1) { resetMenuBar(); }
+  else if (url.indexOf('terms') > -1) { resetMenuBar(); }
+  else if (url.indexOf('imprint') > -1) { resetMenuBar(); }
+  else { resetMenuBar(); activateMenuItem('.menu-hackathon'); }
+
+  // add event listener
+  if (url.indexOf('challenges') > -1) { 
+  document.getElementsByClassName('challenge-content')[0]
+          .addEventListener('click', function (event) {
+              // do something
+          });
+  }
+})();
 
 // mobile menu
 function openNav() {
@@ -174,9 +184,7 @@ function activateMenuItem(menuItem) {
     }
 }
 
-if (url.indexOf('challenges') > -1) { 
-document.getElementsByClassName('challenge-content')[0]
-        .addEventListener('click', function (event) {
-            // do something
-        });
-}
+// claculate position: slected_challenge.x - scroller_container.x - 20 (margin)
+let selected_challenge = document.getElementsByClassName('img-selected')[0]
+let scroller = document.getElementById('challenges-menu-scroller')
+scroller.scrollLeft = selected_challenge.x - scroller.offsetLeft -20;

@@ -118,59 +118,60 @@
 
 
   <section id="challenges-menu" class="challenges-menu mt-5">
-    <div class="categories-menu container" style="overflow-x: auto;">
-      <div id="challenges-menu-health" class="category" onclick="changeChallenge(this)"
-        data-target-id="health">
-        <div class="category-image">
-          <img id="challenges-health-img" class="img-selected" src="../assets/img/challenges/health_and_medicine.png"
-            alt="Picture of medical equipment">
+    <div class="container">
+      <div id="challenges-menu-scroller" class="categories-menu ">
+        <div id="challenges-menu-health" class="category" onclick="changeChallenge(this)" data-target-id="health">
+          <div class="category-image">
+            <img id="challenges-health-img" class="img-selected" src="../assets/img/challenges/health_and_medicine.png"
+              alt="Picture of medical equipment">
+          </div>
+          <div class="category-button noselect">Health & Life</div>
         </div>
-        <div class="category-button noselect">Health & Life</div>
-      </div>
 
-      <div id="challenges-menu-business" class="category not-selected" onclick="changeChallenge(this)"
-        data-target-id="business">
-        <div class="category-image">
-          <img id="challenges-business-img" class="img-greyed" src="../assets/img/challenges/business_continuity.png"
-            alt="Picture of someone working on a laptop and making some notes next to a sheet with diagrams">
+        <div id="challenges-menu-business" class="category not-selected" onclick="changeChallenge(this)"
+          data-target-id="business">
+          <div class="category-image">
+            <img id="challenges-business-img" class="img-greyed" src="../assets/img/challenges/business_continuity.png"
+              alt="Picture of someone working on a laptop and making some notes next to a sheet with diagrams">
+          </div>
+          <div class="category-button noselect">Business Continuity</div>
         </div>
-        <div class="category-button noselect">Business Continuity</div>
-      </div>
 
-      <div id="challenges-menu-social" class="category not-selected" onclick="changeChallenge(this)"
-        data-target-id="social">
-        <div class="category-image">
-          <img id="challenges-social-img" class="img-greyed" src="../assets/img/challenges/social_cohesion.png"
-            alt="Picture showing the arms of two people holding something">
+        <div id="challenges-menu-social" class="category not-selected" onclick="changeChallenge(this)"
+          data-target-id="social">
+          <div class="category-image">
+            <img id="challenges-social-img" class="img-greyed" src="../assets/img/challenges/social_cohesion.png"
+              alt="Picture showing the arms of two people holding something">
+          </div>
+          <div class="category-button noselect">Social & Political Cohesion</div>
         </div>
-        <div class="category-button noselect">Social & Political Cohesion</div>
-      </div>
 
-      <div id="challenges-menu-education" class="category not-selected" onclick="changeChallenge(this)"
-        data-target-id="remote">
-        <div class="category-image">
-          <img id="challenges-education-img" class="img-greyed" src="../assets/img/challenges/education.png"
-            alt="Picture of a girl focussing on something">
+        <div id="challenges-menu-education" class="category not-selected" onclick="changeChallenge(this)"
+          data-target-id="remote">
+          <div class="category-image">
+            <img id="challenges-education-img" class="img-greyed" src="../assets/img/challenges/education.png"
+              alt="Picture of a girl focussing on something">
+          </div>
+          <div class="category-button noselect">Remote Working & Education</div>
         </div>
-        <div class="category-button noselect">Remote Working & Education</div>
-      </div>
 
-      <div id="challenges-menu-finance" class="category not-selected" onclick="changeChallenge(this)"
-        data-target-id="finance">
-        <div class="category-image">
-          <img id="challenges-finance-img" class="img-greyed" src="../assets/img/challenges/digital_finance.png"
-            alt="Picture of an elderly women with shades and a red hat">
+        <div id="challenges-menu-finance" class="category not-selected" onclick="changeChallenge(this)"
+          data-target-id="finance">
+          <div class="category-image">
+            <img id="challenges-finance-img" class="img-greyed" src="../assets/img/challenges/digital_finance.png"
+              alt="Picture of an elderly women with shades and a red hat">
+          </div>
+          <div class="category-button noselect">Digital Finance</div>
         </div>
-        <div class="category-button noselect">Digital Finance</div>
-      </div>
 
-      <div id="challenges-menu-other" class="category not-selected" onclick="changeChallenge(this)"
-        data-target-id="other">
-        <div class="category-image">
-          <img id="challenges-other-img" class="img-greyed" src="../assets/img/challenges/other.png"
-            alt="Picture of a girl focussing on something">
+        <div id="challenges-menu-other" class="category not-selected" onclick="changeChallenge(this)"
+          data-target-id="other">
+          <div class="category-image">
+            <img id="challenges-other-img" class="img-greyed" src="../assets/img/challenges/other.png"
+              alt="Picture of a girl focussing on something">
+          </div>
+          <div class="category-button noselect">Other</div>
         </div>
-        <div class="category-button noselect">Other</div>
       </div>
     </div>
   </section>
@@ -179,8 +180,7 @@
       <img src="./../assets/img/challenges/back_arrow.svg"
         alt="arrow pointing to the right indicating a horizontal scroll" class="rotate-90">
     </div>
-    <!-- <hr> -->
-    <div class="h1-seperator"></div>
+    <div class="h1-seperator challenges-seperator"></div>
   </div>
 
 
@@ -358,7 +358,7 @@
       </p>
     </div>
   </section>
-  
+
   <section id="remote" class="container challenge-content d-none">
     <div class="pb-3">
       <h2 class="challenge-content-h2">Remote Working & Education</h2>

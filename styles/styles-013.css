@@ -743,7 +743,7 @@ button:focus {
 	font-size: 1rem;
 	color: white;
 	overflow-y: hidden;
-	padding: 10px;
+	padding: 10px 5px 0 10px;
 }
 
 .category-open-all {
@@ -878,9 +878,36 @@ button:focus {
 
 /*** BEGIN challenges ***/
 /* challenges MENU */
-.challenges-menu .categories-menu {
+.challenges-menu {
+}
+	.challenges-menu .categories-menu {
 	display: flex;
 }
+
+/* scrollbar */
+#challenges-menu-scroller {
+	overflow-x: auto;
+}
+#challenges-menu-scroller::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#challenges-menu-scroller::-webkit-scrollbar
+{
+	height: 5px;
+	background-color: #F5F5F5;
+}
+
+#challenges-menu-scroller::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
 
 .challenges-menu .category {
 	padding-top: 10px;
@@ -935,6 +962,7 @@ button:focus {
 }
 @media (max-width: 992px){
 	.challenges-arrow-right-container { display: flex }
+	.challenges-seperator { display: none }
 }
 .challenge-content {
 	margin-top: 3rem;
