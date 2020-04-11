@@ -150,7 +150,9 @@
           <span class="counter-group">
             <span id="counter-seconds">00</span> Seconds
           </span>
-          until registration opens.
+          <span id="counter-until-text">
+            until registration opens.
+          </span>
         </p>
         <p class="bold mt-4">
           Challenges to be hacked, and the opening of registration to hack the challenges, will be announced soon. Watch
@@ -377,7 +379,9 @@
       <span class="counter-group">
         <span id="counter-seconds-2">00</span> Seconds
       </span>
-      until registration opens.
+      <span id="counter-until-text-2">
+        until registration opens.
+      </span>
     </div>
 
 
@@ -711,8 +715,36 @@
   <script src="./assets/js/global.js"></script>
   <script>
     // tbd: add other counters
-    // var deadline = new Date("Apr 20, 2020 23:59:59").getTime();
-    var deadline = new Date("Apr 14, 2020 00:00:01").getTime();
+    let which_counter = 'register_open'  // either register_open, register_close or hackathon_start
+    let until_text = 'until registration opens'
+    var now = Date.now()
+    
+    var deadline_ro = new Date("Apr 14, 2020 00:00:01").getTime();
+    var deadline_rc = new Date("Apr 19, 2020 00:00:01").getTime();
+    var deadline_hs = new Date("Apr 24, 2020 00:00:01").getTime();
+
+    if (now < deadline_ro) { 
+      // next deadline: registration opens
+      which_counter = 'register_open';
+      until_text = 'until registration opens'
+      var deadline = deadline_ro;
+    }
+    else {
+      if (now < deadline_rc) { 
+        // next deadline: registration closes
+        which_counter = 'register_close'
+        until_text = 'until registration closes'
+        var deadline = deadline_rc;
+      }
+      else {
+        // next deadline: hackathon start or over (over handled below)
+        which_counter = 'hackathon_start'
+        until_text = 'until the hackathon starts'
+        var deadline = deadline_hs;
+      }
+
+    }
+    // deadline = new Date("Apr 10, 2020 00:00:01").getTime();
 
     var x = setInterval(function () {
       var now = new Date().getTime();
@@ -735,10 +767,15 @@
       document.getElementById('counter-minutes-2').innerHTML = minutes;
       document.getElementById('counter-seconds').innerHTML = seconds;
       document.getElementById('counter-seconds-2').innerHTML = seconds;
+      document.getElementById('counter-until-text').innerHTML = until_text;
+      document.getElementById('counter-until-text-2').innerHTML = until_text;
+      
+      document.getElementById('counter-header').style.opacity = 1;
+      document.getElementById('counter-register').style.opacity = 1;
       if (t < 0) {
         clearInterval(x);
-        document.getElementById('counter-header').innerHTML = 'Application deadline expired';
-        document.getElementById('counter-register').innerHTML = 'Application deadline expired';
+        document.getElementById('counter-header').innerHTML = 'The hackathon has finished. Stay tuned for more info soon!';
+        document.getElementById('counter-register').innerHTML = 'The hackathon has finished. Stay tuned for more info soon!';
       }
     }, 1000);
   </script>

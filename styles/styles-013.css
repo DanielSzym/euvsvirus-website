@@ -448,6 +448,9 @@ button:focus {
 .header-left {
 	width: 55%;
 }
+#counter-register, #counter-header {
+	opacity: 0;
+}
 .counter-header {
 	margin-top: 1rem;
 	font-size: 90%;
