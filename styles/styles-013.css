@@ -878,9 +878,6 @@ button:focus {
 	display: none;
 	max-width: 320px;
 }
-.agenda-follow-up {
-	max-width: 70%;
-}
 @media (max-width: 768px){
 	.agenda {
 		margin-top: 5rem !important;
@@ -891,9 +888,6 @@ button:focus {
 	}
 	.agenda-image.desktop{
 		display: none;
-	}
-	.agenda-follow-up {
-		max-width: 100%;
 	}
 }
 
