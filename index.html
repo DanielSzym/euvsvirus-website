@@ -87,11 +87,9 @@
       </div>
       <div id="menu-desktop-content">
         <div class="d-flex">
-          <a href="#" class="desktop-link-item menu-item menu-hackathon current-menu"
-            onclick="selectMenuItem(this)">Hackathon</a>
-          <a href="./challenges/" class="desktop-link-item menu-challenges menu-item"
-            onclick="selectMenuItem(this)">Challenges</a>
-          <a href="./agenda/" class="desktop-link-item menu-agenda menu-item" onclick="selectMenuItem(this)">Agenda</a>
+          <a href="#" class="desktop-link-item menu-item menu-hackathon current-menu">Hackathon</a>
+          <a href="./challenges/" class="desktop-link-item menu-challenges menu-item">Challenges</a>
+          <a href="./agenda/" class="desktop-link-item menu-agenda menu-item">Agenda</a>
           <a class="desktop-link-item menu-item menu-resources disable-menu tooltip">Resources<span
               class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
@@ -99,7 +97,7 @@
           <a id="menu-team" class="desktop-link-item menu-item menu-team disable-menu tooltip">Team<span
               class="tooltiptext tooltip-bottom">Coming
               soon</span></a>
-          <a href="./faq/" class="desktop-link-item menu-item menu-faq" onclick="selectMenuItem(this)">FAQ</a>
+          <a href="./faq/" class="desktop-link-item menu-item menu-faq">FAQ</a>
         </div>
         <div class="d-flex align-items-center">
           <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -217,12 +215,20 @@
       </div>
     </div>
 
-    <!-- EU Parliament involvment -->
-    <div class="parliament-wrapper mt-5">
-      <strong class="bold d-block mb-3">EUvsVirus is supported by the European Parliament</strong>
-      <img class="logo-parliament" alt="Logo of the European parliament"
-        src="./assets/img/intro/european_parliament.png">
+    <div class="mt-6 eic-parliament-container">
+      <div id="logo-eic">
+        <img class="eic-logo" alt="A banner image of the european innovation council"
+          src="./assets/img/EIC-innovation.png">
+      </div>
+      <!-- EU Parliament involvment -->
+      <div class="parliament-wrapper">
+        <strong class="bold d-block mb-3">EUvsVirus is supported by the European Parliament</strong>
+        <img class="logo-parliament" alt="Logo of the European parliament"
+          src="./assets/img/intro/european_parliament.png">
+      </div>
     </div>
+
+
 
     <!-- Countries involved -->
     <div class="countries-wrapper mt-5">
@@ -251,15 +257,9 @@
             </h2>
             <div class="description-p">
               <p class="mt-3">
-                Many online hackathons have been organised across Europe since the beginning of March.
-                There have been hackathons in Estonia, Finland, Poland, Italy, Belgium and similar events are also
-                planned in the coming weeks.
-              </p>
-              <p class="mt-2">
                 <strong>euvsvirus.org</strong> is an online European-wide hackathon organized by the most
                 plugged in and nationally connected digital ecosystem actors from all over Europe.
                 It builds upon already conducted national hackathons and the solutions worked on.
-
               </p>
               <p class="mt-2">
                 It is a call to action to each and everyone to participate in the fight against COVID-19:
@@ -280,7 +280,15 @@
               </p>
               <p class="mt-2">
                 <strong>Recognition</strong>
-                <br>Judge-selected projects will be shared widely across tech ecosystem and partner networks.
+                <br>A jury will select the best projects that will be shared
+                widely across the European Commission, European
+                Parliament and other partners’ networks.
+              </p>
+              <p class="mt-2">
+                <strong>Follow-up</strong>
+                <br>The best projects from
+                the #EUvsVirus hackathon will receive a follow-up on the European
+                Innovation Council Covid platform providing you with many opportunities to come.
               </p>
             </div>
           </div>
@@ -327,7 +335,7 @@
         <div class="category">
           <a href="./challenges/#remote">
             <div class="category-image">
-              <img src="./assets/img/challenges/education.png" alt="Picture of a girl focussing on something">
+              <img src="./assets/img/challenges/remote.png" alt="Picture of a girl focussing on something">
             </div>
             <div class="category-button noselect">Remote Working & Education</div>
           </a>
@@ -446,7 +454,7 @@
         </a>
         <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_Foundations">
           <button class="secondary-button mt-2">
-            Nonprofit private organisation
+            Civil society organisation
           </button>
         </a>
         <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_LocalAuthorities">
@@ -468,7 +476,7 @@
   <!-- BEGIN Agenda -->
   <section class="agenda container">
     <div id="agenda" class="anchor"></div>
-    <h2>Agenda</h2>
+    <h2>Timeline</h2>
     <br><br>
     <div class="agenda-image desktop">
       <img src="./assets/img/agenda/agenda_desktop.png" alt="Image of the EUvsVirus hackathon agenda">
@@ -478,18 +486,6 @@
     </div>
     <div class="mt-3">
       <a href="./agenda/"><b><u>Open Full agenda</u></b></a>
-    </div>
-    <div class="mt-5 agenda-follow-up">
-      <h4>
-        Follow-up of the best ideas: EIC Covid platform
-      </h4>
-      <p class="mt-2">
-        The European Commission, in close collaboration with all member States and the participating H2020 associated
-        countries, will provide follow up to the best projects coming from the #EUvsVirus hackathon through the new
-        EuropeanInnovation Council (EIC) Covid platform. Foundations, investors, health providers (e.g. hospitals) will
-        also be part of the EIC Covid platform to ensure that the best ideas are turned into actual solutions to fight
-        against coronavirus and its consequences.
-      </p>
     </div>
   </section>
   <!-- END Agenda -->
@@ -573,7 +569,12 @@
       </div>
       <div class="initiators-logo ml-2">
         <a target="_blank" rel="noreferrer" href="https://www.francedigitale.org/">
-          <img src="./assets/img/initiators/franceDigitale.png" alt="Logo of the 'France Digital'">
+          <img src="./assets/img/initiators/franceDigitale.png" alt="Logo of 'France Digital'">
+        </a>
+      </div>
+      <div class="initiators-logo ml-2">
+        <a target="_blank" rel="noreferrer" href="https://www.funderbeam.com/">
+          <img src="./assets/img/initiators/funderbeam.png" alt="Logo of 'Funder Beam'">
         </a>
       </div>
       <div class="initiators-logo ml-2">
@@ -599,6 +600,11 @@
       <div class="initiators-logo">
         <a target="_blank" rel="noreferrer" href="https://www.hackjunction.com/">
           <img src="./assets/img/initiators/hackjunction.png" alt="Logo of 'Hackjunction'">
+        </a>
+      </div>
+      <div class="initiators-logo">
+        <a target="_blank" rel="noreferrer" href="https://hamagbicro.hr/">
+          <img src="./assets/img/initiators/hamagbicro.png" alt="Logo of 'Hamag Bicro'">
         </a>
       </div>
       <div class="initiators-logo">
@@ -642,7 +648,12 @@
         </a>
       </div>
       <div class="initiators-logo">
-        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/transilvania-it-cluster/">
+        <a target="_blank" rel="noreferrer" href="https://techbbq.dk/">
+          <img src="./assets/img/initiators/techbbq.png" alt="Logo of 'Tech BBQ'">
+        </a>
+      </div>
+      <div class="initiators-logo">
+        <a target="_blank" rel="noreferrer" href="https://transilvaniait.ro/">
           <img src="./assets/img/initiators/transilvania.png" alt="Logo of the company 'Transilvania IT Cluster'">
         </a>
       </div>
@@ -664,10 +675,6 @@
     </div>
   </section>
 
-  <section id="logo-eic" class="container mt-6">
-    <img class="eic-logo" alt="A banner image of the european innovation council" src="./assets/img/EIC-innovation.png">
-  </section>
-
   <!-- BEGIN footer -->
   <footer class="mt-6 pt-1">
     <div class="container d-flex space-between">
@@ -687,6 +694,11 @@
           <li>
             <a href="./imprint/" hreflang="en">
               Imprint
+            </a>
+          </li>
+          <li>
+            <a href="./assets/docs/EuvsVirus Values and Code Of Conduct.pdf" hreflang="en">
+              Code of Conduct
             </a>
           </li>
           <li>
@@ -718,19 +730,19 @@
     let which_counter = 'register_open'  // either register_open, register_close or hackathon_start
     let until_text = 'until registration opens'
     var now = Date.now()
-    
-    var deadline_ro = new Date("Apr 14, 2020 00:00:01").getTime();
-    var deadline_rc = new Date("Apr 19, 2020 00:00:01").getTime();
-    var deadline_hs = new Date("Apr 24, 2020 00:00:01").getTime();
 
-    if (now < deadline_ro) { 
+    var deadline_ro = new Date("Apr 14, 2020 12:00:00").getTime();
+    var deadline_rc = new Date("Apr 19, 2020 23:59:59").getTime();
+    var deadline_hs = new Date("Apr 24, 2020 17:00:00").getTime();
+
+    if (now < deadline_ro) {
       // next deadline: registration opens
       which_counter = 'register_open';
       until_text = 'until registration opens'
       var deadline = deadline_ro;
     }
     else {
-      if (now < deadline_rc) { 
+      if (now < deadline_rc) {
         // next deadline: registration closes
         which_counter = 'register_close'
         until_text = 'until registration closes'
@@ -769,7 +781,7 @@
       document.getElementById('counter-seconds-2').innerHTML = seconds;
       document.getElementById('counter-until-text').innerHTML = until_text;
       document.getElementById('counter-until-text-2').innerHTML = until_text;
-      
+
       document.getElementById('counter-header').style.opacity = 1;
       document.getElementById('counter-register').style.opacity = 1;
       if (t < 0) {

@@ -586,10 +586,43 @@ button:focus {
 	border-bottom: 2px solid var(--color-grey);
 }
 
-
+.eic-parliament-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.eic-logo {
+	width: 70%;
+	/* max-width: 60%; */
+}
+.parliament-wrapper {
+	width: 60%;
+}
 .logo-parliament {
 	max-width: 140px;
 }
+@media (max-width: 992px) {
+	.eic-logo {
+		max-width: 80%;
+	}
+}
+@media (max-width: 768px) {
+	.eic-logo {
+		width: 100%;
+	}
+	.parliament-wrapper {
+		width: 100%;
+	}
+}
+@media (max-width: 576px) {
+	.eic-parliament-container {
+		flex-direction: column;
+	}
+	.parliament-wrapper {
+		margin-top: 2rem;
+	}
+}
+
 
 
 /* countries */
@@ -636,20 +669,10 @@ button:focus {
 .initiators-logo img {
 	width: 120px;
 }
-.eic-logo {
-	max-width: 60%;
-}
-@media (max-width: 992px) {
-	.eic-logo {
-		max-width: 80%;
-	}
-}
+
 @media (max-width: 768px) {
 	.initiators-logo img {
 		width: 80px;
-	}
-	.eic-logo {
-		max-width: 100%;
 	}
 }
 /* description */
@@ -855,9 +878,6 @@ button:focus {
 	display: none;
 	max-width: 320px;
 }
-.agenda-follow-up {
-	max-width: 70%;
-}
 @media (max-width: 768px){
 	.agenda {
 		margin-top: 5rem !important;
@@ -868,9 +888,6 @@ button:focus {
 	}
 	.agenda-image.desktop{
 		display: none;
-	}
-	.agenda-follow-up {
-		max-width: 100%;
 	}
 }
 
@@ -996,7 +1013,20 @@ button:focus {
 	border-radius: 4px;
 }
 
-
+/* challenges navbar */
+.challenges-navigation-bar {
+	margin-top: -20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.challenges-navigation-bar img {
+	width: 42px;
+	cursor: pointer;;
+}
+.challenges-navigation-bar p {
+	font-size: 1.05rem;
+}
 /*** BEGIN faq ***/
 .faq {
 	background-color: #F4F4F4;
@@ -1314,6 +1344,9 @@ footer ul li a {
 }
 .rotate-90 {
 	transform: rotate(180deg);
+}
+.text-muted {
+	color: #818181;
 }
 
 /*** Tooltip ***/
