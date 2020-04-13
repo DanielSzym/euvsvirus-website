@@ -123,6 +123,7 @@ function changeChallenge(element) {
   window.history.pushState('object or string', 'Title', '#' + target_id);
 
   document.getElementById('challenges-navigation-counter').innerHTML = hits[CHALLENGE_DOMAINS.indexOf(target_id)]
+  window.scrollTo(0, 0);
 }
 
 
