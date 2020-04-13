@@ -146,10 +146,10 @@
           <div class="category-button noselect">Social & Political Cohesion</div>
         </div>
 
-        <div id="challenges-menu-education" class="category not-selected" onclick="changeChallenge(this)"
+        <div id="challenges-menu-remote" class="category not-selected" onclick="changeChallenge(this)"
           data-target-id="remote">
           <div class="category-image">
-            <img id="challenges-education-img" class="img-greyed" src="../assets/img/challenges/education.png"
+            <img id="challenges-remote-img" class="img-greyed" src="../assets/img/challenges/remote.png"
               alt="Picture of a girl focussing on something">
           </div>
           <div class="category-button noselect">Remote Working & Education</div>
@@ -486,6 +486,17 @@
     </div>
   </section>
 
+  <div class="container mb-5 challenges-navigation-bar">
+      <img onclick="navigateChallenges(this)" id="challenge-nav-prev" alt="navigation icon pointing to the left indicating last challenge domain" src="./../assets/img/icons/navigate_before.svg" title="next domain">
+      &nbsp;
+      <p>
+        Showing
+        <span id="challenges-navigation-counter">1–8</span>
+        of 37 challenges
+      </p>
+      &nbsp;
+      <img onclick="navigateChallenges(this)" id="challenge-nav-next" alt="navigation icon pointing to the right indicating next challenge domain" src="./../assets/img/icons/navigate_next.svg">
+  </div>
   <section class="vertical-spacing"></section>
 
 

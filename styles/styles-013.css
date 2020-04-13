@@ -1013,7 +1013,20 @@ button:focus {
 	border-radius: 4px;
 }
 
-
+/* challenges navbar */
+.challenges-navigation-bar {
+	margin-top: -20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.challenges-navigation-bar img {
+	width: 42px;
+	cursor: pointer;;
+}
+.challenges-navigation-bar p {
+	font-size: 1.05rem;
+}
 /*** BEGIN faq ***/
 .faq {
 	background-color: #F4F4F4;
@@ -1331,6 +1344,9 @@ footer ul li a {
 }
 .rotate-90 {
 	transform: rotate(180deg);
+}
+.text-muted {
+	color: #818181;
 }
 
 /*** Tooltip ***/
