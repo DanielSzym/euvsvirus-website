@@ -260,7 +260,7 @@ button:focus {
 .anchor {
     display: block;
     position: relative;
-	top: -100px;
+	top: -70px;
 	visibility: hidden;
 }
 
@@ -1116,10 +1116,20 @@ button:focus {
 	display: flex;
 	flex-flow: wrap;
 }
+.partnername-wrapper.mobile {
+	display: none;
+}
+
 .partnername-wrapper a {
 	width: 33%;
 }
 @media (max-width: 576px) {
+	.partnername-wrapper.desktop {
+		display: none;
+	}
+	.partnername-wrapper.mobile {
+		display: flex;
+	}
 	.resources-menu {
 		flex-direction: column;
 		margin-top: 1rem;
@@ -1128,7 +1138,7 @@ button:focus {
 		margin-top: 1rem;
 	}
 	.partnername-wrapper a {
-		width: 50%;
+		width: 100%;
 	}
 }
 /*** END resources ***/
