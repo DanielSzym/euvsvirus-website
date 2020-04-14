@@ -667,7 +667,7 @@ button:focus {
 	margin-bottom: -1rem;
 }
 .initiators-logo img {
-	width: 120px;
+	width: 140px; /* 120 initial */
 }
 
 @media (max-width: 768px) {
