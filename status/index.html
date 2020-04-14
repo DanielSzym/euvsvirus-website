@@ -329,8 +329,14 @@
             loader.removeClass("hide");
             resultContainer.addClass("hide");
 
-            $.post(statusUrl,{
-                "email": email
+            $.ajax({
+                url:statusUrl,
+                type:"POST",
+                data: JSON.stringify({
+                    "email": email
+                }),
+                dataType:"json",
+                contentType:"application/json; charset=utf-8"
             }).done(function(data){
                 data = data[0];
                 if(!!data.Team){
