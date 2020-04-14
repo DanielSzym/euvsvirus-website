@@ -213,15 +213,17 @@
             <div class="description">
                 Here you can check the status of your registration. Please just enter your email address and click on "Submit".
             </div>
-            <div class="status-input-form clearfix">
-                <div class="col-75">
-                    <input type="text" id="email" name="email" placeholder="E-Mail"/>
-                    <p id="email-invalid" class="text-muted d-none"><em>Please enter a valid E-Mail Address</em></p>
+            <form id="status-input" name="status-input" method="POST">
+                <div class="status-input-form clearfix">
+                    <div class="col-75">
+                        <input type="text" id="email" name="email" placeholder="E-Mail"/>
+                        <p id="email-invalid" class="text-muted d-none"><em>Please enter a valid E-Mail Address</em></p>
+                    </div>
+                    <div class="col-25">
+                        <button type="button" onclick="checkStatus()">Submit</button>
+                    </div>
                 </div>
-                <div class="col-25">
-                    <button type="button" onclick="checkStatus()">Submit</button>
-                </div>
-            </div>
+            </form>
 
             <div class="result">
                 <div class="loader hide"></div>
@@ -325,6 +327,11 @@
     <script>
         var statusUrl = "https://prod-22.westeurope.logic.azure.com:443/workflows/4d71fdacd4c743f1867e3dbe9664e755/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qtjHCGYpLeuEO3CWycGRfGvb7u_kb-nLB4-_FrWho4o";
         
+        $('#status-input').submit(function(e) {
+            e.preventDefault();
+            checkStatus();
+        })
+
         function checkStatus(){
             $('#email-invalid').addClass('d-none')
 
