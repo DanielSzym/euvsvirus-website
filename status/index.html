@@ -43,7 +43,7 @@
         .col-25 {
             box-sizing: border-box;
             float: left;
-            width: 25%;
+            width: 20%;
             margin-top: 6px;
         }
 
@@ -116,7 +116,7 @@
     </style>
 </head>
 
-<body>
+<body style="background-color: #F4F4F4">
 
     <!-- BEGIN mobile menu -->
     <div id="mobileNav" class="overlay">
@@ -205,7 +205,7 @@
 
 
     <!-- BEGIN status -->
-    <section id="status" class="status main-wrapper">
+    <section id="status" class="status main-wrapper pb-4">
         <div class="container">
             <h1>Registration Status</h1>
             <div class="h1-seperator"></div>
@@ -217,7 +217,7 @@
                 <div class="col-75">
                     <input type="text" id="email" name="email" placeholder="E-Mail"/>
                 </div>
-                <div class="col-25">
+                <div class="col-25 ml-2">
                     <button type="button" onclick="checkStatus()">Submit</button>
                 </div>
             </div>
@@ -263,6 +263,8 @@
         If you did not receive an email with your login data, go to <a href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email address.
     </template>
     <!-- END Templates-->
+
+    <section class="vertical-spacing"></section>
 
     <!-- BEGIN footer -->
     <footer class="mt-3 pt-1">
