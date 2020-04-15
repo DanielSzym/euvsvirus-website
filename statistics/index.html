@@ -234,6 +234,16 @@
                 <canvas id="challengeChart"></canvas>
             </div>
 
+            <div class="statistics-wrapper">
+                <h2>Time cummulated (UTC)</h2>
+                <canvas id="timeCummulatedChart"></canvas>
+            </div>
+
+            <div class="statistics-wrapper">
+                <h2>Time (UTC)</h2>
+                <canvas id="timeChart"></canvas>
+            </div>
+
         </div>
     </section>
     <!-- END status -->
@@ -328,6 +338,7 @@
     </footer>
     <!-- END footer -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"
         integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -338,6 +349,8 @@
     <script>
         var countryUrl = "https://prod-115.westeurope.logic.azure.com:443/workflows/247874e5189a4cedb80f2503007782f9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2aMHmFwLZAc7gzEWhxCZIhRgxrXO_D9H7_2wDaF4n44";
         var challengeUrl = "https://prod-123.westeurope.logic.azure.com:443/workflows/596303616d7d44f6a218f46789f374b9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=muqj-i8lGbsWtxxZMtBS7rjPqpdyT2kCpVUI8_6v7fA";
+        var timeUrl = "https://prod-81.westeurope.logic.azure.com:443/workflows/fb7f8666db5c421da8b39dffabfc1e57/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=i1y8st0Bw864tqGrCuIqZF_Kxtuag0ovHD20YA15U8Y"
+        var elemCount = 25;
 
         function getRandomColor() {
             var letters = '0123456789ABCDEF'.split('');
@@ -350,13 +363,25 @@
 
         $('document').ready(function () {
             $.ajax({
-                url: countryUrl,
-                type: "POST",
-                dataType: "json",
-                contentType: "application/json; charset=utf-8"
-            }).done(function (data) {
-                var sum = _.sumBy(data, function (elem) { return parseInt(elem.Count) });
-                data = _.sortBy(data, function (elem) { return parseInt(elem.Count) * -1; });
+                url:countryUrl,
+                type:"POST",
+                dataType:"json",
+                contentType:"application/json; charset=utf-8"
+            }).done(function(data){
+                _.each(data, function(elem) { elem.Count = parseInt(elem.Count); });
+                var sum = _.sumBy(data, function(elem) {return elem.Count; });
+                data = _.sortBy(data, function(elem) {return elem.Count*-1;},);
+                data = _.reduce(data, function(aggr,elem, index) {
+                    if(index < elemCount){
+                        return _.concat(aggr, elem);
+                    }else {
+                        aggr[elemCount] = {
+                            "Country": "Rest",
+                            "Count": (!!aggr[elemCount] ? aggr[elemCount].Count : 0) + elem.Count
+                        };
+                        return aggr;
+                    }
+                }, []);
                 var ctx = document.getElementById('countryChart').getContext('2d');
                 var chart = new Chart(ctx, {
                     type: 'bar',
@@ -383,13 +408,25 @@
             });
 
             $.ajax({
-                url: challengeUrl,
-                type: "POST",
-                dataType: "json",
-                contentType: "application/json; charset=utf-8"
-            }).done(function (data) {
-                var sum = _.sumBy(data, function (elem) { return parseInt(elem.Count) });
-                data = _.sortBy(data, function (elem) { return parseInt(elem.Count) * -1; });
+                url:challengeUrl,
+                type:"POST",
+                dataType:"json",
+                contentType:"application/json; charset=utf-8"
+            }).done(function(data){
+                _.each(data, function(elem) { elem.Count = parseInt(elem.Count); });
+                var sum = _.sumBy(data, function(elem) {return elem.Count; });
+                data = _.sortBy(data, function(elem) {return elem.Count*-1;},);
+                data = _.reduce(data, function(aggr,elem, index) {
+                    if(index < elemCount){
+                        return _.concat(aggr, elem);
+                    }else {
+                        aggr[elemCount] = {
+                            "Challenge": "Rest",
+                            "Count": (!!aggr[elemCount] ? aggr[elemCount].Count : 0) + elem.Count
+                        };
+                        return aggr;
+                    }
+                }, []);
                 var ctx = document.getElementById('challengeChart').getContext('2d');
                 var chart = new Chart(ctx, {
                     type: 'bar',
@@ -397,8 +434,8 @@
                         labels: _.map(data, function (elem) { return elem.Challenge; }),
                         datasets: [{
                             label: '# of participants',
-                            backgroundColor: _.map(data, function (elem) { return getRandomColor(); }),
-                            data: _.map(data, function (elem) { return parseInt(elem.Count); })
+                            backgroundColor: _.map(data, function(elem) { return getRandomColor();}),
+                            data: _.map(data, function(elem) { return elem.Count;})
                         }]
                     },
 
@@ -408,6 +445,85 @@
                         title: {
                             display: true,
                             text: 'Distribution for all ' + sum + ' participants'
+                        }
+                    }
+                });
+            }).fail(function (jqXHR, status) {
+                alert("Data fetch failed");
+            });
+
+            $.ajax({
+                url:timeUrl,
+                type:"POST",
+                dataType:"json",
+                contentType:"application/json; charset=utf-8"
+            }).done(function(data){
+                _.each(data, function(elem) { elem.Count = parseInt(elem.Count); });
+
+                var ctx = document.getElementById('timeChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        datasets: [{
+                            label: '# of participants',
+                            borderColor: "#003399",
+                            backgroundColor: "rgba(0, 0, 0, 0)",
+                            data: _.map(data, function(elem) { return {x:elem.Time, y: elem.Count}; })
+                        }]
+                    },
+
+                    // Configuration options go here
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Course of registrations'
+                        },
+                        scales: {
+                            xAxes: [{
+                                type: 'time',
+                                time: {
+                                    unit: 'hour'
+                                }
+                            }]
+                        }
+                    }
+                });
+
+                var dataCummulated = _.reduce(data, function(aggr, elem, index) {
+                    aggr.result[index] = {
+                        "Time": elem.Time,
+                        "Count": elem.Count + aggr.count
+                    }
+                    aggr.count += elem.Count;
+                    return aggr;
+                }, { count: 0, result: []}).result;
+                var ctx = document.getElementById('timeCummulatedChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        datasets: [{
+                            label: '# of participants',
+                            borderColor: "#003399",
+                            backgroundColor: "rgba(0, 0, 0, 0)",
+                            data: _.map(dataCummulated, function(elem) { return {x:elem.Time, y: elem.Count}; })
+                        }]
+                    },
+
+                    // Configuration options go here
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Progress of registrations'
+                        },
+                        scales: {
+                            xAxes: [{
+                                type: 'time',
+                                time: {
+                                    unit: 'hour'
+                                }
+                            }]
                         }
                     }
                 });
