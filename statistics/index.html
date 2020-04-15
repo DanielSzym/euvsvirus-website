@@ -26,7 +26,9 @@
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="./../styles/styles-014.css">
     <style>
-        input[type=text], select, textarea {
+        input[type=text],
+        select,
+        textarea {
             box-sizing: border-box;
             width: 100%;
             padding: 12px;
@@ -65,7 +67,7 @@
         button {
             box-sizing: border-box;
             width: 100%;
-            background-color: white; 
+            background-color: white;
             border: 2px solid var(--color-primary-blue);
             color: var(--color-primary-blue);
             padding: 11px 20px;
@@ -88,8 +90,10 @@
         }
 
         .loader {
-            border: 16px solid #f3f3f3; /* Light grey */
-            border-top: 16px solid var(--color-primary-blue); /* Blue */
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid var(--color-primary-blue);
+            /* Blue */
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -98,8 +102,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .result {
@@ -133,17 +142,6 @@
                 <div>
                     <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
                 </div>
-                <div class="d-none">
-                    <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
-                    </a>
-                    <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
-                    </a>
-                    <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
-                    </a>
-                </div>
             </div>
         </section>
         <div class="overlay-content container">
@@ -164,6 +162,9 @@
                 </a>
                 <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
                     <img class="navbar-logo-mobile" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+                </a>
+                <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                    <img class="navbar-logo-mobile" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
                 </a>
                 <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
                     <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
@@ -200,6 +201,9 @@
                     <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
                         <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
                     </a>
+                    <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
+                    </a>
                     <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
                         <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
                     </a>
@@ -219,12 +223,12 @@
             <div class="description">
                 Here you see statistics about the registrations (updated every ~10 minutes).
             </div>
-            
+
             <div class="statistics-wrapper">
                 <h2>Countries</h2>
                 <canvas id="countryChart"></canvas>
             </div>
-            
+
             <div class="statistics-wrapper">
                 <h2>Challenges</h2>
                 <canvas id="challengeChart"></canvas>
@@ -240,7 +244,7 @@
             This could take a few minutes. <br />
             Maybe you used another mail address?
         </div>
-        <div id="team-reg" >Your registration did arrive in our system. <br />
+        <div id="team-reg">Your registration did arrive in our system. <br />
             You registered in team <b>{{Team}}</b> for the challenge: <b>{{Challenge}}</b>. <br />
             Current member count: <b>{{ColleagueCount}}</b>. <br />
             Slack invite should come soon. <br />
@@ -254,13 +258,17 @@
             You registered in team <b>{{Team}}</b> for the challenge: <b>{{Challenge}}</b>. <br />
             Current member count: <b>{{ColleagueCount}}</b>. <br />
             Your slack user: <b>{{Username}}</b>. <br />
-            If you did not receive an email with your login data, go to <a href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email address. <br />
+            If you did not receive an email with your login data, go to <a
+                href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email
+            address. <br />
             Link for inviting new members:<br /><b>{{TeamLink}}</b>
         </div>
         <div id="indi-reg-slack">Your registration did arrive in our system. <br />
             You registered as individual for the challenge: <b>{{Challenge}}</b>. <br />
             Your slack user: <b>{{Username}}</b>. <br />
-            If you did not receive an email with your login data, go to <a href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email address.
+            If you did not receive an email with your login data, go to <a
+                href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email
+            address.
         </div>
         <!-- END Templates-->
     </div>
@@ -309,6 +317,9 @@
                     <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
                         <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
                     </a>
+                    <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
+                    </a>
                     <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
                         <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
                     </a>
@@ -317,27 +328,28 @@
     </footer>
     <!-- END footer -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"
+        integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="./../assets/js/global-014.js"></script>
     <script src="./../assets/js/cookieconsent.min.js"></script>
     <script>
         var countryUrl = "https://prod-115.westeurope.logic.azure.com:443/workflows/247874e5189a4cedb80f2503007782f9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2aMHmFwLZAc7gzEWhxCZIhRgxrXO_D9H7_2wDaF4n44";
         var challengeUrl = "https://prod-123.westeurope.logic.azure.com:443/workflows/596303616d7d44f6a218f46789f374b9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=muqj-i8lGbsWtxxZMtBS7rjPqpdyT2kCpVUI8_6v7fA";
-        
         var elemCount = 25;
 
         function getRandomColor() {
             var letters = '0123456789ABCDEF'.split('');
             var color = '#';
-            for (var i = 0; i < 6; i++ ) {
+            for (var i = 0; i < 6; i++) {
                 color += letters[Math.floor(Math.random() * 16)];
             }
             return color;
         }
 
-        $('document').ready(function(){
+        $('document').ready(function () {
             $.ajax({
                 url:countryUrl,
                 type:"POST",
@@ -362,11 +374,11 @@
                 var chart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: _.map(data, function(elem) { return elem.Country;}),
+                        labels: _.map(data, function (elem) { return elem.Country; }),
                         datasets: [{
                             label: '# of participants',
-                            backgroundColor: _.map(data, function(elem) { return getRandomColor();}),
-                            data: _.map(data, function(elem) { return parseInt(elem.Count);})
+                            backgroundColor: _.map(data, function (elem) { return getRandomColor(); }),
+                            data: _.map(data, function (elem) { return parseInt(elem.Count); })
                         }]
                     },
 
@@ -375,11 +387,11 @@
                         responsive: true,
                         title: {
                             display: true,
-                            text: 'Distribution for '+ sum + ' participants who selected a country'
+                            text: 'Distribution for ' + sum + ' participants who selected a country'
                         }
                     }
                 });
-            }).fail(function(jqXHR, status) {
+            }).fail(function (jqXHR, status) {
                 alert("Data fetch failed");
             });
 
@@ -407,7 +419,7 @@
                 var chart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: _.map(data, function(elem) { return elem.Challenge; }),
+                        labels: _.map(data, function (elem) { return elem.Challenge; }),
                         datasets: [{
                             label: '# of participants',
                             backgroundColor: _.map(data, function(elem) { return getRandomColor();}),
@@ -420,16 +432,16 @@
                         responsive: true,
                         title: {
                             display: true,
-                            text: 'Distribution for all '+ sum + ' participants'
+                            text: 'Distribution for all ' + sum + ' participants'
                         }
                     }
                 });
-            }).fail(function(jqXHR, status) {
+            }).fail(function (jqXHR, status) {
                 alert("Data fetch failed");
             });
         });
 
-    
+
     </script>
 </body>
 
