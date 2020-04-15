@@ -162,6 +162,7 @@ function changeChallenge(element) {
   else if (url.indexOf('terms') > -1) { resetMenuBar(); }
   else if (url.indexOf('imprint') > -1) { resetMenuBar(); }
   else if (url.indexOf('status') > -1) { resetMenuBar(); }
+  else if (url.indexOf('statistics') > -1) { resetMenuBar(); }
   else { resetMenuBar(); activateMenuItem('.menu-hackathon'); }
 
   // add event listener
