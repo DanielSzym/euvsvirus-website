@@ -122,6 +122,12 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+
+        .statistics-wrapper {
+            box-sizing: border-box;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -209,34 +215,23 @@
 
 
     <!-- BEGIN status -->
-    <section id="status" class="status main-wrapper pb-4">
+    <section id="statistics" class="statistics main-wrapper pb-4">
         <div class="container">
-            <h1>Registration Status</h1>
+            <h1>Statistics</h1>
             <div class="h1-seperator"></div>
 
             <div class="description">
-                Here you can check the status of your registration. Please just enter your email address and click on
-                "Submit".
+                Here you see statistics about the registrations (updated every ~10 minutes).
             </div>
-            <form id="status-input" name="status-input" method="POST">
-                <div class="status-input-form clearfix">
-                    <div class="col-75">
-                        <input type="text" id="email" name="email" placeholder="E-Mail" />
-                        <p id="email-invalid" class="text-muted d-none"><em>Please enter a valid E-Mail Address</em></p>
-                    </div>
-                    <div class="col-25">
-                        <button type="button" onclick="checkStatus()">Submit</button>
-                    </div>
-                </div>
-            </form>
 
-            <div class="result">
-                <div class="loader hide"></div>
+            <div class="statistics-wrapper">
+                <h2>Countries</h2>
+                <canvas id="countryChart"></canvas>
+            </div>
 
-                <div class="status-result clearfix hide">
-                    <div class="col-25"><b>Status: </b></div>
-                    <div class="col-75" id="template-result"></div>
-                </div>
+            <div class="statistics-wrapper">
+                <h2>Challenges</h2>
+                <canvas id="challengeChart"></canvas>
             </div>
 
         </div>
@@ -289,7 +284,7 @@
                 <ul>
                     <li>
                         <a href="./../terms/" hreflang="en">
-                            Terms &amp; Conditions
+                            Terms & Conditions
                         </a>
                     </li>
                     <li>
@@ -333,77 +328,93 @@
     </footer>
     <!-- END footer -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"
+        integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="./../assets/js/global-014.js"></script>
     <script src="./../assets/js/cookieconsent.min.js"></script>
     <script>
-        var statusUrl = "https://prod-22.westeurope.logic.azure.com:443/workflows/4d71fdacd4c743f1867e3dbe9664e755/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qtjHCGYpLeuEO3CWycGRfGvb7u_kb-nLB4-_FrWho4o";
+        var countryUrl = "https://prod-115.westeurope.logic.azure.com:443/workflows/247874e5189a4cedb80f2503007782f9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2aMHmFwLZAc7gzEWhxCZIhRgxrXO_D9H7_2wDaF4n44";
+        var challengeUrl = "https://prod-123.westeurope.logic.azure.com:443/workflows/596303616d7d44f6a218f46789f374b9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=muqj-i8lGbsWtxxZMtBS7rjPqpdyT2kCpVUI8_6v7fA";
 
-        $('#status-input').submit(function (e) {
-            e.preventDefault();
-            checkStatus();
-        })
-
-        function checkStatus() {
-            $('#email-invalid').addClass('d-none')
-
-            var email = $("#email").val();
-            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            if (!re.test(String(email).toLowerCase())) {
-                $('#email-invalid').removeClass('d-none')
-                return
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
             }
+            return color;
+        }
 
-            var resultBox = $("#template-result");
-            var loader = $(".loader");
-            var resultContainer = $(".status-result");
-
-            loader.removeClass("hide");
-            resultContainer.addClass("hide");
-
-
+        $('document').ready(function () {
             $.ajax({
-                url: statusUrl,
+                url: countryUrl,
                 type: "POST",
-                data: JSON.stringify({
-                    "email": email
-                }),
                 dataType: "json",
                 contentType: "application/json; charset=utf-8"
             }).done(function (data) {
-                data = data[0];
-                if (!!data.Team) {
-                    if (!!data.Username) { renderTemplate('team-reg-slack', data) }
-                    else { renderTemplate('team-reg', data) }
-                } else {
-                    if (!!data.Username) { renderTemplate('indi-reg-slack', data) }
-                    else { renderTemplate('indi-reg', data) }
-                }
-                loader.addClass("hide");
-                resultContainer.removeClass("hide");
+                var sum = _.sumBy(data, function (elem) { return parseInt(elem.Count) });
+                data = _.sortBy(data, function (elem) { return parseInt(elem.Count) * -1; });
+                var ctx = document.getElementById('countryChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: _.map(data, function (elem) { return elem.Country; }),
+                        datasets: [{
+                            label: '# of participants',
+                            backgroundColor: _.map(data, function (elem) { return getRandomColor(); }),
+                            data: _.map(data, function (elem) { return parseInt(elem.Count); })
+                        }]
+                    },
+
+                    // Configuration options go here
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Distribution for ' + sum + ' participants who selected a country'
+                        }
+                    }
+                });
             }).fail(function (jqXHR, status) {
-                if (jqXHR.status == "404") {
-                    resultBox.html($("#no-reg").html());
-                    loader.addClass("hide");
-                    resultContainer.removeClass("hide");
-                } else {
-                    alert("Request error");
-                }
+                alert("Data fetch failed");
             });
-        }
 
-        function renderTemplate(id, data) {
-            var resultBox = $("#template-result");
-            var template = $("#" + id).html();
+            $.ajax({
+                url: challengeUrl,
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8"
+            }).done(function (data) {
+                var sum = _.sumBy(data, function (elem) { return parseInt(elem.Count) });
+                data = _.sortBy(data, function (elem) { return parseInt(elem.Count) * -1; });
+                var ctx = document.getElementById('challengeChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: _.map(data, function (elem) { return elem.Challenge; }),
+                        datasets: [{
+                            label: '# of participants',
+                            backgroundColor: _.map(data, function (elem) { return getRandomColor(); }),
+                            data: _.map(data, function (elem) { return parseInt(elem.Count); })
+                        }]
+                    },
 
-            for (var prop in data) {
-                if (data.hasOwnProperty(prop)) {
-                    template = template.replace("{{" + prop + "}}", data[prop]);
-                }
-            }
-            resultBox.html(template);
-        }
+                    // Configuration options go here
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Distribution for all ' + sum + ' participants'
+                        }
+                    }
+                });
+            }).fail(function (jqXHR, status) {
+                alert("Data fetch failed");
+            });
+        });
 
 
     </script>

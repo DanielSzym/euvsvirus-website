@@ -153,7 +153,7 @@ function changeChallenge(element) {
     scroller.scrollLeft = selected_challenge.x - scroller.offsetLeft - 20;
   }
   else if (url.indexOf('agenda') > -1) { resetMenuBar(); activateMenuItem('.menu-agenda') }
-  else if (url.indexOf('resources') > -1) { resetMenuBar(); activateMenuItem('.menu-resources') }
+  else if (url.indexOf('partners') > -1) { resetMenuBar(); activateMenuItem('.menu-resources') }
   else if (url.indexOf('press') > -1) { resetMenuBar(); activateMenuItem('.menu-press') }
   else if (url.indexOf('team') > -1) { resetMenuBar(); activateMenuItem('.menu-team') }
   else if (url.indexOf('faq') > -1) { resetMenuBar(); activateMenuItem('.menu-faq') }
@@ -162,6 +162,7 @@ function changeChallenge(element) {
   else if (url.indexOf('terms') > -1) { resetMenuBar(); }
   else if (url.indexOf('imprint') > -1) { resetMenuBar(); }
   else if (url.indexOf('status') > -1) { resetMenuBar(); }
+  else if (url.indexOf('statistics') > -1) { resetMenuBar(); }
   else { resetMenuBar(); activateMenuItem('.menu-hackathon'); }
 
   // add event listener
