@@ -317,7 +317,7 @@
     </footer>
     <!-- END footer -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.core.min.js" integrity="sha256-yEkk5ZYVs/fZgvxWU+sCb8bHTk9jScxIaZQD+CZ4vcg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="./../assets/js/global-014.js"></script>
@@ -342,6 +342,7 @@
                 dataType:"json",
                 contentType:"application/json; charset=utf-8"
             }).done(function(data){
+                var sum = _.sumBy(data, function(elem) {return parseInt(elem.Count)});
                 data = _.sortBy(data, function(elem) {return parseInt(elem.Count)*-1;},);
                 var ctx = document.getElementById('countryChart').getContext('2d');
                 var chart = new Chart(ctx, {
@@ -356,7 +357,13 @@
                     },
 
                     // Configuration options go here
-                    options: {}
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Distribution for '+ sum + ' participants who selected a country'
+                        }
+                    }
                 });
             }).fail(function(jqXHR, status) {
                 alert("Data fetch failed");
@@ -368,6 +375,7 @@
                 dataType:"json",
                 contentType:"application/json; charset=utf-8"
             }).done(function(data){
+                var sum = _.sumBy(data, function(elem) {return parseInt(elem.Count)});
                 data = _.sortBy(data, function(elem) {return parseInt(elem.Count)*-1;},);
                 var ctx = document.getElementById('challengeChart').getContext('2d');
                 var chart = new Chart(ctx, {
@@ -382,7 +390,13 @@
                     },
 
                     // Configuration options go here
-                    options: {}
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Distribution for '+ sum + ' participants'
+                        }
+                    }
                 });
             }).fail(function(jqXHR, status) {
                 alert("Data fetch failed");
