@@ -26,7 +26,9 @@
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="./../styles/styles-014.css">
     <style>
-        input[type=text], select, textarea {
+        input[type=text],
+        select,
+        textarea {
             box-sizing: border-box;
             width: 100%;
             padding: 12px;
@@ -65,7 +67,7 @@
         button {
             box-sizing: border-box;
             width: 100%;
-            background-color: white; 
+            background-color: white;
             border: 2px solid var(--color-primary-blue);
             color: var(--color-primary-blue);
             padding: 11px 20px;
@@ -88,8 +90,10 @@
         }
 
         .loader {
-            border: 16px solid #f3f3f3; /* Light grey */
-            border-top: 16px solid var(--color-primary-blue); /* Blue */
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid var(--color-primary-blue);
+            /* Blue */
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -98,8 +102,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .result {
@@ -127,17 +136,6 @@
                 <div>
                     <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
                 </div>
-                <div class="d-none">
-                    <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
-                    </a>
-                    <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
-                    </a>
-                    <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
-                    </a>
-                </div>
             </div>
         </section>
         <div class="overlay-content container">
@@ -158,6 +156,9 @@
                 </a>
                 <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
                     <img class="navbar-logo-mobile" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+                </a>
+                <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                    <img class="navbar-logo-mobile" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
                 </a>
                 <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
                     <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
@@ -194,6 +195,9 @@
                     <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
                         <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
                     </a>
+                    <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
+                    </a>
                     <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
                         <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
                     </a>
@@ -211,12 +215,13 @@
             <div class="h1-seperator"></div>
 
             <div class="description">
-                Here you can check the status of your registration. Please just enter your email address and click on "Submit".
+                Here you can check the status of your registration. Please just enter your email address and click on
+                "Submit".
             </div>
             <form id="status-input" name="status-input" method="POST">
                 <div class="status-input-form clearfix">
                     <div class="col-75">
-                        <input type="text" id="email" name="email" placeholder="E-Mail"/>
+                        <input type="text" id="email" name="email" placeholder="E-Mail" />
                         <p id="email-invalid" class="text-muted d-none"><em>Please enter a valid E-Mail Address</em></p>
                     </div>
                     <div class="col-25">
@@ -233,7 +238,7 @@
                     <div class="col-75" id="template-result"></div>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <!-- END status -->
@@ -244,7 +249,7 @@
             This could take a few minutes. <br />
             Maybe you used another mail address?
         </div>
-        <div id="team-reg" >Your registration did arrive in our system. <br />
+        <div id="team-reg">Your registration did arrive in our system. <br />
             You registered in team <b>{{Team}}</b> for the challenge: <b>{{Challenge}}</b>. <br />
             Current member count: <b>{{ColleagueCount}}</b>. <br />
             Slack invite should come soon. <br />
@@ -258,13 +263,17 @@
             You registered in team <b>{{Team}}</b> for the challenge: <b>{{Challenge}}</b>. <br />
             Current member count: <b>{{ColleagueCount}}</b>. <br />
             Your slack user: <b>{{Username}}</b>. <br />
-            If you did not receive an email with your login data, go to <a href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email address. <br />
+            If you did not receive an email with your login data, go to <a
+                href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email
+            address. <br />
             Link for inviting new members:<br /><b>{{TeamLink}}</b>
         </div>
         <div id="indi-reg-slack">Your registration did arrive in our system. <br />
             You registered as individual for the challenge: <b>{{Challenge}}</b>. <br />
             Your slack user: <b>{{Username}}</b>. <br />
-            If you did not receive an email with your login data, go to <a href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email address.
+            If you did not receive an email with your login data, go to <a
+                href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email
+            address.
         </div>
         <!-- END Templates-->
     </div>
@@ -280,7 +289,7 @@
                 <ul>
                     <li>
                         <a href="./../terms/" hreflang="en">
-                            Terms & Conditions
+                            Terms &amp; Conditions
                         </a>
                     </li>
                     <li>
@@ -313,6 +322,9 @@
                     <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
                         <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
                     </a>
+                    <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
+                    </a>
                     <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
                         <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
                     </a>
@@ -321,18 +333,19 @@
     </footer>
     <!-- END footer -->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./../assets/js/global-014.js"></script>
     <script src="./../assets/js/cookieconsent.min.js"></script>
     <script>
         var statusUrl = "https://prod-22.westeurope.logic.azure.com:443/workflows/4d71fdacd4c743f1867e3dbe9664e755/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qtjHCGYpLeuEO3CWycGRfGvb7u_kb-nLB4-_FrWho4o";
-        
-        $('#status-input').submit(function(e) {
+
+        $('#status-input').submit(function (e) {
             e.preventDefault();
             checkStatus();
         })
 
-        function checkStatus(){
+        function checkStatus() {
             $('#email-invalid').addClass('d-none')
 
             var email = $("#email").val();
@@ -348,33 +361,33 @@
 
             loader.removeClass("hide");
             resultContainer.addClass("hide");
-            
+
 
             $.ajax({
-                url:statusUrl,
-                type:"POST",
+                url: statusUrl,
+                type: "POST",
                 data: JSON.stringify({
                     "email": email
                 }),
-                dataType:"json",
-                contentType:"application/json; charset=utf-8"
-            }).done(function(data){
+                dataType: "json",
+                contentType: "application/json; charset=utf-8"
+            }).done(function (data) {
                 data = data[0];
-                if(!!data.Team){
-                    if(!!data.Username) { renderTemplate('team-reg-slack',data)}
-                    else { renderTemplate('team-reg',data)}
-                }else{
-                    if(!!data.Username) { renderTemplate('indi-reg-slack',data)}
-                    else { renderTemplate('indi-reg',data)}
+                if (!!data.Team) {
+                    if (!!data.Username) { renderTemplate('team-reg-slack', data) }
+                    else { renderTemplate('team-reg', data) }
+                } else {
+                    if (!!data.Username) { renderTemplate('indi-reg-slack', data) }
+                    else { renderTemplate('indi-reg', data) }
                 }
                 loader.addClass("hide");
                 resultContainer.removeClass("hide");
-            }).fail(function(jqXHR, status) {
-                if(jqXHR.status == "404"){
+            }).fail(function (jqXHR, status) {
+                if (jqXHR.status == "404") {
                     resultBox.html($("#no-reg").html());
                     loader.addClass("hide");
                     resultContainer.removeClass("hide");
-                }else{
+                } else {
                     alert("Request error");
                 }
             });
@@ -392,7 +405,7 @@
             resultBox.html(template);
         }
 
-    
+
     </script>
 </body>
 

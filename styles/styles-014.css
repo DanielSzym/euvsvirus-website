@@ -27,11 +27,11 @@
 @media (max-width: 578px) {
 	:root {
 		--font-size-h1: 2rem;
-		--line-height-h1: 2rem;
+		--line-height-h1: 2.2rem;
 		--font-size-h2: 1.6rem;
 		--line-height-h2: 1.9rem;
 		--font-size-h3: 1.2rem;
-		--line-height-h3: 1.3rem;
+		--line-height-h3: 1.55rem;
 		--font-size-p: 1rem;
 		--line-height-p: 1.2rem;
 		--font-size-a: 1rem;
@@ -341,8 +341,8 @@ button:focus {
 }
 .navbar-logo-mobile {
 	max-height: 34px;
-	margin-left: 16px;
-	margin-right: 16px;
+	margin-left: 12px;
+	margin-right: 11px;
 }
 /*** END mobile menu ***/
 
