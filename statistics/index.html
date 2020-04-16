@@ -235,8 +235,8 @@
             </div>
 
             <div class="statistics-wrapper">
-                <h2>Cummulated registrations</h2>
-                <canvas id="timeCummulatedChart"></canvas>
+                <h2>Cumulated registrations</h2>
+                <canvas id="timeCumulatedChart"></canvas>
             </div>
 
             <div class="statistics-wrapper">
@@ -498,7 +498,7 @@
                     aggr.count += elem.Count;
                     return aggr;
                 }, { count: 0, result: []}).result;
-                var ctx = document.getElementById('timeCummulatedChart').getContext('2d');
+                var ctx = document.getElementById('timeCumulatedChart').getContext('2d');
                 var chart = new Chart(ctx, {
                     type: 'line',
                     data: {
