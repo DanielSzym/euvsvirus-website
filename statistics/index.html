@@ -235,6 +235,11 @@
             </div>
 
             <div class="statistics-wrapper">
+                <h2>Domains</h2>
+                <canvas id="domainChart"></canvas>
+            </div>
+
+            <div class="statistics-wrapper">
                 <h2>Challenges</h2>
                 <canvas id="challengeChart"></canvas>
             </div>
@@ -252,41 +257,6 @@
         </div>
     </section>
     <!-- END status -->
-
-    <!-- BEGIN templates-->
-    <div class="d-none">
-        <div id="no-reg">Your registration did not arrive in our system yet. <br />
-            This could take a few minutes. <br />
-            Maybe you used another mail address?
-        </div>
-        <div id="team-reg">Your registration did arrive in our system. <br />
-            You registered in team <b>{{Team}}</b> for the challenge: <b>{{Challenge}}</b>. <br />
-            Current member count: <b>{{ColleagueCount}}</b>. <br />
-            Slack invite should come soon. <br />
-            Link for inviting new members:<br /><b>{{TeamLink}}</b>
-        </div>
-        <div id="indi-reg">Your registration did arrive in our system. <br />
-            You registered as individual for the challenge: <b>{{Challenge}}</b>. <br />
-            Slack invite should come soon.
-        </div>
-        <div id="team-reg-slack">Your registration did arrive in our system. <br />
-            You registered in team <b>{{Team}}</b> for the challenge: <b>{{Challenge}}</b>. <br />
-            Current member count: <b>{{ColleagueCount}}</b>. <br />
-            Your slack user: <b>{{Username}}</b>. <br />
-            If you did not receive an email with your login data, go to <a
-                href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email
-            address. <br />
-            Link for inviting new members:<br /><b>{{TeamLink}}</b>
-        </div>
-        <div id="indi-reg-slack">Your registration did arrive in our system. <br />
-            You registered as individual for the challenge: <b>{{Challenge}}</b>. <br />
-            Your slack user: <b>{{Username}}</b>. <br />
-            If you did not receive an email with your login data, go to <a
-                href="https://euvsvirus.slack.com/forgot"><u>EUvsVirus Slack Password Reset</u></a> and enter your email
-            address.
-        </div>
-        <!-- END Templates-->
-    </div>
 
     <section class="vertical-spacing"></section>
 
@@ -356,6 +326,7 @@
         var countryUrl = "https://prod-115.westeurope.logic.azure.com:443/workflows/247874e5189a4cedb80f2503007782f9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2aMHmFwLZAc7gzEWhxCZIhRgxrXO_D9H7_2wDaF4n44";
         var challengeUrl = "https://prod-123.westeurope.logic.azure.com:443/workflows/596303616d7d44f6a218f46789f374b9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=muqj-i8lGbsWtxxZMtBS7rjPqpdyT2kCpVUI8_6v7fA";
         var timeUrl = "https://prod-81.westeurope.logic.azure.com:443/workflows/fb7f8666db5c421da8b39dffabfc1e57/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=i1y8st0Bw864tqGrCuIqZF_Kxtuag0ovHD20YA15U8Y"
+        var domainUrl = "https://prod-60.westeurope.logic.azure.com:443/workflows/bdee150720b14e0c856010af1d86d94f/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1zTsPERGWTakN2SIzMwX9CwfyPBPorI_buRXYE4P5es"
         var elemCount = 30;
 
         var aspectRatio = window.innerHeight > window.innerWidth ? 1 : 2;
@@ -490,6 +461,52 @@
                     type: 'bar',
                     data: {
                         labels: _.map(data, function (elem) { return elem.Challenge; }),
+                        datasets: [{
+                            label: '# of registrations',
+                            backgroundColor: _.map(data, function(elem) { return getRandomColor();}),
+                            data: _.map(data, function(elem) { return elem.Count;})
+                        }]
+                    },
+
+                    // Configuration options go here
+                    options: {
+                        responsive: true,
+                        aspectRatio: aspectRatio,
+                        title: {
+                            display: true,
+                            text: 'Distribution for all ' + sum + ' registrations'
+                        }
+                    }
+                });
+            }).fail(function (jqXHR, status) {
+                alert("Data fetch failed");
+            });
+
+            $.ajax({
+                url:domainUrl,
+                type:"POST",
+                dataType:"json",
+                contentType:"application/json; charset=utf-8"
+            }).done(function(data){
+                _.each(data, function(elem) { elem.Count = parseInt(elem.Count); });
+                var sum = _.sumBy(data, function(elem) {return elem.Count; });
+                data = _.sortBy(data, function(elem) {return elem.Count*-1;},);
+                data = _.reduce(data, function(aggr,elem, index) {
+                    if(index < elemCount){
+                        return _.concat(aggr, elem);
+                    }else {
+                        aggr[elemCount] = {
+                            "Domain": "Rest",
+                            "Count": (!!aggr[elemCount] ? aggr[elemCount].Count : 0) + elem.Count
+                        };
+                        return aggr;
+                    }
+                }, []);
+                var ctx = document.getElementById('domainChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: _.map(data, function (elem) { return elem.Domain; }),
                         datasets: [{
                             label: '# of registrations',
                             backgroundColor: _.map(data, function(elem) { return getRandomColor();}),
