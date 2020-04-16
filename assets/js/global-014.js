@@ -153,7 +153,9 @@ function changeChallenge(element) {
     scroller.scrollLeft = selected_challenge.x - scroller.offsetLeft - 20;
   }
   else if (url.indexOf('agenda') > -1) { resetMenuBar(); activateMenuItem('.menu-agenda') }
-  else if (url.indexOf('partners') > -1) { resetMenuBar(); activateMenuItem('.menu-resources') }
+  else if (url.indexOf('ambassadors') > -1) { resetMenuBar(); activateMenuItem('.menu-ambassadors') }
+  else if (url.indexOf('partners') > -1) { resetMenuBar(); activateMenuItem('.menu-partners') }
+  else if (url.indexOf('resources') > -1) { resetMenuBar(); activateMenuItem('.menu-resources') }
   else if (url.indexOf('press') > -1) { resetMenuBar(); activateMenuItem('.menu-press') }
   else if (url.indexOf('team') > -1) { resetMenuBar(); activateMenuItem('.menu-team') }
   else if (url.indexOf('faq') > -1) { resetMenuBar(); activateMenuItem('.menu-faq') }

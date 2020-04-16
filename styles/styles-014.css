@@ -483,6 +483,9 @@ nav ul ul ul li {
 	transition: 0.3s;
 	text-align: center;
 }
+.navbar-btn-spacing {
+	width: 20px;
+}
 /*** END navbar ***/
 
 
