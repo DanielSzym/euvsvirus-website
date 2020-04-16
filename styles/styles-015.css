@@ -66,6 +66,7 @@
 
 
 body {
+	color: rgb(4, 36, 99);
 	margin:0;
 	padding:0;
 	text-rendering:optimizeLegibility;
@@ -1470,7 +1471,10 @@ footer ul li a {
 	font-size: 1rem;
 	font-size: var(--font-size-a);
 }
-@media (max-width: 576px){
+@media (max-width: 1359px) {
+	footer {
+		padding-bottom: 4rem;
+	}
 	.footer-left {
 		flex-direction: column;
 		align-items: flex-start;
