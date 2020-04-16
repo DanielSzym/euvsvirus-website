@@ -230,6 +230,11 @@
             </div>
 
             <div class="statistics-wrapper">
+                <h2>Countries relative</h2>
+                <canvas id="countryRelativeChart"></canvas>
+            </div>
+
+            <div class="statistics-wrapper">
                 <h2>Challenges</h2>
                 <canvas id="challengeChart"></canvas>
             </div>
@@ -338,6 +343,7 @@
     </footer>
     <!-- END footer -->
 
+    <script src="countries.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"
         integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
@@ -370,8 +376,8 @@
             }).done(function(data){
                 _.each(data, function(elem) { elem.Count = parseInt(elem.Count); });
                 var sum = _.sumBy(data, function(elem) {return elem.Count; });
-                data = _.sortBy(data, function(elem) {return elem.Count*-1;},);
-                data = _.reduce(data, function(aggr,elem, index) {
+                var sortedData = _.sortBy(data, function(elem) {return elem.Count*-1;},);
+                var viewData = _.reduce(sortedData, function(aggr,elem, index) {
                     if(index < elemCount){
                         return _.concat(aggr, elem);
                     }else {
@@ -386,11 +392,11 @@
                 var chart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: _.map(data, function (elem) { return elem.Country; }),
+                        labels: _.map(viewData, function (elem) { return elem.Country; }),
                         datasets: [{
-                            label: '# of participants',
-                            backgroundColor: _.map(data, function (elem) { return getRandomColor(); }),
-                            data: _.map(data, function (elem) { return parseInt(elem.Count); })
+                            label: '# of registrations',
+                            backgroundColor: _.map(viewData, function (elem) { return getRandomColor(); }),
+                            data: _.map(viewData, function (elem) { return elem.Count; })
                         }]
                     },
 
@@ -399,7 +405,56 @@
                         responsive: true,
                         title: {
                             display: true,
-                            text: 'Distribution for ' + sum + ' participants who selected a country'
+                            text: 'Distribution for ' + sum + ' registrations who selected a country'
+                        }
+                    }
+                });
+
+                var countryLookup = _.reduce(countries, function(aggr, elem) {
+                    if(!!elem) {
+                        aggr[elem.Country] = elem.PopulationThousands;
+                    }else{
+                        console.log(elem);
+                    }
+                    return aggr;
+                }, {});
+                var relativeData = _.map(data, function(elem) {
+                    if (elem.Country in countryLookup) {
+                        return {
+                            "Country": elem.Country,
+                            "Count": elem.Count / (countryLookup[elem.Country] / 1000)
+                        };
+                    }else{
+                        console.log('No country found: ' + elem.Country);
+                        return {};
+                    }
+                });
+                var filtered = _.filter(relativeData, function(elem) { return !!elem; });
+                var sortedDataCountries = _.sortBy(filtered, function(elem) {return elem.Count*-1;},);
+                var viewDataCountries = _.reduce(sortedDataCountries, function(aggr,elem, index) {
+                    if(index < elemCount){
+                        return _.concat(aggr, elem);
+                    }
+                    return aggr;
+                }, []);
+                var ctx = document.getElementById('countryRelativeChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: _.map(viewDataCountries, function (elem) { return elem.Country; }),
+                        datasets: [{
+                            label: '# of registrations',
+                            backgroundColor: _.map(viewDataCountries, function (elem) { return getRandomColor(); }),
+                            data: _.map(viewDataCountries, function (elem) { return elem.Count.toPrecision(3); })
+                        }]
+                    },
+
+                    // Configuration options go here
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Registrations per milion inhabitants'
                         }
                     }
                 });
@@ -433,7 +488,7 @@
                     data: {
                         labels: _.map(data, function (elem) { return elem.Challenge; }),
                         datasets: [{
-                            label: '# of participants',
+                            label: '# of registrations',
                             backgroundColor: _.map(data, function(elem) { return getRandomColor();}),
                             data: _.map(data, function(elem) { return elem.Count;})
                         }]
@@ -444,7 +499,7 @@
                         responsive: true,
                         title: {
                             display: true,
-                            text: 'Distribution for all ' + sum + ' participants'
+                            text: 'Distribution for all ' + sum + ' registrations'
                         }
                     }
                 });
@@ -465,7 +520,7 @@
                     type: 'line',
                     data: {
                         datasets: [{
-                            label: '# of participants',
+                            label: '# of registrations',
                             borderColor: "#003399",
                             backgroundColor: "rgba(0, 0, 0, 0)",
                             data: _.map(data, function(elem) { return {x:elem.Time, y: elem.Count}; })
@@ -503,7 +558,7 @@
                     type: 'line',
                     data: {
                         datasets: [{
-                            label: '# of participants',
+                            label: '# of registrations',
                             borderColor: "#003399",
                             backgroundColor: "rgba(0, 0, 0, 0)",
                             data: _.map(dataCummulated, function(elem) { return {x:elem.Time, y: elem.Count}; })
