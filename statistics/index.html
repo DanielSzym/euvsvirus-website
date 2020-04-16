@@ -358,6 +358,7 @@
         var timeUrl = "https://prod-81.westeurope.logic.azure.com:443/workflows/fb7f8666db5c421da8b39dffabfc1e57/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=i1y8st0Bw864tqGrCuIqZF_Kxtuag0ovHD20YA15U8Y"
         var elemCount = 30;
 
+        var aspectRatio = window.innerHeight > window.innerWidth ? 1 : 2;
         function getRandomColor() {
             var letters = '0123456789ABCDEF'.split('');
             var color = '#';
@@ -403,6 +404,7 @@
                     // Configuration options go here
                     options: {
                         responsive: true,
+                        aspectRatio: aspectRatio,
                         title: {
                             display: true,
                             text: 'Distribution for ' + sum + ' registrations who selected a country'
@@ -452,6 +454,7 @@
                     // Configuration options go here
                     options: {
                         responsive: true,
+                        aspectRatio: aspectRatio,
                         title: {
                             display: true,
                             text: 'Registrations per milion inhabitants'
@@ -497,6 +500,7 @@
                     // Configuration options go here
                     options: {
                         responsive: true,
+                        aspectRatio: aspectRatio,
                         title: {
                             display: true,
                             text: 'Distribution for all ' + sum + ' registrations'
@@ -530,6 +534,7 @@
                     // Configuration options go here
                     options: {
                         responsive: true,
+                        aspectRatio: aspectRatio,
                         title: {
                             display: true,
                             text: 'Course of registrations'
@@ -568,6 +573,7 @@
                     // Configuration options go here
                     options: {
                         responsive: true,
+                        aspectRatio: aspectRatio,
                         title: {
                             display: true,
                             text: 'Progress of registrations'
