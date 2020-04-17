@@ -391,7 +391,7 @@ nav ul ul {
 	display: none;
 	background-color: #ffffff;
 	position: absolute; 
-	top: 55px; /* the height of the main nav */
+	top: 60px; /* the height of the main nav */
 	border: 1px solid #e9ecef;
 	border-radius: 4px;
 	padding: 6px 0;
