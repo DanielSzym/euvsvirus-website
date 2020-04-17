@@ -44,14 +44,14 @@
                 <a href="./../" class="mobile-link-item menu-hackathon">Hackathon</a>
                 <a href="./../challenges" class="mobile-link-item menu-item menu-challenges">Challenges</a>
                 <a href="./../agenda" class="mobile-link-item menu-item menu-agenda">Agenda</a>
-                <a class="mobile-link-item menu-item menu-resources disable-menu tooltip">Resources<span
-                        class="tooltiptext tooltip-bottom">Coming soon</span></a>
+                <a class="mobile-link-item menu-item menu-resources disable-menu tooltip"
+                    style="width:110px;">Resources<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
                 <a href="./../faq" class="mobile-link-item menu-item menu-faq">FAQ</a>
 
                 <!-- About -->
                 <ul class="mobile-menu-sub">
                     <li>
-                        <a href="./../ambassadors/" class="mobile-link-item menu-item menu-ambassadors">Ambassadors</a>
+                        <a class="mobile-link-item menu-item menu-ambassadors" onclick="closeNav()">Ambassadors</a>
                     </li>
                     <li>
                         <a href="./../partners/" class="mobile-link-item menu-item menu-partners">Partners</a>
@@ -62,7 +62,7 @@
                     </li>
                 </ul>
 
-                <a class="mobile-link-item menu-item menu-press" onclick="closeNav()">Press</a>
+                <a href="./../press/" class="mobile-link-item menu-item menu-press">Press</a>
             </div>
             <div class="d-flex mb-4">
                 <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
@@ -94,7 +94,8 @@
                 <div class="d-flex">
                     <ul>
                         <li>
-                            <a href="./../" class="desktop-link-item menu-item menu-hackathon current-menu">Hackathon</a>
+                            <a href="./../"
+                                class="desktop-link-item menu-item menu-hackathon current-menu">Hackathon</a>
                         </li>
                         <li>
                             <a href="./../challenges/"
@@ -117,7 +118,7 @@
                             <a class="cursor-default">About</a>
                             <!-- First Tier Drop Down -->
                             <ul>
-                                <li><a class="dd-item menu-ambassadors" href="./../ambassadors/">Ambassadors</a></li>
+                                <li><a class="dd-item menu-ambassadors" href="#">Ambassadors</a></li>
                                 <li><a class="dd-item menu-partners" href="./../partners/">Partners</a></li>
                                 <li class="disable-menu"><a class="dd-item tooltip disable-menu" href="#">Team<span
                                             class="tooltiptext tooltip-bottom">Coming
@@ -125,7 +126,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="desktop-link-item menu-item menu-press">Press</a>
+                            <a href="./../press/" class="desktop-link-item menu-item menu-press">Press</a>
                         </li>
                     </ul>
                 </div>
@@ -142,59 +143,64 @@
     </section>
     <!-- END navbar desktop -->
 
-    <!-- BEGIN press -->
-    <section id="press" class="press">
-        <div class="container main-wrapper">
-            <h1>Press</h1>
+
+    <!-- BEGIN ambassadors -->
+    <section id="ambassadors" class="ambassadors main-wrapper">
+        <div class="container">
+
+            <h1>Ambassadors</h1>
             <div class="h1-seperator"></div>
 
-            <h2>Graphics</h2>
-            <a href="https://drive.google.com/file/d/1--oXzEJ2X9jUH-GSmAlkcHcAZgNvD_X_/view" target="_blank"
-                rel="noreferrer">
-                <h3 class="d-inline-block"><u>EUvsVirus Flyer</u></h3>
-            </a>
-            <br>
-            <a href="https://drive.google.com/file/d/1OjJYncuS3SRLuPDNR9TAokdGSj-Qozhi/view" target="_blank"
-                rel="noreferrer">
-                <h3 class="d-inline-block"><u>EUvsVirus Banner</u></h3>
-            </a>
+            <div class="mt"></div>
 
-            <h2>Press Releases</h2>
-            <a href="https://ec.europa.eu/info/news/pan-european-hackathon-develop-innovative-solutions-overcome-societal-challenges-related-coronavirus-2020-apr-14_en"
-                target="_blank" rel="noreferrer" class="d-inline">
-                <h3 class="d-inline-block">
-                    <u>https://ec.europa.eu/info/news/pan-european-hackathon-develop-i...</u>
-                </h3>
-            </a>
-            <a href="https://ec.europa.eu/info/files/first-eravscorona-action-plan-short-term-coordinated-reseach-and-innovation-actions_en"
-                target="_blank" rel="noreferrer" class="d-inline">
-                <h3 class="d-inline-block">
-                    <u>https://ec.europa.eu/info/files/first-eravscorona-action-plan-short-t...</u>
-                </h3>
-            </a>
-            <a href="https://ec.europa.eu/info/news/euvsvirus-hackathon-develop-innovative-solutions-and-overcome-coronavirus-related-challenges-2020-apr-03_de"
-                target="_blank" rel="noreferrer" class="d-inline">
-                <h3 class="d-inline-block"><u>https://ec.europa.eu/info/news/euvsvirus-hackathon-develop-innov...</u>
-                </h3>
-            </a>
-
-            <h2>Press Inquiries</h2>
-            <h3 style="font-weight: normal;">
-                <b>Press inquiries only!</b> - 
-                Please send and email inquiry to:
-                <a href="mailto:RTD-PAN-EUROPEAN-COVID-HACKATHON@ec.europa.eu?subject=Press%20Inquiry%20From%20EUvsVirus%20Website">
-                    <h3 class="d-inline-block">
-                        <u>
-                            Press contact
-                        </u>
-                    </h3>
+            <div class="d-flex space-between flex-wrap ambassador-grid">
+                <a target="_blank" rel="noreferrer" class="ambassador-card">
+                    <img class="mt-5" alt="Information on ambassador Miguel Arias"
+                        src="./../assets/img/ambassadors/ambassador_arias.png">
                 </a>
-            </h3>
-
-            <h2>Twitterwall – #EUvsVirus</h2>
-            <div class="mt-4">
-                <iframe id="twitter-wall" src="https://walls.io/EUvsVirus?nobackground=1" title="EUvsVirus"></iframe>
+                <a class="ambassador-card" target="_blank" rel="noreferrer" href="https://primariaclujnapoca.ro/en/">
+                    <img class="mt-5" alt="Information on ambassador Emil Boc"
+                        src="./../assets/img/ambassadors/ambassador_boc.png">
+                </a>
+                <a class="ambassador-card" target="_blank" rel="noreferrer">
+                    <img class="mt-5" alt="Information on ambassador Sherry Coutu CBE"
+                        src="./../assets/img/ambassadors/ambassador_coutu.png">
+                </a>
+                <!-- <a class="ambassador-card" target="_blank" rel="noreferrer">
+                    <img class="mt-5" alt="Information on ambassador Carlos Eduardo Espinal"
+                        src="./../assets/img/ambassadors/ambassador_espinal.png">
+                </a> -->
+                <a class="ambassador-card" target="_blank" rel="noreferrer"
+                    href="https://www.segib.org/en/secretary-general/">
+                    <img class="mt-5" alt="Information on ambassador Rebeca Grynspan Mayufis"
+                        src="./../assets/img/ambassadors/ambassador_grynspan.png">
+                </a>
+                <a class="ambassador-card" target="_blank" rel="noreferrer" href="https://www.bindikaria.com/">
+                    <img class="mt-5" alt="Information on ambassador Bindi Karia"
+                        src="./../assets/img/ambassadors/ambassador_karia.png">
+                </a>
+                <!-- <a class="ambassador-card" target="_blank" rel="noreferrer" href="https://www.leuven.be/english">
+                    <img class="mt-5" alt="Information on ambassador Mohamed Ridouani"
+                        src="./../assets/img/ambassadors/ambassador_ridouani.png">
+                </a> -->
+                <!-- <a class="ambassador-card" target="_blank" rel="noreferrer" href="https://www.wroclaw.pl/en/">
+                    <img class="mt-5" alt="Information on ambassador Jacek Sutryk"
+                        src="./../assets/img/ambassadors/ambassador_sutryk.png">
+                </a> -->
+                <a class="ambassador-card" target="_blank" rel="noreferrer">
+                    <img class="mt-5" alt="Information on ambassador Eze Vidra"
+                        src="./../assets/img/ambassadors/ambassador_vidra.png">
+                </a>
+                <a class="ambassador-card" target="_blank" rel="noreferrer">
+                    <img class="mt-5" alt="Information on ambassador Robin Wauters"
+                        src="./../assets/img/ambassadors/ambassador_wauters.png">
+                </a>
+                <a class="ambassador-card o-zero">
+                </a>
+                <a class="ambassador-card o-zero">
+                </a>
             </div>
+
         </div>
     </section>
 

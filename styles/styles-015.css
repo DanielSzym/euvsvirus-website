@@ -66,6 +66,7 @@
 
 
 body {
+	color: rgb(4, 36, 99);
 	margin:0;
 	padding:0;
 	text-rendering:optimizeLegibility;
@@ -177,25 +178,30 @@ button:focus {
 	outline:0;
 }
 
-
 .primary-button {
-	/* cursor: pointer; */
-	padding: 10px 25px;
 	border: none;
-	/* border-radius: 30px; */
 	background-color: #FFCC00;
 	background-color: var(--color-secondary-yellow);
 	color: #222121;
 	color: var(--color-grey-h3-normal);
 	font-size: 1.1rem;
 	font-weight: bold;
-	width: 320px;
-	display:flex;
+	display: flex;
 	justify-content: center;
 }
+.primary-button.btn-angular {
+	padding: 10px 25px;
+	width: 320px;
+	/* max-width: 80vw; */
+}
+.primary-button.btn-rounded {
+	padding: 6px 12px;
+	border-radius: 30px;
+	width: 140px;
+}
 @media (max-width: 576px) {
-	.primary-button {
-		width: 280px;
+	.primary-button.btn-angular {
+		width: 70vw;
 	}
 }
 
@@ -344,20 +350,92 @@ button:focus {
 	margin-left: 12px;
 	margin-right: 11px;
 }
+
+.mobile-menu-sub {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 /*** END mobile menu ***/
 
 
 
 /*** BEGIN navbar ***/
+nav ul {
+	padding: 0;
+  	margin: 0;
+	list-style: none;
+	position: relative;
+}
+	
+nav ul li {
+	display:inline-block;
+	background-color: #ffffff;
+}
+
+nav .dd a {
+	display: block;
+	padding: 0 14px;	
+	font-size: 1.2rem;
+	font-size: var(--font-size-h4);
+	line-height: 60px;
+	text-decoration:none;
+}
+.dd-item {
+	line-height: 2.2rem !important;
+	text-decoration:none;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	background-color: #ffffff;
+	position: absolute; 
+	top: 60px; /* the height of the main nav */
+	border: 1px solid #e9ecef;
+	border-radius: 4px;
+	padding: 6px 0;
+}
+nav ul ul li {
+	padding: 5px 0 5px 10px;
+
+}
+nav ul ul li:hover:not(.disable-menu) {
+	background-color: #e9ecef;
+}
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:140px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:170px;
+}
+.dd-divider {
+	height: 0;
+	margin: 0.5rem 0;
+	overflow: hidden;
+	border-top: 1px solid #e9ecef;
+}
+
+
 .navbar {
-	height: 7vh;
+	height: 60px;
 	min-height: 60px;
 	background-color: white;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-
 .navbar img {
 	height: 35px;
 }
@@ -389,7 +467,7 @@ button:focus {
 }
 
 .desktop-link-item {
-	padding: 1.6vh 16px;
+	padding: 6px 12px;
 	text-decoration: none;
 	font-size: 1.2rem;
 	font-size: var(--font-size-h4);
@@ -397,6 +475,10 @@ button:focus {
 	color: var(--color-grey);
 	display: block;
 	transition: 0.3s;
+	text-align: center;
+}
+.navbar-btn-spacing {
+	width: 20px;
 }
 /*** END navbar ***/
 
@@ -628,7 +710,7 @@ button:focus {
 
 /* countries */
 .country-flags {
-	width: 75%;
+	width: 100%;
 }
 .country-mobile { display: none; }
 @media (max-width: 992px) {
@@ -779,7 +861,7 @@ button:focus {
 		padding-top: 40px;
 	}
 	.category {
-		padding: 40px 20px 0px 20px;
+		padding: 40px 0px 0px 0px;
 	}
 	.category-image {
 		width: 90px;
@@ -909,13 +991,13 @@ button:focus {
 	margin: 4px 24px;
 }
 .partners-logo img {
-	width: 140px;
+	width: 130px;
 }
 .partners-logo-corp {
-	margin: 4px 24px;
+	margin: 4px 36px;
 }
 .partners-logo-corp img {
-	width: 120px;
+	width: 115px;
 }
 @media (max-width: 768px) {
 	.partners-logo img {
@@ -1063,7 +1145,10 @@ button:focus {
 	box-shadow: 0px 0px 12px 0px rgba(209,209,209,.8);
 	border-radius: 4px;
 }
+.challenge-topic-box li {
+	color: var(--color-grey);
 
+}
 /* challenges navbar */
 .challenges-navigation-bar {
 	margin-top: -20px;
@@ -1078,6 +1163,20 @@ button:focus {
 .challenges-navigation-bar p {
 	font-size: 1.05rem;
 }
+
+
+
+/*** BEGIN ambassadors page ***/
+.ambassadors {
+	background-color: #F4F4F4;
+	background-color: var(--color-light-grey);
+	padding-bottom: 100px;	
+}
+.ambassador-card {
+	width: 260px;
+}
+/*** END ambassadors page ***/
+
 
 
 /*** BEGIN partners page ***/
@@ -1160,6 +1259,26 @@ button:focus {
 	}
 }
 /*** END partners page ***/
+
+
+
+/*** BEGIN team page ***/
+.team {
+	background-color: #F4F4F4;
+	background-color: var(--color-light-grey);
+	padding-bottom: 100px;	
+}
+.badges-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.badges-wrapper .LI-profile-badge {
+	margin-right: 2px;
+	margin-top: 20px;
+}
+/*** END team page ***/
+
 
 
 /*** BEGIN faq ***/
@@ -1328,7 +1447,10 @@ footer ul li a {
 	font-size: 1rem;
 	font-size: var(--font-size-a);
 }
-@media (max-width: 576px){
+@media (max-width: 1359px) {
+	footer {
+		padding-bottom: 4rem;
+	}
 	.footer-left {
 		flex-direction: column;
 		align-items: flex-start;
@@ -1456,6 +1578,9 @@ footer ul li a {
 		margin-top: 3rem;
 	}
 }
+.o-zero {
+	opacity: 0 !important;
+}
 .d-none {
 	display: none !important;
 }
@@ -1480,6 +1605,9 @@ footer ul li a {
 .justify-end {
 	justify-content: flex-end;
 }
+.flex-wrap {
+	flex-wrap: wrap !important;
+}
 @media (max-width: 768px){
 	.d-none-mobile {
 		display: none !important;
@@ -1490,6 +1618,9 @@ footer ul li a {
 }
 .text-muted {
 	color: #818181;
+}
+.cursor-default {
+	cursor: default;
 }
 
 /*** Tooltip ***/
