@@ -24,18 +24,17 @@
     <title>Pan-European Hackathon</title>
 
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="../styles/styles-014.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styles-015.css">
     <link rel="stylesheet" type="text/css" href="../styles/agenda.css">
 </head>
 
-<body style="background-color: #F4F4F4">
+<body class="bg-grey">
 
     <!-- BEGIN mobile menu -->
     <div id="mobileNav" class="overlay">
         <section id="navbar-mobile">
             <div class="navbar container">
-                <a href="./../" onclick="closeNav()"><img alt="EU versus virus hashtag"
-                        src="../assets/img/navbar/EUvsVirus.svg"></a>
+                <a href="/"><img alt="EU versus virus hashtag" src="./../assets/img/navbar/EUvsVirus.svg"></a>
                 <div>
                     <span class="toggle-mobile-menu-icon close" onclick="closeNav()">&times;</span>
                 </div>
@@ -43,28 +42,41 @@
         </section>
         <div class="overlay-content container">
             <div>
-                <a href="./../" class="mobile-link-item menu-hackathon" onclick="closeNav()">Hackathon</a>
-                <a href="./../challenges/" class="mobile-link-item menu-item menu-challenges"
-                    onclick="closeNav()">Challenges</a>
-                <a href="./../agenda/" class="mobile-link-item menu-item menu-agenda" onclick="closeNav()">Agenda</a>
-                <a class="mobile-link-item menu-item menu-resources" onclick="closeNav()">Partners</a>
-                <a href="./../press/" class="mobile-link-item menu-item menu-press" style="width:110px;">Press</a>
-                <a class="mobile-link-item menu-item menu-team disable-menu tooltip" style="width:110px;">Team<span
+                <a href="/" class="mobile-link-item menu-hackathon">Hackathon</a>
+                <a href="./../challenges" class="mobile-link-item menu-item menu-challenges">Challenges</a>
+                <a href="./../agenda" class="mobile-link-item menu-item menu-agenda" onclick="closeNav()">Agenda</a>
+                <a class="mobile-link-item menu-item menu-resources disable-menu tooltip">Resources<span
                         class="tooltiptext tooltip-bottom">Coming soon</span></a>
-                <a href="./../faq/" class="mobile-link-item menu-item menu-faq" onclick="closeNav()">FAQ</a>
+                <a href="./../faq" class="mobile-link-item menu-item menu-faq">FAQ</a>
+
+                <!-- About -->
+                <ul class="mobile-menu-sub">
+                    <li>
+                        <a href="./../ambassadors/" class="mobile-link-item menu-item menu-ambassadors">Ambassadors</a>
+                    </li>
+                    <li>
+                        <a class="mobile-link-item menu-item menu-partners" onclick="closeNav()">Partners</a>
+                    </li>
+                    <li>
+                        <a class="mobile-link-item menu-item menu-team disable-menu tooltip"
+                            style="width:110px;">Team<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
+                    </li>
+                </ul>
+
+                <a href="./../press/" class="mobile-link-item menu-item menu-press">Press</a>
             </div>
             <div class="d-flex mb-4">
                 <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
-                    <img class="navbar-logo-mobile" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+                    <img class="navbar-logo-mobile" alt="Logo Twitter" src="./../assets/img/navbar/twitter.png">
                 </a>
                 <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
-                    <img class="navbar-logo-mobile" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+                    <img class="navbar-logo-mobile" alt="Logo Facebook" src="./../assets/img/navbar/facebook.png">
                 </a>
                 <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
                     <img class="navbar-logo-mobile" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
                 </a>
                 <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
-                    <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+                    <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./../assets/img/navbar/linkedin.png">
                 </a>
             </div>
         </div>
@@ -75,40 +87,62 @@
     <!-- BEGIN navbar desktop -->
     <section id="navbar-desktop">
         <div class="navbar container">
-            <a href="./../"><img alt="EU versus virus hashtag" src="../assets/img/navbar/EUvsVirus.svg"></a>
+            <a href="./"><img alt="EU versus virus hashtag" src="./../assets/img/navbar/EUvsVirus.svg"></a>
             <div id="menu-mobile-burger">
                 <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
             </div>
-            <div id="menu-desktop-content">
+            <nav id="menu-desktop-content">
                 <div class="d-flex">
-                    <a href="./../" class="desktop-link-item menu-item menu-hackathon">Hackathon</a>
-                    <a href="./../challenges/" class="desktop-link-item menu-challenges menu-item">Challenges</a>
-                    <a href="./../agenda/" class="desktop-link-item menu-agenda menu-item">Agenda</a>
-                    <a href="#" class="desktop-link-item menu-item menu-resources">Partners</a>
-                    <a href="./../press/" class="desktop-link-item menu-item menu-press">Press</a>
-                    <a id="menu-team" class="desktop-link-item menu-item menu-team disable-menu tooltip">Team<span
-                            class="tooltiptext tooltip-bottom">Coming
-                            soon</span></a>
-                    <a href="./../faq/" class="desktop-link-item menu-item menu-faq">FAQ</a>
+                    <ul>
+                        <li>
+                            <a href="/" class="desktop-link-item menu-item menu-hackathon current-menu">Hackathon</a>
+                        </li>
+                        <li>
+                            <a href="./../challenges/"
+                                class="desktop-link-item menu-challenges menu-item">Challenges</a>
+                        </li>
+                        <li>
+                            <a href="./../agenda/" class="desktop-link-item menu-agenda menu-item">Agenda</a>
+                        </li>
+                        <li>
+                            <a id="menu-team"
+                                class="desktop-link-item menu-item menu-resources disable-menu tooltip">Resources<span
+                                    class="tooltiptext tooltip-bottom">Coming
+                                    soon</span></a>
+                        </li>
+                        <li>
+                            <a href="./../faq/" class="desktop-link-item menu-item menu-faq">FAQ</a>
+                        </li>
+
+                        <li class="dd">
+                            <a class="cursor-default">About</a>
+                            <!-- First Tier Drop Down -->
+                            <ul>
+                                <li><a class="dd-item menu-ambassadors" href="./../ambassadors/">Ambassadors</a></li>
+                                <li><a class="dd-item menu-partners" href="#">Partners</a></li>
+                                <li class="disable-menu"><a class="dd-item tooltip disable-menu" href="#">Team<span
+                                            class="tooltiptext tooltip-bottom">Coming
+                                            soon</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./../press/" class="desktop-link-item menu-item menu-press">Press</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="d-flex align-items-center">
-                    <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
-                    </a>
-                    <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
-                    </a>
-                    <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
-                    </a>
-                    <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
-                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+                <div class="navbar-btn-spacing"></div>
+                <div class="d-flex align-items-center ">
+                    <a href="/#register">
+                        <div class="primary-button btn-rounded">
+                            Join now!
+                        </div>
                     </a>
                 </div>
-            </div>
+            </nav>
         </div>
     </section>
     <!-- END navbar desktop -->
+
 
     <!-- BEGIN partner -->
     <main class="partners-wrapper">
@@ -129,8 +163,14 @@
 
             <!-- Strategic Partners -->
             <div class="partners-box mt-5">
-                <h3 class="mt-4">Strategic Partners</h3>
+                <h3 class="mt-4">Supporting Partners</h3>
                 <div class="partners-logo-row">
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://aws.amazon.com/">
+                            <img src="./../assets/img/partners/strategic/aws.png"
+                                alt="Logo of the company 'AWS'">
+                        </a>
+                    </div>
                     <div class="partners-logo">
                         <a target="_blank" rel="noreferrer" href="https://www.bain.com/">
                             <img src="./../assets/img/partners/strategic/bain.png"
@@ -138,8 +178,25 @@
                         </a>
                     </div>
                     <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://www.datarobot.com/">
+                            <img src="./../assets/img/partners/corporate/datarobot.png"
+                                alt="Logo of the company 'Data Robot'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
                         <a target="_blank" rel="noreferrer" href="https://www.enagas.es/portal/site/enagas">
                             <img src="./../assets/img/partners/strategic/enagas.png" alt="Logo of the company 'Enagas'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://www.efc.be/">
+                            <img src="./../assets/img/partners/corporate/efc.png"
+                                alt="Logo of 'European Foundation Centre'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="http://wsdomino.eurocities.eu/eurocities/home">
+                            <img src="./../assets/img/partners/corporate/eurocities.png" alt="Logo of 'eurocities'">
                         </a>
                     </div>
                     <div class="partners-logo">
@@ -149,8 +206,19 @@
                         </a>
                     </div>
                     <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://www.ferrovial.com/">
+                            <img src="./../assets/img/partners/corporate/ferrovial.png"
+                                alt="Logo of the company 'Ferrovial'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
                         <a target="_blank" rel="noreferrer" href="https://www.google.com/">
                             <img src="./../assets/img/partners/strategic/google.png" alt="Logo of the company 'Google'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://www.gsa.europa.eu/">
+                            <img src="./../assets/img/partners/corporate/gsa.png" alt="Logo of the 'European GNSS Agency'">
                         </a>
                     </div>
                     <div class="partners-logo">
@@ -159,9 +227,44 @@
                         </a>
                     </div>
                     <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://www.iberdrola.es/">
+                            <img src="./../assets/img/partners/corporate/iberdrola.png"
+                                alt="Logo of the company 'Iberdrola'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://home.kpmg/">
+                            <img src="./../assets/img/partners/strategic/kpmg.png"
+                                alt="Logo of the company 'KPMG'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://legoventures.com/">
+                            <img src="./../assets/img/partners/corporate/legoventures.png"
+                                alt="Logo of the company 'Lego Ventures'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://livestreamberlin.de/">
+                            <img src="./../assets/img/partners/corporate/livestreamberlin.png"
+                                alt="Logo of the company 'Livestream Berlin'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
                         <a target="_blank" rel="noreferrer" href="https://www.mckinsey.com/">
                             <img src="./../assets/img/partners/strategic/mcckinsey.png"
                                 alt="Logo of the company 'McKinsey'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://miro.com/">
+                            <img src="./../assets/img/partners/corporate/miro.png"
+                                alt="Logo of the company 'Miro'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://www.otpbank.hu/portal/hu/Maganszemelyek">
+                            <img src="./../assets/img/partners/corporate/otp.png" alt="Logo of the 'OTP Bank'">
                         </a>
                     </div>
                     <div class="partners-logo">
@@ -182,69 +285,28 @@
                         </a>
                     </div>
                     <div class="partners-logo">
-                        <a target="_blank" rel="noreferrer" href="https://www.typeform.com/">
-                            <img src="./../assets/img/partners/strategic/typeform.png"
-                                alt="Logo of the company 'Typeform'">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Corporate Partners -->
-            <div class="partners-box mt-5">
-                <h3 class="mt-4">Corporate Partners</h3>
-                <div class="partners-logo-row">
-                    <div class="partners-logo-corp">
-                        <a target="_blank" rel="noreferrer" href="https://www.datarobot.com/">
-                            <img src="./../assets/img/partners/corporate/datarobot.png"
-                                alt="Logo of the company 'Data Robot'">
-                        </a>
-                    </div>
-                    <div class="partners-logo-corp">
-                        <a target="_blank" rel="noreferrer" href="https://www.efc.be/">
-                            <img src="./../assets/img/partners/corporate/efc.png"
-                                alt="Logo of 'European Foundation Centre'">
-                        </a>
-                    </div>
-                    <div class="partners-logo-corp">
-                        <a target="_blank" rel="noreferrer" href="http://wsdomino.eurocities.eu/eurocities/home">
-                            <img src="./../assets/img/partners/corporate/eurocities.png" alt="Logo of 'eurocities'">
-                        </a>
-                    </div>
-                    <div class="partners-logo-corp">
-                        <a target="_blank" rel="noreferrer" href="https://www.ferrovial.com/">
-                            <img src="./../assets/img/partners/corporate/ferrovial.png"
-                                alt="Logo of the company 'Ferrovial'">
-                        </a>
-                    </div>
-                    <div class="partners-logo-corp">
-                        <a target="_blank" rel="noreferrer" href="https://www.iberdrola.es/">
-                            <img src="./../assets/img/partners/corporate/iberdrola.png"
-                                alt="Logo of the company 'Iberdrola'">
-                        </a>
-                    </div>
-                    <div class="partners-logo-corp">
-                        <a target="_blank" rel="noreferrer" href="https://www.otpbank.hu/portal/hu/Maganszemelyek">
-                            <img src="./../assets/img/partners/corporate/otp.png" alt="Logo of the 'OTP Bank'">
-                        </a>
-                    </div>
-                    <div class="partners-logo-corp">
-                        <a target="_blank" rel="noreferrer" href="https://www.sanofi.com/">
-                            <img src="./../assets/img/partners/corporate/sanofi.png" alt="Logo of the company 'Sanofi'">
-                        </a>
-                    </div>
-                    <div class="partners-logo-corp">
                         <a target="_blank" rel="noreferrer" href="https://www.telefonica.com/es/home">
                             <img src="./../assets/img/partners/corporate/telefonica.png"
                                 alt="Logo of the company 'Telefónica'">
                         </a>
                     </div>
-                    <div class="partners-logo-corp">
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://www.typeform.com/">
+                            <img src="./../assets/img/partners/strategic/typeform.png"
+                                alt="Logo of the company 'Typeform'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
+                        <a target="_blank" rel="noreferrer" href="https://www.unwto.org/">
+                            <img src="./../assets/img/partners/corporate/unwto.png" alt="Logo of the 'UNWTO'">
+                        </a>
+                    </div>
+                    <div class="partners-logo">
                         <a target="_blank" rel="noreferrer" href="https://www.wayra.com/">
                             <img src="./../assets/img/partners/corporate/wayra.png" alt="Logo of the company 'Wayra'">
                         </a>
                     </div>
-                    <div class="partners-logo-corp">
+                    <div class="partners-logo">
                         <a target="_blank" rel="noreferrer" href="https://www.workstreams.ai/">
                             <img src="./../assets/img/partners/corporate/workstreams.png"
                                 alt="Logo of the company 'Workstreams.ai'">
@@ -256,7 +318,6 @@
             <div class="mt-5"></div>
             <!-- Additional Partners -->
             <div id="partners-content">
-                <h3 class="mt-4">Additional Partners</h3>
 
                 <!-- <div class="partners-menu">
                     <a href="#media">
@@ -293,6 +354,11 @@
                 <h3>Media</h3>
                 <ul class="additional-partners-list">
                     <li>
+                        <a target="_blank" rel="noreferrer" href="https://www.europeclouds.com/">
+                            EuropeClouds
+                        </a>
+                    </li>
+                    <li>
                         <a target="_blank" rel="noreferrer" href="https://www.georg-media.de">
                             Georg Media
                         </a>
@@ -300,6 +366,11 @@
                     <li>
                         <a target="_blank" rel="noreferrer" href="https://www.ilsole24ore.com">
                             Il Sole 24 Ore
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="https://www.israelclouds.com/">
+                            IsraelClouds
                         </a>
                     </li>
                     <li>
@@ -314,7 +385,7 @@
                 </ul>
 
                 <div id="civil" class="anchor"></div>
-                <h3 class="mt-5">Civil societites</h3>
+                <h3 class="mt-5">Civil Societies</h3>
                 <ul class="additional-partners-list">
                     <li>
                         <a target="_blank" rel="noreferrer" href="https://www.copcap.com/">
@@ -337,8 +408,28 @@
                         </a>
                     </li>
                     <li>
+                        <a target="_blank" rel="noreferrer" href="http://www.eu-life.eu/">
+                            eulife
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="http://www.eurada.org/">
+                            EURADA
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="http://web.finnovaregio.org/">
+                            finnova
+                        </a>
+                    </li>
+                    <li>
                         <a target="_blank" rel="noreferrer" href="http://ghf2020.g2hp.net/">
                             Geneva Health Forum
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="https://imece.com/">
+                            imece
                         </a>
                     </li>
                 </ul>
@@ -353,15 +444,25 @@
                         </a>
                     </li>
                     <li>
+                        <a target="_blank" rel="noreferrer" href="http://www.investcroatia.hr/">
+                            Hamag Bicro
+                        </a>
+                    </li>
+                    <li>
                         <a target="_blank" rel="noreferrer" href="https://www.innovationisrael.org.il/ISERD/">
                             ISERD
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="http://www.ivace.es/index.php?lang=es">
+                            IVACE
                         </a>
                     </li>
                 </ul>
 
 
                 <div id="business" class="anchor"></div>
-                <h3 class="mt-5">Businesses</h3>
+                <h3 class="mt-5">Private Partners</h3>
                 <ul class="additional-partners-list">
                     <li>
                         <a target="_blank" rel="noreferrer" href="https://ab-inbev.de/">
@@ -371,6 +472,11 @@
                     <li>
                         <a target="_blank" rel="noreferrer" href="http://www.arcfund.net/">
                             ARC Consulting Ltd.
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="http://ierc.bia-bg.com">
+                            Bulgarian Industrial Association
                         </a>
                     </li>
                     <li>
@@ -389,6 +495,16 @@
                         </a>
                     </li>
                     <li>
+                        <a target="_blank" rel="noreferrer" href="www.ickosovo.com ">
+                            Innovation Centre Kosovo
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="https://oficina.al/">
+                            Oficina
+                        </a>
+                    </li>
+                    <li>
                         <a target="_blank" rel="noreferrer" href="https://www.risklick.ch/#/login">
                             Risklick AG
                         </a>
@@ -401,6 +517,11 @@
                     <li>
                         <a target="_blank" rel="noreferrer" href="https://www.skyrora.com/">
                             Skyrora UA
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="https://www.startisrael.co.il/">
+                            StartIsrael
                         </a>
                     </li>
                     <li>
@@ -418,7 +539,23 @@
                             Yonder
                         </a>
                     </li>
+
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="">
+                        </a>
+                    </li>
                 </ul>
+
+
+                <!-- <div id="support" class="anchor"></div>
+                <h3 class="mt-5">Supporting Organisations</h3>
+                <ul class="additional-partners-list">
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="">
+
+                        </a>
+                    </li>
+                </ul> -->
 
             </div>
 
@@ -487,7 +624,7 @@
     <!-- END footer -->
 
 
-    <script src="./../assets/js/global-014.js"></script>
+    <script src="./../assets/js/global-015.js"></script>
     <script src="./../assets/js/cookieconsent.min.js"></script>
 </body>
 
