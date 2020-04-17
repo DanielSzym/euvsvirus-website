@@ -474,7 +474,7 @@ nav ul ul ul li {
 }
 
 .desktop-link-item {
-	padding: 1.6vh 12px;
+	padding: 6px 12px;
 	text-decoration: none;
 	font-size: 1.2rem;
 	font-size: var(--font-size-h4);
