@@ -1145,7 +1145,10 @@ nav ul ul ul li {
 	box-shadow: 0px 0px 12px 0px rgba(209,209,209,.8);
 	border-radius: 4px;
 }
+.challenge-topic-box li {
+	color: var(--color-grey);
 
+}
 /* challenges navbar */
 .challenges-navigation-bar {
 	margin-top: -20px;
