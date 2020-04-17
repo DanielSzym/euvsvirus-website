@@ -710,7 +710,7 @@ nav ul ul ul li {
 
 /* countries */
 .country-flags {
-	width: 75%;
+	width: 100%;
 }
 .country-mobile { display: none; }
 @media (max-width: 992px) {
