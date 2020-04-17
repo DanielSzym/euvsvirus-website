@@ -394,14 +394,7 @@ nav ul ul {
 	top: 55px; /* the height of the main nav */
 	border: 1px solid #e9ecef;
 	border-radius: 4px;
-}
-nav ul ul li:first-child {
-	border-top-right-radius: inherit;
-	border-top-left-radius: inherit;
-}
-nav ul ul li:last-child {
-	border-bottom-right-radius: inherit;
-	border-bottom-left-radius: inherit;
+	padding: 6px 0;
 }
 nav ul ul li {
 	padding: 5px 0 5px 10px;
