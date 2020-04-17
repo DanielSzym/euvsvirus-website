@@ -1171,27 +1171,7 @@ nav ul ul ul li {
 }
 .ambassador-card {
 	width: 260px;
-	height: 230px;
-	background-color: var(--color-primary-blue);
-	border-radius: 6px;
-	padding: 20px;
 }
-.ambassador-card-title h3, .ambassador-card-title p {
-	color: #fff;
-	color: var(--color-secondary-yellow);
-	font-weight: normal;
-}
-.ambassador-card-title h3 {
-	/* font-size: 1.4rem; */
-}
-.ambassador-card-title p {
-	margin-top: 4px;
-}
-.ambassador-card-content {
-	font-size: 1rem;
-
-}
-
 /*** END ambassadors page ***/
 
 
@@ -1594,6 +1574,9 @@ footer ul li a {
 	.mt-5-mobile {
 		margin-top: 3rem;
 	}
+}
+.o-zero {
+	opacity: 0 !important;
 }
 .d-none {
 	display: none !important;
