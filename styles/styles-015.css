@@ -718,6 +718,10 @@ nav ul ul ul li {
 		width: 100%;
 	}
 }
+@media (max-width: 768px) {
+	.country-desktop { display: none; }
+	.country-mobile { display: block; }
+}
 @media (max-width: 576px) {
 	.logo-EC {
 		max-width: 136px;
@@ -734,11 +738,6 @@ nav ul ul ul li {
 		margin-top: 1.5rem;
 		margin-bottom: 1.5rem;
 	}
-	.country-flags {
-		width: 100%;
-	}
-	.country-desktop { display: none; }
-	.country-mobile { display: block; }
 }
 
 /* description */

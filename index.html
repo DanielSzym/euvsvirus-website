@@ -262,14 +262,28 @@
       </div>
 
       <div class="country-flags mt-4">
-        <img class="country-desktop" alt="Country flags of all participating countries in a 2x12 grid"
-          src="./assets/img/flags/countryflags1704_desktop.png">
+        <img id="desktop_supporting_countries" class="country-desktop"
+          alt="Country flags of all participating countries in a 2x12 grid"
+          src="./assets/img/flags/countryflags1704_desktop.png" usemap="#segib-map-desktop">
+        <map name="segib-map-desktop">
+          <area id="flag-segib-map-desktop" target="_blank" alt="Secretaría General Iberoamericana"
+            title="Secretaría General Iberoamericana" href="https://www.segib.org" coords="121,0,212,91" shape="rect">
+          <!-- <area id="flag-segib-map-mobile" alt="Secretaría General Iberoamericana" title="Secretaría General Iberoamericana"
+             href="#d" coords="60,0,69,47" shape="rect"> -->
+        </map>
+
         <img class="country-mobile" alt="Country flags of all participating countries in a 4x6 grid"
           src="./assets/img/flags/countryflags1404_mobile.png">
-
         <strong class="mt-5 bold country-mobile">Supporting countries</strong>
-        <img class="mt-4 country-mobile" alt="Country flags of all participating countries in a 4x6 grid"
-          src="./assets/img/flags/countryflags1404_mobile_2.png">
+        <img id="mobile_supporting_countries" class="mt-4 country-mobile"
+          alt="Country flags of all participating countries in a 4x6 grid"
+          src="./assets/img/flags/countryflags1404_mobile_2.png" usemap="#segib-map-mobile">
+        <map name="segib-map-mobile">
+          <area id="flag-segib-map-mobile" target="_blank" alt="Secretaría General Iberoamericana"
+            title="Secretaría General Iberoamericana" href="https://www.segib.org" coords="121,0,212,91" shape="rect">
+          <!-- <area id="flag-segib-map-mobile" alt="Secretaría General Iberoamericana" title="Secretaría General Iberoamericana"
+           href="#d" coords="60,0,69,47" shape="rect"> -->
+        </map>
       </div>
     </div>
     <p class="mt-4" style="text-align: center;">
@@ -899,6 +913,37 @@
         document.getElementById('counter-register').innerHTML = 'The hackathon has finished. Stay tuned for more info soon!';
       }
     }, 1000);
+
+
+    function calculateImageMap() {
+      // set the image map, so that SEGIB can get clicked
+      if (window.innerWidth <= 768) {
+        // mobile
+        let mobile_flag_area = document.getElementById('flag-segib-map-mobile');
+        let mobile_flags = document.getElementById('mobile_supporting_countries');
+        let mobile_new_coords_x_start = Math.round(mobile_flags.clientWidth * .1129)
+        let mobile_new_coords_x_end = Math.round(mobile_flags.clientWidth * .245) - 1
+        let mobile_new_coords_y_start = 0
+        let mobile_new_coords_y_end = Math.round(mobile_flags.clientHeight) - 1
+        let mobile_new_coords = '' + mobile_new_coords_x_start + ',' + mobile_new_coords_y_start + ',' + mobile_new_coords_x_end + ',' + mobile_new_coords_y_end
+
+        mobile_flag_area.setAttribute('coords', mobile_new_coords)
+      } else {
+        // desktop
+        let desktop_flag_area = document.getElementById('flag-segib-map-desktop');
+        let desktop_flags = document.getElementById('desktop_supporting_countries');
+        let desktop_new_coords_x_start = Math.round(desktop_flags.clientWidth * .9586)
+
+        let desktop_new_coords_x_end = Math.round(desktop_flags.clientWidth)
+        let desktop_new_coords_y_start = 0
+        let desktop_new_coords_y_end = Math.round(desktop_flags.clientHeight * .5) - 1
+        let desktop_new_coords = '' + desktop_new_coords_x_start + ',' + desktop_new_coords_y_start + ',' + desktop_new_coords_x_end + ',' + desktop_new_coords_y_end
+
+        desktop_flag_area.setAttribute('coords', desktop_new_coords)
+      }
+    }
+    window.onload = function() { calculateImageMap(); }
+    window.onresize = function () { calculateImageMap(); }
   </script>
   <script src="./assets/js/cookieconsent.min.js"></script>
 
