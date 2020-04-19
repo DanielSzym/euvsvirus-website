@@ -404,7 +404,7 @@ nav ul ul li:hover:not(.disable-menu) {
 	background-color: #e9ecef;
 }
 /* Display Dropdowns on Hover */
-nav ul li:hover > ul {
+.dd:hover > ul {
 	display:inherit;
 }
 /* Fisrt Tier Dropdown */
@@ -718,6 +718,10 @@ nav ul ul ul li {
 		width: 100%;
 	}
 }
+@media (max-width: 768px) {
+	.country-desktop { display: none; }
+	.country-mobile { display: block; }
+}
 @media (max-width: 576px) {
 	.logo-EC {
 		max-width: 136px;
@@ -734,11 +738,6 @@ nav ul ul ul li {
 		margin-top: 1.5rem;
 		margin-bottom: 1.5rem;
 	}
-	.country-flags {
-		width: 100%;
-	}
-	.country-desktop { display: none; }
-	.country-mobile { display: block; }
 }
 
 /* description */
@@ -1016,7 +1015,7 @@ nav ul ul ul li {
 	margin-bottom: -1rem;
 }
 .initiators-logo img {
-	width: 125px; /* 120 initial */
+	width: 120px; /* 120 initial */
 }
 
 @media (max-width: 768px) {
@@ -1028,9 +1027,7 @@ nav ul ul ul li {
 
 /*** BEGIN challenges ***/
 /* challenges MENU */
-.challenges-menu {
-}
-	.challenges-menu .categories-menu {
+.challenges-menu .categories-menu {
 	display: flex;
 }
 
@@ -1227,11 +1224,22 @@ nav ul ul ul li {
 	list-style: none;
 	padding-left: 0;
 }
+.additional-partners-list.univerities {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+	column-count: 2;
+	color: var(--color-grey);
+}
 @media (max-width: 992px){
 	.additional-partners-list {
 		-webkit-column-count: 2;
 		-moz-column-count: 2;
 		column-count: 2;
+	}
+	.additional-partners-list.univerities {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
 	}
 }
 @media (max-width: 576px){
