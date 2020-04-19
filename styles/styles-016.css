@@ -1015,7 +1015,7 @@ nav ul ul ul li {
 	margin-bottom: -1rem;
 }
 .initiators-logo img {
-	width: 125px; /* 120 initial */
+	width: 120px; /* 120 initial */
 }
 
 @media (max-width: 768px) {
@@ -1226,11 +1226,21 @@ nav ul ul ul li {
 	list-style: none;
 	padding-left: 0;
 }
+.additional-partners-list.univerities {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+	column-count: 2;
+}
 @media (max-width: 992px){
 	.additional-partners-list {
 		-webkit-column-count: 2;
 		-moz-column-count: 2;
 		column-count: 2;
+	}
+	.additional-partners-list.univerities {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
 	}
 }
 @media (max-width: 576px){
