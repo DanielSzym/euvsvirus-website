@@ -1027,9 +1027,7 @@ nav ul ul ul li {
 
 /*** BEGIN challenges ***/
 /* challenges MENU */
-.challenges-menu {
-}
-	.challenges-menu .categories-menu {
+.challenges-menu .categories-menu {
 	display: flex;
 }
 
@@ -1230,6 +1228,7 @@ nav ul ul ul li {
     -webkit-column-count: 2;
     -moz-column-count: 2;
 	column-count: 2;
+	color: var(--color-grey);
 }
 @media (max-width: 992px){
 	.additional-partners-list {
