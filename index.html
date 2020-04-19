@@ -112,7 +112,7 @@
             </li>
 
             <li class="dd">
-              <a class="cursor-default">About</a>
+              <a id="about-menu-opener" style="cursor:pointer;" onclick="">About</a>
               <!-- First Tier Drop Down -->
               <ul>
                 <li><a class="dd-item" href="./ambassadors/">Ambassadors</a></li>
@@ -947,7 +947,7 @@
         desktop_flag_area.setAttribute('coords', desktop_new_coords)
       }
     }
-    window.onload = function() { calculateImageMap(); }
+    window.onload = function () { calculateImageMap(); }
     window.onresize = function () { calculateImageMap(); }
   </script>
   <script src="./assets/js/cookieconsent.min.js"></script>

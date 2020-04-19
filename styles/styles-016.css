@@ -404,7 +404,7 @@ nav ul ul li:hover:not(.disable-menu) {
 	background-color: #e9ecef;
 }
 /* Display Dropdowns on Hover */
-nav ul li:hover > ul {
+.dd:hover > ul, .dd:active > ul {
 	display:inherit;
 }
 /* Fisrt Tier Dropdown */
