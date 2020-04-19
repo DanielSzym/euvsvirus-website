@@ -16,18 +16,22 @@ import os
 
 df = pd.read_csv('./assets/scripts/universities.csv')
 
-html = ''
-for index, row in df.iterrows():
-    html_list_element = '<a '
-    if df.at[index, 'link'] == '-':
-        # no link provided, don't add href attribute
-        html_list_element += 'target="_blank" rel="noreferrer">'
-    else:
-        html_list_element += 'href="'+str(df.at[index, 'link'])+'" target="_blank" rel="noreferrer">'
-    html_list_element += '<li>'+str(df.at[index, 'name'])+'</li></a>'
+ADD_LINKS = False
+HTML = ''
 
-    html += html_list_element
+for index, row in df.iterrows():
+    if ADD_LINKS:
+        html_list_element = '<a '
+        if df.at[index, 'link'] == '-':
+            # no link provided, don't add href attribute
+            html_list_element += 'target="_blank" rel="noreferrer">'
+        else:
+            html_list_element += 'href="'+str(df.at[index, 'link'])+'" target="_blank" rel="noreferrer">'
+        html_list_element += '<li>'+str(df.at[index, 'name'])+'</li></a>'
+    else:
+        html_list_element = '<a><li>'+str(df.at[index, 'name'])+'</li></a>'
+    HTML += html_list_element
 
 # add to file
 with open(os.path.join('./assets/scripts', 'partners_universities.html'), 'w') as unis:
-    unis.write(html)
+    unis.write(HTML)
