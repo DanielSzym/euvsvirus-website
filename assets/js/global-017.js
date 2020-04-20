@@ -2,6 +2,7 @@
 // Cookies
 const Cookie = {
   initialiseCookieconsent: function () {
+    console.log('init')
     window.cookieconsent.initialise({
       "palette": {
         "popup": {
@@ -44,7 +45,6 @@ const Cookie = {
   },
   registerOptInServices: function () {
     if (Cookie.getCookieConsent('cookieconsent_status')) {
-      console.log('allow');
       var head = document.getElementsByTagName('head')[0];
       var script = document.createElement('script');
       script.type = 'text/javascript';
@@ -80,7 +80,7 @@ const Cookie = {
 }
 
 window.onload = function () {
-  Cookie.initialiseCookieconsent()
+  Cookie.initialiseCookieconsent();
 }
 
 
