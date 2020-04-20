@@ -306,18 +306,16 @@
             </h2>
             <div class="description-p">
               <p class="mt-3">
-                <strong>euvsvirus.org</strong> is a Europe-wide online hackathon
+                <strong>euvsvirus.org</strong> is an Europe-wide online hackathon
                 organized by the most plugged in and nationally
                 connected actors from all over Europe. It builds upon
                 already conducted national hackathons to enable
                 the rapid execution of brilliant solutions.
               </p>
               <p class="mt-2">
-                The #EUvsVirus is a call to action to each and
-                everyone to participate in the fight against COVID-19:
-                Demonstrate unity and share your skills for the common
-                good across borders and generations! Let’s digitally
-                open EU-borders during this collective challenge!
+                The #EUvsVirus is a call to action to all citizens around the world regardless of origin and skill to
+                participate in the fight against COVID-19: Demonstrate unity and share your skills for the common good
+                across borders and generations! Let’s digitally open EU-borders during this collective challenge!
               </p>
             </div>
           </div>
@@ -518,11 +516,7 @@
         <strong>
           Register as
         </strong>
-        <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_Corporate" target="_blank">
-          <button class="secondary-button mt-3">
-            Corporate
-          </button>
-        </a>
+
         <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_Universities" target="_blank">
           <button class="secondary-button mt-2">
             University
@@ -538,11 +532,14 @@
             Public authority
           </button>
         </a>
-        <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_Private_org" target="_blank">
-          <button class="secondary-button mt-2">
-            SME, start-up, accelerator
-          </button>
-        </a>
+        <button class="secondary-button tooltip disable-button mt-2">
+          Corporate
+          <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
+        </button>
+        <button class="secondary-button tooltip disable-button mt-2">
+          SME, start-up, accelerator
+          <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
+        </button>
       </div>
     </div>
   </section>
@@ -562,7 +559,7 @@
     </div>
     <h4>Update: No registration deadline anymore!</h4>
     <div class="mt-3">
-      <a href="./agenda/"><b><u>Open Full agenda</u></b></a>
+      <a href="./agenda/"><b><u>Open full agenda</u></b></a>
     </div>
   </section>
   <!-- END Agenda -->
@@ -866,20 +863,20 @@
     if (now < deadline_ro) {
       // next deadline: registration opens
       which_counter = 'register_open';
-      until_text = 'until registration opens'
+      until_text = 'until registration opens (CET)'
       var deadline = deadline_ro;
     }
     else {
       if (now < deadline_rc) {
         // next deadline: registration closes
         which_counter = 'register_close'
-        until_text = 'until registration closes'
+        until_text = 'until registration closes (CET)'
         var deadline = deadline_rc;
       }
       else {
         // next deadline: hackathon start or over (over handled below)
         which_counter = 'hackathon_start'
-        until_text = 'until the hackathon starts'
+        until_text = 'until the hackathon starts (CET)'
         var deadline = deadline_hs;
       }
 

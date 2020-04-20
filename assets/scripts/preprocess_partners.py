@@ -14,7 +14,11 @@ import pandas as pd
 import numpy as np
 import os
 
-df = pd.read_csv('./assets/scripts/universities.csv')
+# Select either of the three below
+INPUT_TEMPLATE = ['universities', 'civil', 'public']
+INPUT = INPUT_TEMPLATE[2]
+
+df = pd.read_csv('./assets/scripts/{}.csv'.format(INPUT))
 
 ADD_LINKS = False
 HTML = ''
@@ -33,5 +37,5 @@ for index, row in df.iterrows():
     HTML += html_list_element
 
 # add to file
-with open(os.path.join('./assets/scripts', 'partners_universities.html'), 'w') as unis:
+with open(os.path.join('./assets/scripts', 'partners_{}.html'.format(INPUT)), 'w') as unis:
     unis.write(HTML)
