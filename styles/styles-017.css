@@ -1316,6 +1316,10 @@ nav ul ul ul li {
 	color: #222121;
 	color: var(--color-grey-h3-normal);
 }
+.faq a {
+	color: #003399;
+	color: var(--color-primary-blue);
+}
 
 @media (max-width: 992px){
 	.faq .p {
