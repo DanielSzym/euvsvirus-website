@@ -24,7 +24,7 @@
   <title>Pan-European Hackathon</title>
 
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="./styles/styles-016.css">
+  <link rel="stylesheet" type="text/css" href="./styles/styles-017.css">
 </head>
 
 <body>
@@ -76,6 +76,10 @@
         </a>
         <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
           <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+        </a>
+        <div style="width: 20px;"></div>
+        <a href="https://www.facebook.com/events/249707376073847" target="_blank" rel="noreferrer">
+          <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./assets/img/footer/fbevent.png">
         </a>
       </div>
     </div>
@@ -622,6 +626,11 @@
         </a>
       </div>
       <div class="initiators-logo">
+        <a target="_blank" rel="noreferrer" href="https://www.copcap.com">
+          <img src="./assets/img/initiators/copenhagencapacity.png" alt="Logo of 'Copenhagen Capacity'">
+        </a>
+      </div>
+      <div class="initiators-logo">
         <a target="_blank" rel="noreferrer" href="https://coronathonturkiye.com/">
           <img src="./assets/img/initiators/coronathon.png" alt="Logo of the 'Coronathon Türkiye'">
         </a>
@@ -677,8 +686,13 @@
         <!-- </a> -->
       </div>
       <div class="initiators-logo">
-        <a target="_blank" rel="noreferrer" href="">
+        <a target="_blank" rel="noreferrer" href="http://hackcyprus.com">
           <img src="./assets/img/initiators/hackcyprus.png" alt="Logo of 'Hack Cyprus'">
+        </a>
+      </div>
+      <div class="initiators-logo">
+        <a target="_blank" rel="noreferrer" href="https://hackies.online">
+          <img src="./assets/img/initiators/hackiesonline.png" alt="Logo of 'hackies.online'">
         </a>
       </div>
       <div class="initiators-logo">
@@ -712,6 +726,16 @@
         </a>
       </div>
       <div class="initiators-logo">
+        <a target="_blank" rel="noreferrer" href="https://thenextweb.com/">
+          <img src="./assets/img/initiators/nextweb.png" alt="Logo of the 'Nextweb'">
+        </a>
+      </div>
+      <div class="initiators-logo">
+        <a target="_blank" rel="noreferrer" href="https://www.nlmtd.com/">
+          <img src="./assets/img/initiators/nlmtd.png" alt="Logo of 'Nlmdt'">
+        </a>
+      </div>
+      <div class="initiators-logo">
         <a target="_blank" rel="noreferrer" href="https://www.hackthecrisisnorway.com/">
           <img src="./assets/img/initiators/norway.png" alt="Logo of 'Hack the Crisis Norway'">
         </a>
@@ -722,8 +746,13 @@
         </a>
       </div>
       <div class="initiators-logo">
-        <a target="_blank" rel="noreferrer">
-          <img src="./assets/img/initiators/powerbulgaria.png" alt="Logo of 'Power Bulgaria'">
+        <a target="_blank" rel="noreferrer" href="http://photonicinsights.com">
+          <img src="./assets/img/initiators/photonic.png" alt="Logo of the 'Photonic Insights'">
+        </a>
+      </div>
+      <div class="initiators-logo">
+        <a target="_blank" rel="noreferrer" href="http://power-of-bg.org/">
+          <img src="./assets/img/initiators/powerbulgaria.png" alt="Logo of 'Power of Bulgaria'">
         </a>
       </div>
       <div class="initiators-logo">
@@ -832,24 +861,29 @@
       </div>
       <div class="d-flex align-items-center d-none-mobile">
         <div class="d-flex align-items-center">
+
           <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
-            <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
+            <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
           </a>
-          <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
-            <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
+          <a href="https://www.facebook.com/EUvsVirus/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
           </a>
           <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
-            <img class="navbar-logo" alt="Logo Instagram" src="./assets/img/navbar/instagram.png">
+            <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
           </a>
-          <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
-            <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
+          <a href="https://www.linkedin.com/company/euvsvirus/" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+          </a>
+          <div style="width: 20px;"></div>
+          <a href="https://www.facebook.com/events/249707376073847" target="_blank" rel="noreferrer">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/footer/fbevent.png">
           </a>
         </div>
       </div>
   </footer>
   <!-- END footer -->
 
-  <script src="./assets/js/global-015.js"></script>
+  <script src="./assets/js/global-017.js"></script>
   <script>
     // tbd: add other counters
     let which_counter = 'register_open'  // either register_open, register_close or hackathon_start
@@ -944,10 +978,14 @@
         desktop_flag_area.setAttribute('coords', desktop_new_coords)
       }
     }
-    window.onload = function () { calculateImageMap(); }
+    window.onload = function () {
+      calculateImageMap();
+      // recall functions from global.js, as onload is overwritten here
+      Cookie.initialiseCookieconsent();
+    }
     window.onresize = function () { calculateImageMap(); }
   </script>
-  <script src="./assets/js/cookieconsent.min.js"></script>
+  <script src="./assets/js/cookieconsent-017.min.js"></script>
 
 </body>
 
