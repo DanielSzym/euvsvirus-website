@@ -2,7 +2,6 @@
 // Cookies
 const Cookie = {
   initialiseCookieconsent: function () {
-    console.log('init')
     window.cookieconsent.initialise({
       "palette": {
         "popup": {

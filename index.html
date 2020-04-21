@@ -521,21 +521,18 @@
           Register as
         </strong>
 
-        <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_Universities" target="_blank">
-          <button class="secondary-button mt-2">
-            University
-          </button>
-        </a>
-        <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_Foundations" target="_blank">
-          <button class="secondary-button mt-2">
-            Civil society organisation
-          </button>
-        </a>
-        <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_LocalAuthorities" target="_blank">
-          <button class="secondary-button mt-2">
-            Public authority
-          </button>
-        </a>
+        <button class="secondary-button tooltip disable-button mt-2">
+          University
+          <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
+        </button>
+        <button class="secondary-button tooltip disable-button mt-2">
+          Civil society organisation
+          <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
+        </button>
+        <button class="secondary-button tooltip disable-button mt-2">
+          Public authority
+          <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
+        </button>
         <button class="secondary-button tooltip disable-button mt-2">
           Corporate
           <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
@@ -556,12 +553,36 @@
     <h2>Timeline</h2>
     <br><br>
     <div class="agenda-image desktop">
-      <img src="./assets/img/agenda/timetable_0419_desktop.png" alt="Image of the EUvsVirus hackathon agenda">
+      <img src="./assets/img/agenda/timetable_0421_desktop.png" alt="Image of the EUvsVirus hackathon agenda">
     </div>
     <div class="agenda-image mobile">
-      <img src="./assets/img/agenda/timetable_0419_mobile.png" alt="Image of the EUvsVirus hackathon agenda">
+      <img src="./assets/img/agenda/timetable_0421_mobile.png" alt="Image of the EUvsVirus hackathon agenda">
     </div>
-    <h4>Update: No registration deadline anymore!</h4>
+
+    <!-- Livestreams -->
+    <div class="mt-3 d-none" id="livestream-container">
+      <div class="d-flex align-items-center" id="livestream-container">
+        <div>
+          <img src="./assets/img/streams/EUvsVirus-2.png" style="width: 200px; border-radius: 10px;">
+        </div>
+        <div style="margin: 40px;">
+          <div class="d-flex align-items-center">
+            <img src="./assets/img/streams/fb-live.png" style="width: 100px;">
+            <div style="width: 20px;"></div>
+            <h3>
+              Livestream is on!
+            </h3>
+          </div>
+          <a target="_blank" rel="noreferrer" href="#" id="livestream-link">
+            <div class="primary-button btn-angular mt-3">
+              Watch now on Facebook
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    </p>
     <div class="mt-3">
       <a href="./agenda/"><b><u>Open full agenda</u></b></a>
     </div>
@@ -863,16 +884,16 @@
         <div class="d-flex align-items-center">
 
           <a href="https://twitter.com/EU_Commission" target="_blank" rel="noreferrer">
-            <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+            <img class="navbar-logo" alt="Logo Twitter" src="./assets/img/navbar/twitter.png">
           </a>
           <a href="https://www.facebook.com/EUvsVirus/" target="_blank" rel="noreferrer">
-            <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+            <img class="navbar-logo" alt="Logo Facebook" src="./assets/img/navbar/facebook.png">
           </a>
           <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
-            <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
+            <img class="navbar-logo" alt="Logo Instagram" src="./assets/img/navbar/instagram.png">
           </a>
           <a href="https://www.linkedin.com/company/euvsvirus/" target="_blank" rel="noreferrer">
-            <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+            <img class="navbar-logo" alt="Logo LinkedIn" src="./assets/img/navbar/linkedin.png">
           </a>
           <div style="width: 20px;"></div>
           <a href="https://www.facebook.com/events/249707376073847" target="_blank" rel="noreferrer">
@@ -892,7 +913,7 @@
 
     var deadline_ro = new Date("Apr 14, 2020 12:00:00").getTime();
     var deadline_rc = new Date("Apr 16, 2020 23:59:59").getTime();
-    var deadline_hs = new Date("Apr 24, 2020 17:00:00").getTime();
+    var deadline_hs = new Date(Date.UTC(2020, 3, 24, 16, 0, 0)).getTime();
 
     if (now < deadline_ro) {
       // next deadline: registration opens
@@ -915,7 +936,6 @@
       }
 
     }
-    // deadline = new Date("Apr 10, 2020 00:00:01").getTime();
 
     var x = setInterval(function () {
       var now = new Date().getTime();
@@ -984,6 +1004,52 @@
       Cookie.initialiseCookieconsent();
     }
     window.onresize = function () { calculateImageMap(); }
+
+
+
+    // manage livestreams
+    function setStreamHtml(stream_link) {
+      // sets the html to show the stream link
+      let html_stream_container = document.getElementById('livestream-container');
+      let html_stream_link = document.getElementById('livestream-link');
+      html_stream_container.classList.remove('d-none')
+      html_stream_link.setAttribute('href', stream_link)
+    }
+    var stream_now = new Date().getTime();
+
+    // take the UTC time here with an offset of -1 hour to get CET
+    // e.g. 17:00 (5pm) would have to be 16:00 (6pm)
+    // e.g. for programming in GMT+2 (summer time) if yout want 11pm set 9pm
+    // 21 April
+    var ls11_s = new Date(Date.UTC(2020, 3, 21, 9, 45, 0)).getTime();
+    var ls11_e = new Date(Date.UTC(2020, 3, 21, 10, 30, 0)).getTime();
+    var ls12_s = new Date(Date.UTC(2020, 3, 21, 15, 0, 0)).getTime();
+    var ls12_e = new Date(Date.UTC(2020, 3, 21, 15, 30, 0)).getTime();
+
+    // 22 April
+    var ls21_s = new Date(Date.UTC(2020, 3, 22, 10, 0, 0)).getTime();
+    var ls21_e = new Date(Date.UTC(2020, 3, 22, 10, 30, 0)).getTime();
+    var ls22_s = new Date(Date.UTC(2020, 3, 22, 15, 0, 0)).getTime();
+    var ls22_e = new Date(Date.UTC(2020, 3, 22, 15, 30, 0)).getTime();
+
+    // 23 April
+    var ls31_s = new Date(Date.UTC(2020, 3, 23, 10, 0, 0)).getTime();
+    var ls31_e = new Date(Date.UTC(2020, 3, 23, 10, 30, 0)).getTime();
+    var ls32_s = new Date(Date.UTC(2020, 3, 23, 15, 0, 0)).getTime();
+    var ls32_e = new Date(Date.UTC(2020, 3, 23, 15, 30, 0)).getTime();
+
+    var ls11_link = 'https://www.facebook.com/EUvsVirus/posts/105748421115549'
+    var ls12_link = '#'
+    var ls21_link = '#'
+    var ls22_link = '#'
+    var ls31_link = '#'
+    var ls32_link = '#'
+    if (ls11_s < stream_now && ls11_e > stream_now) { setStreamHtml(ls11_link); }
+    if (ls12_s < stream_now && ls12_e > stream_now) { setStreamHtml(ls12_link); }
+    if (ls21_s < stream_now && ls21_e > stream_now) { setStreamHtml(ls21_link); }
+    if (ls22_s < stream_now && ls22_e > stream_now) { setStreamHtml(ls22_link); }
+    if (ls31_s < stream_now && ls31_e > stream_now) { setStreamHtml(ls31_link); }
+    if (ls32_s < stream_now && ls32_e > stream_now) { setStreamHtml(ls32_link); }
   </script>
   <script src="./assets/js/cookieconsent-017.min.js"></script>
 
