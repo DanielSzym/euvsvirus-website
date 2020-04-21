@@ -24,7 +24,7 @@
   <title>Pan-European Hackathon</title>
 
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="./styles/styles-018.css">
+  <link rel="stylesheet" type="text/css" href="./styles/styles-019.css">
 </head>
 <body>
 
@@ -907,7 +907,7 @@
   </footer>
   <!-- END footer -->
 
-  <script src="./assets/js/global-017.js"></script>
+  <script src="./assets/js/global-019.js"></script>
   <script>
     // tbd: add other counters
     let which_counter = 'register_open'  // either register_open, register_close or hackathon_start
@@ -921,20 +921,20 @@
     if (now < deadline_ro) {
       // next deadline: registration opens
       which_counter = 'register_open';
-      until_text = 'until registration opens (CET)'
+      until_text = 'until registration opens (CEST)'
       var deadline = deadline_ro;
     }
     else {
       if (now < deadline_rc) {
         // next deadline: registration closes
         which_counter = 'register_close'
-        until_text = 'until registration closes (CET)'
+        until_text = 'until registration closes (CEST)'
         var deadline = deadline_rc;
       }
       else {
         // next deadline: hackathon start or over (over handled below)
         which_counter = 'hackathon_start'
-        until_text = 'until the hackathon starts (CET)'
+        until_text = 'until the hackathon starts (CEST)'
         var deadline = deadline_hs;
       }
 
@@ -1020,7 +1020,7 @@
     }
     var stream_now = new Date().getTime();
 
-    // take the UTC time here with an offset of -1 hour to get CET
+    // take the UTC time here with an offset of -1 hour to get CEST
     // e.g. 17:00 (5pm) would have to be 16:00 (6pm)
     // e.g. for programming in GMT+2 (summer time) if yout want 11pm set 9pm
     // 21 April
