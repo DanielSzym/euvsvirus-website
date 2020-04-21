@@ -849,35 +849,6 @@
   <!-- END initiators -->
 
 
-  <div class="d-none stream-container">
-    <div class="stream-card">
-      <div class="stream-card-left">
-      </div>
-      <div class="stream-card-right">
-        <div>
-          <h3>
-            Upcoming webinar
-          </h3>
-          <p class="mt-1 stream-card-date">
-            21 April 2020, 17:00 CET
-          </p>
-          <div>
-            <p class="mt-2">
-              We will talk about the hackathon and how to foster YOUR ideas!
-            </p>
-          </div>
-        </div>
-        <div>
-          <p class="stream-card-dismiss">
-            Dismiss
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- <img src="./assets/img/streams/stream_12.png" style="width: 200px; border-radius: 10px;"> -->
-
-  </div>
-
 
   <!-- BEGIN footer -->
   <footer class="mt-6 pt-1">
@@ -1044,8 +1015,8 @@
       // sets the html to show the stream link
       let html_stream_container = document.getElementById('livestream-container');
       let html_stream_link = document.getElementById('livestream-link');
-      html_stream_container.classList.remove('d-none')
-      html_stream_link.setAttribute('href', stream_link)
+      html_stream_container.classList.remove('d-none');
+      html_stream_link.setAttribute('href', stream_link);
     }
     var stream_now = new Date().getTime();
 
@@ -1070,18 +1041,19 @@
     var ls32_s = new Date(Date.UTC(2020, 3, 23, 15, 0, 0)).getTime();
     var ls32_e = new Date(Date.UTC(2020, 3, 23, 15, 30, 0)).getTime();
 
-    var ls11_link = 'https://www.facebook.com/EUvsVirus/posts/105748421115549'
-    var ls12_link = 'https://www.facebook.com/EUvsVirus/posts/105959847761073'
-    var ls21_link = '#'
-    var ls22_link = '#'
-    var ls31_link = '#'
-    var ls32_link = '#'
+    var ls11_link = 'https://www.facebook.com/EUvsVirus/posts/105748421115549';
+    var ls12_link = 'https://www.facebook.com/EUvsVirus/posts/105959847761073';
+    var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207';
+    var ls22_link = 'https://www.facebook.com/EUvsVirus/';
+    var ls31_link = 'https://www.facebook.com/EUvsVirus/';
+    var ls32_link = 'https://www.facebook.com/EUvsVirus/';
     if (ls11_s < stream_now && ls11_e > stream_now) { setStreamHtml(ls11_link); }
     if (ls12_s < stream_now && ls12_e > stream_now) { setStreamHtml(ls12_link); }
     if (ls21_s < stream_now && ls21_e > stream_now) { setStreamHtml(ls21_link); }
     if (ls22_s < stream_now && ls22_e > stream_now) { setStreamHtml(ls22_link); }
     if (ls31_s < stream_now && ls31_e > stream_now) { setStreamHtml(ls31_link); }
     if (ls32_s < stream_now && ls32_e > stream_now) { setStreamHtml(ls32_link); }
+
   </script>
   <script src="./assets/js/cookieconsent-017.min.js"></script>
 

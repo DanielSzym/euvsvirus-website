@@ -239,6 +239,103 @@ function activateMenuItem(menuItem) {
 }
 
 
+// livestream stuff
+function dismissWebinar() {
+  var d = new Date;
+  let offset_days = .5;
+  d.setTime(d.getTime() + 24*60*60*1000*offset_days);
+  document.cookie = 'dismisswebinar=dismiss;path=/;expires=' + d.toGMTString();
+  document.getElementById('stream-container').style.display = 'none';
+}
+const STREAM_CARD_TEXTS = {
+  title: 'Upcoming webinar',
+  date: '22 April 2020, 12:00 PM CEST',
+  cta: 'Soon on Facebook',
+  href: 'https://www.facebook.com/EUvsVirus/posts/106308507726207',
+}
+function setContextLive(stream_link, stream_time) {
+  STREAM_CARD_TEXTS.title = 'Live webinar';
+  STREAM_CARD_TEXTS.date = stream_time;
+  STREAM_CARD_TEXTS.cta = 'Join now on Facebook!';
+  STREAM_CARD_TEXTS.href = stream_link;
+}
+function getStreamCardContext() {
+  var stream_now = new Date().getTime();
+
+  // 22 April
+  var ls21_s = new Date(Date.UTC(2020, 3, 22, 9, 45, 0)).getTime();
+  var ls21_e = new Date(Date.UTC(2020, 3, 22, 10, 30, 0)).getTime();
+  var ls22_s = new Date(Date.UTC(2020, 3, 22, 14, 45, 0)).getTime();
+  var ls22_e = new Date(Date.UTC(2020, 3, 22, 15, 30, 0)).getTime();
+
+  // 23 April
+  var ls31_s = new Date(Date.UTC(2020, 3, 23, 9, 45, 0)).getTime();
+  var ls31_e = new Date(Date.UTC(2020, 3, 23, 10, 30, 0)).getTime();
+  var ls32_s = new Date(Date.UTC(2020, 3, 23, 14, 45, 0)).getTime();
+  var ls32_e = new Date(Date.UTC(2020, 3, 23, 15, 30, 0)).getTime();
+
+  // links
+  var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207'
+  var ls22_link = 'https://www.facebook.com/EUvsVirus/'
+  var ls31_link = 'https://www.facebook.com/EUvsVirus/'
+  var ls32_link = 'https://www.facebook.com/EUvsVirus/'
+
+  // check if webinar is on (always 15 minutes earlier). If yes, set link and other banner content
+  // if no set next webinar date
+  if (ls21_s < stream_now && ls21_e > stream_now) { setContextLive(ls21_link, 'until 12:30 PM CEST'); }
+  if (ls22_s < stream_now && ls22_e > stream_now) { setContextLive(ls22_link, 'until 05:30 PM CEST'); }
+  if (ls31_s < stream_now && ls31_e > stream_now) { setContextLive(ls31_link, 'until 12:30 PM CEST'); }
+  if (ls32_s < stream_now && ls32_e > stream_now) { setContextLive(ls32_link, 'until 05:30 PM CEST'); }
+  else {
+  // set new datetime of upcoming
+    if ( stream_now > ls21_e ) {
+      STREAM_CARD_TEXTS.date = '22 April 2020, 05:00 PM CEST';
+      STREAM_CARD_TEXTS.href = 'ls22_link';
+    }
+    if ( stream_now > ls22_e ) {
+      STREAM_CARD_TEXTS.date = '23 April 2020, 12:00 CEST';
+      STREAM_CARD_TEXTS.href = 'ls31_link';
+    }
+    if ( stream_now > ls31_e ) {
+      STREAM_CARD_TEXTS.date = '23 April 2020, 17:00 CEST';
+      STREAM_CARD_TEXTS.href = 'ls32_link';
+    }
+    if ( stream_now > ls32_e ) { STREAM_CARD_TEXTS.date = '-1'; }
+  }
+}
+(function () {
+  if (Cookie.getCookie('dismisswebinar') != 'dismiss' && Cookie.getCookie('cookieconsent_status')) {
+    // first assemble the context
+    getStreamCardContext()
+    // then add the banner
+    let webinar_banner_title = STREAM_CARD_TEXTS.title;
+    let webinar_banner_date = STREAM_CARD_TEXTS.date;
+    // no more scheduled
+    if (webinar_banner_date == '-1') return
+
+    let webinar_banner_text = 'Follow the EU’s most important leaders and innovators in our free webinars.';
+    webinar_banner_text += '<a href="';
+    webinar_banner_text += STREAM_CARD_TEXTS.href;
+    webinar_banner_text += '" target="_blank" rel="noreferrer" class="stream-button mt-1">';
+    webinar_banner_text += STREAM_CARD_TEXTS.cta;
+    webinar_banner_text += '</a>'
+
+    // assemble banner
+    let webinar_banner = '<div id="stream-container" class="stream-container"><div class="stream-card"><div class="stream-card-left"></div><div class="stream-card-right"><div><h3>';
+    webinar_banner += webinar_banner_title;
+    webinar_banner += '</h3><p class="mt-1 stream-card-date">';
+    webinar_banner += webinar_banner_date;
+    webinar_banner += '</p><div><p class="mt-1">';
+    webinar_banner += webinar_banner_text;
+    webinar_banner += '</p></div></div><div><p class="stream-card-dismiss" onclick="dismissWebinar()">Dismiss</p></div></div></div></div>';
+    var node = document.createElement('div');
+    node.innerHTML = webinar_banner;
+    document.body.appendChild(node)
+    // document.getElementById('stream-outer').innerHTML = webinar_banner;
+  }
+})();
+
+
 // Back to top button. Source: https://github.com/vfeskov/vanilla-back-to-top
 function addBackToTop(){var o,t,e,n,i=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},r=i.backgroundColor,d=void 0===r?"#000":r,a=i.cornerOffset,c=void 0===a?20:a,s=i.diameter,l=void 0===s?56:s,u=i.ease,p=void 0===u?function(o){return.5*(1-Math.cos(Math.PI*o))}:u,m=i.id,h=void 0===m?"back-to-top":m,b=i.innerHTML,v=void 0===b?'<svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>':b,f=i.onClickScrollTo,x=void 0===f?0:f,w=i.scrollContainer,g=void 0===w?document.body:w,k=i.scrollDuration,y=void 0===k?100:k,T=i.showWhenScrollTopIs,M=void 0===T?1:T,z=i.size,E=void 0===z?l:z,C=i.textColor,L=void 0===C?"#fff":C,N=i.zIndex,I=void 0===N?1:N,A=g===document.body,B=A&&document.documentElement;o=Math.round(.43*E),t=Math.round(.29*E),e="#"+h+"{background:"+d+";-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;bottom:"+c+"px;-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);-moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);box-shadow:0 2px 5px 0 rgba(0,0,0,.26);color:"+L+";cursor:pointer;display:block;height:"+E+"px;opacity:1;outline:0;position:fixed;right:"+c+"px;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-transition:bottom .2s,opacity .2s;-o-transition:bottom .2s,opacity .2s;-moz-transition:bottom .2s,opacity .2s;transition:bottom .2s,opacity .2s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:"+E+"px;z-index:"+I+"}#"+h+" svg{display:block;fill:currentColor;height:"+o+"px;margin:"+t+"px auto 0;width:"+o+"px}#"+h+".hidden{bottom:-"+E+"px;opacity:0}",(n=document.createElement("style")).appendChild(document.createTextNode(e)),document.head.insertAdjacentElement("afterbegin",n);var D=function(){var o=document.createElement("div");return o.id=h,o.className="hidden",o.innerHTML=v,o.addEventListener("click",function(o){o.preventDefault(),function(){var o="function"==typeof x?x():x,t=window,e=t.performance,n=t.requestAnimationFrame;if(y<=0||void 0===e||void 0===n)return q(o);var i=e.now(),r=j(),d=r-o;n(function o(t){var e=Math.min((t-i)/y,1);q(r-Math.round(p(e)*d)),e<1&&n(o)})}()}),document.body.appendChild(o),o}(),H=!0;function S(){j()>=M?function(){if(!H)return;D.className="",H=!1}():function(){if(H)return;D.className="hidden",H=!0}()}function j(){return g.scrollTop||B&&document.documentElement.scrollTop||0}function q(o){g.scrollTop=o,B&&(document.documentElement.scrollTop=o)}(A?window:g).addEventListener("scroll",S),S()}
 addBackToTop({
@@ -246,5 +343,5 @@ addBackToTop({
   backgroundColor: 'rgb(4, 36, 99)',
   cornerOffset: 44, // px
   textColor: '#fff',
-  zIndex: 10
+  zIndex: 8
 })
