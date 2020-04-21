@@ -54,6 +54,10 @@
 	}
 }
 
+.agenda-time-incell {
+    font-size: .8rem;
+}
+
 .agenda.desktop {
     margin-top: 0;
     display: -ms-grid;
