@@ -245,5 +245,6 @@ addBackToTop({
   diameter: 52,
   backgroundColor: 'rgb(4, 36, 99)',
   cornerOffset: 44, // px
-  textColor: '#fff'
+  textColor: '#fff',
+  zIndex: 10
 })
