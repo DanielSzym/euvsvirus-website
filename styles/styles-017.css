@@ -679,10 +679,7 @@ nav ul ul ul li {
 	/* max-width: 60%; */
 }
 .parliament-wrapper {
-	width: 60%;
-}
-.logo-parliament {
-	max-width: 140px;
+	width: 80%;
 }
 @media (max-width: 992px) {
 	.eic-logo {
@@ -690,11 +687,15 @@ nav ul ul ul li {
 	}
 }
 @media (max-width: 768px) {
+	.eic-parliament-container {
+		flex-wrap: wrap;
+	}
 	.eic-logo {
 		width: 100%;
 	}
 	.parliament-wrapper {
 		width: 100%;
+		margin-top: 3rem;
 	}
 }
 @media (max-width: 576px) {
