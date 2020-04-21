@@ -1431,6 +1431,56 @@ nav ul ul ul li {
 }
 /*** END all legal ***/
 
+/*** BEGIN stream banner ***/
+.stream-container {
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	z-index: 10;
+	width: 380px;
+	height: 204px;
+	border-radius: 8px;
+
+	background-color: #ffffff;
+	-webkit-box-shadow: 0px 0px 10px -1px rgba(77,77,77,1);
+	-moz-box-shadow: 0px 0px 10px -1px rgba(77,77,77,1);
+	box-shadow: 0px 0px 10px -1px rgba(77,77,77,1);
+
+	/* padding: 20px; */
+	overflow: hidden;
+}
+.stream-card {
+	display: flex;
+	width: inherit;
+	height: inherit;
+}
+.stream-card-left {
+	background-image: url('./../assets/img/streams/stream_12.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 50%;
+	height: inherit;
+}
+.stream-card-right {
+	margin: 10px 10px 10px 0;
+	width: 50%;
+	display: flex;
+	flex-direction:column;
+	justify-content: space-between;
+}
+.stream-card-date {
+	font-size: .9rem;
+	color: rgb(91, 96, 99);
+}
+.stream-card-dismiss {
+	position: relative;
+	bottom: 0;
+	font-size: .9rem;
+	text-decoration: underline;
+	color: rgb(91, 96, 99);
+	cursor: pointer;
+}
+/*** END stream banner ***/
 
 
 /*** BEGIN footer ***/
