@@ -24,10 +24,11 @@
   <title>Pan-European Hackathon</title>
 
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="./styles/styles-018.css">
+  <link rel="stylesheet" type="text/css" href="./styles/styles-019.css">
 </head>
 
 <body>
+
   <!-- BEGIN mobile menu -->
   <div id="mobileNav" class="overlay">
     <section id="navbar-mobile">
@@ -270,7 +271,7 @@
       <div class="country-flags mt-4">
         <img id="desktop_supporting_countries" class="country-desktop"
           alt="Country flags of all participating countries in a 2x12 grid"
-          src="./assets/img/flags/countryflags1704_desktop.png" usemap="#segib-map-desktop">
+          src="./assets/img/flags/countryflags2104_desktop.png" usemap="#segib-map-desktop">
         <map name="segib-map-desktop">
           <area id="flag-segib-map-desktop" target="_blank" alt="Secretaría General Iberoamericana"
             title="Secretaría General Iberoamericana" href="https://www.segib.org" coords="121,0,212,91" shape="rect">
@@ -279,7 +280,7 @@
         </map>
 
         <img class="country-mobile" alt="Country flags of all participating countries in a 4x6 grid"
-          src="./assets/img/flags/countryflags1404_mobile.png">
+          src="./assets/img/flags/countryflags2104_mobile.png">
         <strong class="mt-5 bold country-mobile">Supporting countries</strong>
         <img id="mobile_supporting_countries" class="mt-4 country-mobile"
           alt="Country flags of all participating countries in a 4x6 grid"
@@ -490,13 +491,16 @@
         </div>
       </div>
       <div class="how-can-you-help-column mt-5-mobile">
-        <h3>As a mentor</h3>
+        <h3>As a supporter</h3>
         <p>
           We seek experts in the areas of Health, Business,
           Social & Political Cohesion, Education, Digital Finance
           and other areas who support the problem solvers with
           their inside view and experience. Besides, we need team
           coordinators who organise and coordinate the teams during the hackathon.
+          <br><br>
+          We also seek experienced Judge Members that select innovative solutions
+          based on evaluation criteria.
         </p>
         <strong>
           Become a
@@ -511,6 +515,11 @@
             Team Coordinator
           </button>
         </a>
+        <a href="https://euvsvirus.typeform.com/to/ecdjm7" target="_blank">
+          <button class="secondary-button mt-2">
+            Judge
+          </button>
+        </a>
       </div>
       <div class="how-can-you-help-column mt-5-mobile">
         <h3>As a partner</h3>
@@ -523,12 +532,13 @@
           Register as
         </strong>
 
+        <a href="https://ec.europa.eu/eusurvey/runner/EUvsVirus_Foundations" target="_blank">
+          <button class="secondary-button mt-3">
+            Civil society organisation
+          </button>
+        </a>
         <button class="secondary-button tooltip disable-button mt-2">
           University
-          <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
-        </button>
-        <button class="secondary-button tooltip disable-button mt-2">
-          Civil society organisation
           <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
         </button>
         <button class="secondary-button tooltip disable-button mt-2">
@@ -563,7 +573,7 @@
 
     <!-- Livestreams -->
     <div class="mt-3 d-none" id="livestream-container">
-    <!-- <div class="mt-3" id="livestream-container"> -->
+      <!-- <div class="mt-3" id="livestream-container"> -->
       <div class="d-flex align-items-center" id="livestream-container">
         <div>
           <img src="./assets/img/streams/stream_12.png" style="width: 200px; border-radius: 10px;">
@@ -849,35 +859,6 @@
   <!-- END initiators -->
 
 
-  <div class="d-none stream-container">
-    <div class="stream-card">
-      <div class="stream-card-left">
-      </div>
-      <div class="stream-card-right">
-        <div>
-          <h3>
-            Upcoming webinar
-          </h3>
-          <p class="mt-1 stream-card-date">
-            21 April 2020, 17:00 CET
-          </p>
-          <div>
-            <p class="mt-2">
-              We will talk about the hackathon and how to foster YOUR ideas!
-            </p>
-          </div>
-        </div>
-        <div>
-          <p class="stream-card-dismiss">
-            Dismiss
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- <img src="./assets/img/streams/stream_12.png" style="width: 200px; border-radius: 10px;"> -->
-
-  </div>
-
 
   <!-- BEGIN footer -->
   <footer class="mt-6 pt-1">
@@ -936,7 +917,7 @@
   </footer>
   <!-- END footer -->
 
-  <script src="./assets/js/global-017.js"></script>
+  <script src="./assets/js/global-019.js"></script>
   <script>
     // tbd: add other counters
     let which_counter = 'register_open'  // either register_open, register_close or hackathon_start
@@ -950,20 +931,20 @@
     if (now < deadline_ro) {
       // next deadline: registration opens
       which_counter = 'register_open';
-      until_text = 'until registration opens (CET)'
+      until_text = 'until registration opens (CEST)'
       var deadline = deadline_ro;
     }
     else {
       if (now < deadline_rc) {
         // next deadline: registration closes
         which_counter = 'register_close'
-        until_text = 'until registration closes (CET)'
+        until_text = 'until registration closes (CEST)'
         var deadline = deadline_rc;
       }
       else {
         // next deadline: hackathon start or over (over handled below)
         which_counter = 'hackathon_start'
-        until_text = 'until the hackathon starts (CET)'
+        until_text = 'until the hackathon starts (CEST)'
         var deadline = deadline_hs;
       }
 
@@ -1044,12 +1025,12 @@
       // sets the html to show the stream link
       let html_stream_container = document.getElementById('livestream-container');
       let html_stream_link = document.getElementById('livestream-link');
-      html_stream_container.classList.remove('d-none')
-      html_stream_link.setAttribute('href', stream_link)
+      html_stream_container.classList.remove('d-none');
+      html_stream_link.setAttribute('href', stream_link);
     }
     var stream_now = new Date().getTime();
 
-    // take the UTC time here with an offset of -1 hour to get CET
+    // take the UTC time here with an offset of -1 hour to get CEST
     // e.g. 17:00 (5pm) would have to be 16:00 (6pm)
     // e.g. for programming in GMT+2 (summer time) if yout want 11pm set 9pm
     // 21 April
@@ -1059,29 +1040,30 @@
     var ls12_e = new Date(Date.UTC(2020, 3, 21, 15, 30, 0)).getTime();
 
     // 22 April
-    var ls21_s = new Date(Date.UTC(2020, 3, 22, 10, 0, 0)).getTime();
+    var ls21_s = new Date(Date.UTC(2020, 3, 22, 9, 45, 0)).getTime();
     var ls21_e = new Date(Date.UTC(2020, 3, 22, 10, 30, 0)).getTime();
-    var ls22_s = new Date(Date.UTC(2020, 3, 22, 15, 0, 0)).getTime();
+    var ls22_s = new Date(Date.UTC(2020, 3, 22, 14, 45, 0)).getTime();
     var ls22_e = new Date(Date.UTC(2020, 3, 22, 15, 30, 0)).getTime();
 
     // 23 April
-    var ls31_s = new Date(Date.UTC(2020, 3, 23, 10, 0, 0)).getTime();
+    var ls31_s = new Date(Date.UTC(2020, 3, 23, 9, 45, 0)).getTime();
     var ls31_e = new Date(Date.UTC(2020, 3, 23, 10, 30, 0)).getTime();
-    var ls32_s = new Date(Date.UTC(2020, 3, 23, 15, 0, 0)).getTime();
+    var ls32_s = new Date(Date.UTC(2020, 3, 23, 14, 45, 0)).getTime();
     var ls32_e = new Date(Date.UTC(2020, 3, 23, 15, 30, 0)).getTime();
 
-    var ls11_link = 'https://www.facebook.com/EUvsVirus/posts/105748421115549'
-    var ls12_link = 'https://www.facebook.com/EUvsVirus/posts/105959847761073'
-    var ls21_link = '#'
-    var ls22_link = '#'
-    var ls31_link = '#'
-    var ls32_link = '#'
+    var ls11_link = 'https://www.facebook.com/EUvsVirus/posts/105748421115549';
+    var ls12_link = 'https://www.facebook.com/EUvsVirus/posts/105959847761073';
+    var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207';
+    var ls22_link = 'https://www.facebook.com/EUvsVirus/posts/106866467670411';
+    var ls31_link = 'https://www.facebook.com/EUvsVirus/';
+    var ls32_link = 'https://www.facebook.com/EUvsVirus/';
     if (ls11_s < stream_now && ls11_e > stream_now) { setStreamHtml(ls11_link); }
     if (ls12_s < stream_now && ls12_e > stream_now) { setStreamHtml(ls12_link); }
     if (ls21_s < stream_now && ls21_e > stream_now) { setStreamHtml(ls21_link); }
     if (ls22_s < stream_now && ls22_e > stream_now) { setStreamHtml(ls22_link); }
     if (ls31_s < stream_now && ls31_e > stream_now) { setStreamHtml(ls31_link); }
     if (ls32_s < stream_now && ls32_e > stream_now) { setStreamHtml(ls32_link); }
+
   </script>
   <script src="./assets/js/cookieconsent-017.min.js"></script>
 

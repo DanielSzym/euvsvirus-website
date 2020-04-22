@@ -913,7 +913,7 @@ nav ul ul ul li {
 	width: 30%;
 }
 .how-can-you-help-column p {
-	min-height: 150px;
+	min-height: 190px;
 }
 .how-can-you-help .secondary-button {
 	font-size: 1rem;
@@ -1433,9 +1433,11 @@ nav ul ul ul li {
 
 /*** BEGIN stream banner ***/
 .stream-container {
+	/* display: none; */
+
 	position: fixed;
 	bottom: 2em;
-	right: 2em;
+	right: -400px;
 	z-index: 10;
 	width: 380px;
 	height: 204px;
@@ -1446,8 +1448,24 @@ nav ul ul ul li {
 	-moz-box-shadow: 0px 0px 10px -1px rgba(77,77,77,1);
 	box-shadow: 0px 0px 10px -1px rgba(77,77,77,1);
 
-	/* padding: 20px; */
 	overflow: hidden;
+
+	animation-name: stream-content-movein;
+	-moz-animation-name: stream-content-movein;
+	-webkit-animation-name: stream-content-movein;
+
+	animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	-webkit-animation-delay: 3s;
+}
+@keyframes stream-content-movein {
+  from {right: -400px;}
+  to {right: 2em;}
 }
 .stream-card {
 	display: flex;
@@ -1461,6 +1479,16 @@ nav ul ul ul li {
 	width: 50%;
 	height: inherit;
 }
+@media (max-width: 436px) {
+	@keyframes stream-content-movein {
+		from {right: -400px;}
+		to {right: 5vw;}
+	}
+	.stream-container {
+		width: 90vw;
+		bottom: 1em;
+	}
+}
 .stream-card-right {
 	margin: 10px 10px 10px 0;
 	width: 50%;
@@ -1469,7 +1497,7 @@ nav ul ul ul li {
 	justify-content: space-between;
 }
 .stream-card-date {
-	font-size: .9rem;
+	font-size: .85rem;
 	color: rgb(91, 96, 99);
 }
 .stream-card-dismiss {
@@ -1479,6 +1507,18 @@ nav ul ul ul li {
 	text-decoration: underline;
 	color: rgb(91, 96, 99);
 	cursor: pointer;
+}
+.stream-button {
+	border: none;
+	background-color: #FFCC00;
+	background-color: var(--color-secondary-yellow);
+	color: #222121;
+	color: var(--color-grey-h3-normal);
+	font-size: .8rem;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	padding: 0px 0;
 }
 /*** END stream banner ***/
 
