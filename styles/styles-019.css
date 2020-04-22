@@ -110,6 +110,9 @@ h3 {
 	color: #222121;
 	color: var(--color-grey);
 }
+h4 {
+	color: #222121;
+}
 h3.fw-normal {
 	font-weight: normal;
 }
@@ -269,6 +272,28 @@ button:focus {
 	top: -70px;
 	visibility: hidden;
 }
+
+.side-navbar {
+	background-color: white;
+	z-index: 1;
+	position: fixed;
+	top: 30vh;
+	margin-left: -10px;
+	padding: 20px;
+	border-radius: 6px;
+
+	-webkit-box-shadow: 0px 0px 8px 0px rgba(140,138,140,1);
+	-moz-box-shadow: 0px 0px 8px 0px rgba(140,138,140,1);
+	box-shadow: 0px 0px 8px 0px rgba(140,138,140,1);
+}
+
+.side-navbar-item {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	display: block;
+}
+
+
 
 
 
@@ -1473,7 +1498,7 @@ nav ul ul ul li {
 	height: inherit;
 }
 .stream-card-left {
-	background-image: url('./../assets/img/streams/stream_21.png');
+	background-image: url('./../assets/img/streams/livestream_generic.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 50%;
@@ -1571,6 +1596,12 @@ footer ul li a {
 
 
 /*** Helpers ***/
+.selectable {
+	cursor: pointer;
+}
+.float-right {
+	float: right;
+}
 .bg-grey {
 	background-color: #F4F4F4;
 	background-color: var(--color-light-grey);
@@ -1717,6 +1748,9 @@ footer ul li a {
 	}
 }
 .rotate-90 {
+	transform: rotate(180deg);
+}
+.rotate-180 {
 	transform: rotate(180deg);
 }
 .text-muted {
