@@ -283,9 +283,9 @@ function getStreamCardContext() {
   // check if webinar is on (always 15 minutes earlier). If yes, set link and other banner content
   // if no set next webinar date
   if (ls21_s < stream_now && ls21_e > stream_now) { setContextLive(ls21_link, 'until 12:30 PM CEST'); }
-  if (ls22_s < stream_now && ls22_e > stream_now) { setContextLive(ls22_link, 'until 05:30 PM CEST'); }
-  if (ls31_s < stream_now && ls31_e > stream_now) { setContextLive(ls31_link, 'until 12:30 PM CEST'); }
-  if (ls32_s < stream_now && ls32_e > stream_now) { setContextLive(ls32_link, 'until 05:30 PM CEST'); }
+  else if (ls22_s < stream_now && ls22_e > stream_now) { setContextLive(ls22_link, 'until 05:30 PM CEST'); }
+  else if (ls31_s < stream_now && ls31_e > stream_now) { setContextLive(ls31_link, 'until 12:30 PM CEST'); }
+  else if (ls32_s < stream_now && ls32_e > stream_now) { setContextLive(ls32_link, 'until 05:30 PM CEST'); }
   else {
   // set new datetime of upcoming
     if ( stream_now > ls21_e ) {
