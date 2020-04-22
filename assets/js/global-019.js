@@ -276,7 +276,7 @@ function getStreamCardContext() {
 
   // links
   var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207'
-  var ls22_link = 'https://www.facebook.com/EUvsVirus/'
+  var ls22_link = 'https://www.facebook.com/EUvsVirus/posts/106866467670411'
   var ls31_link = 'https://www.facebook.com/EUvsVirus/'
   var ls32_link = 'https://www.facebook.com/EUvsVirus/'
 
