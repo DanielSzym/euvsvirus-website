@@ -290,15 +290,15 @@ function getStreamCardContext() {
   // set new datetime of upcoming
     if ( stream_now > ls21_e ) {
       STREAM_CARD_TEXTS.date = '22 April 2020, 05:00 PM CEST';
-      STREAM_CARD_TEXTS.href = 'ls22_link';
+      STREAM_CARD_TEXTS.href = ls22_link;
     }
     if ( stream_now > ls22_e ) {
       STREAM_CARD_TEXTS.date = '23 April 2020, 12:00 CEST';
-      STREAM_CARD_TEXTS.href = 'ls31_link';
+      STREAM_CARD_TEXTS.href = ls31_link;
     }
     if ( stream_now > ls31_e ) {
       STREAM_CARD_TEXTS.date = '23 April 2020, 17:00 CEST';
-      STREAM_CARD_TEXTS.href = 'ls32_link';
+      STREAM_CARD_TEXTS.href = ls32_link;
     }
     if ( stream_now > ls32_e ) { STREAM_CARD_TEXTS.date = '-1'; }
   }
