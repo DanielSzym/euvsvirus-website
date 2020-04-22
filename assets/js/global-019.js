@@ -277,8 +277,8 @@ function getStreamCardContext() {
   // links
   var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207'
   var ls22_link = 'https://www.facebook.com/EUvsVirus/posts/106866467670411'
-  var ls31_link = 'https://www.facebook.com/EUvsVirus/'
-  var ls32_link = 'https://www.facebook.com/EUvsVirus/'
+  var ls31_link = 'https://www.facebook.com/EUvsVirus/posts/107554264268298'
+  var ls32_link = 'https://www.facebook.com/EUvsVirus/posts/107555497601508'
 
   // check if webinar is on (always 15 minutes earlier). If yes, set link and other banner content
   // if no set next webinar date
