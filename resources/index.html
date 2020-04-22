@@ -26,9 +26,7 @@
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="../styles/styles-019.css">
     <link rel="stylesheet" type="text/css" href="../styles/agenda.css">
-    <script>
-        window.location.replace("/");
-    </script>
+
 </head>
 
 <body class="bg-grey">
@@ -70,19 +68,19 @@
             </div>
             <div class="d-flex mb-4">
                 <a href="https://twitter.com/EUvsVirus" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo-mobile" alt="Logo Twitter" src="./../assets/img/navbar/twitter.png">
+                    <img class="navbar-logo-mobile" alt="Logo Twitter" src="./../assets/img/navbar/twitter.png">
                 </a>
                 <a href="https://www.facebook.com/EUvsVirus/" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo-mobile" alt="Logo Facebook" src="./../assets/img/navbar/facebook.png">
+                    <img class="navbar-logo-mobile" alt="Logo Facebook" src="./../assets/img/navbar/facebook.png">
                 </a>
                 <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo-mobile" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
+                    <img class="navbar-logo-mobile" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
                 </a>
                 <a href="https://www.linkedin.com/company/euvsvirus/" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./../assets/img/navbar/linkedin.png">
+                    <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./../assets/img/navbar/linkedin.png">
                 </a>
                 <a href="https://www.facebook.com/events/249707376073847" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./../assets/img/footer/fbevent.png">
+                    <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./../assets/img/footer/fbevent.png">
                 </a>
             </div>
         </div>
@@ -152,50 +150,304 @@
 
 
     <div id="side-navbar" class="side-navbar">
-      <a class="side-navbar-item" href="#platforms">Platforms</a>
-      <a class="side-navbar-item" href="#terminology">Terminology/Definitions</a>
-
-      <br><br><br>
-
-      <div class="float-right">
-        <img id="show-hide-side-navbar" class="selectable show-hide-side-navbar" src="./../assets/img/challenges/back_arrow.svg" alt="" onclick="showOrHideSideNavbar(this)"/>
-        <!-- <img id="show-side-navbar" class="selectable" src="./../assets/img/challenges/back_arrow.svg" alt="" style="transform: rotate(180deg)" onclick="showOrHideSideNavbar(this)"/> -->
-      </div>
+        <p class="side-navbar-item mb-3"><b>Jump to:</b></p>
+        <a class="side-navbar-item" href="#platforms">Platforms</a>
+        <a class="side-navbar-item" href="#terminology">Definitions</a>
+        <a class="side-navbar-item" href="#expert-advice">Expert Advice</a>
+        <a class="side-navbar-item" href="#helpful-tools">Helpful Tools</a>
+        <a class="side-navbar-item" href="#submissions">How-to Submit</a>
+        <div class="float-right">
+            <img id="show-hide-side-navbar" class="selectable show-hide-side-navbar rotate-180"
+                src="./../assets/img/challenges/back_arrow.svg" alt="" onclick="showOrHideSideNavbar(this)" />
+        </div>
     </div>
 
 
     <section id="Resources" class="container main-wrapper">
-      <h1>Resources</h1>
-      <hr><br>      
-      <div class="anchor" id="platforms"></div>
-      <h2>Platforms</h2>
-      <hr><br>
-      <p>We will use Slack and DevPost for this Hackathon. In some cases they overlap, which is ok (as long as you know) but they do serve different end goals.</p>
-      <br>
-      <h3>Goals/What are they for?</h3>
-      <br>
-      <h4>Slack</h4>
-      <p>Slack image</p>
-      <p>Slack explanation...</p>
-      <br>
-      <h4>DevPost</h4>
-      <p>DevPost image</p>
-      <p>DevPost explanation...</p>
-      <br><br>
-      <h3>Detailed explanation</h3>
-      <br>
-      <h4>Subhead</h4>
-      <p>Text</p>
-      <br>
-      <h4>Subhead</h4>
-      <p>Text</p>
-      
-      <br><br>
-      <div class="anchor" id="terminology"></div>
-      <h2>Terminology/Definitions</h2>
-      <hr>
-      <br>
+        <h1>Resources</h1>
+        <hr><br>
+        <p>
+            Some description text to make this look not so squished. (Put TOC in mobile mode)
+        </p>
+        <br>
+        <div class="anchor" id="platforms"></div>
+        <h2>Platforms</h2>
+        <hr><br>
+        <p>For the duration of the hackathon, we use two different platforms. Find their purposes here:</p>
+        <br>
+        <div class="platform-section">
+            <div class="platform-column">
+                <img class="platform-image" width="150" height="50" src="./../assets/img/resources/devpost.svg" alt=""
+                    \>
+                <p>Finding team mates</p>
+                <p><b>Forming teams</b></p>
+                <p><b>Submitting your final project</b></p>
+            </div>
+            <div class="platform-column">
+                <svg class="platform-image" shape-rendering="geometricPrecision" viewBox="0 0 240 60"
+                    xmlns="http://www.w3.org/2000/svg" width="150" height="50" aria-label="Slack"
+                    class="c-slacklogo--color svg-replaced">
+                    <path
+                        d="m75.663 47.477 2.929-6.846c3.207 2.375 7.39 3.632 11.574 3.632 3.068 0 5.02-1.187 5.02-3.003-.07-5.03-18.477-1.118-18.617-13.764-.07-6.427 5.648-11.387 13.737-11.387 4.81 0 9.622 1.188 13.038 3.913l-2.737 6.992c-3.143-2.021-7.025-3.43-10.72-3.43-2.51 0-4.184 1.187-4.184 2.725.07 4.96 18.618 2.235 18.827 14.322 0 6.567-5.579 11.178-13.528 11.178-5.856 0-11.225-1.397-15.34-4.332m116.629-9.325a8.498 8.498 0 0 1 -7.405 4.33c-4.698 0-8.506-3.816-8.506-8.523s3.808-8.523 8.506-8.523a8.498 8.498 0 0 1 7.405 4.33l8.143-4.52c-3.05-5.451-8.868-9.137-15.548-9.137-9.839 0-17.815 7.991-17.815 17.85 0 9.858 7.976 17.85 17.815 17.85 6.68 0 12.498-3.686 15.548-9.137zm-82.477 12.958h10.18v-49.86h-10.179zm95.761-49.86v49.86h10.18v-14.938l12.063 14.938h13.012l-15.34-17.746 14.224-16.559h-12.454l-11.505 13.767v-29.322zm-54.218 15.557v4.053c-1.673-2.795-5.787-4.751-10.11-4.751-8.925 0-15.967 7.895-15.967 17.815s7.042 17.885 15.967 17.885c4.323 0 8.437-1.956 10.11-4.751v4.052h10.18v-34.303zm0 21.414c-1.464 2.445-4.532 4.26-7.948 4.26-4.699 0-8.507-3.815-8.507-8.522s3.808-8.523 8.507-8.523c3.416 0 6.484 1.886 7.948 4.4z">
+                    </path>
+                    <path
+                        d="m21.902.148c-3.299 0-5.973 2.68-5.973 5.985a5.979 5.979 0 0 0 5.973 5.985h5.974v-5.985a5.98 5.98 0 0 0 -5.974-5.985m0 15.96h-15.929c-3.299 0-5.973 2.68-5.973 5.986 0 3.305 2.674 5.985 5.973 5.985h15.93c3.298 0 5.973-2.68 5.973-5.985 0-3.306-2.675-5.986-5.974-5.986"
+                        fill="#36c5f0"></path>
+                    <path
+                        d="m59.734 22.094c0-3.306-2.675-5.986-5.974-5.986s-5.973 2.68-5.973 5.986v5.985h5.973a5.98 5.98 0 0 0 5.974-5.985m-15.929 0v-15.961a5.98 5.98 0 0 0 -5.974-5.985c-3.299 0-5.973 2.68-5.973 5.985v15.96c0 3.307 2.674 5.987 5.973 5.987a5.98 5.98 0 0 0 5.974-5.985"
+                        fill="#2eb67d"></path>
+                    <path
+                        d="m37.831 60a5.98 5.98 0 0 0 5.974-5.985 5.98 5.98 0 0 0 -5.974-5.985h-5.973v5.985c0 3.305 2.674 5.985 5.973 5.985m0-15.96h15.93c3.298 0 5.973-2.68 5.973-5.986a5.98 5.98 0 0 0 -5.974-5.985h-15.929c-3.299 0-5.973 2.68-5.973 5.985a5.979 5.979 0 0 0 5.973 5.985"
+                        fill="#ecb22e"></path>
+                    <path
+                        d="m0 38.054a5.979 5.979 0 0 0 5.973 5.985 5.98 5.98 0 0 0 5.974-5.985v-5.985h-5.974c-3.299 0-5.973 2.68-5.973 5.985m15.929 0v15.96c0 3.306 2.674 5.986 5.973 5.986a5.98 5.98 0 0 0 5.974-5.985v-15.961a5.979 5.979 0 0 0 -5.974-5.985c-3.299 0-5.973 2.68-5.973 5.985"
+                        fill="#e01e5a"></path>
+                </svg>
+                <br>
+                <p><b>Chatting with people</b></p>
+                <p>Finding team mates</p>
+                <p><b>Receiving announcements</b></p>
+                <p><b>Getting help</b></p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h2 style="text-align: center;">Team Building</h2>
+        <br class="mt-3">
+        <div class="platform-section">
+            <div class="platform-column" style="text-align: left!important;">
+                <b>Formal team creation will occur on our DevPost account until Friday 24th April 21:00 CEST.</b>
+                <br class="mt-3">
+                <h3>Participants Page</h3>
+                <br class="mt-3">
+                <p>Using the hackathon’s Participant page, you can look for teammates and send <b>team-up</b> requests
+                    to whomever interests you.</p>
+                <br class="mt-3"></br>
+                <b>How to form teams on DevPost:</b>
+                <a style="color:#1155CC; text-decoration: underline;"
+                    href="https://help.devpost.com/hc/en-us/articles/360022031411-Participants-page-forming-a-team">https://help.devpost.com/hc/en-us/articles/360022031411-Participants-page-forming-a-team</a>
+                <br class="mt-3">
+                <h3>Discussions Page</h3>
+                <br class="mt-3">
+                If there are discussions posted, chime in and participate. You can also start a conversation and you may
+                receive technical advice, support, and ideas from other participants.
+                <br class="mt-3">
+                ...IMAGE...
+            </div>
+            <div class="platform-column" style="text-align: left!important; margin-top: 0; padding-left: 50px;">
+                <h3>If you still haven't found a team after 24th April, dont worry!</h3>
+                <br class="mt-3">
+                <p>In that case, got into Slack and post into your challenge channel <b>#c??-search-team</b> and also
+                    inform our <b>#c??-ask-the-team-coordinator</b>. They can hook you up with a team that fits you.</p>
+            </div>
+        </div>
+
+        <br><br>
+        <div class="anchor" id="definitions"></div>
+        <h2>Definitions</h2>
+        <hr>
+        <br class="mt-3">
+        <p><b>Participant</b> - any participant in the EUvsVirus hackathon.</p>
+        <br class="mt-1">
+        <p><b>Team Lead</b> - main responsible and point-of-contact of a team.</p>
+        <br class="mt-1">
+
+        <p><b>Team</b> - A group between 3-7 participants working on a specific project to solve a challenge.</p>
+        <br class="mt-1">
+
+        <p><b>Domain Lead</b> - Coordinating the Domain including all its stakeholders. Leading the Domain Boards,
+            managing the relationship with the Challenge/Mentor/Team tracks.</p>
+        <br class="mt-1">
+
+        <p><b>Domain Board</b> - A body consisting of recognized and successful people to be a patron/inspirator for the
+            domain. We expect from these people to conduct a webinar, host a session track or share related resources.
+        </p>
+        <br class="mt-1">
+
+        <p><b>Challenge Track</b> - <a style="color:#1155CC; text-decoration: underline;" href="https://euvsvirus.org/challenges/">https://euvsvirus.org/challenges/</a> is divided into 6 tracks. These are like 6
+            parallel hackathons inside of the EUvsVirus Hackathon. </p>
+        <br class="mt-1">
+
+        <p><b>Challenge Lead</b> - The person, who is accountable and responsible for the Challenge track. They closely
+            work and coordinate with the Domain Lead, Challenge Board Members, Mentor Leads and Team Leads. They have an
+            overall view on schedule, track of the teams, webinars, events, and communication channels related to a
+            Challenge.</p>
+        <br class="mt-1">
+
+        <p><b>Challenge Board</b> - A body consisting of experts in the fields related to a challenge. These people
+            should have a very high skill to see the big picture in their domain, and at the same time be capable of
+            advising Challenge Mentors on how to execute. We expect from these people to conduct a webinar, host a
+            session track or share related resources</p>
+        <br class="mt-1">
+
+        <p><b>Mentor Coordinator</b> - Overlooking all mentors and skill mentors in one challenge track, gathering and
+            managing all the mentors, mentorship logistics, allocation of mentors to teams, the progress of mentorship,
+            final reporting. </p>
+        <br class="mt-1">
+
+        <p><b>Mentor</b> - The Team’s Coach throughout the hackathon process, responsible for guiding the development
+            process of approximately 5 - max 10 teams. </p>
+        <br class="mt-1">
+
+        <p><b>Skill Mentor</b> - A person with expertise in one or more fields, who is able to support a team with a
+            specific problem or need. The skill Mentor is committed to investing time throughout the weekend to assist
+            in the growth and development of others. </p>
+        <br class="mt-1">
+
+        <p><b>Team Coordinator</b> - Navigating, and giving skill guidance for the teams. They are responsible for
+            keeping people well-informed on the team forming process, hackathon process, and looking for problems to
+            solve. They are your main point of contact for any questions regarding your hackathon experience. </p>
+        <br class="mt-1">
+
+        <p><b>HQ</b> - the organisational unit synchronising all the tracks / main organisers.</p>
+    
+
+
+        <br class="mt-6">
+        <div class="anchor" id="expert-advice"></div>
+        <h2>Expert Advice</h2>
+        <hr>
+        <br>
+        <p>Gain interesting insights from known experts to kickstart your project!</p>
+        <br class="mt-3">
+        <div class="platform-section">
+            <div class="platform-column">
+                <h3>Livestream #1</h3>
+                <br class="mt-3">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="platform-column">
+                <h3>Livestream #2</h3>
+                <br class="mt-3">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        <div class="platform-section">
+            <div class="platform-column">
+                <h3>Livestream #3</h3>
+                <br class="mt-3">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+            </div>
+            <div class="platform-column">
+                <h3>Livestream #4</h3>
+                <br class="mt-3">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        <div class="platform-section">
+            <div class="platform-column">
+                <h3>Livestream #5</h3>
+                <br class="mt-3">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="platform-column">
+                <h3>Livestream #6</h3>
+                <br class="mt-3">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        
+
+        
+        <div class="anchor" id="helpful-tools"></div>
+        <h2>Helpful Tools</h2>
+        <hr>
+        <br class="mt-1">
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://miro.com">Miro</a></b>: team collaboration, charts and planning</p> 
+        <br class="mt-1">
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://airtable.com">Airtable</a></b>: collect data via a form view and manipulate it via table view</p> 
+        <br class="mt-1">
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://bubble.io">Bubble</a></b>: build full apps without coding (database, view, logic)</p> 
+        <br class="mt-1">
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://www.glideapps.com">Glide</a></b>: build mobile web apps in minutes</p> 
+        <br class="mt-1">
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://firebase.google.com">Firebase</a></b>: powerful and easy to setup backend with api and websocket support</p> 
+        <br class="mt-1">
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://backendless.com">Backendless</a></b>: powerful and easy to setup backend with api and websocket support</p> 
+        <br class="mt-1">
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://www.invisionapp.com/studio">InVision</a></b>: easy to use design tool with click-dummy features</p> 
+        <br class="mt-1">
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="http://Workstreams.ai">Workstreams</a></b>: results-oriented, data-driven task management solution & kanban board app integrated to Slack</p> 
+        <br class="mt-3">
+        <p>You don't necessarily need development skills in order to create websites or mobile apps, try the NoCode approach. Here are tools you can use for that: <a style="color:#1155CC; text-decoration: underline;" href="http://Workstreams.ai">https://www.nocode.tech/tools</a></p>
+
+        <br>
+
+        <br><br>
+        <div class="anchor" id="submissions"></div>
+        <h2>Submissions</h2>
+        <hr>
+        <br>
+        <div class="platform-section">
+            <div class="platform-column">
+                <h3>How-to Submit</h3>
+                <br class="mt-3">
+                <h4>I. Textual Pitch Submission on Devpost</h4>
+                <br class="mt-3">
+                <p>Composed of 7 questions that you should prepare in advance before submitting to <a style="color:#1155CC; text-decoration: underline;" href="https://eunitedvsvirus.devpost.com/">DevPost</a>: </p> 
+                <ul>
+                    <li>The problem your project solves</li>
+                    <li>The solution you bring to the table</li>
+                    <li>What you have done during the weekend</li>
+                    <li>The solution’s impact to the crisis</li>
+                    <li>The necessities in order to continue the project</li>
+                    <li>The value of your solution(s) after the crisis</li>
+                    <li>The URL to the prototype [Github, Website,...]</li>
+                </ul>
+
+                <p>This needs to be submitted, alongside the video by <b>26th April 23:45 CEST.</b> </p> 
+
+                <p><a style="color:#1155CC; text-decoration: underline;" href="https://devpost.com/software/traffeed">Here's an example project page.</a></p> 
+                <p><a style="color:#1155CC; text-decoration: underline;" href="https://youtu.be/vCa7QFFthfU">Here’s a video on how to submit on DevPost.</a></p> 
+                <br class="mt-3">
+                <h4>II. Video Pitch</h4>
+                <br class="mt-3">
+                <p>For the video part, you have two strict requirements: </p> 
+                <ul>
+                    <li>No longer than 2 minutes</li>
+                    <li>Uploaded to YouTube as a public video (it can be “unlisted” if you want to)</li>
+                </ul>            
+            </div>
+            <div class="platform-column" style="margin-top: 0; padding-left: 50px;">
+                <h3>Judging Criteria</h3>
+                <br class="mt-3">
+                <h4>Impact Potential</h4>
+                <p>What is the impact to society if the ideas is implemented at scale? Does this offer something
+                    that hasn't been solved already? Id it has been solved, deas this offer something different? 
+                    Can it be scaled to meed thousands or even millions of people?
+                </p>
+                <br class="mt-3">
+                <h4>Technical Complexity</h4>
+                <p>Technical complexity does not necessarily mean code. This could be anything, hardware designs, 
+                    specialised test kits or even a complex but clear business plan
+                </p>
+                <br class="mt-3">
+                <h4>Prototype Completion</h4>
+                <p>Is there a ready technical prototype of the solution? If yes, does it work well? Does the 
+                    prototype present well the idea of the solution? How fast can the prototype be turned into a 
+                    ready to use product?</p>
+                <br class="mt-3">
+                <h4>Business Plan</h4>
+                <p>It is essential to consider the feasibility, economic and societal value, market knowledge 
+                    and sustainability of the solution. What resources are needed to implement the solution?
+                </p>
+            </div>
+        </div>
+
+        <h2>After Submission</h2>
+        <br>
+        <p>After the submission deadline, your submission will be evaluated by a panel of 5 jurors using the evaluation criteria mentioned above on a scale of 1-5 for each criteria, and the sum of all the scores will be your final submission score. 
+            <br class="mt-3">
+            Your submission score will be evaluated with other submissions within your challenge. If your submission is in the top 10%, highest ranked of the challenge, then your submission will  be presented in front of a panel of highly recognised, leading experts in the domain of the challenge you selected.
+            Then this panel will hold another voting with the same criteria, to select the winning project and two runner ups.
+            <br class="mt-3">
+            Winners will be notified and announced on the 30th of April via email.
+            </p>
+        <br>
     </section>
+    <br class="mt-3">
+    <br class="mt-3">
 
 
 
@@ -239,25 +491,25 @@
                 </ul>
             </div>
             <div class="d-flex align-items-center d-none-mobile">
-              <div class="d-flex align-items-center">
-      
-                <a href="https://twitter.com/EUvsVirus" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
-                </a>
-                <a href="https://www.facebook.com/EUvsVirus/" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
-                </a>
-                <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
-                </a>
-                <a href="https://www.linkedin.com/company/euvsvirus/" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
-                </a>
-                <div style="width: 20px;"></div>
-                <a href="https://www.facebook.com/events/249707376073847" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/footer/fbevent.png">
-                </a>
-              </div>
+                <div class="d-flex align-items-center">
+
+                    <a href="https://twitter.com/EUvsVirus" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+                    </a>
+                    <a href="https://www.facebook.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+                    </a>
+                    <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
+                    </a>
+                    <a href="https://www.linkedin.com/company/euvsvirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+                    </a>
+                    <div style="width: 20px;"></div>
+                    <a href="https://www.facebook.com/events/249707376073847" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/footer/fbevent.png">
+                    </a>
+                </div>
             </div>
     </footer>
     <!-- END footer -->
@@ -266,33 +518,29 @@
     <script src="./../assets/js/global-019.js"></script>
     <script src="./../assets/js/cookieconsent-017.min.js"></script>
     <script>
-      function showOrHideSideNavbar(element){
-        console.log(element.id)
-        let items = document.getElementsByClassName('side-navbar-item');
-        console.log(items)
+        function showOrHideSideNavbar(element) {
+            let items = document.getElementsByClassName('side-navbar-item');
+            console.log(items)
 
-        if(element.classList.contains('rotate-180') == false){
-          element.classList.add('rotate-180')
-          document.getElementById('side-navbar').style.width = '20px'
-          for (let item of items) {
-            item.style.marginLeft = '-1000px'
-            
-          }
-          element.style.paddingLeft = '0px'
-          element.style.paddingRight = '10px'
+            if (!element.classList.contains('rotate-180')) {
+                element.classList.add('rotate-180')
+                for (let item of items) {
+                    item.style.display = 'none'
+                }
+                element.style.paddingLeft = '0px'
+                element.style.paddingRight = '10px'
+            }
+            else {
+                element.classList.remove('rotate-180')
+                document.getElementById('side-navbar').style.width = 'auto'
+                for (let item of items) {
+                    item.style.display = 'block'
+                }
+                element.style.paddingLeft = 'inherit'
+                element.style.paddingRight = 'inherit'
+            }
         }
-        else{
-          element.classList.remove('rotate-180')
-          document.getElementById('side-navbar').style.width = 'auto'
-          for (let item of items) {
-            item.style.marginLeft = 'auto'
-            
-          }
-          element.style.paddingLeft = 'inherit'
-          element.style.paddingRight = 'inherit'
-        } 
-      }
     </script>
 </body>
-
 </html>
+
