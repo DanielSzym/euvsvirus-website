@@ -304,15 +304,29 @@
     -ms-grid-column: 2;
     grid-column: day-1;
     -ms-grid-row: 10;
-    -ms-grid-row-span: 2;
-    grid-row: time-1700 / time-1900;
+    -ms-grid-row-span: 1;
+    grid-row: time-1700 / time-1800;
 }
 .item-d1-2 {
+    -ms-grid-column: 2;
+    grid-column: day-1;
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 1;
+    grid-row: time-1800 / time-1900;
+}
+.item-d1-3 {
     -ms-grid-column: 2;
     grid-column: day-1;
     -ms-grid-row: 12;
     -ms-grid-row-span: 5;
     grid-row: time-1900 / time-2400;
+}
+.item-d2-all {
+    -ms-grid-column: 3;
+    grid-column: day-2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 17;
+    grid-row: time-0900 / time-2400;
 }
 .item-d2-1 {
     -ms-grid-column: 3;
@@ -325,31 +339,45 @@
     -ms-grid-column: 3;
     grid-column: day-2;
     -ms-grid-row: 3;
-    -ms-grid-row-span: 4;
-    grid-row: time-1000 / time-1400;
+    -ms-grid-row-span: 2;
+    grid-row: time-1000 / time-1200;
 }
 .item-d2-3 {
     -ms-grid-column: 3;
     grid-column: day-2;
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 3;
-    grid-row: time-1400 / time-1700;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 2;
+    grid-row: time-1200 / time-1400;
 }
 .item-d2-4 {
     -ms-grid-column: 3;
     grid-column: day-2;
-    -ms-grid-row: 10;
+    -ms-grid-row: 7;
     -ms-grid-row-span: 2;
-    grid-row: time-1700 / time-1900;
+    grid-row: time-1400 / time-1600;
 }
 .item-d2-5 {
+    -ms-grid-column: 3;
+    grid-column: day-2;
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 2;
+    grid-row: time-1600 / time-1800;
+}
+.item-d2-6 {
+    -ms-grid-column: 3;
+    grid-column: day-2;
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 1;
+    grid-row: time-1800 / time-1900;
+}
+.item-d2-7 {
     -ms-grid-column: 3;
     grid-column: day-2;
     -ms-grid-row: 12;
     -ms-grid-row-span: 1;
     grid-row: time-1900 / time-2000;
 }
-.item-d2-6 {
+.item-d2-8 {
     -ms-grid-column: 3;
     grid-column: day-2;
     -ms-grid-row: 13;
@@ -367,21 +395,21 @@
     -ms-grid-column: 4;
     grid-column: day-3;
     -ms-grid-row: 3;
-    -ms-grid-row-span: 10;
+    -ms-grid-row-span: 7;
     grid-row: time-1000 / time-1700;
 }
 .item-d3-3 {
     -ms-grid-column: 4;
     grid-column: day-3;
-    -ms-grid-row: 13;
-    -ms-grid-row-span: 2;
-    grid-row: time-1700 / time-1900;
+    -ms-grid-row: 10;
+    -ms-grid-row-span: 1;
+    grid-row: time-1700 / time-1800;
 }
 .item-d3-4 {
     -ms-grid-column: 4;
     grid-column: day-3;
-    -ms-grid-row: 15;
-    -ms-grid-row-span: 1;
-    grid-row: time-1900 / time-2000;
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 2;
+    grid-row: time-1800 / time-2000;
 }
 /*** END agenda ***/
