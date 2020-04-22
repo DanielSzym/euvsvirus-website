@@ -1532,7 +1532,7 @@ nav ul ul ul li {
 	height: inherit;
 }
 .stream-card-left {
-	background-image: url('./../assets/img/streams/livestream_generic.png');
+	background-image: url('./../assets/img/streams/stream_generic.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 50%;
