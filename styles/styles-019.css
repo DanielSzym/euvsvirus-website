@@ -1581,6 +1581,55 @@ nav ul ul ul li {
 }
 /*** END stream banner ***/
 
+/*** BEGIN sharebutton ***/
+.share-container {
+	width: 100px;
+	position: fixed;
+	top: 40vh;
+	left: -54px;
+	height: 42px;
+	/* background-color: red; */
+	transition: 0.5s;
+}
+.share-container:hover {
+	left: 0;
+}
+@media (max-width: 992px) {
+	.share-container {
+		display: none;
+	}
+}
+.share-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 38px;
+	font-weight: bold;
+	background-color: #375897;
+
+	border-radius: 0 6px 6px 0;
+}
+.share-btn.mobile {
+	display: none;
+	border-radius: 6px;
+	padding: 0px 12px;
+}
+@media (max-width: 992px) {
+	.share-btn.mobile {
+		display: flex;
+	}
+}
+.share-btn img {
+	width: 24px;
+	height: 24px;
+	margin-left: 8px;
+}
+.share-btn p {
+	color: #ffffff;
+}
+/*** END sharebutton ***/
+
+
 
 /*** BEGIN footer ***/
 footer {
