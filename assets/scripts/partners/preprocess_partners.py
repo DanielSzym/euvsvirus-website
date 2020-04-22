@@ -41,5 +41,5 @@ for idx, val in enumerate(INPUT_TEMPLATE):
         HTML += html_list_element
 
     # add to file
-    with open(os.path.join('./assets/scripts/output', 'partners_{}.html'.format(INPUT)), 'w') as unis:
+    with open(os.path.join('./assets/scripts/partners/output', 'partners_{}.html'.format(INPUT)), 'w') as unis:
         unis.write(HTML)
