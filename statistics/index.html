@@ -198,7 +198,8 @@
                 <div class="d-flex">
                     <ul>
                         <li>
-                            <a href="./../" class="desktop-link-item menu-item menu-hackathon current-menu">Hackathon</a>
+                            <a href="./../"
+                                class="desktop-link-item menu-item menu-hackathon current-menu">Hackathon</a>
                         </li>
                         <li>
                             <a href="./../challenges/"
@@ -277,16 +278,6 @@
                 <canvas id="challengeChart"></canvas>
             </div>
 
-            <div class="statistics-wrapper">
-                <h2>Cumulated registrations</h2>
-                <canvas id="timeCumulatedChart"></canvas>
-            </div>
-
-            <div class="statistics-wrapper">
-                <h2>Absolute registrations per hour</h2>
-                <canvas id="timeChart"></canvas>
-            </div>
-
         </div>
     </section>
     <!-- END status -->
@@ -328,31 +319,32 @@
                 </ul>
             </div>
             <div class="d-flex align-items-center d-none-mobile">
-              <div class="d-flex align-items-center">
-      
-                <a href="https://twitter.com/EUvsVirus" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
-                </a>
-                <a href="https://www.facebook.com/EUvsVirus/" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
-                </a>
-                <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
-                </a>
-                <a href="https://www.linkedin.com/company/euvsvirus/" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
-                </a>
-                <div style="width: 20px;"></div>
-                <a href="https://www.facebook.com/events/249707376073847" target="_blank" rel="noreferrer">
-                  <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/footer/fbevent.png">
-                </a>
-              </div>
+                <div class="d-flex align-items-center">
+
+                    <a href="https://twitter.com/EUvsVirus" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Twitter" src="../assets/img/navbar/twitter.png">
+                    </a>
+                    <a href="https://www.facebook.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Facebook" src="../assets/img/navbar/facebook.png">
+                    </a>
+                    <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
+                    </a>
+                    <a href="https://www.linkedin.com/company/euvsvirus/" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/navbar/linkedin.png">
+                    </a>
+                    <div style="width: 20px;"></div>
+                    <a href="https://www.facebook.com/events/249707376073847" target="_blank" rel="noreferrer">
+                        <img class="navbar-logo" alt="Logo LinkedIn" src="../assets/img/footer/fbevent.png">
+                    </a>
+                </div>
             </div>
     </footer>
     <!-- END footer -->
 
     <script src="countries.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"
         integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -379,16 +371,16 @@
 
         $('document').ready(function () {
             $.ajax({
-                url:countryUrl,
-                type:"POST",
-                dataType:"json",
-                contentType:"application/json; charset=utf-8"
-            }).done(function(data){
-                _.each(data, function(elem) { elem.Count = parseInt(elem.Count); });
-                var sum = _.sumBy(data, function(elem) {return elem.Count; });
-                var sortedData = _.sortBy(data, function(elem) {return elem.Count*-1;},);
-                var viewData = _.reduce(sortedData, function(aggr,elem, index) {
-                    if(index < elemCount){
+                url: countryUrl,
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8"
+            }).done(function (data) {
+                _.each(data, function (elem) { elem.Count = parseInt(elem.Count); });
+                var sum = _.sumBy(data, function (elem) { return elem.Count; });
+                var sortedData = _.sortBy(data, function (elem) { return elem.Count * -1; });
+                var viewData = _.reduce(sortedData, function (aggr, elem, index) {
+                    if (index < elemCount) {
                         return _.concat(aggr, elem);
                     } else {
                         aggr[elemCount] = {
@@ -421,29 +413,29 @@
                     }
                 });
 
-                var countryLookup = _.reduce(countries, function(aggr, elem) {
-                    if(!!elem) {
+                var countryLookup = _.reduce(countries, function (aggr, elem) {
+                    if (!!elem) {
                         aggr[elem.Country] = elem.PopulationThousands;
-                    }else{
+                    } else {
                         console.log(elem);
                     }
                     return aggr;
                 }, {});
-                var relativeData = _.map(data, function(elem) {
+                var relativeData = _.map(data, function (elem) {
                     if (elem.Country in countryLookup) {
                         return {
                             "Country": elem.Country,
                             "Count": elem.Count / (countryLookup[elem.Country] / 1000)
                         };
-                    }else{
+                    } else {
                         console.log('No country found: ' + elem.Country);
                         return {};
                     }
                 });
-                var filtered = _.filter(relativeData, function(elem) { return !!elem; });
-                var sortedDataCountries = _.sortBy(filtered, function(elem) {return elem.Count*-1;},);
-                var viewDataCountries = _.reduce(sortedDataCountries, function(aggr,elem, index) {
-                    if(index < elemCount){
+                var filtered = _.filter(relativeData, function (elem) { return !!elem; });
+                var sortedDataCountries = _.sortBy(filtered, function (elem) { return elem.Count * -1; });
+                var viewDataCountries = _.reduce(sortedDataCountries, function (aggr, elem, index) {
+                    if (index < elemCount) {
                         return _.concat(aggr, elem);
                     }
                     return aggr;
@@ -501,8 +493,8 @@
                         labels: _.map(data, function (elem) { return elem.Challenge; }),
                         datasets: [{
                             label: '# of registrations',
-                            backgroundColor: _.map(data, function(elem) { return getRandomColor();}),
-                            data: _.map(data, function(elem) { return elem.Count;})
+                            backgroundColor: _.map(data, function (elem) { return getRandomColor(); }),
+                            data: _.map(data, function (elem) { return elem.Count; })
                         }]
                     },
 
@@ -521,18 +513,18 @@
             });
 
             $.ajax({
-                url:domainUrl,
-                type:"POST",
-                dataType:"json",
-                contentType:"application/json; charset=utf-8"
-            }).done(function(data){
-                _.each(data, function(elem) { elem.Count = parseInt(elem.Count); });
-                var sum = _.sumBy(data, function(elem) {return elem.Count; });
-                data = _.sortBy(data, function(elem) {return elem.Count*-1;},);
-                data = _.reduce(data, function(aggr,elem, index) {
-                    if(index < elemCount){
+                url: domainUrl,
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8"
+            }).done(function (data) {
+                _.each(data, function (elem) { elem.Count = parseInt(elem.Count); });
+                var sum = _.sumBy(data, function (elem) { return elem.Count; });
+                data = _.sortBy(data, function (elem) { return elem.Count * -1; });
+                data = _.reduce(data, function (aggr, elem, index) {
+                    if (index < elemCount) {
                         return _.concat(aggr, elem);
-                    }else {
+                    } else {
                         aggr[elemCount] = {
                             "Domain": "Rest",
                             "Count": (!!aggr[elemCount] ? aggr[elemCount].Count : 0) + elem.Count
@@ -547,8 +539,8 @@
                         labels: _.map(data, function (elem) { return elem.Domain; }),
                         datasets: [{
                             label: '# of registrations',
-                            backgroundColor: _.map(data, function(elem) { return getRandomColor();}),
-                            data: _.map(data, function(elem) { return elem.Count;})
+                            backgroundColor: _.map(data, function (elem) { return getRandomColor(); }),
+                            data: _.map(data, function (elem) { return elem.Count; })
                         }]
                     },
 
@@ -566,86 +558,6 @@
                 alert("Data fetch failed");
             });
 
-            $.ajax({
-                url: timeUrl,
-                type: "POST",
-                dataType: "json",
-                contentType: "application/json; charset=utf-8"
-            }).done(function (data) {
-                _.each(data, function (elem) { elem.Count = parseInt(elem.Count); });
-
-                var ctx = document.getElementById('timeChart').getContext('2d');
-                var chart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        datasets: [{
-                            label: '# of registrations',
-                            borderColor: "#003399",
-                            backgroundColor: "rgba(0, 0, 0, 0)",
-                            data: _.map(data, function (elem) { return { x: elem.Time, y: elem.Count }; })
-                        }]
-                    },
-
-                    // Configuration options go here
-                    options: {
-                        responsive: true,
-                        aspectRatio: aspectRatio,
-                        title: {
-                            display: true,
-                            text: 'Course of registrations'
-                        },
-                        scales: {
-                            xAxes: [{
-                                type: 'time',
-                                time: {
-                                    unit: 'hour'
-                                }
-                            }]
-                        }
-                    }
-                });
-
-                var dataCummulated = _.reduce(data, function (aggr, elem, index) {
-                    aggr.result[index] = {
-                        "Time": elem.Time,
-                        "Count": elem.Count + aggr.count
-                    }
-                    aggr.count += elem.Count;
-                    return aggr;
-                }, { count: 0, result: [] }).result;
-                var ctx = document.getElementById('timeCumulatedChart').getContext('2d');
-                var chart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        datasets: [{
-                            label: '# of registrations',
-                            borderColor: "#003399",
-                            backgroundColor: "rgba(0, 0, 0, 0)",
-                            data: _.map(dataCummulated, function (elem) { return { x: elem.Time, y: elem.Count }; })
-                        }]
-                    },
-
-                    // Configuration options go here
-                    options: {
-                        responsive: true,
-                        aspectRatio: aspectRatio,
-                        title: {
-                            display: true,
-                            text: 'Progress of registrations'
-                        },
-                        scales: {
-                            xAxes: [{
-                                type: 'time',
-                                time: {
-                                    unit: 'hour'
-                                }
-                            }]
-                        }
-                    }
-                });
-            }).fail(function (jqXHR, status) {
-                alert("Data fetch failed");
-            });
         });
 
 
