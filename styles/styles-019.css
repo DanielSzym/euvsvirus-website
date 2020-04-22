@@ -1311,6 +1311,40 @@ nav ul ul ul li {
 	margin-right: 2px;
 	margin-top: 20px;
 }
+.team-member {
+	margin-top: 1.5rem;
+	max-width: 250px;
+	width: 250px;
+}
+.team-member-position {
+	margin-top: .25rem;
+	max-height: 2.8rem;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	overflow-y: hidden;
+}
+
+.team-menu {
+	margin-top: 3rem;
+	/* display: flex; */
+	/* justify-content: space-between; */
+}
+@media (max-width: 992px){
+	.team-menu {
+		margin-top: 3rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.team-menu a {
+		margin-right: 12px;
+		margin-bottom: 12px;
+	}
+}
+.team-menu-list {
+	list-style: none;
+	padding: 0;
+}
 /*** END team page ***/
 
 
