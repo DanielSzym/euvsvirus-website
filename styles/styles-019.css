@@ -913,7 +913,7 @@ nav ul ul ul li {
 	width: 30%;
 }
 .how-can-you-help-column p {
-	min-height: 150px;
+	min-height: 190px;
 }
 .how-can-you-help .secondary-button {
 	font-size: 1rem;
@@ -1473,7 +1473,7 @@ nav ul ul ul li {
 	height: inherit;
 }
 .stream-card-left {
-	background-image: url('./../assets/img/streams/stream_12.png');
+	background-image: url('./../assets/img/streams/stream_21.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 50%;

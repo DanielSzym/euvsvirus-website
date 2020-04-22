@@ -242,7 +242,7 @@ function activateMenuItem(menuItem) {
 // livestream stuff
 function dismissWebinar() {
   var d = new Date;
-  let offset_days = .5;
+  let offset_days = .125;
   d.setTime(d.getTime() + 24*60*60*1000*offset_days);
   document.cookie = 'dismisswebinar=dismiss;path=/;expires=' + d.toGMTString();
   document.getElementById('stream-container').style.display = 'none';
