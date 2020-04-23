@@ -127,6 +127,7 @@ function changeChallenge(element) {
 }
 
 
+// blue blackground to selected meanu
 (function () {
   // 'activate' menu item based on url
   let url = window.location.href
