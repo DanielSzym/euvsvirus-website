@@ -289,9 +289,12 @@ button:focus {
 }
 
 .side-navbar-item {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	margin-bottom: 0;
 	display: none;
+}
+.side-navbar-item.header {
+	font-size: 1.2rem;
 }
 
 .show-hide-side-navbar {
