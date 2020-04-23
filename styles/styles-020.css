@@ -1660,6 +1660,9 @@ nav ul ul ul li {
 	/* background-color: red; */
 	transition: 0.5s;
 }
+.share-container.higher {
+	top: 20vh;
+}
 .share-container:hover {
 	left: 0;
 }
