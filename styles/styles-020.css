@@ -1324,11 +1324,16 @@ nav ul ul ul li {
 	width: 250px;
 }
 .team-member-position {
-	margin-top: .25rem;
-	max-height: 2.8rem;
+	padding: .25rem;
+	height: 2.8rem;
 	font-size: 1rem;
 	line-height: 1.4rem;
 	overflow-y: hidden;
+	background-color: #bf38ef;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .team-menu {
