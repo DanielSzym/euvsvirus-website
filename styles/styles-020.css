@@ -1504,7 +1504,7 @@ nav ul ul ul li {
 	display: flex;
 	flex-direction: column;
 	/* margin-bottom: 50px; */
-	max-width: 50%;
+	width: 560px;
 }
 @media (max-width: 768px){
 	.platform-column{
@@ -1659,6 +1659,9 @@ nav ul ul ul li {
 	height: 42px;
 	/* background-color: red; */
 	transition: 0.5s;
+}
+.share-container.higher {
+	top: 20vh;
 }
 .share-container:hover {
 	left: 0;
