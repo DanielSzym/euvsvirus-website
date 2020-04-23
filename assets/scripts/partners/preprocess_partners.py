@@ -22,7 +22,7 @@ INPUT = INPUT_TEMPLATE[3]
 for idx, val in enumerate(INPUT_TEMPLATE):
     INPUT = val
 
-    df = pd.read_csv('./assets/scripts/{}.csv'.format(INPUT))
+    df = pd.read_csv('./assets/scripts/partners/input/{}.csv'.format(INPUT))
 
     ADD_LINKS = False
     HTML = ''
@@ -41,5 +41,5 @@ for idx, val in enumerate(INPUT_TEMPLATE):
         HTML += html_list_element
 
     # add to file
-    with open(os.path.join('./assets/scripts', 'partners_{}.html'.format(INPUT)), 'w') as unis:
+    with open(os.path.join('./assets/scripts/partners/output', 'partners_{}.html'.format(INPUT)), 'w') as unis:
         unis.write(HTML)

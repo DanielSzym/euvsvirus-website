@@ -127,6 +127,7 @@ function changeChallenge(element) {
 }
 
 
+// blue blackground to selected meanu
 (function () {
   // 'activate' menu item based on url
   let url = window.location.href
@@ -277,8 +278,8 @@ function getStreamCardContext() {
   // links
   var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207'
   var ls22_link = 'https://www.facebook.com/EUvsVirus/posts/106866467670411'
-  var ls31_link = 'https://www.facebook.com/EUvsVirus/'
-  var ls32_link = 'https://www.facebook.com/EUvsVirus/'
+  var ls31_link = 'https://www.facebook.com/EUvsVirus/posts/107554264268298'
+  var ls32_link = 'https://www.facebook.com/EUvsVirus/posts/107555497601508'
 
   // check if webinar is on (always 15 minutes earlier). If yes, set link and other banner content
   // if no set next webinar date
@@ -287,7 +288,7 @@ function getStreamCardContext() {
   else if (ls31_s < stream_now && ls31_e > stream_now) { setContextLive(ls31_link, 'until 12:30 PM CEST'); }
   else if (ls32_s < stream_now && ls32_e > stream_now) { setContextLive(ls32_link, 'until 05:30 PM CEST'); }
   else {
-  // set new datetime of upcoming
+    // set new datetime of upcoming
     if ( stream_now > ls21_e ) {
       STREAM_CARD_TEXTS.date = '22 April 2020, 05:00 PM CEST';
       STREAM_CARD_TEXTS.href = ls22_link;
@@ -301,7 +302,7 @@ function getStreamCardContext() {
       STREAM_CARD_TEXTS.href = ls32_link;
     }
     if ( stream_now > ls32_e ) { STREAM_CARD_TEXTS.date = '-1'; }
-  }
+}
 }
 (function () {
   if (Cookie.getCookie('dismisswebinar') != 'dismiss' && Cookie.getCookie('cookieconsent_status')) {

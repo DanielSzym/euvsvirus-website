@@ -24,10 +24,21 @@
   <title>Pan-European Hackathon</title>
 
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="./styles/styles-019.css">
+  <link rel="stylesheet" type="text/css" href="./styles/styles-020.css">
 </head>
 
 <body>
+
+  <div class="share-container">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://euvsvirus.org/" target="_blank" rel="noreferrer">
+          <div class="share-btn">
+              <p>
+                  Share
+              </p>
+              <img alt="The Facebook F" src="./assets/img/icons/fb-icon.png">
+          </div>
+        </a>
+  </div>
 
   <!-- BEGIN mobile menu -->
   <div id="mobileNav" class="overlay">
@@ -45,8 +56,7 @@
         <a class="mobile-link-item menu-hackathon" onclick="closeNav()">Hackathon</a>
         <a href="./challenges" class="mobile-link-item menu-item menu-challenges" onclick="closeNav()">Challenges</a>
         <a href="./agenda" class="mobile-link-item menu-item menu-agenda" onclick="closeNav()">Agenda</a>
-        <a class="mobile-link-item menu-item menu-team disable-menu tooltip" style="width:110px;">Resources<span
-            class="tooltiptext tooltip-bottom">Coming soon</span></a>
+        <a href="./resources/" class="mobile-link-item menu-item menu-resources">Resources</a>
         <a href="./faq" class="mobile-link-item menu-item menu-faq" onclick="closeNav()">FAQ</a>
 
         <!-- About -->
@@ -58,8 +68,7 @@
             <a href="./partners/" class="mobile-link-item menu-item menu-resources">Partners</a>
           </li>
           <li>
-            <a class="mobile-link-item menu-item menu-team disable-menu tooltip" style="width:110px;">Team<span
-                class="tooltiptext tooltip-bottom">Coming soon</span></a>
+            <a href="./team/" class="mobile-link-item menu-item menu-team">Team</a>
           </li>
         </ul>
 
@@ -92,6 +101,15 @@
   <section id="navbar-desktop">
     <div class="navbar container">
       <a href="./"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://euvsvirus.org/" target="_blank"
+          rel="noreferrer">
+          <div class="share-btn mobile">
+              <p>
+                  Share
+              </p>
+              <img alt="The Facebook F" src="./assets/img/icons/fb-icon.png">
+          </div>
+      </a>
       <div id="menu-mobile-burger">
         <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
       </div>
@@ -108,9 +126,7 @@
               <a href="./agenda/" class="desktop-link-item menu-agenda menu-item">Agenda</a>
             </li>
             <li>
-              <a id="menu-team" class="desktop-link-item menu-item menu-team disable-menu tooltip">Resources<span
-                  class="tooltiptext tooltip-bottom">Coming
-                  soon</span></a>
+              <a href="./resources/" class="desktop-link-item menu-resources menu-item">Resources</a>
             </li>
             <li>
               <a href="./faq/" class="desktop-link-item menu-item menu-faq">FAQ</a>
@@ -122,9 +138,7 @@
               <ul>
                 <li><a class="dd-item" href="./ambassadors/">Ambassadors</a></li>
                 <li><a class="dd-item" href="./partners/">Partners</a></li>
-                <li class="disable-menu"><a class="dd-item tooltip disable-menu" href="#">Team<span
-                      class="tooltiptext tooltip-bottom">Coming
-                      soon</span></a></li>
+                <li><a class="dd-item menu-team" href="./team/">Team</a></li>
               </ul>
             </li>
             <li>
@@ -566,18 +580,18 @@
     <h2>Timeline</h2>
     <br><br>
     <div class="agenda-image desktop">
-      <img src="./assets/img/agenda/Index_timetable_0421_b_desktop.png" alt="Image of the EUvsVirus hackathon agenda">
+      <img src="./assets/img/agenda/Index_timetable_0422_b_desktop.png" alt="Image of the EUvsVirus hackathon agenda">
     </div>
     <div class="agenda-image mobile">
-      <img src="./assets/img/agenda/Index_timetable_0421_b_mobile.png" alt="Image of the EUvsVirus hackathon agenda">
+      <img src="./assets/img/agenda/Index_timetable_0422_b_mobile.png" alt="Image of the EUvsVirus hackathon agenda">
     </div>
 
     <!-- Livestreams -->
-    <div class="mt-3 d-none" id="livestream-container">
-      <!-- <div class="mt-3" id="livestream-container"> -->
+    <!-- <div class="mt-3 d-none" id="livestream-container"> -->
+      <div class="mt-3" id="livestream-container">
       <div class="d-flex align-items-center" id="livestream-container">
         <div>
-          <img src="./assets/img/streams/stream_21.png" style="width: 200px; border-radius: 10px;">
+          <img src="./assets/img/streams/stream_generic.png" style="width: 200px; border-radius: 10px;">
         </div>
         <div style="margin: 40px;">
           <div class="d-flex align-items-center">
@@ -918,7 +932,7 @@
   </footer>
   <!-- END footer -->
 
-  <script src="./assets/js/global-019.js"></script>
+  <script src="./assets/js/global-020.js"></script>
   <script>
     // tbd: add other counters
     let which_counter = 'register_open'  // either register_open, register_close or hackathon_start
@@ -1056,8 +1070,8 @@
     var ls12_link = 'https://www.facebook.com/EUvsVirus/posts/105959847761073';
     var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207';
     var ls22_link = 'https://www.facebook.com/EUvsVirus/posts/106866467670411';
-    var ls31_link = 'https://www.facebook.com/EUvsVirus/';
-    var ls32_link = 'https://www.facebook.com/EUvsVirus/';
+    var ls31_link = 'https://www.facebook.com/EUvsVirus/posts/107554264268298';
+    var ls32_link = 'https://www.facebook.com/EUvsVirus/posts/107555497601508';
     if (ls11_s < stream_now && ls11_e > stream_now) { setStreamHtml(ls11_link); }
     if (ls12_s < stream_now && ls12_e > stream_now) { setStreamHtml(ls12_link); }
     if (ls21_s < stream_now && ls21_e > stream_now) { setStreamHtml(ls21_link); }
