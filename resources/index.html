@@ -25,11 +25,23 @@
 
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="../styles/styles-020.css">
-    <link rel="stylesheet" type="text/css" href="../styles/agenda.css">
-
+    <script>
+        window.location.replace("/");
+    </script>
 </head>
 
 <body class="bg-grey">
+
+    <div class="share-container">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://euvsvirus.org/" target="_blank" rel="noreferrer">
+            <div class="share-btn">
+                <p>
+                    Share
+                </p>
+                <img alt="The Facebook F" src="./../assets/img/icons/fb-icon.png">
+            </div>
+          </a>
+    </div>
 
     <!-- BEGIN mobile menu -->
     <div id="mobileNav" class="overlay">
@@ -56,11 +68,10 @@
                         <a href="./../ambassadors/" class="mobile-link-item menu-item menu-ambassadors">Ambassadors</a>
                     </li>
                     <li>
-                        <a class="mobile-link-item menu-item menu-partners" onclick="closeNav()">Partners</a>
+                        <a href="./../partners/" class="mobile-link-item menu-item menu-partners">Partners</a>
                     </li>
                     <li>
-                        <a class="mobile-link-item menu-item menu-team disable-menu tooltip"
-                            style="width:110px;">Team<span class="tooltiptext tooltip-bottom">Coming soon</span></a>
+                        <a href="./../team/" class="mobile-link-item menu-item menu-team">Team</a>
                     </li>
                 </ul>
 
@@ -92,6 +103,15 @@
     <section id="navbar-desktop">
         <div class="navbar container">
             <a href="./../"><img alt="EU versus virus hashtag" src="./../assets/img/navbar/EUvsVirus.svg"></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://euvsvirus.org/" target="_blank"
+                rel="noreferrer">
+                <div class="share-btn mobile">
+                    <p>
+                        Share
+                    </p>
+                    <img alt="The Facebook F" src="./../assets/img/icons/fb-icon.png">
+                </div>
+            </a>
             <div id="menu-mobile-burger">
                 <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
             </div>
@@ -124,10 +144,8 @@
                             <!-- First Tier Drop Down -->
                             <ul>
                                 <li><a class="dd-item menu-ambassadors" href="./../ambassadors/">Ambassadors</a></li>
-                                <li><a class="dd-item menu-partners" href="#">Partners</a></li>
-                                <li class="disable-menu"><a class="dd-item tooltip disable-menu" href="#">Team<span
-                                            class="tooltiptext tooltip-bottom">Coming
-                                            soon</span></a></li>
+                                <li><a class="dd-item menu-partners" href="./../partners/">Partners</a></li>
+                                <li><a class="dd-item menu-team" href="./../team/">Team</a></li>
                             </ul>
                         </li>
                         <li>
@@ -148,8 +166,7 @@
     </section>
     <!-- END navbar desktop -->
 
-
-    <div id="side-navbar" class="side-navbar">
+    <div id="side-navbar" class="side-navbar nav-resources">
         <p class="side-navbar-item mb-3"><b>Jump to:</b></p>
         <a class="side-navbar-item" href="#platforms">Platforms</a>
         <a class="side-navbar-item" href="#definitions">Definitions</a>
@@ -167,8 +184,41 @@
         <h1>Resources</h1>
         <hr><br>
         <p>
-            Some description text to make this look not so squished. (Put TOC in mobile mode)
+            Here you will find all important information, links and guidelines that will accompany and help you during
+            the Hackathon.
         </p>
+
+        <!-- Mobile menu -->
+        <div class="mobile-resources-menu">
+            <ul class="resources-menu-list">
+                <li>
+                    <a href="#platforms">
+                        <u>Platforms</u>
+                    </a>
+                </li>
+                <li>
+                    <a href="#definitions">
+                        <u>Definitions</u>
+                    </a>
+                </li>
+                <li>
+                    <a href="#expert-advice">
+                        <u>Expert Advice</u>
+                    </a>
+                </li>
+                <li>
+                    <a href="#helpful-tools">
+                        <u>Helpful Tools</u>
+                    </a>
+                </li>
+                <li>
+                    </a><a href="#submissions">
+                        <u>How-to Submit</u>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
         <br>
         <div class="anchor" id="platforms"></div>
         <h2>Platforms</h2>
@@ -232,7 +282,8 @@
                 If there are discussions posted, chime in and participate. You can also start a conversation and you may
                 receive technical advice, support, and ideas from other participants.
                 <br class="mt-3">
-                <img class="mt-2" src="./../assets/img/resources/discussion.gif" alt="Screenshot of how it looks like to post a new discussion">
+                <img class="mt-2" src="./../assets/img/resources/discussion.gif"
+                    alt="Screenshot of how it looks like to post a new discussion">
             </div>
             <div class="platform-column" style="text-align: left!important; margin-top: 0; padding-left: 50px;">
                 <h3>If you still haven't found a team after 24th April, dont worry!</h3>
@@ -264,7 +315,9 @@
         </p>
         <br class="mt-1">
 
-        <p><b>Challenge Track</b> - <a style="color:#1155CC; text-decoration: underline;" href="https://euvsvirus.org/challenges/">https://euvsvirus.org/challenges/</a> is divided into 6 tracks. These are like 6
+        <p><b>Challenge Track</b> - <a style="color:#1155CC; text-decoration: underline;"
+                href="https://euvsvirus.org/challenges/">https://euvsvirus.org/challenges/</a> is divided into 6 tracks.
+            These are like 6
             parallel hackathons inside of the EUvsVirus Hackathon. </p>
         <br class="mt-1">
 
@@ -300,7 +353,7 @@
         <br class="mt-1">
 
         <p><b>HQ</b> - the organisational unit synchronising all the tracks / main organisers.</p>
-    
+
 
 
         <br class="mt-6">
@@ -314,63 +367,92 @@
             <div class="platform-column">
                 <h3>Livestream #1</h3>
                 <br class="mt-3">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fvideos%2F614028609147818%2F&show_text=1&width=560"
+                    width="560" height="483" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
             </div>
             <div class="platform-column">
                 <h3>Livestream #2</h3>
                 <br class="mt-3">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fvideos%2F230921398147217%2F&show_text=1&width=560"
+                    width="560" height="464" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
             </div>
         </div>
         <div class="platform-section">
             <div class="platform-column">
                 <h3>Livestream #3</h3>
                 <br class="mt-3">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fvideos%2F241492580595108%2F&show_text=1&width=560"
+                    width="560" height="445" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
 
             </div>
             <div class="platform-column">
                 <h3>Livestream #4</h3>
                 <br class="mt-3">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fvideos%2F799381757136470%2F&show_text=1&width=560"
+                    width="560" height="464" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
             </div>
         </div>
         <div class="platform-section">
             <div class="platform-column">
                 <h3>Livestream #5</h3>
                 <br class="mt-3">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe
+                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&width=500"
+                    width="500" height="614" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div class="platform-column">
                 <h3>Livestream #6</h3>
                 <br class="mt-3">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107554264268298&show_text=false&width=500&appId=630894014333523&height=610" width="500" height="612" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe
+                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEUvsVirus%2Fposts%2F107555497601508&width=500"
+                    width="500" height="595" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
-        
 
-        
+
+
         <div class="anchor" id="helpful-tools"></div>
         <h2>Helpful Tools</h2>
         <hr>
         <br class="mt-1">
-        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://miro.com">Miro</a></b>: team collaboration, charts and planning</p> 
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://miro.com">Miro</a></b>: team
+            collaboration, charts and planning</p>
         <br class="mt-1">
-        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://airtable.com">Airtable</a></b>: collect data via a form view and manipulate it via table view</p> 
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://airtable.com">Airtable</a></b>:
+            collect data via a form view and manipulate it via table view</p>
         <br class="mt-1">
-        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://bubble.io">Bubble</a></b>: build full apps without coding (database, view, logic)</p> 
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://bubble.io">Bubble</a></b>: build full
+            apps without coding (database, view, logic)</p>
         <br class="mt-1">
-        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://www.glideapps.com">Glide</a></b>: build mobile web apps in minutes</p> 
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://www.glideapps.com">Glide</a></b>:
+            build mobile web apps in minutes</p>
         <br class="mt-1">
-        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://firebase.google.com">Firebase</a></b>: powerful and easy to setup backend with api and websocket support</p> 
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://firebase.google.com">Firebase</a></b>:
+            powerful and easy to setup backend with api and websocket support</p>
         <br class="mt-1">
-        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://backendless.com">Backendless</a></b>: powerful and easy to setup backend with api and websocket support</p> 
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://backendless.com">Backendless</a></b>:
+            powerful and easy to setup backend with api and websocket support</p>
         <br class="mt-1">
-        <p><b><a style="color:#1155CC; text-decoration: underline;" href="https://www.invisionapp.com/studio">InVision</a></b>: easy to use design tool with click-dummy features</p> 
+        <p><b><a style="color:#1155CC; text-decoration: underline;"
+                    href="https://www.invisionapp.com/studio">InVision</a></b>: easy to use design tool with click-dummy
+            features</p>
         <br class="mt-1">
-        <p><b><a style="color:#1155CC; text-decoration: underline;" href="http://Workstreams.ai">Workstreams</a></b>: results-oriented, data-driven task management solution & kanban board app integrated to Slack</p> 
+        <p><b><a style="color:#1155CC; text-decoration: underline;" href="http://Workstreams.ai">Workstreams</a></b>:
+            results-oriented, data-driven task management solution & kanban board app integrated to Slack</p>
         <br class="mt-3">
-        <p>You don't necessarily need development skills in order to create websites or mobile apps, try the NoCode approach. Here are tools you can use for that: <a style="color:#1155CC; text-decoration: underline;" href="http://Workstreams.ai">https://www.nocode.tech/tools</a></p>
+        <p>You don't necessarily need development skills in order to create websites or mobile apps, try the NoCode
+            approach. Here are tools you can use for that: <a style="color:#1155CC; text-decoration: underline;"
+                href="http://Workstreams.ai">https://www.nocode.tech/tools</a></p>
 
         <br>
 
@@ -385,7 +467,9 @@
                 <br class="mt-3">
                 <h4>I. Textual Pitch Submission on Devpost</h4>
                 <br class="mt-3">
-                <p>Composed of 7 questions that you should prepare in advance before submitting to <a style="color:#1155CC; text-decoration: underline;" href="https://eunitedvsvirus.devpost.com/">DevPost</a>: </p> 
+                <p>Composed of 7 questions that you should prepare in advance before submitting to <a
+                        style="color:#1155CC; text-decoration: underline;"
+                        href="https://eunitedvsvirus.devpost.com/">DevPost</a>: </p>
                 <ul>
                     <li>The problem your project solves</li>
                     <li>The solution you bring to the table</li>
@@ -396,40 +480,42 @@
                     <li>The URL to the prototype [Github, Website,...]</li>
                 </ul>
 
-                <p>This needs to be submitted, alongside the video by <b>26th April 23:45 CEST.</b> </p> 
+                <p>This needs to be submitted, alongside the video by <b>26th April 23:45 CEST.</b> </p>
 
-                <p><a style="color:#1155CC; text-decoration: underline;" href="https://devpost.com/software/traffeed">Here's an example project page.</a></p> 
-                <p><a style="color:#1155CC; text-decoration: underline;" href="https://youtu.be/vCa7QFFthfU">Here’s a video on how to submit on DevPost.</a></p> 
+                <p><a style="color:#1155CC; text-decoration: underline;"
+                        href="https://devpost.com/software/traffeed">Here's an example project page.</a></p>
+                <p><a style="color:#1155CC; text-decoration: underline;" href="https://youtu.be/vCa7QFFthfU">Here’s a
+                        video on how to submit on DevPost.</a></p>
                 <br class="mt-3">
                 <h4>II. Video Pitch</h4>
                 <br class="mt-3">
-                <p>For the video part, you have two strict requirements: </p> 
+                <p>For the video part, you have two strict requirements: </p>
                 <ul>
                     <li>No longer than 2 minutes</li>
                     <li>Uploaded to YouTube as a public video (it can be “unlisted” if you want to)</li>
-                </ul>            
+                </ul>
             </div>
             <div class="platform-column" style="margin-top: 0; padding-left: 50px;">
                 <h3>Judging Criteria</h3>
                 <br class="mt-3">
                 <h4>Impact Potential</h4>
                 <p>What is the impact to society if the ideas is implemented at scale? Does this offer something
-                    that hasn't been solved already? Id it has been solved, deas this offer something different? 
+                    that hasn't been solved already? Id it has been solved, deas this offer something different?
                     Can it be scaled to meed thousands or even millions of people?
                 </p>
                 <br class="mt-3">
                 <h4>Technical Complexity</h4>
-                <p>Technical complexity does not necessarily mean code. This could be anything, hardware designs, 
+                <p>Technical complexity does not necessarily mean code. This could be anything, hardware designs,
                     specialised test kits or even a complex but clear business plan
                 </p>
                 <br class="mt-3">
                 <h4>Prototype Completion</h4>
-                <p>Is there a ready technical prototype of the solution? If yes, does it work well? Does the 
-                    prototype present well the idea of the solution? How fast can the prototype be turned into a 
+                <p>Is there a ready technical prototype of the solution? If yes, does it work well? Does the
+                    prototype present well the idea of the solution? How fast can the prototype be turned into a
                     ready to use product?</p>
                 <br class="mt-3">
                 <h4>Business Plan</h4>
-                <p>It is essential to consider the feasibility, economic and societal value, market knowledge 
+                <p>It is essential to consider the feasibility, economic and societal value, market knowledge
                     and sustainability of the solution. What resources are needed to implement the solution?
                 </p>
             </div>
@@ -437,13 +523,18 @@
 
         <h2>After Submission</h2>
         <br>
-        <p>After the submission deadline, your submission will be evaluated by a panel of 5 jurors using the evaluation criteria mentioned above on a scale of 1-5 for each criteria, and the sum of all the scores will be your final submission score. 
+        <p>After the submission deadline, your submission will be evaluated by a panel of 5 jurors using the evaluation
+            criteria mentioned above on a scale of 1-5 for each criteria, and the sum of all the scores will be your
+            final submission score.
             <br class="mt-3">
-            Your submission score will be evaluated with other submissions within your challenge. If your submission is in the top 10%, highest ranked of the challenge, then your submission will  be presented in front of a panel of highly recognised, leading experts in the domain of the challenge you selected.
-            Then this panel will hold another voting with the same criteria, to select the winning project and two runner ups.
+            Your submission score will be evaluated with other submissions within your challenge. If your submission is
+            in the top 10%, highest ranked of the challenge, then your submission will be presented in front of a panel
+            of highly recognised, leading experts in the domain of the challenge you selected.
+            Then this panel will hold another voting with the same criteria, to select the winning project and two
+            runner ups.
             <br class="mt-3">
             Winners will be notified and announced on the 30th of April via email.
-            </p>
+        </p>
         <br>
     </section>
     <br class="mt-3">
@@ -542,5 +633,5 @@
         }
     </script>
 </body>
-</html>
 
+</html>

@@ -1324,17 +1324,20 @@ nav ul ul ul li {
 	width: 250px;
 }
 .team-member-position {
-	margin-top: .25rem;
-	max-height: 2.8rem;
+	padding: .25rem;
+	height: 2.8rem;
 	font-size: 1rem;
 	line-height: 1.4rem;
 	overflow-y: hidden;
+	background-color: #bf38ef;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .team-menu {
 	margin-top: 3rem;
-	/* display: flex; */
-	/* justify-content: space-between; */
 }
 @media (max-width: 992px){
 	.team-menu {
@@ -1459,13 +1462,40 @@ nav ul ul ul li {
 
 
 /*** BEGIN resources ***/
+
+.mobile-resources-menu {
+	margin-top: 3rem;
+	display: none;
+}
+@media (max-width: 819px){
+	.mobile-resources-menu {
+		margin-top: 3rem;
+		display: block;
+	}
+	.mobile-resources-menu a {
+		margin-right: 12px;
+	}
+	.side-navbar.nav-resources {
+		display: none;
+	}
+}
+.resources-menu-list {
+	list-style: none;
+	padding: 0;
+}
+.resources-menu-list li {
+	line-height: 1rem;
+	font-weight: bold;
+	margin-top: .5em;
+	padding: 0;
+}
+
 .platform-section {
 	display:flex;
-	/* flex-direction: row; */
-	/* align-items: flex-start; */
+	justify-content: space-between;
 	color: #222121;
 }
-@media (max-width: 768px){
+@media (max-width: 1200px){
 	.platform-section{
 		flex-direction: column;
 	}
@@ -1473,9 +1503,7 @@ nav ul ul ul li {
 .platform-column {
 	display: flex;
 	flex-direction: column;
-	align-items: start!important;
-	margin: auto;
-	margin-bottom: 50px;
+	/* margin-bottom: 50px; */
 	max-width: 50%;
 }
 @media (max-width: 768px){
@@ -1484,6 +1512,7 @@ nav ul ul ul li {
 		padding-left: 0px!important;
 	}
 }
+
 .platform-image {
 	margin-bottom: 30px;
 }
