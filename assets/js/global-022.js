@@ -308,7 +308,7 @@ function getStreamCardContext() {
       STREAM_CARD_TEXTS.href = ls32_link;
     }
     if ( stream_now > ls32_e ) { 
-      STREAM_CARD_TEXTS.date = '23 April 2020, 17:00 CEST'; 
+      STREAM_CARD_TEXTS.date = '24 April 2020, 17:00 CEST'; 
       STREAM_CARD_TEXTS.href = ls41_link;
     }
     if ( stream_now > ls41_e ) { STREAM_CARD_TEXTS.date = '-1'; }
