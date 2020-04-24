@@ -276,7 +276,7 @@ function getStreamCardContext() {
   var ls32_e = new Date(Date.UTC(2020, 3, 23, 15, 30, 0)).getTime();
 
   // 24 April
-  var ls41_s = new Date(Date.UTC(2020, 3, 24, 15, 45, 0)).getTime();
+  var ls41_s = new Date(Date.UTC(2020, 3, 24, 14, 45, 0)).getTime();
   var ls41_e = new Date(Date.UTC(2020, 3, 24, 16, 15, 0)).getTime();
 
   // links
