@@ -1598,6 +1598,10 @@ nav ul ul ul li {
   from {right: -400px;}
   to {right: 2em;}
 }
+.stream-container h3 {
+	font-size: 1.3rem;
+	line-height: 1.4rem;
+}
 .stream-card {
 	display: flex;
 	width: inherit;
