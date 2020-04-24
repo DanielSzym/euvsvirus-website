@@ -940,6 +940,7 @@
     var deadline_ro = new Date("Apr 14, 2020 12:00:00").getTime();
     var deadline_rc = new Date("Apr 16, 2020 23:59:59").getTime();
     var deadline_hs = new Date(Date.UTC(2020, 3, 24, 15, 0, 0)).getTime();
+    var deadline_sub = new Date(Date.UTC(2020, 3, 26, 16, 0, 0)).getTime();
 
     if (now < deadline_ro) {
       // next deadline: registration opens
@@ -947,20 +948,23 @@
       until_text = 'until registration opens (CEST)'
       var deadline = deadline_ro;
     }
-    else {
-      if (now < deadline_rc) {
+    else if (now < deadline_rc) {
         // next deadline: registration closes
         which_counter = 'register_close'
         until_text = 'until registration closes (CEST)'
         var deadline = deadline_rc;
-      }
-      else {
+    }
+    else if (now < deadline_rc) {
         // next deadline: hackathon start or over (over handled below)
         which_counter = 'hackathon_start'
         until_text = 'until the hackathon starts (CEST)'
         var deadline = deadline_hs;
-      }
-
+    }
+    else {
+        // next deadline: submission over (over handled below)
+        which_counter = 'hackathon_start'
+        until_text = 'until Submission (CEST)'
+        var deadline = deadline_sub;
     }
 
     var x = setInterval(function () {
@@ -991,8 +995,8 @@
       document.getElementById('counter-register').style.opacity = 1;
       if (t < 0) {
         clearInterval(x);
-        document.getElementById('counter-header').innerHTML = 'The hackathon has finished. Stay tuned for more info soon!';
-        document.getElementById('counter-register').innerHTML = 'The hackathon has finished. Stay tuned for more info soon!';
+        document.getElementById('counter-header').innerHTML = 'The hackathon has finished. Thanks to all who took part in this amazing event!';
+        document.getElementById('counter-register').innerHTML = 'The hackathon has finished. Thanks to all who took part in this amazing event!';
       }
     }, 1000);
 
