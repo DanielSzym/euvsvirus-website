@@ -1,6 +1,6 @@
 :root {
     --color-agenda-grey: #e6e9e9;
-    --layout-agenda-cell-height: 20px;
+    --layout-agenda-cell-height: 36px;
     --layout-agenda-cell-width: 2fr;
 }
 
@@ -74,23 +74,23 @@
         [day-3] var(--layout-agenda-cell-width);
     -ms-grid-rows:
         [dates] 4em
-        [time-0900] 20px
-        [time-1000] 20px
-        [time-1100] 20px
-        [time-1200] 20px
-        [time-1300] 20px
-        [time-1400] 20px
-        [time-1500] 20px
-        [time-1600] 20px
-        [time-1700] 20px
-        [time-1800] 20px
-        [time-1900] 20px
-        [time-2000] 20px
-        [time-2100] 20px
-        [time-2200] 20px
-        [time-2300] 20px
-        [time-2400] 20px
-        [time-0100] 20px;
+        [time-0900] 36px
+        [time-1000] 36px
+        [time-1100] 36px
+        [time-1200] 36px
+        [time-1300] 36px
+        [time-1400] 36px
+        [time-1500] 36px
+        [time-1600] 36px
+        [time-1700] 36px
+        [time-1800] 36px
+        [time-1900] 36px
+        [time-2000] 36px
+        [time-2100] 36px
+        [time-2200] 36px
+        [time-2300] 36px
+        [time-2400] 36px
+        [time-0100] 36px;
     grid-template-rows:
         [dates] 4em
         [time-0900] var(--layout-agenda-cell-height)
@@ -209,7 +209,10 @@
     justify-content: center;
     align-items: center;
 }
-
+.item.bottom {
+    align-items: flex-end;
+    padding-bottom: 25px;
+}
 .item-blue {
 	color: #FFCC00;
     color: var(--color-secondary-yellow);
@@ -221,7 +224,10 @@
     color: var(--color-grey-h3-normal);
     background-color: #e6e9e9;
     background-color: var(--color-agenda-grey);
-
+}
+.item-lgrey {
+    color: #222121;
+    background-color: #a2bff7;
 }
 /* Layout - columns */
 .item-date {
@@ -257,45 +263,66 @@
     background-color: var(--color-agenda-grey);
     font-size: 85%;
     margin: 4px;
+    -ms-grid-row-span: 1;
 }
 .time-t09 {
     -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    grid-row: time-0900 / time-1100;
+    grid-row: time-0900 / time-1000;
+}
+.time-t10 {
+    -ms-grid-row: 3;
+    grid-row: time-1000 / time-1100;
 }
 .time-t11 {
     -ms-grid-row: 4;
-    -ms-grid-row-span: 2;
-    grid-row: time-1100 / time-1300;
+    grid-row: time-1100 / time-1200;
+}
+.time-t12 {
+    -ms-grid-row: 5;
+    grid-row: time-1200 / time-1300;
 }
 .time-t13 {
     -ms-grid-row: 6;
-    -ms-grid-row-span: 2;
-    grid-row: time-1300 / time-1500;
+    grid-row: time-1300 / time-1400;
+}
+.time-t14 {
+    -ms-grid-row: 7;
+    grid-row: time-1400 / time-1500;
 }
 .time-t15 {
     -ms-grid-row: 8;
-    -ms-grid-row-span: 2;
-    grid-row: time-1500 / time-1700;
+    grid-row: time-1500 / time-1600;
+}
+.time-t16 {
+    -ms-grid-row: 9;
+    grid-row: time-1600 / time-1700;
 }
 .time-t17 {
     -ms-grid-row: 10;
-    -ms-grid-row-span: 2;
-    grid-row: time-1700 / time-1900;
+    grid-row: time-1700 / time-1800;
+}
+.time-t18 {
+    -ms-grid-row: 11;
+    grid-row: time-1800 / time-1900;
 }
 .time-t19 {
     -ms-grid-row: 12;
-    -ms-grid-row-span: 2;
-    grid-row: time-1900 / time-2100;
+    grid-row: time-1900 / time-2000;
+}
+.time-t20 {
+    -ms-grid-row: 13;
+    grid-row: time-2000 / time-2100;
 }
 .time-t21 {
     -ms-grid-row: 14;
-    -ms-grid-row-span: 2;
-    grid-row: time-2100 / time-2300;
+    grid-row: time-2100 / time-2200;
+}
+.time-t22 {
+    -ms-grid-row: 15;
+    grid-row: time-2200 / time-2300;
 }
 .time-t23 {
     -ms-grid-row: 16;
-    -ms-grid-row-span: 2;
     grid-row: time-2300 / time-0100;
 }
 
@@ -320,6 +347,13 @@
     -ms-grid-row: 12;
     -ms-grid-row-span: 5;
     grid-row: time-1900 / time-2400;
+}
+.item-d1-4 {
+    -ms-grid-column: 2;
+    grid-column: day-1;
+    -ms-grid-row: 14;
+    -ms-grid-row-span: 1;
+    grid-row: time-2100 / time-2200;
 }
 .item-d2-all {
     -ms-grid-column: 3;
@@ -384,6 +418,20 @@
     -ms-grid-row-span: 17;
     grid-row: time-2000 / time-2400;
 }
+.item-d2-9 {
+    -ms-grid-column: 3;
+    grid-column: day-2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: time-1000 / time-1100;
+}
+.item-d2-10 {
+    -ms-grid-column: 3;
+    grid-column: day-2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: time-1800 / time-1900;
+}
 .item-d3-1 {
     -ms-grid-column: 4;
     grid-column: day-3;
@@ -411,5 +459,12 @@
     -ms-grid-row: 11;
     -ms-grid-row-span: 2;
     grid-row: time-1800 / time-2000;
+}
+.item-d3-5 {
+    -ms-grid-column: 4;
+    grid-column: day-3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: time-1000 / time-1100;
 }
 /*** END agenda ***/
