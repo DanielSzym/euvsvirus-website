@@ -443,8 +443,8 @@
     -ms-grid-column: 4;
     grid-column: day-3;
     -ms-grid-row: 3;
-    -ms-grid-row-span: 7;
-    grid-row: time-1000 / time-1700;
+    -ms-grid-row-span: 8;
+    grid-row: time-1000 / time-1800;
 }
 .item-d3-3 {
     -ms-grid-column: 4;
