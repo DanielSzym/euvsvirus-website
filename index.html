@@ -30,14 +30,14 @@
 <body>
 
   <div class="share-container">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://euvsvirus.org/" target="_blank" rel="noreferrer">
-          <div class="share-btn">
-              <p>
-                  Share
-              </p>
-              <img alt="The Facebook F" src="./assets/img/icons/fb-icon.png">
-          </div>
-        </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://euvsvirus.org/" target="_blank" rel="noreferrer">
+      <div class="share-btn">
+        <p>
+          Share
+        </p>
+        <img alt="The Facebook F" src="./assets/img/icons/fb-icon.png">
+      </div>
+    </a>
   </div>
 
   <!-- BEGIN mobile menu -->
@@ -101,14 +101,13 @@
   <section id="navbar-desktop">
     <div class="navbar container">
       <a href="./"><img alt="EU versus virus hashtag" src="./assets/img/navbar/EUvsVirus.svg"></a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://euvsvirus.org/" target="_blank"
-          rel="noreferrer">
-          <div class="share-btn mobile">
-              <p>
-                  Share
-              </p>
-              <img alt="The Facebook F" src="./assets/img/icons/fb-icon.png">
-          </div>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://euvsvirus.org/" target="_blank" rel="noreferrer">
+        <div class="share-btn mobile">
+          <p>
+            Share
+          </p>
+          <img alt="The Facebook F" src="./assets/img/icons/fb-icon.png">
+        </div>
       </a>
       <div id="menu-mobile-burger">
         <span class="toggle-mobile-menu-icon open" onclick="openNav()">&#9776;</span>
@@ -487,16 +486,15 @@
           <strong>
             Register as
           </strong>
-          <a href="https://euvsvirus.typeform.com/to/YKIyEh" target="_blank">
-            <button class="secondary-button mt-3">
-              Team
-            </button>
-          </a>
-          <a href="https://euvsvirus.typeform.com/to/fSzYnT" target="_blank">
-            <button class="secondary-button mt-2">
-              Individual
-            </button>
-          </a>
+
+          <button class="secondary-button tooltip disable-button mt-3">
+            Team
+            <a href="#" class="tooltiptext" style="width: 140px;">Registration closed</a>
+          </button>
+          <button class="secondary-button tooltip disable-button mt-2">
+            Individual
+            <a href="#" class="tooltiptext" style="width: 140px;">Registration closed</a>
+          </button>
           <div class="text-muted register-status-check">
             <em>
               Check the status of your registration <a href="./status/">here</a>
@@ -520,15 +518,15 @@
           Become a
         </strong>
         <button class="secondary-button tooltip disable-button mt-3">
-            Mentor
+          Mentor
           <a href="#" class="tooltiptext" style="width: 140px;">Registration closed</a>
         </button>
         <button class="secondary-button tooltip disable-button mt-2">
-            Judge
+          Judge
           <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
         </button>
         <button class="secondary-button tooltip disable-button mt-2">
-            Team Coordinator
+          Team Coordinator
           <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
         </button>
       </div>
@@ -948,22 +946,22 @@
       var deadline = deadline_ro;
     }
     else if (now < deadline_rc) {
-        // next deadline: registration closes
-        which_counter = 'register_close'
-        until_text = 'until registration closes (CEST)'
-        var deadline = deadline_rc;
+      // next deadline: registration closes
+      which_counter = 'register_close'
+      until_text = 'until registration closes (CEST)'
+      var deadline = deadline_rc;
     }
     else if (now < deadline_rc) {
-        // next deadline: hackathon start or over (over handled below)
-        which_counter = 'hackathon_start'
-        until_text = 'until the hackathon starts (CEST)'
-        var deadline = deadline_hs;
+      // next deadline: hackathon start or over (over handled below)
+      which_counter = 'hackathon_start'
+      until_text = 'until the hackathon starts (CEST)'
+      var deadline = deadline_hs;
     }
     else {
-        // next deadline: submission over (over handled below)
-        which_counter = 'hackathon_start'
-        until_text = 'until Submission (CEST)'
-        var deadline = deadline_sub;
+      // next deadline: submission over (over handled below)
+      which_counter = 'hackathon_start'
+      until_text = 'until Submission (CEST)'
+      var deadline = deadline_sub;
     }
 
     var x = setInterval(function () {
