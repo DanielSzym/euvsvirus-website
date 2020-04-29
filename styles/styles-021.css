@@ -1710,6 +1710,19 @@ nav ul ul ul li {
 
 
 
+/*** BEGIN results ***/
+.domain-winner span{
+	color: var(--color-grey);
+}
+.domain-winner span a{
+	color: var(--color-primary-blue);
+}
+
+
+/*** END results ***/
+
+
+
 /*** BEGIN footer ***/
 footer {
 	background-color: #F4F4F4;
