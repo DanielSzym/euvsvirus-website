@@ -160,6 +160,8 @@ function changeChallenge(element) {
   else if (url.indexOf('press') > -1) { resetMenuBar(); activateMenuItem('.menu-press') }
   else if (url.indexOf('team') > -1) { resetMenuBar(); activateMenuItem('.menu-team') }
   else if (url.indexOf('faq') > -1) { resetMenuBar(); activateMenuItem('.menu-faq') }
+  else if (url.indexOf('results') > -1) { resetMenuBar(); activateMenuItem('.menu-results') }
+  else if (url.indexOf('nextsteps') > -1) { resetMenuBar(); activateMenuItem('.menu-nextsteps') }
   else if (url.indexOf('terms') > -1) { resetMenuBar(); }
   else if (url.indexOf('privacy') > -1) { resetMenuBar(); }
   else if (url.indexOf('terms') > -1) { resetMenuBar(); }
