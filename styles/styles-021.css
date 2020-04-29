@@ -1182,6 +1182,7 @@ nav ul ul ul li {
 	color: var(--color-grey);
 
 }
+
 /* challenges navbar */
 .challenges-navigation-bar {
 	margin-top: -20px;
@@ -1196,6 +1197,50 @@ nav ul ul ul li {
 .challenges-navigation-bar p {
 	font-size: 1.05rem;
 }
+
+/* Winner */
+.winner-wrapper {
+	display: flex;
+	margin-top: 2rem;
+}
+.winner-picture {
+	width: 188px;
+	height: 153px;
+}
+.winner-content {
+	margin-left: 1rem;
+}
+.winner-header {
+	margin-top: 0 !important;
+	margin-bottom: .5rem !important; 
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+}
+.winner-team {
+	color: #222122;
+}
+.winner-text {
+	margin-top: .7rem; 
+}
+.winner-link {
+	display: inline-block;
+	margin-top: .7rem;
+	color: #2B48E0;
+}
+@media (max-width: 768px){
+	.winner-wrapper {
+		flex-direction: column;
+	}
+	.winner-picture {
+		order: 2;
+		margin-top: 1rem;
+	}
+	.winner-content {
+		order: 1;
+		margin-left: 0;
+	}
+}
+/*** END challenges ***/
 
 
 
