@@ -181,6 +181,9 @@ button:focus {
 	outline:0;
 }
 
+.primary-button-wrapper {
+	display: flex;
+}
 .primary-button {
 	border: none;
 	background-color: #FFCC00;
@@ -192,10 +195,10 @@ button:focus {
 	display: flex;
 	justify-content: center;
 }
-.primary-button.btn-angular {
+.primary-button.btn-angular-small {
 	padding: 10px 25px;
-	width: 320px;
-	/* max-width: 80vw; */
+	width: 160px;
+	margin-right: 16px;
 }
 .primary-button.btn-rounded {
 	padding: 6px 12px;
@@ -203,7 +206,10 @@ button:focus {
 	width: 140px;
 }
 @media (max-width: 576px) {
-	.primary-button.btn-angular {
+	.primary-button-wrapper {
+		flex-direction: column;	
+	}
+	.primary-button.btn-angular-small {
 		width: 70vw;
 	}
 }
