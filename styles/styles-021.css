@@ -1728,14 +1728,36 @@ nav ul ul ul li {
 
 
 /*** BEGIN results ***/
-.domain-winner span{
+.domain-winner {
+	margin-top: 4rem;
+}
+.domain-winner span {
 	color: var(--color-grey);
 }
-.domain-winner span a{
+.domain-winner span a {
 	color: var(--color-primary-blue);
 }
-
-
+.domain-winner-content {
+	display: flex;
+	margin-top: 1rem;
+}
+.domain-winner-content b {
+	color: #003399;
+}
+.domain-winner img {
+	width: 280px;
+	height: auto;
+	margin-right: 1.5rem;
+}
+@media (max-width: 1359px) {
+	.domain-winner-content {
+		flex-direction: column;
+	}
+	.domain-winner img {
+		margin-top: 2rem;
+		order: 2;
+	}
+}
 /*** END results ***/
 
 
