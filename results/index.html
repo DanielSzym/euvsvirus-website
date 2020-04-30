@@ -24,7 +24,7 @@
     <title>Pan-European Hackathon</title>
 
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="../styles/styles-021.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styles-022.css">
     <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     <!-- <script>
         window.location.replace("/");
@@ -5556,7 +5556,15 @@
                 const selector = elm.getAttribute('data-target');
                 collapse(selector, 'toggle');
             }
+            console.log(elm)
+            if (elm.classList.contains('card-header-btn-expand') && el.textContent == '-'){
+                elm.textContent = '&#x2b;'
+            }
+            else {
+                elm.textContent = '-'
+            }
         }, false);
+
     </script>
 </body>
 
