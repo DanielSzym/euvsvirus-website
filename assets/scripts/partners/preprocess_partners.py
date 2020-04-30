@@ -8,6 +8,8 @@
 # This script takes a list of university partners and creates html list elements out of it
 # Takes a comma-separated csv file with columns <name> and <link>
 # 
+# HOW TO USE:
+# After activating venv, start with: python3 assets/scripts/partners/preprocess_partners.py
 # -------------------------------------------------------------------------------------------- #
 
 import pandas as pd

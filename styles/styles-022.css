@@ -181,6 +181,9 @@ button:focus {
 	outline:0;
 }
 
+.primary-button-wrapper {
+	display: flex;
+}
 .primary-button {
 	border: none;
 	background-color: #FFCC00;
@@ -192,10 +195,10 @@ button:focus {
 	display: flex;
 	justify-content: center;
 }
-.primary-button.btn-angular {
+.primary-button.btn-angular-small {
 	padding: 10px 25px;
-	width: 320px;
-	/* max-width: 80vw; */
+	width: 160px;
+	margin-right: 16px;
 }
 .primary-button.btn-rounded {
 	padding: 6px 12px;
@@ -203,7 +206,10 @@ button:focus {
 	width: 140px;
 }
 @media (max-width: 576px) {
-	.primary-button.btn-angular {
+	.primary-button-wrapper {
+		flex-direction: column;	
+	}
+	.primary-button.btn-angular-small {
 		width: 70vw;
 	}
 }
@@ -1464,6 +1470,17 @@ nav ul ul ul li {
 /*** END press ***/
 
 
+
+/*** BEGIN nextsteps ***/
+.nextsteps-wrapper a {
+	color: #003399;
+	line-height: 1rem;
+	text-decoration: underline;
+}
+/*** END nextsteps ***/
+
+
+
 /*** BEGIN resources ***/
 
 .mobile-resources-menu {
@@ -1707,6 +1724,141 @@ nav ul ul ul li {
 	color: #ffffff;
 }
 /*** END sharebutton ***/
+
+
+
+/*** BEGIN results ***/
+.domain-winner {
+	margin-top: 3rem;
+}
+.domain-winner span {
+	color: var(--color-grey);
+}
+.domain-winner span a {
+	color: var(--color-primary-blue);
+}
+.domain-winner-content {
+	display: flex;
+	margin-top: 1rem;
+}
+.domain-winner-content b {
+	color: #003399;
+	font-size: 1rem;
+	line-height: 1rem;
+}
+.domain-winner-content img {
+	min-width: 280px !important;
+	width: 280px !important;
+	/* height: auto; */
+	margin-right: 1.5rem;
+}
+@media (max-width: 1359px) {
+	.domain-winner-content {
+		flex-direction: column;
+	}
+	.domain-winner img {
+		margin-top: 2rem;
+		order: 2;
+	}
+}
+/* collapse */
+#acc-health a {
+	color: #003399;
+}
+.card-prize em a {
+	color: #003399;
+}
+.card-prize a {
+	color: #003399;
+}
+.card-invited a {
+	color: #003399;
+}
+.card {
+	background-color: #fff;
+	margin-top: .75rem;
+	border-radius: 5px;
+}
+.card-header, .card-header-btn {
+	background-color: #ffffff;
+	cursor: pointer;
+	color: #222121;
+	border-radius: 5px;
+}
+.card-header {
+	display: block;
+	border-bottom: 1px solid rgb(163, 163, 163);
+}
+.card-header-btn {
+	border: none;
+	width: 100%;
+	padding: 16px 28px;
+	margin: 0;
+	text-align: start;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+.card-header-btn-expand {
+	float: right;
+	font-size: 2.4rem;
+	line-height: 1.4rem;
+	color: #3C4043;
+
+}
+.card-body {
+	padding: 16px 28px;
+}
+.teams-wrapper  {
+	margin-bottom: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.card-body-team {
+	width: 400px;
+	margin-top: 1.4rem;
+}
+.card-body-flex {
+	margin-top: 1rem;
+	display: flex;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.collapse {
+  display: block;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .5s cubic-bezier(0, 1, 0, 1);
+}
+.collapse.show {
+    max-height: 99em;
+    transition: max-height .5s ease-in-out;
+}
+/* card content (team) styling */
+.card-rank-number {
+	margin-right: 1rem;
+	border: 1px solid grey;
+	border-radius: 18px;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card-find-out-more {
+	color: #003399;
+	font-size: .9rem;
+	display: inline-block;
+	margin-top: .2rem;
+}
+.card-prize {
+	margin-top: .7rem;
+}
+.card-invited {
+	margin-top: .2rem;
+}
+/*** END results ***/
 
 
 

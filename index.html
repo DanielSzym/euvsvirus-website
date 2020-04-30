@@ -24,7 +24,7 @@
   <title>Pan-European Hackathon</title>
 
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="./styles/styles-021.css">
+  <link rel="stylesheet" type="text/css" href="./styles/styles-022.css">
 </head>
 
 <body>
@@ -54,10 +54,10 @@
     <div class="overlay-content container">
       <div>
         <a class="mobile-link-item menu-hackathon" onclick="closeNav()">Hackathon</a>
-        <a href="./challenges" class="mobile-link-item menu-item menu-challenges" onclick="closeNav()">Challenges</a>
-        <a href="./agenda" class="mobile-link-item menu-item menu-agenda" onclick="closeNav()">Agenda</a>
-        <a href="./resources/" class="mobile-link-item menu-item menu-resources">Resources</a>
-        <a href="./faq" class="mobile-link-item menu-item menu-faq" onclick="closeNav()">FAQ</a>
+        <a href="./results/" class="mobile-link-item menu-item menu-results">Results</a>
+        <a href="./challenges/" class="mobile-link-item menu-item menu-challenges">Challenges</a>
+        <a href="./nextsteps/" class="mobile-link-item menu-item menu-nextsteps">What's Next</a>
+        <a href="./faq/" class="mobile-link-item menu-item menu-faq">FAQ</a>
 
         <!-- About -->
         <ul class="mobile-menu-sub">
@@ -71,7 +71,6 @@
             <a href="./team/" class="mobile-link-item menu-item menu-team">Team</a>
           </li>
         </ul>
-
         <a href="./press/" class="mobile-link-item menu-item menu-press" style="width:110px;">Press</a>
       </div>
       <div class="d-flex mb-4">
@@ -119,13 +118,13 @@
               <a href="#" class="desktop-link-item menu-item menu-hackathon current-menu">Hackathon</a>
             </li>
             <li>
+              <a href="./results/" class="desktop-link-item menu-results menu-item">Results</a>
+            </li>
+            <li>
               <a href="./challenges/" class="desktop-link-item menu-challenges menu-item">Challenges</a>
             </li>
             <li>
-              <a href="./agenda/" class="desktop-link-item menu-agenda menu-item">Agenda</a>
-            </li>
-            <li>
-              <a href="./resources/" class="desktop-link-item menu-resources menu-item">Resources</a>
+              <a href="./nextsteps/" class="desktop-link-item menu-nextsteps menu-item">What's Next</a>
             </li>
             <li>
               <a href="./faq/" class="desktop-link-item menu-item menu-faq">FAQ</a>
@@ -147,9 +146,9 @@
         </div>
         <div class="navbar-btn-spacing"></div>
         <div class="d-flex align-items-center ">
-          <a class="" href="#register">
+          <a class="" href="./results/">
             <div class="primary-button btn-rounded">
-              Join now!
+              See results
             </div>
           </a>
         </div>
@@ -196,11 +195,18 @@
             until registration opens.
           </span>
         </p>
-        <a href="#register">
-          <div class="primary-button btn-angular mt-3">
-            Join now & save lives!
-          </div>
-        </a>
+        <div class="primary-button-wrapper">
+          <a href="./results/">
+            <div class="primary-button btn-angular-small mt-3">
+              See results
+            </div>
+          </a>
+          <a href="./nextsteps/">
+            <div class="primary-button btn-angular-small mt-3">
+              What's next?
+            </div>
+          </a>
+        </div>
         <div class="d-flex mt-2 flex-wrap">
           <p class="hashtags-header">
             #EUvsVirus
@@ -326,16 +332,17 @@
             </h2>
             <div class="description-p">
               <p class="mt-3">
-                <strong>euvsvirus.org</strong> is an Europe-wide online hackathon
-                organized by the most plugged in and nationally
-                connected actors from all over Europe. It builds upon
-                already conducted national hackathons to enable
-                the rapid execution of brilliant solutions.
+                On 24, 25 and 26 April the European Commission, led by the European Innovation Council
+                and in close collaboration with the EU member states, hosted a pan-European hackathon
+                to connect civil society, innovators, partners and investors across Europe in order to
+                develop innovative solutions for coronavirus-related challenges.
               </p>
               <p class="mt-2">
-                The #EUvsVirus is a call to action to all citizens around the world regardless of origin and skill to
-                participate in the fight against COVID-19: Demonstrate unity and share your skills for the common good
-                across borders and generations! Let’s digitally open EU-borders during this collective challenge!
+                Over 20,900 people
+                from across the EU and beyond took part, with 2,150 solutions submitted in areas
+                including health and life (898), business continuity (381), remote working and
+                education (270), social and political cohesion (452), digital finance (75) and
+                other challenges (83).
               </p>
             </div>
           </div>
@@ -495,11 +502,6 @@
             Individual
             <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
           </button>
-          <div class="text-muted register-status-check">
-            <em>
-              Check the status of your registration <a href="./status/">here</a>
-            </em>
-          </div>
         </div>
       </div>
       <div class="how-can-you-help-column mt-5-mobile">
@@ -542,15 +544,15 @@
         </strong>
 
         <button class="secondary-button tooltip disable-button mt-3">
-            Civil society organisation
+          Civil society organisation
           <a href="#" class="tooltiptext" style="width: 140px;">Registration closed</a>
         </button>
         <button class="secondary-button tooltip disable-button mt-2">
-            University
+          University
           <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
         </button>
         <button class="secondary-button tooltip disable-button mt-2">
-            Public authority
+          Public authority
           <a href="#" class="tooltiptext tooltip-bottom" style="width: 140px;">Registration closed</a>
         </button>
         <button class="secondary-button tooltip disable-button mt-2">
@@ -604,7 +606,7 @@
 
     </p>
     <div class="mt-3">
-      <a href="./agenda/"><b><u>Open full agenda</u></b></a>
+      <a href="./nextsteps/"><b><u>What's next?</u></b></a>
     </div>
   </section>
   <!-- END Agenda -->
@@ -924,7 +926,7 @@
   </footer>
   <!-- END footer -->
 
-  <script src="./assets/js/global-022.js"></script>
+  <script src="./assets/js/global-023.js"></script>
   <script>
     // tbd: add other counters
     let which_counter = 'register_open'  // either register_open, register_close or hackathon_start
