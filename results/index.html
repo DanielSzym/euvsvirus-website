@@ -5531,7 +5531,7 @@
     </footer>
     <!-- END footer -->
 
-    <script src="./../assets/js/global-022.js"></script>
+    <script src="./../assets/js/global-023.js"></script>
     <script src="./../assets/js/cookieconsent-017.min.js"></script>
     <script>
         // mimicking bootstrap collapse
@@ -5557,11 +5557,11 @@
                 collapse(selector, 'toggle');
             }
             console.log(elm)
-            if (elm.classList.contains('card-header-btn-expand') && el.textContent == '-'){
-                elm.textContent = '&#x2b;'
+            if (elm.classList.contains('card-header-btn-expand') && elm.firstElementChild.innerHTML == '-'){
+                elm.firstElementChild.innerHTML = '&#x2b;'
             }
-            else {
-                elm.textContent = '-'
+            else if (elm.classList.contains('card-header-btn-expand') && elm.firstElementChild.innerHTML == '&#x2b;'){
+                elm.firstElementChild.innerHTML = '-'
             }
         }, false);
 
