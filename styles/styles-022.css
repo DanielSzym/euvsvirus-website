@@ -1747,7 +1747,8 @@ nav ul ul ul li {
 	line-height: 1rem;
 }
 .domain-winner-content img {
-	width: 280px!important;
+	min-width: 280px !important;
+	width: 280px !important;
 	/* height: auto; */
 	margin-right: 1.5rem;
 }
