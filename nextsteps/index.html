@@ -24,10 +24,14 @@
     <title>Pan-European Hackathon</title>
 
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="./../styles/styles-022.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styles-022.css">
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    <!-- <script>
+        window.location.replace("/");
+    </script> -->
 </head>
 
-<body>
+<body class="bg-grey">
 
     <div class="share-container">
         <a href="https://www.facebook.com/sharer/sharer.php?u=https://euvsvirus.org/" target="_blank" rel="noreferrer">
@@ -53,7 +57,7 @@
         <div class="overlay-content container">
             <div>
                 <a href="./../" class="mobile-link-item menu-hackathon">Hackathon</a>
-                <a href="./../results/" class="mobile-link-item menu-item menu-results">Results</a>
+                <a class="mobile-link-item menu-item menu-results" onclick="closeNav()">Results</a>
                 <a href="./../challenges/" class="mobile-link-item menu-item menu-challenges">Challenges</a>
                 <a href="./../nextsteps/" class="mobile-link-item menu-item menu-nextsteps">What's Next</a>
                 <a href="./../faq/" class="mobile-link-item menu-item menu-faq">FAQ</a>
@@ -71,20 +75,23 @@
                     </li>
                 </ul>
 
-                <a class="mobile-link-item menu-item menu-press" onclick="closeNav()">Press</a>
+                <a href="./../press/" class="mobile-link-item menu-item menu-press">Press</a>
             </div>
             <div class="d-flex mb-4">
                 <a href="https://twitter.com/EUvsVirus" target="_blank" rel="noreferrer">
                     <img class="navbar-logo-mobile" alt="Logo Twitter" src="./../assets/img/navbar/twitter.png">
                 </a>
-                <a href="https://www.facebook.com/EuropeanCommission/" target="_blank" rel="noreferrer">
+                <a href="https://www.facebook.com/EUvsVirus/" target="_blank" rel="noreferrer">
                     <img class="navbar-logo-mobile" alt="Logo Facebook" src="./../assets/img/navbar/facebook.png">
                 </a>
                 <a href="https://www.instagram.com/EUvsVirus/" target="_blank" rel="noreferrer">
                     <img class="navbar-logo-mobile" alt="Logo Instagram" src="./../assets/img/navbar/instagram.png">
                 </a>
-                <a href="https://www.linkedin.com/company/european-commission/" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/company/euvsvirus/" target="_blank" rel="noreferrer">
                     <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./../assets/img/navbar/linkedin.png">
+                </a>
+                <a href="https://www.facebook.com/events/249707376073847" target="_blank" rel="noreferrer">
+                    <img class="navbar-logo-mobile" alt="Logo LinkedIn" src="./../assets/img/footer/fbevent.png">
                 </a>
             </div>
         </div>
@@ -116,7 +123,7 @@
                                 class="desktop-link-item menu-item menu-hackathon current-menu">Hackathon</a>
                         </li>
                         <li>
-                            <a href="./../results/" class="desktop-link-item menu-results menu-item">Results</a>
+                            <a class="desktop-link-item menu-results menu-item">Results</a>
                         </li>
                         <li>
                             <a href="./../challenges/"
@@ -139,7 +146,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="desktop-link-item menu-item menu-press">Press</a>
+                            <a href="./../press/" class="desktop-link-item menu-item menu-press">Press</a>
                         </li>
                     </ul>
                 </div>
@@ -156,95 +163,48 @@
     </section>
     <!-- END navbar desktop -->
 
-    <!-- BEGIN press -->
-    <section id="press" class="press">
-        <div class="container main-wrapper">
-            <h1>Press</h1>
-            <div class="h1-seperator"></div>
+    <section class="container main-wrapper nextsteps-wrapper">
+        <h1>What's Next?</h1>
+        <hr>
+        <br>
+        <h3>
+            What happens next?
+        </h3>
+        <p class="mt-2">
+            Winning solutions will be announced on Thursday at 11:00 CET during an #EUvsVirus
+            online award ceremony aired <a href="https://www.facebook.com/EUvsVirus/">here</a>. There will be 117
+            winners in total - one winner for
+            each domain (6) and challenge (37), as well as two runners up for each challenge.
+            Cash prizes donated by partners will be offered to select winners (currently 110k in total).
 
-            <h2>Graphics</h2>
-            <a href="https://drive.google.com/file/d/1--oXzEJ2X9jUH-GSmAlkcHcAZgNvD_X_/view" target="_blank"
-                rel="noreferrer">
-                <h3 class="d-inline-block"><u>EUvsVirus Flyer</u></h3>
-            </a>
-            <br>
-            <a href="https://drive.google.com/file/d/1OjJYncuS3SRLuPDNR9TAokdGSj-Qozhi/view" target="_blank"
-                rel="noreferrer">
-                <h3 class="d-inline-block"><u>EUvsVirus Banner</u></h3>
-            </a>
-            <br>
-            <a href="./../assets/img/press/Engagement Poster 1 - TWITTER.png" target="_blank" rel="noreferrer">
-                <h3 class="d-inline-block"><u>Engagement Poster 1 - Twitter</u></h3>
-            </a>
-            <br>
-            <a href="./../assets/img/press/Engagement Poster 2 - TWITTER.png" target="_blank" rel="noreferrer">
-                <h3 class="d-inline-block"><u>Engagement Poster 2 - Twitter</u></h3>
-            </a>
-
-            <h2>Press Releases</h2>
-            <a href="https://ec.europa.eu/info/news/european-commission-hosted-euvsvirus-hackathon-gives-rise-over-2000-pioneering-solutions-fight-outbreak-2020-apr-27_en"
-                target="_blank" rel="noreferrer" class="d-inline">
-                <h3 class="d-inline-block"><u>https://ec.europa.eu/info/news/european-commission-hosted-euvsv...</u>
-                </h3>
-            </a>
-            <br><small style="color: grey">27 April 2020</small><br>
-
-            <a href="https://ec.europa.eu/commission/presscorner/detail/en/mex_20_728" target="_blank" rel="noreferrer"
-                class="d-inline">
-                <h3 class="d-inline-block"><u>https://ec.europa.eu/commission/presscorner/detail/en/mex_20_72...</u>
-                </h3>
-            </a>
-            <br><small style="color: grey">23 April 2020</small><br>
-
-            <a href="https://ec.europa.eu/info/news/pan-european-hackathon-develop-innovative-solutions-overcome-societal-challenges-related-coronavirus-2020-apr-14_en"
-                target="_blank" rel="noreferrer" class="d-inline">
-                <h3 class="d-inline-block">
-                    <u>https://ec.europa.eu/info/news/pan-european-hackathon-develop-i...</u>
-                </h3>
-            </a>
-            <br><small style="color: grey">14 April 2020</small><br>
-
-            <a href="https://ec.europa.eu/info/news/euvsvirus-hackathon-develop-innovative-solutions-and-overcome-coronavirus-related-challenges-2020-apr-03_de"
-                target="_blank" rel="noreferrer" class="d-inline">
-                <h3 class="d-inline-block"><u>https://ec.europa.eu/info/news/euvsvirus-hackathon-develop-innov...</u>
-                </h3>
-            </a>
-            <br><small style="color: grey">3 April 2020</small><br>
-
-            <a href="https://ec.europa.eu/info/files/first-eravscorona-action-plan-short-term-coordinated-reseach-and-innovation-actions_en"
-                target="_blank" rel="noreferrer" class="d-inline">
-                <h3 class="d-inline-block">
-                    <u>https://ec.europa.eu/info/files/first-eravscorona-action-plan-short-t...</u>
-                </h3>
-            </a>
-            <br><small style="color: grey">April 2020</small><br>
-
-
-            <h2>Press Inquiries</h2>
-            <h3 style="font-weight: normal;">
-                <b>Press inquiries only!</b> -
-                Please send and email inquiry to:
-                <a
-                    href="mailto:RTD-PAN-EUROPEAN-COVID-HACKATHON@ec.europa.eu?subject=Press%20Inquiry%20From%20EUvsVirus%20Website">
-                    <h3 class="d-inline-block">
-                        <u>
-                            Press contact
-                        </u>
-                    </h3>
-                </a>
-            </h3>
-
-            <h2>Twitterwall – #EUvsVirus</h2>
-            <div class="mt-4">
-                <iframe id="twitter-wall" src="https://walls.io/EUvsVirus?nobackground=1" title="EUvsVirus"></iframe>
-            </div>
-        </div>
+        </p>
+        <h3 class="mt-3">
+            #EUvsVirus Matchathon - 22 to 25 May
+        </h3>
+        <p class="mt-2">
+            During the two weeks after the award ceremony, the financing and resource needs
+            of the winning teams to develop and scale their ideas, as well as the financing and
+            resources that partners are willing to dedicate, will be collated. From 22 to 25 May, a
+            Matchathon event will take place to match the needs with available resources. Winning
+            solutions have been invited to join an EIC COVID Platform to facilitate connections with
+            end users, such as hospitals, and provide access to investors, foundations and other
+            funding opportunities from across the EU.
+        </p>
+        <h3 class="mt-3">
+            EIC COVID Platform
+        </h3>
+        <p class="mt-2">
+            The EIC COVID Platform – to be launched at the end of May - will be a European-level
+            community platform to connect winning teams and companies with innovative solutions
+            with those in need of such solutions, such as public authorities, hospitals, public bodies,
+            foundations, as well as investors. To facilitate this, there will be a marketplace mechanism
+            to match between the potential solutions, the needs, and where relevant, investors and funders.
+        </p>
+        <br><br>
     </section>
 
 
-
-
-
+    <section class="vertical-spacing"></section>
 
     <!-- BEGIN footer -->
     <footer class="mt-3 pt-1">
@@ -305,8 +265,10 @@
     </footer>
     <!-- END footer -->
 
+
     <script src="./../assets/js/global-023.js"></script>
     <script src="./../assets/js/cookieconsent-017.min.js"></script>
+
 </body>
 
 </html>
