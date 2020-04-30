@@ -1776,11 +1776,13 @@ nav ul ul ul li {
 .card {
 	background-color: #fff;
 	margin-top: .75rem;
+	border-radius: 5px;
 }
 .card-header, .card-header-btn {
 	background-color: #ffffff;
 	cursor: pointer;
 	color: #222121;
+	border-radius: 5px;
 }
 .card-header {
 	display: block;
