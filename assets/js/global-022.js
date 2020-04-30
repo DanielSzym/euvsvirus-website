@@ -251,13 +251,13 @@ function dismissWebinar() {
   document.getElementById('stream-container').style.display = 'none';
 }
 const STREAM_CARD_TEXTS = {
-  title: 'Opening Ceremony',
+  title: 'Award Ceremony',
   date: '22 April 2020, 12:00 PM CEST',
   cta: 'Soon on Facebook',
   href: 'https://www.facebook.com/EUvsVirus/posts/108444284179296',
 }
 function setContextLive(stream_link, stream_time) {
-  STREAM_CARD_TEXTS.title = 'Kick-off now live';
+  STREAM_CARD_TEXTS.title = 'Award ceremony live';
   STREAM_CARD_TEXTS.date = stream_time;
   STREAM_CARD_TEXTS.cta = 'Join now on Facebook!';
   STREAM_CARD_TEXTS.href = stream_link;
@@ -281,12 +281,17 @@ function getStreamCardContext() {
   var ls41_s = new Date(Date.UTC(2020, 3, 24, 14, 45, 0)).getTime();
   var ls41_e = new Date(Date.UTC(2020, 3, 24, 16, 15, 0)).getTime();
 
+  // 30 April, award ceremony
+  var ls51_s = new Date(Date.UTC(2020, 3, 30, 8, 45, 0)).getTime();
+  var ls51_e = new Date(Date.UTC(2020, 3, 30, 11, 0, 0)).getTime();
+
   // links
   var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207'
   var ls22_link = 'https://www.facebook.com/EUvsVirus/posts/106866467670411'
   var ls31_link = 'https://www.facebook.com/EUvsVirus/posts/107554264268298'
   var ls32_link = 'https://www.facebook.com/EUvsVirus/posts/107555497601508'
   var ls41_link = 'https://www.facebook.com/EUvsVirus/posts/108444284179296'
+  var ls51_link = 'https://www.facebook.com/EUvsVirus/posts/116610133362711'  // award ceremony
 
   // check if webinar is on (always 15 minutes earlier). If yes, set link and other banner content
   // if no set next webinar date
@@ -295,6 +300,7 @@ function getStreamCardContext() {
   else if (ls31_s < stream_now && ls31_e > stream_now) { setContextLive(ls31_link, 'until 12:30 PM CEST'); }
   else if (ls32_s < stream_now && ls32_e > stream_now) { setContextLive(ls32_link, 'until 05:30 PM CEST'); }
   else if (ls41_s < stream_now && ls41_e > stream_now) { setContextLive(ls41_link, 'until 06:15 PM CEST'); }
+  else if (ls51_s < stream_now && ls51_e > stream_now) { setContextLive(ls41_link, 'until 06:15 PM CEST'); }
   else {
     // set new datetime of upcoming
     if ( stream_now > ls21_e ) {
@@ -313,7 +319,11 @@ function getStreamCardContext() {
       STREAM_CARD_TEXTS.date = '24 April 2020, 17:00 CEST'; 
       STREAM_CARD_TEXTS.href = ls41_link;
     }
-    if ( stream_now > ls41_e ) { STREAM_CARD_TEXTS.date = '-1'; }
+    if ( stream_now > ls41_e ) { 
+      STREAM_CARD_TEXTS.date = '30 April 2020, 11:00 CEST'; 
+      STREAM_CARD_TEXTS.href = ls51_link;
+    }
+    if ( stream_now > ls51_e ) { STREAM_CARD_TEXTS.date = '-1'; }
 }
 }
 (function () {
@@ -327,7 +337,7 @@ function getStreamCardContext() {
     if (webinar_banner_date == '-1') return
 
     // let webinar_banner_text = 'Follow the EU’s most important leaders and innovators in our free webinars.';
-    let webinar_banner_text = 'Join thousands of EU’s and global citizens for the kick-off show. Live from Oslo!';
+    let webinar_banner_text = 'Commissioner Mariya Gabriel will announce the winners of the #EUvsVirus!';
     webinar_banner_text += '<a href="';
     webinar_banner_text += STREAM_CARD_TEXTS.href;
     webinar_banner_text += '" target="_blank" rel="noreferrer" class="stream-button mt-3">';
