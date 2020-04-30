@@ -5556,13 +5556,12 @@
                 const selector = elm.getAttribute('data-target');
                 collapse(selector, 'toggle');
             }
-            console.log(elm)
-            if (elm.classList.contains('card-header-btn-expand') && elm.firstElementChild.innerHTML == '-'){
-                elm.firstElementChild.innerHTML = '&#x2b;'
+            if(elm.firstElementChild.classList.contains('card-header-btn-expand')){
+                console.log(elm.firstElementChild)
+                if(elm.firstElementChild.innerHTML == '+') elm.firstElementChild.innerHTML = '&#8210;'
+                else elm.firstElementChild.innerHTML = '+'
             }
-            else if (elm.classList.contains('card-header-btn-expand') && elm.firstElementChild.innerHTML == '&#x2b;'){
-                elm.firstElementChild.innerHTML = '-'
-            }
+            
         }, false);
 
     </script>
