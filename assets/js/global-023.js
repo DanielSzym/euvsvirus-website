@@ -283,7 +283,7 @@ function getStreamCardContext() {
 
   // 30 April, award ceremony
   var ls51_s = new Date(Date.UTC(2020, 3, 30, 8, 45, 0)).getTime();
-  var ls51_e = new Date(Date.UTC(2020, 3, 30, 11, 0, 0)).getTime();
+  var ls51_e = new Date(Date.UTC(2020, 3, 30, 10, 15, 0)).getTime();
 
   // links
   var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207'
@@ -300,7 +300,7 @@ function getStreamCardContext() {
   else if (ls31_s < stream_now && ls31_e > stream_now) { setContextLive(ls31_link, 'until 12:30 PM CEST'); }
   else if (ls32_s < stream_now && ls32_e > stream_now) { setContextLive(ls32_link, 'until 05:30 PM CEST'); }
   else if (ls41_s < stream_now && ls41_e > stream_now) { setContextLive(ls41_link, 'until 06:15 PM CEST'); }
-  else if (ls51_s < stream_now && ls51_e > stream_now) { setContextLive(ls41_link, 'until 06:15 PM CEST'); }
+  else if (ls51_s < stream_now && ls51_e > stream_now) { setContextLive(ls41_link, 'until 12:15 PM CEST'); }
   else {
     // set new datetime of upcoming
     if ( stream_now > ls21_e ) {
