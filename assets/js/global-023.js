@@ -293,7 +293,7 @@ function getStreamCardContext() {
   var ls51_e = new Date(Date.UTC(2020, 3, 30, 10, 15, 0)).getTime();
 
   // badge link, show for one week
-  var badge_s = new Date(Date.UTC(2020, 4, 1, 10, 0, 0)).getTime();
+  var badge_s = new Date(Date.UTC(2020, 4, 1, 8, 0, 0)).getTime();
   var badge_e = new Date(Date.UTC(2020, 4, 8, 12, 0, 0)).getTime();
 
   // links
