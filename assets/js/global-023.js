@@ -347,6 +347,7 @@ function getStreamCardContext() {
   if (Cookie.getCookie('dismisswebinar') != 'dismiss' && Cookie.getCookie('cookieconsent_status')) {
     // first assemble the context
     getStreamCardContext()
+    const SHOW_TITLE = true;
     // then add the banner
     let webinar_banner_title = STREAM_CARD_TEXTS.title;
     let webinar_banner_date = STREAM_CARD_TEXTS.date;
@@ -362,11 +363,13 @@ function getStreamCardContext() {
     webinar_banner_text += '</a>'
 
     // assemble banner
-    let webinar_banner = '<div id="stream-container" class="stream-container"><div class="stream-card"><div class="stream-card-left"></div><div class="stream-card-right"><div><h3>';
+    let webinar_banner = '<div id="stream-container" class="stream-container"><div class="stream-card"><div class="stream-card-left"></div><div class="stream-card-right"><div><h3 style="font-size: 1.2rem;"'
+    if (!SHOW_TITLE) webinar_banner += ' class="d-none"'
+    webinar_banner += '>';
     webinar_banner += webinar_banner_title;
     webinar_banner += '</h3><p class="mt-1 stream-card-date">';
     webinar_banner += webinar_banner_date;
-    webinar_banner += '</p><div><p class="mt-1">';
+    webinar_banner += '</p><div><p class="mt-1" style="font-size: .9rem;">';
     webinar_banner += webinar_banner_text;
     webinar_banner += '</p></div></div><div><p class="stream-card-dismiss" onclick="dismissWebinar()">Dismiss</p></div></div></div></div>';
     var node = document.createElement('div');
