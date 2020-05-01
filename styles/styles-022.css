@@ -1625,7 +1625,7 @@ nav ul ul ul li {
 	height: inherit;
 }
 .stream-card-left {
-	background-image: url('./../assets/img/streams/stream_kickoff.png');
+	background-image: url('./../assets/img/streams/badge.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 50%;
