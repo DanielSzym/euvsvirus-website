@@ -251,20 +251,27 @@ function dismissWebinar() {
   document.getElementById('stream-container').style.display = 'none';
 }
 const STREAM_CARD_TEXTS = {
-  title: 'Award Ceremony',
+  title: 'Hackathon badge',
   date: '22 April 2020, 12:00 PM CEST',
-  cta: 'Soon on Facebook',
+  cta: 'Coming today',
   href: 'https://www.facebook.com/EUvsVirus/posts/108444284179296',
 }
 function setContextLive(stream_link, stream_time) {
-  STREAM_CARD_TEXTS.title = 'Award ceremony live';
+  STREAM_CARD_TEXTS.title = 'Live Stream';
   STREAM_CARD_TEXTS.date = stream_time;
-  STREAM_CARD_TEXTS.cta = 'Join now on Facebook!';
-  STREAM_CARD_TEXTS.href = stream_link;
+  STREAM_CARD_TEXTS.cta = 'Stay tuned';
+  STREAM_CARD_TEXTS.href = '#';
+}
+function setContextBadge(badge_link) {
+  STREAM_CARD_TEXTS.title = 'Hackathon badge';
+  STREAM_CARD_TEXTS.date = '';
+  STREAM_CARD_TEXTS.cta = 'Get your badge';
+  STREAM_CARD_TEXTS.href = badge_link;
 }
 function getStreamCardContext() {
   var stream_now = new Date().getTime();
 
+  // All in UTC time! UTC = CEST - 2
   // 22 April
   var ls21_s = new Date(Date.UTC(2020, 3, 22, 9, 45, 0)).getTime();
   var ls21_e = new Date(Date.UTC(2020, 3, 22, 10, 30, 0)).getTime();
@@ -285,13 +292,18 @@ function getStreamCardContext() {
   var ls51_s = new Date(Date.UTC(2020, 3, 30, 8, 45, 0)).getTime();
   var ls51_e = new Date(Date.UTC(2020, 3, 30, 10, 15, 0)).getTime();
 
+  // badge link, show for one week
+  var badge_s = new Date(Date.UTC(2020, 4, 1, 10, 0, 0)).getTime();
+  var badge_e = new Date(Date.UTC(2020, 4, 8, 12, 0, 0)).getTime();
+
   // links
-  var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207'
-  var ls22_link = 'https://www.facebook.com/EUvsVirus/posts/106866467670411'
-  var ls31_link = 'https://www.facebook.com/EUvsVirus/posts/107554264268298'
-  var ls32_link = 'https://www.facebook.com/EUvsVirus/posts/107555497601508'
-  var ls41_link = 'https://www.facebook.com/EUvsVirus/posts/108444284179296'
-  var ls51_link = 'https://www.facebook.com/EUvsVirus/posts/116610133362711'  // award ceremony
+  var ls21_link = 'https://www.facebook.com/EUvsVirus/posts/106308507726207';
+  var ls22_link = 'https://www.facebook.com/EUvsVirus/posts/106866467670411';
+  var ls31_link = 'https://www.facebook.com/EUvsVirus/posts/107554264268298';
+  var ls32_link = 'https://www.facebook.com/EUvsVirus/posts/107555497601508';
+  var ls41_link = 'https://www.facebook.com/EUvsVirus/posts/108444284179296';
+  var ls51_link = 'https://www.facebook.com/EUvsVirus/posts/116610133362711';  // award ceremony
+  var badge_link = 'https://euvsvirusbadges.azurewebsites.net/';
 
   // check if webinar is on (always 15 minutes earlier). If yes, set link and other banner content
   // if no set next webinar date
@@ -300,7 +312,8 @@ function getStreamCardContext() {
   else if (ls31_s < stream_now && ls31_e > stream_now) { setContextLive(ls31_link, 'until 12:30 PM CEST'); }
   else if (ls32_s < stream_now && ls32_e > stream_now) { setContextLive(ls32_link, 'until 05:30 PM CEST'); }
   else if (ls41_s < stream_now && ls41_e > stream_now) { setContextLive(ls41_link, 'until 06:15 PM CEST'); }
-  else if (ls51_s < stream_now && ls51_e > stream_now) { setContextLive(ls41_link, 'until 12:15 PM CEST'); }
+  else if (ls51_s < stream_now && ls51_e > stream_now) { setContextLive(ls51_link, 'until 12:15 PM CEST'); }
+  else if (badge_s < stream_now && badge_e > stream_now) { setContextBadge(badge_link); }
   else {
     // set new datetime of upcoming
     if ( stream_now > ls21_e ) {
@@ -323,7 +336,11 @@ function getStreamCardContext() {
       STREAM_CARD_TEXTS.date = '30 April 2020, 11:00 CEST'; 
       STREAM_CARD_TEXTS.href = ls51_link;
     }
-    if ( stream_now > ls51_e ) { STREAM_CARD_TEXTS.date = '-1'; }
+    if (stream_now > ls51_e) {
+      STREAM_CARD_TEXTS.date = '';
+      STREAM_CARD_TEXTS.href = '#';
+    }
+    if ( stream_now > badge_e ) { STREAM_CARD_TEXTS.date = '-1'; }
 }
 }
 (function () {
@@ -337,7 +354,7 @@ function getStreamCardContext() {
     if (webinar_banner_date == '-1') return
 
     // let webinar_banner_text = 'Follow the EU’s most important leaders and innovators in our free webinars.';
-    let webinar_banner_text = 'Commissioner Mariya Gabriel will announce the winners of the #EUvsVirus!';
+    let webinar_banner_text = 'The European Commission says thank you to every Hackathon participant for your contribution in these hard times.';
     webinar_banner_text += '<a href="';
     webinar_banner_text += STREAM_CARD_TEXTS.href;
     webinar_banner_text += '" target="_blank" rel="noreferrer" class="stream-button mt-3">';
